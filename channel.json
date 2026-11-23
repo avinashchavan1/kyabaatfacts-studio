@@ -3,7 +3,7 @@
  "id": "kyabaatfacts",
  "name": "Kya Baat Facts",
  "app_title": "Kya Baat Facts Studio",
- "app_url": "https://studio.example.com",
+ "app_url": "https://kyabaatfacts-studio.netlify.app",
  "series": {
   "id": "kyabaatfacts",
   "name": "Kya Baat Facts",
@@ -43,12 +43,13 @@
   "youtube_title_suffix": "#Shorts #KyaBaatFacts"
  },
  "infra": {
-  "supabase_ref": "YOUR-PROJECT-REF",
-  "supabase_url": "https://YOUR-PROJECT-REF.supabase.co",
+  "supabase_ref": "vrhcofbhrcqthbacixpb",
+  "supabase_url": "https://vrhcofbhrcqthbacixpb.supabase.co",
   "hf_masters_repo": "Avinash1443/kyabaatfacts-masters",
-  "netlify_site_id": "YOUR-NETLIFY-SITE-ID",
-  "supabase_publishable_key": "sb_publishable_YOUR_KEY",
-  "github_repo": "avinashchavan1/kyabaatfacts-studio"
+  "netlify_site_id": "5f2cf191-7017-44d4-b4a0-1375ebfbf40f",
+  "supabase_publishable_key": "sb_publishable_-iWE7Mx4X-CtPR8GewC4Yw__uGDxzB8",
+  "github_repo": "avinashchavan1/kyabaatfacts-studio",
+  "_supabase_note": "Shared project 'avinash-all-aps' (free-plan limit). Studio tables live in public alongside other apps; no name clashes (checked)."
  },
  "owner": {
   "contact_email": "sonamrathod888@gmail.com",

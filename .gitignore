@@ -21,3 +21,4 @@ studio/**/audio/pick_log.txt
 studio/**/audio/pick.out
 studio/**/audio/*.log
 studio/series/*/cast/audition/
+supabase/.temp/
