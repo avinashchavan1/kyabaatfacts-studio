@@ -134,7 +134,7 @@ function PublishTab({ r, files }: { r: Reel; files: FileRow[] }) {
   return (
     <div className="grid gap-4">
       <label className={clsx("flex items-start gap-3 rounded-2xl border p-4", r.reviewed ? "border-emerald-300 bg-emerald-50 dark:border-emerald-900 dark:bg-emerald-950/40" : "border-amber-300 bg-amber-50 dark:border-amber-900 dark:bg-amber-950/40")}>
-        <input id="reviewed" type="checkbox" className="mt-1 h-5 w-5 accent-[#a8741a]" checked={r.reviewed}
+        <input id="reviewed" type="checkbox" className="mt-1 h-5 w-5 accent-gold-deep" checked={r.reviewed}
           onChange={(e) => update.mutate({ reel: r, patch: { reviewed: e.target.checked, reviewed_at: e.target.checked ? new Date().toISOString() : null, stage: e.target.checked && r.stage === "review" ? "approved" : r.stage }, action: e.target.checked ? "citations reviewed" : "review cleared" })} />
         <span className="text-sm">
           <b className="flex items-center gap-1.5"><ShieldCheck size={16} /> I checked the citations against the text</b>

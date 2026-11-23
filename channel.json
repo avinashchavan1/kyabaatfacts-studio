@@ -69,6 +69,49 @@
    "title": "Montserrat Black",
    "body": "Montserrat Bold",
    "hindi": "Mukta"
+  },
+  "app_theme": {
+   "_doc": "Look of the studio web app (read by tailwind.config.js and vite.config.ts). Token names are the app's: night = dark shell, gold = accent, parchment = light background, ink = text, vermilion = alert.",
+   "icon": "brand/app_icon.png",
+   "theme_color": "#14123A",
+   "google_fonts": "https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Mukta:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap",
+   "fonts": {
+    "display": [
+     "\"Montserrat\"",
+     "system-ui",
+     "sans-serif"
+    ],
+    "sans": [
+     "\"Montserrat\"",
+     "\"Mukta\"",
+     "\"Noto Sans Devanagari\"",
+     "system-ui",
+     "sans-serif"
+    ]
+   },
+   "colors": {
+    "ink": {
+     "DEFAULT": "#14123A",
+     "soft": "#5E5A80"
+    },
+    "night": {
+     "950": "#0C0A26",
+     "900": "#14123A",
+     "800": "#1F1C52",
+     "700": "#2B276A",
+     "600": "#3B3585"
+    },
+    "gold": {
+     "DEFAULT": "#FFC83D",
+     "deep": "#9A6400",
+     "soft": "#FFE9A8"
+    },
+    "parchment": {
+     "DEFAULT": "#FFF6E4",
+     "deep": "#FBE8C0"
+    },
+    "vermilion": "#FF4B3E"
+   }
   }
  },
  "categories": [

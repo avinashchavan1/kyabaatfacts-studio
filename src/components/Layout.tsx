@@ -84,7 +84,7 @@ export default function Layout() {
 
 const Brand = () => (
   <div className="flex items-center gap-3">
-    <img src="/favicon.svg" alt="" className="h-9 w-9" />
+    <img src={__APP_ICON__} alt="" className="h-9 w-9 rounded-lg" />
     <div className="leading-tight">
       <div className="text-[10px] font-semibold uppercase tracking-[0.28em] text-gold">Studio</div>
       <div className="font-display text-lg font-extrabold tracking-wider">{CHANNEL.name}</div>

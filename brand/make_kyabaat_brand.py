@@ -246,3 +246,11 @@ d.text((80, 1850), "Covers + end cards (9:16)", font=mont(32, "Bold"), fill=INK)
 d.text((1450, 1800), "YouTube banner", font=mont(32, "Bold"), fill=INK)
 BS.save(f"{OUT}/BRAND_SHEET.png")
 print("ok")
+
+# ---- app icon (studio web app + browser tab): eyes on a yellow rounded tile, readable at 16-36 px
+I = 512 * S
+ic = Image.new("RGBA", (I, I), (0, 0, 0, 0)); idr = ImageDraw.Draw(ic)
+idr.rounded_rectangle((0, 0, I - 1, I - 1), 110 * S, fill=YEL)
+eyes(idr, 158 * S, 300 * S, 92 * S, look=(1, -1)); eyes(idr, 354 * S, 300 * S, 92 * S, look=(1, -1))
+ic.resize((512, 512), Image.LANCZOS).save(f"{OUT}/app_icon.png")
+print("app icon ok")
