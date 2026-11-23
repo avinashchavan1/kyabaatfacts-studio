@@ -1,3 +1,14 @@
+# This channel: Kya Baat Facts (mixed facts, Hindi/Hinglish narration, English on screen)
+- Instagram @kyabaatfacts · YouTube @kyabaatfacts (handle pending). Series folder: `studio/series/kyabaatfacts/`
+  (CHANNEL.md = decisions, PLAN.md = 100 reels + 10 long videos + 400-reel roadmap, LONGFORM.md).
+- 9 categories with a weekly rhythm (`channel.json → categories`, `calendar.json → weekly`).
+- **Sources instead of verses:** this is a mixed facts channel with no single base text. Wherever the rules below say
+  "verse", "base text" or `source_verse.py`, read: every claim lists its own source (publisher, title, URL) and is verified by
+  reading that source, never from memory. Disputed or legendary claims are framed honestly or dropped. The opening-verse and
+  quote-card rules become: show the source on screen when a claim is surprising. (Engine support for per-reel sources: still to do.)
+- Brand: "Hairaan Aankhen" logo (googly eyes over the AA of BAAT), yellow #FFC83D / ink #14123A / punch #FF4B3E, Montserrat + Mukta.
+  Kit in `brand/kit/`, regenerate with `python3 brand/make_kyabaat_brand.py brand brand/kit`; upload with `python3 scripts/brand.py --no-render`.
+
 # Storyreel Studio: rules for every session
 
 This repo makes short story reels (9:16, ~60–120 s) for ONE channel, described in `channel.json` (name, handles, language,

@@ -1,22 +1,27 @@
 {
  "instagram": {
-  "username": "examplechannel",
-  "name": "Example Channel | Stories",
+  "username": "kyabaatfacts",
+  "name": "Kya Baat Facts | Hindi Facts",
   "category": "Digital creator",
-  "bio": "Stories from the original texts\nEvery reel shows its verse\nNarration · English subtitles",
-  "link": "https://www.youtube.com/@examplechannel",
+  "bio": "Har fact pe bologe: kya baat! 🤯\nScience · History · Animals · Space · Desh Ke Ajoobe\nMyth or Fact? every Friday",
+  "link": "https://www.youtube.com/@kyabaatfacts",
   "link_title": "YouTube",
   "settings": [
    "Account type: Professional → Creator; turn on “Display category label”."
   ]
  },
  "youtube": {
-  "handle": "@examplechannel",
-  "name": "Example Channel",
-  "description": "Short stories from the original texts, with the verse on screen.",
+  "handle": "@kyabaatfacts",
+  "name": "Kya Baat Facts",
+  "description": "Kya Baat Facts – har fact pe bologe \"kya baat!\" 🤯\n\nScience, history, animals, space, India's wonders, food, money and words – short, simple and in Hinglish. Every fact is checked against real sources.\n\nMon Science · Tue History · Wed Animals/Space · Thu Desh Ke Ajoobe · Fri Myth or Fact? · Sat Food/Money/Words\n\nInstagram: @kyabaatfacts",
   "keywords": [
-   "stories",
-   "mythology"
+   "hindi facts",
+   "facts in hindi",
+   "amazing facts",
+   "science facts",
+   "indian history",
+   "myth or fact",
+   "kya baat facts"
   ]
  }
 }

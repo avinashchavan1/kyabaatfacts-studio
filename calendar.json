@@ -1,27 +1,203 @@
 {
- "_doc": "The channel's posting calendar: occasions (festivals, anniversaries), theme words that tag reels (regex, case-insensitive, matched on title + plan note + hashtags), and weekly days that suit a theme. Copy a preset from presets/ or write your own.",
+ "_doc": "Kya Baat Facts posting calendar (IST). Occasions from the Hindu preset are used for festival-special reels; weekly days follow the category rhythm (0=Sun ... 6=Sat). Add national days (26 Jan, 15 Aug, 2 Oct...) as festival specials are planned.",
  "timezone_offset_min": 330,
  "occasions": [
   {
-   "date": "2027-01-01",
-   "name": "New Year",
-   "what": "A big viewing day",
+   "date": "2026-11-21",
+   "name": "Tulsi Vivah",
+   "what": "Kartika Shukla Dwadashi; a big devotional day, the wedding season begins",
    "themes": [
-    "any"
+    "devotion"
    ],
    "weight": 2,
+   "devotional": true
+  },
+  {
+   "date": "2026-11-24",
+   "name": "Kartik Purnima · Dev Diwali",
+   "what": "Full moon of Kartik: holy dip in the Ganga, lamps on the ghats",
+   "themes": [
+    "devotion",
+    "ganga",
+    "lamps"
+   ],
+   "weight": 4,
+   "devotional": true
+  },
+  {
+   "date": "2026-12-14",
+   "name": "Vivah Panchami",
+   "what": "Anniversary of the wedding of Rama and Sita",
+   "themes": [
+    "wedding",
+    "swayamvara",
+    "bow",
+    "janaka"
+   ],
+   "weight": 5,
+   "devotional": true
+  },
+  {
+   "date": "2026-12-20",
+   "name": "Gita Jayanti",
+   "what": "Mokshada Ekadashi (some calendars 19 Dec)",
+   "themes": [
+    "devotion"
+   ],
+   "weight": 1,
+   "approx": true,
+   "devotional": true
+  },
+  {
+   "date": "2027-01-14",
+   "name": "Makar Sankranti",
+   "what": "The sun enters Capricorn: a sun festival",
+   "themes": [
+    "sun"
+   ],
+   "weight": 3
+  },
+  {
+   "date": "2027-03-06",
+   "name": "Maha Shivratri",
+   "what": "Night of Shiva (some calendars 5 Mar)",
+   "themes": [
+    "shiva",
+    "bow"
+   ],
+   "weight": 3,
+   "approx": true,
+   "devotional": true
+  },
+  {
+   "date": "2027-04-15",
+   "name": "Ram Navami",
+   "what": "Birth of Rama (some calendars 14 Apr)",
+   "themes": [
+    "rama-birth",
+    "dasharatha"
+   ],
+   "weight": 6,
+   "approx": true,
+   "devotional": true
+  },
+  {
+   "date": "2027-04-20",
+   "name": "Hanuman Jayanti",
+   "what": "Birth of Hanuman (north Indian date)",
+   "themes": [
+    "hanuman"
+   ],
+   "weight": 6,
+   "approx": true,
    "devotional": true
   }
  ],
  "themes": [
   [
-   "wedding",
-   "wedding|marri"
+   "science",
+   "science wala sach|#sciencewalasach"
   ],
   [
-   "hero",
-   "\\bhero\\b"
+   "history",
+   "itihaas ke raaz|#itihaaskeraaz"
+  ],
+  [
+   "animals",
+   "jaanwaron ki duniya|#jaanwaronkiduniya"
+  ],
+  [
+   "space",
+   "antriksh|#antriksh"
+  ],
+  [
+   "wonders",
+   "desh ke ajoobe|#deshkeajoobe"
+  ],
+  [
+   "myth",
+   "myth or fact|#mythorfact"
+  ],
+  [
+   "food",
+   "khaane ka itihaas|#khaanekaitihaas"
+  ],
+  [
+   "money",
+   "paise ki kahani|#paisekikahani"
+  ],
+  [
+   "words",
+   "shabdon ki kahani|#shabdonkikahani"
+  ],
+  [
+   "festival",
+   "festival|diwali|holi|sankranti|republic day|independence day"
   ]
  ],
- "weekly": []
+ "weekly": [
+  {
+   "theme": "science",
+   "days": [
+    1
+   ],
+   "label": "Science Monday"
+  },
+  {
+   "theme": "history",
+   "days": [
+    2
+   ],
+   "label": "History Tuesday"
+  },
+  {
+   "theme": "animals",
+   "days": [
+    3
+   ],
+   "label": "Animals/Space Wednesday"
+  },
+  {
+   "theme": "space",
+   "days": [
+    3
+   ],
+   "label": "Animals/Space Wednesday"
+  },
+  {
+   "theme": "wonders",
+   "days": [
+    4
+   ],
+   "label": "Desh Ke Ajoobe Thursday"
+  },
+  {
+   "theme": "myth",
+   "days": [
+    5
+   ],
+   "label": "Myth or Fact? Friday"
+  },
+  {
+   "theme": "food",
+   "days": [
+    6
+   ],
+   "label": "Saturday rotation"
+  },
+  {
+   "theme": "money",
+   "days": [
+    6
+   ],
+   "label": "Saturday rotation"
+  },
+  {
+   "theme": "words",
+   "days": [
+    6
+   ],
+   "label": "Saturday rotation"
+  }
+ ]
 }

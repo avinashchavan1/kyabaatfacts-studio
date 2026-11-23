@@ -1,23 +1,23 @@
 {
  "_doc": "One channel per copy of this template. Every script, the engine and the app read this file. setup.sh fills it in.",
- "id": "example",
- "name": "Example Channel",
- "app_title": "Storyreel Studio",
+ "id": "kyabaatfacts",
+ "name": "Kya Baat Facts",
+ "app_title": "Kya Baat Facts Studio",
  "app_url": "https://studio.example.com",
  "series": {
-  "id": "example",
-  "name": "Example Series",
-  "book": "Example Source Text",
-  "edition": "Public-domain edition"
+  "id": "kyabaatfacts",
+  "name": "Kya Baat Facts",
+  "book": "Mixed sources (cited per reel)",
+  "edition": "Primary and reputable sources"
  },
  "handles": {
   "instagram": {
-   "handle": "@examplechannel",
-   "url": "https://www.instagram.com/examplechannel/"
+   "handle": "@kyabaatfacts",
+   "url": "https://www.instagram.com/kyabaatfacts/"
   },
   "youtube": {
-   "handle": "@examplechannel",
-   "url": "https://www.youtube.com/@examplechannel"
+   "handle": "@kyabaatfacts",
+   "url": "https://www.youtube.com/@kyabaatfacts"
   }
  },
  "language": {
@@ -25,21 +25,22 @@
   "screen": "en"
  },
  "hashtags": [
-  "#ExampleChannel",
-  "#Stories",
-  "#Mythology"
+  "#KyaBaatFacts",
+  "#Facts",
+  "#HindiFacts",
+  "#DidYouKnow"
  ],
  "source": {
-  "title": "Example Source Text",
-  "edition": "Public-domain edition",
-  "citation": "book.chapter.verse",
-  "verse_url": "https://example.org/book-{book}/chapter-{chapter}/",
-  "_verse_url_doc": "Page holding the original-script verse + translation for a chapter; scripts/source_verse.py fetches it (never quote from memory)."
+  "title": "Mixed sources (cited per reel)",
+  "edition": "Primary and reputable sources",
+  "citation": "per reel: sources[] with title, publisher, url, accessed date",
+  "verse_url": "",
+  "_doc": "Mixed facts channel: there is no single base text. Every claim lists its own source(s) (museum, government, NASA/ISRO, peer-reviewed paper, reputable encyclopedia or history book) and is checked by reading that source, never from memory. Studio change still to do: let make_reel.py check accept per-reel sources instead of source_verse.py."
  },
  "captions": {
-  "instagram_follow": "Follow {instagram} for more stories from the original texts.",
-  "youtube_subscribe": "Subscribe to {name} for real stories from the original texts.",
-  "youtube_title_suffix": "{book} #Shorts"
+  "instagram_follow": "Follow {instagram} for a new 'kya baat!' fact every day.",
+  "youtube_subscribe": "Subscribe to {name} for a new 'kya baat!' fact every day.",
+  "youtube_title_suffix": "#Shorts #KyaBaatFacts"
  },
  "infra": {
   "supabase_ref": "YOUR-PROJECT-REF",
@@ -47,19 +48,91 @@
   "hf_masters_repo": "your-hf-user/example-masters",
   "netlify_site_id": "YOUR-NETLIFY-SITE-ID",
   "supabase_publishable_key": "sb_publishable_YOUR_KEY",
-  "github_repo": "your-github-user/your-channel-studio"
+  "github_repo": "avinashchavan1/kyabaatfacts-studio"
  },
  "owner": {
-  "contact_email": "you@example.com",
+  "contact_email": "owner-email-tbd@example.com",
   "_doc": "Shown on the app's privacy/terms pages and seeded as the first app admin."
  },
  "brand": {
-  "tagline": "Stories from the original texts",
+  "tagline": "Har fact pe bologe: kya baat!",
+  "logo": "Hairaan Aankhen: KYA / BAAT! with googly eyes over the AA + FACTS pill",
   "palette": {
-   "gold": "#f6c244",
-   "ivory": "#fbf3df",
-   "red": "#c81e1e",
-   "ink": "#07061a"
+   "yellow": "#FFC83D",
+   "dots": "#F5BA28",
+   "ink": "#14123A",
+   "punch": "#FF4B3E",
+   "white": "#FFFFFF"
+  },
+  "fonts": {
+   "title": "Montserrat Black",
+   "body": "Montserrat Bold",
+   "hindi": "Mukta"
   }
- }
+ },
+ "categories": [
+  {
+   "id": "SCI",
+   "name": "Science Wala Sach",
+   "day": "Mon",
+   "color": "#20B2A6",
+   "hashtag": "#ScienceWalaSach"
+  },
+  {
+   "id": "HIS",
+   "name": "Itihaas Ke Raaz",
+   "day": "Tue",
+   "color": "#C47832",
+   "hashtag": "#ItihaasKeRaaz"
+  },
+  {
+   "id": "ANI",
+   "name": "Jaanwaron Ki Duniya",
+   "day": "Wed (alternate)",
+   "color": "#58AA32",
+   "hashtag": "#JaanwaronKiDuniya"
+  },
+  {
+   "id": "SPC",
+   "name": "Antriksh",
+   "day": "Wed (alternate)",
+   "color": "#6E50F0",
+   "hashtag": "#Antriksh"
+  },
+  {
+   "id": "WON",
+   "name": "Desh Ke Ajoobe",
+   "day": "Thu",
+   "color": "#F06E28",
+   "hashtag": "#DeshKeAjoobe"
+  },
+  {
+   "id": "MYT",
+   "name": "Myth or Fact?",
+   "day": "Fri",
+   "color": "#FF4B3E",
+   "hashtag": "#MythOrFact"
+  },
+  {
+   "id": "FOOD",
+   "name": "Khaane Ka Itihaas",
+   "day": "Sat (rotate)",
+   "color": "#E24682",
+   "hashtag": "#KhaaneKaItihaas"
+  },
+  {
+   "id": "MON",
+   "name": "Paise Ki Kahani",
+   "day": "Sat (rotate)",
+   "color": "#289650",
+   "hashtag": "#PaiseKiKahani"
+  },
+  {
+   "id": "WRD",
+   "name": "Shabdon Ki Kahani",
+   "day": "Sat (rotate)",
+   "color": "#3282DC",
+   "hashtag": "#ShabdonKiKahani"
+  }
+ ]
 }

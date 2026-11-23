@@ -1,0 +1,129 @@
+{
+ "id": "kyabaatfacts",
+ "logo": "KYA BAAT FACTS",
+ "title": [
+  "KYA",
+  "BAAT FACTS"
+ ],
+ "tagline": "Har fact pe bologe: kya baat!",
+ "series_name": "KYA BAAT FACTS",
+ "source_title": "Mixed sources (cited per reel)",
+ "cta_hi": "ऐसे और facts के लिए, फ़ॉलो करें।",
+ "source": {
+  "book": "Mixed sources (cited per reel)",
+  "edition": "Primary and reputable sources",
+  "cite_format": "Publisher, title, year (+ URL), e.g. NASA, 'Venus', 2024",
+  "check_against": [
+   "the source itself (read it), never memory; disputed or legendary claims are framed honestly ('kya sach mein?', 'it's said...')"
+  ]
+ },
+ "language": {
+  "narration": "Hindi (Devanagari); everything written is English",
+  "screen_text": "English",
+  "thumbnails": "English",
+  "captions_titles": "English"
+ },
+ "palette": {
+  "yellow": "#FFC83D",
+  "ink": "#14123A",
+  "punch": "#FF4B3E",
+  "white": "#FFFFFF"
+ },
+ "fonts": {
+  "title": "Montserrat",
+  "body": "Montserrat"
+ },
+ "loudness_lufs": -14,
+ "major_characters": {
+  "rule": "The owner picks look AND voice for major, recurring characters (show stills/audio options first). Minor characters: Claude picks, then says which.",
+  "locked": [
+   "narrator"
+  ],
+  "ask_user_when_first_needed": [
+   "hero",
+   "heroine"
+  ],
+  "minor_examples": [
+   "villager",
+   "hunter"
+  ]
+ },
+ "character_looks": {},
+ "address": {
+  "rule": "Name a revered figure respectfully: devotees and family don't use the bare name; elders, sages and adversaries may.",
+  "protected_names": [],
+  "honorific_prefixes": [
+   "श्री"
+  ],
+  "plain_name_ok": [
+   "narrator"
+  ],
+  "forms": {
+   "default": "an honorific"
+  }
+ },
+ "cast_meta": {
+  "names": {
+   "narrator": "Narrator"
+  },
+  "first_reel": {},
+  "rig_keys": {},
+  "rig_to_character": {},
+  "draw_functions": {},
+  "notes": {},
+  "major_extra": []
+ },
+ "locations": [
+  {
+   "key": "hermitage",
+   "name": "Forest hermitage by a river",
+   "builder": "buildHermitage(tod)",
+   "description": "Hut, tree, river band, moon."
+  },
+  {
+   "key": "court",
+   "name": "Royal court by day",
+   "builder": "buildCourt()",
+   "description": "Sandstone arches, festoons."
+  },
+  {
+   "key": "manuscript",
+   "name": "Palm-leaf manuscript",
+   "builder": "buildManuscript()",
+   "description": "Source, verse and quote cards."
+  }
+ ],
+ "plan_file": "PLAN.md",
+ "channel": {
+  "name": "Kya Baat Facts",
+  "instagram": "@kyabaatfacts",
+  "youtube": "@kyabaatfacts"
+ },
+ "handles_line": [
+  "INSTAGRAM  @kyabaatfacts",
+  "YOUTUBE  @kyabaatfacts"
+ ],
+ "cta": {
+  "instagram": {
+   "button": "FOLLOW",
+   "say": "ऐसी और कहानियों के लिए, फ़ॉलो करें।",
+   "handles_line": [
+    "INSTAGRAM  @kyabaatfacts",
+    "YOUTUBE  @kyabaatfacts"
+   ]
+  },
+  "youtube": {
+   "button": "SUBSCRIBE",
+   "say": "ऐसी और कहानियों के लिए, सब्सक्राइब करें।",
+   "handles_line": [
+    "YOUTUBE  @kyabaatfacts",
+    "INSTAGRAM  @kyabaatfacts"
+   ]
+  }
+ },
+ "manuscript_lines": [
+  "॥ श्रीः ॥",
+  "॥ इति कथा ॥"
+ ],
+ "mascot": "Hairaan Aankhen: two googly eyes that react in intros (Kya baat! / Hmm... / Sach mein? / Wow!) - see brand/kit/eye_expressions.png"
+}
