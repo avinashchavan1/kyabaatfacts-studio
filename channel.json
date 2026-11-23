@@ -45,7 +45,7 @@
  "infra": {
   "supabase_ref": "YOUR-PROJECT-REF",
   "supabase_url": "https://YOUR-PROJECT-REF.supabase.co",
-  "hf_masters_repo": "your-hf-user/example-masters",
+  "hf_masters_repo": "Avinash1443/kyabaatfacts-masters",
   "netlify_site_id": "YOUR-NETLIFY-SITE-ID",
   "supabase_publishable_key": "sb_publishable_YOUR_KEY",
   "github_repo": "avinashchavan1/kyabaatfacts-studio"
