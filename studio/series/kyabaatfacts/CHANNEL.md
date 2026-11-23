@@ -167,3 +167,7 @@ Full content plan: PLAN.md (same folder)
 - Fonts: Montserrat Black/Bold (English), Mukta (Hindi).
 - Kit: avatar, YouTube banner (safe area checked), watermark, 9 category badges, reel cover layout, SUBSCRIBE/FOLLOW end cards.
 - Regenerate: python3 brand/make_kyabaat_brand.py brand brand/kit
+
+## Studio app access
+- App: https://kyabaatfacts-studio.netlify.app (email login link)
+- Admins (public.app_admins): sonamrathod888@gmail.com, avinashchavan1433@gmail.com
