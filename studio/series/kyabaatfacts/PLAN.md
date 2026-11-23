@@ -4,7 +4,7 @@ Instagram: @kyabaatfacts (registered) · YouTube: @kyabaatfacts (pending) · Tag
 Hindi/Hinglish narration, English on screen. Reels 60-120 s (9:16). Long videos 10-12 min (16:9).
 
 ## How this plan works
-- **Reels R001-R100:** every title in posting order, 6 a week (Mon-Sat), about 17 weeks.
+- **Reels R001-R100:** every title in posting order, 6 a week (Mon-Sat), about 17 weeks. Type: R = reveal, M = myth buster (the app's reel kinds); week and day are in Notes.
 - **Long videos L01-L10:** one a month. Each gives 4-6 reels cut from it ("derived reels"), which count in the next 400.
 - **Reels R101-R500:** a roadmap of series and counts. Exact titles get written in batches of 50, using what the analytics show works.
 - **Fact check:** every fact is checked against a real source before recording. The "note" column marks claims that are
@@ -19,124 +19,124 @@ Hindi/Hinglish narration, English on screen. Reels 60-120 s (9:16). Long videos 
 ## Reels R001-R100
 Category totals: Science 17 · History 17 · Wonders 17 · Myth or Fact 16 · Animals 9 · Space 8 · Food 6 · Money 5 · Words 5
 
-| # | Week | Day | Category | Hook / title | Note |
+| Code | Title (hook) | Type | Category | Art | Notes |
 |---|---|---|---|---|---|
-| R001 | 1 | Mon | Science Wala Sach | Bijli ka taapmaan suraj ki surface se 5 guna zyada! |  |
-| R002 | 1 | Tue | Itihaas Ke Raaz | Taj Mahal: 22 saal, 20,000 mazdoor - the real cost | figures are traditional estimates |
-| R003 | 1 | Wed | Jaanwaron Ki Duniya | Octopus ke 3 dil aur neela khoon! |  |
-| R004 | 1 | Thu | Desh Ke Ajoobe | Kailasa Mandir: ek hi pathar, upar se neeche kaata gaya |  |
-| R005 | 1 | Fri | Myth or Fact? | Hum dimaag ka sirf 10% use karte hain? | Myth |
-| R006 | 1 | Sat | Khaane Ka Itihaas | Aloo, tamatar, mirch - Indian nahi hain! Portuguese laaye |  |
-| R007 | 2 | Mon | Science Wala Sach | Shahad kabhi kharab kyun nahi hota? 3,000 saal purana shahad bhi kha sakte ho |  |
-| R008 | 2 | Tue | Itihaas Ke Raaz | Mohenjo-daro mein 4,500 saal pehle drainage system tha! |  |
-| R009 | 2 | Wed | Antriksh | Shukra (Venus) ka ek din uske ek saal se lamba! |  |
-| R010 | 2 | Thu | Desh Ke Ajoobe | Delhi ka loha stambh 1,600 saal se jang kyun nahi khaata? |  |
-| R011 | 2 | Fri | Myth or Fact? | Great Wall of China space se dikhti hai? | Myth |
-| R012 | 2 | Sat | Paise Ki Kahani | ATM PIN sirf 4 digit ka kyun? |  |
-| R013 | 3 | Mon | Science Wala Sach | Bachche 300 haddiyon ke saath paida hote hain, bade hokar 206 kyun? |  |
-| R014 | 3 | Tue | Itihaas Ke Raaz | Akbar padh-likh nahi sakte the, phir bhi itna bada empire kaise chalaya? |  |
-| R015 | 3 | Wed | Jaanwaron Ki Duniya | Kauwe tumhara chehra yaad rakhte hain |  |
-| R016 | 3 | Thu | Desh Ke Ajoobe | Chand Baori: 13 manzil neeche, 3,500 seedhiyan |  |
-| R017 | 3 | Fri | Myth or Fact? | Bijli ek jagah do baar nahi girti? | Myth |
-| R018 | 3 | Sat | Shabdon Ki Kahani | Shampoo, Jungle, Pyjama, Thug - English ne Hindi se liye shabd |  |
-| R019 | 4 | Mon | Science Wala Sach | Kela ek berry hai, strawberry nahi! |  |
-| R020 | 4 | Tue | Itihaas Ke Raaz | Kohinoor: India se London tak ka safar |  |
-| R021 | 4 | Wed | Antriksh | Chandrayaan-3: India first at the Moon's south pole |  |
-| R022 | 4 | Thu | Desh Ke Ajoobe | Howrah Bridge: ek bhi nut-bolt nahi! |  |
-| R023 | 4 | Fri | Myth or Fact? | Brihadeeswarar ki parchhai zameen pe nahi padti? | Myth |
-| R024 | 4 | Sat | Khaane Ka Itihaas | Samosa India ka nahi, Central Asia se aaya |  |
-| R025 | 5 | Mon | Science Wala Sach | Pyaaz kaatne pe aansu kyun aate hain? |  |
-| R026 | 5 | Tue | Itihaas Ke Raaz | Lothal: duniya ka sabse purana dockyard Gujarat mein | 'one of the oldest known' |
-| R027 | 5 | Wed | Jaanwaron Ki Duniya | Sharks are older than trees |  |
-| R028 | 5 | Thu | Desh Ke Ajoobe | Meghalaya ke zinda pul - roots se bane bridge |  |
-| R029 | 5 | Fri | Myth or Fact? | Goldfish ki memory 3 second? | Myth |
-| R030 | 5 | Sat | Paise Ki Kahani | ₹ symbol kisne banaya? |  |
-| R031 | 6 | Mon | Science Wala Sach | Hichki kyun aati hai? |  |
-| R032 | 6 | Tue | Itihaas Ke Raaz | Kalinga ki jung ne Ashoka ko kaise badal diya |  |
-| R033 | 6 | Wed | Antriksh | Suraj ki roshni humein 8 minute purani milti hai |  |
-| R034 | 6 | Thu | Desh Ke Ajoobe | Ladakh ki Magnetic Hill: gaadi upar kyun chadhti hai? | optical illusion |
-| R035 | 6 | Fri | Myth or Fact? | Saand laal rang se bhadakta hai? | Myth |
-| R036 | 6 | Sat | Shabdon Ki Kahani | Shatranj ka janm India mein - Chaturanga |  |
-| R037 | 7 | Mon | Science Wala Sach | Khud ko gudgudi kyun nahi kar sakte? |  |
-| R038 | 7 | Tue | Itihaas Ke Raaz | Sher Shah Suri: the man who gave us the 'Rupiya' |  |
-| R039 | 7 | Wed | Jaanwaron Ki Duniya | Flamingo gulabi kyun hote hain? Khaane ki wajah se! |  |
-| R040 | 7 | Thu | Desh Ke Ajoobe | Lonar Jheel: meteor ne banayi jheel |  |
-| R041 | 7 | Fri | Myth or Fact? | Oont kubad mein paani bharta hai? | Myth - it's fat |
-| R042 | 7 | Sat | Khaane Ka Itihaas | Chai India mein popular kaise hui? |  |
-| R043 | 8 | Mon | Science Wala Sach | Rongte kyun khade hote hain? |  |
-| R044 | 8 | Tue | Itihaas Ke Raaz | Sushruta: 2,000+ saal pehle plastic surgery | dating debated - say 'over 2,000 years' |
-| R045 | 8 | Wed | Antriksh | Space station pe din mein 16 baar suraj ugta hai |  |
-| R046 | 8 | Thu | Desh Ke Ajoobe | Shani Shingnapur: jahan gharon mein darwaze nahi |  |
-| R047 | 8 | Fri | Myth or Fact? | Chamgadad andhe hote hain? | Myth |
-| R048 | 8 | Sat | Paise Ki Kahani | Notes kaagaz ke nahi, cotton ke bane hote hain |  |
-| R049 | 9 | Mon | Science Wala Sach | Aasmaan neela aur sunset naarangi kyun? |  |
-| R050 | 9 | Tue | Itihaas Ke Raaz | Nalanda: kya library sach mein 3 mahine jali? | disputed - frame as question |
-| R051 | 9 | Wed | Jaanwaron Ki Duniya | Haathi aaine mein khud ko pehchaan lete hain |  |
-| R052 | 9 | Thu | Desh Ke Ajoobe | Mawsynram: duniya ki sabse geeli jagah |  |
-| R053 | 9 | Fri | Myth or Fact? | Shave karne se baal ghane aate hain? | Myth |
-| R054 | 9 | Sat | Shabdon Ki Kahani | Snakes & Ladders aur Ludo - dono India ke khel! |  |
-| R055 | 10 | Mon | Science Wala Sach | Paani mein ungliyan sikud kyun jaati hain? | grip theory = hypothesis, say so |
-| R056 | 10 | Tue | Itihaas Ke Raaz | Hampi: kabhi duniya ke sabse bade shehron mein se ek |  |
-| R057 | 10 | Wed | Antriksh | Aryabhata ne 1,500 saal pehle bataya ki dharti ghoomti hai |  |
-| R058 | 10 | Thu | Desh Ke Ajoobe | Loktak: tairte huye islands aur floating national park |  |
-| R059 | 10 | Fri | Myth or Fact? | Ungliyan chatkaane se arthritis hota hai? | Myth |
-| R060 | 10 | Sat | Khaane Ka Itihaas | Jalebi ka safar: Persia se Bharat |  |
-| R061 | 11 | Mon | Science Wala Sach | Ubaasi kyun aati hai? Science ko bhi poora pata nahi! |  |
-| R062 | 11 | Tue | Itihaas Ke Raaz | Shivaji Maharaj ne samundar ke beech kila kaise banaya? (Sindhudurg) |  |
-| R063 | 11 | Wed | Jaanwaron Ki Duniya | King Cobra: the only snake that builds a nest |  |
-| R064 | 11 | Thu | Desh Ke Ajoobe | Jantar Mantar: pathar ki ghadi jo 2 second tak sahi time batati hai |  |
-| R065 | 11 | Fri | Myth or Fact? | Chewing gum 7 saal pet mein rehti hai? | Myth |
-| R066 | 11 | Sat | Paise Ki Kahani | Duniya ka pehla paper money - China |  |
-| R067 | 12 | Mon | Science Wala Sach | Neend mein jhatka kyun lagta hai? | cause not fully known |
-| R068 | 12 | Tue | Itihaas Ke Raaz | Rajendra Chola: the Indian king whose navy crossed the sea |  |
-| R069 | 12 | Wed | Antriksh | Chand pe footprints laakhon saal tak rahenge - kyun? |  |
-| R070 | 12 | Thu | Desh Ke Ajoobe | Mattur: the village where people still speak Sanskrit |  |
-| R071 | 12 | Fri | Myth or Fact? | Shuturmurg ret mein sar chhupata hai? | Myth |
-| R072 | 12 | Sat | Shabdon Ki Kahani | 'Rupee' ka matlab kya hai? |  |
-| R073 | 13 | Mon | Science Wala Sach | Barf paani pe kyun tairti hai? |  |
-| R074 | 13 | Tue | Itihaas Ke Raaz | Takshashila: duniya ki sabse purani universities mein se ek |  |
-| R075 | 13 | Wed | Jaanwaron Ki Duniya | Ullu apni gardan 270 degree ghuma sakta hai |  |
-| R076 | 13 | Thu | Desh Ke Ajoobe | Rani ki Vav: ₹100 ke note wali baori |  |
-| R077 | 13 | Fri | Myth or Fact? | Insaan ke sirf 5 senses hain? | Myth |
-| R078 | 13 | Sat | Khaane Ka Itihaas | Gulab jamun ke naam mein 'gulab' kyun? |  |
-| R079 | 14 | Mon | Science Wala Sach | Machhar kuch logon ko zyada kyun kaatte hain? |  |
-| R080 | 14 | Tue | Itihaas Ke Raaz | Ek company jiske paas apni army thi - East India Company |  |
-| R081 | 14 | Wed | Antriksh | Ek chammach neutron star = arabon ton! |  |
-| R082 | 14 | Thu | Desh Ke Ajoobe | Barren Island: India ka ikloota active jwalamukhi |  |
-| R083 | 14 | Fri | Myth or Fact? | Cheeni bachchon ko hyper banati hai? | Myth (per studies) |
-| R084 | 14 | Sat | Paise Ki Kahani | Gandhi ji ki photo notes pe kab aayi? |  |
-| R085 | 15 | Mon | Science Wala Sach | Pet ka acid pet ko hi kyun nahi gala deta? |  |
-| R086 | 15 | Tue | Itihaas Ke Raaz | Rani Lakshmibai: 1857 ki sherni |  |
-| R087 | 15 | Wed | Jaanwaron Ki Duniya | Sher ki dhaariyan skin pe bhi hoti hain |  |
-| R088 | 15 | Thu | Desh Ke Ajoobe | Chenab Bridge: duniya ka sabse ooncha railway bridge |  |
-| R089 | 15 | Fri | Myth or Fact? | Dinosaurs aur insaan saath rehte the? | Myth |
-| R090 | 15 | Sat | Shabdon Ki Kahani | Namaste ke peeche ka reason |  |
-| R091 | 16 | Mon | Science Wala Sach | Dimaag sharir ki 20% energy kha jaata hai |  |
-| R092 | 16 | Tue | Itihaas Ke Raaz | Chanakya vs Nanda: one insult that changed history | legend - say so |
-| R093 | 16 | Wed | Antriksh | Space mein awaaz kyun nahi hoti? |  |
-| R094 | 16 | Thu | Desh Ke Ajoobe | Statue of Unity: 182 meter - duniya ki sabse oonchi murti |  |
-| R095 | 16 | Fri | Myth or Fact? | Konark mein chumbak tha? | Legend - say what is known |
-| R096 | 16 | Sat | Khaane Ka Itihaas | Biryani ki asli kahani | origin debated - say so |
-| R097 | 17 | Mon | Science Wala Sach | Ek cell mein 2 meter lamba DNA! |  |
-| R098 | 17 | Tue | Itihaas Ke Raaz | Bajirao: the general who, it's said, never lost a battle | claim - say so |
-| R099 | 17 | Wed | Jaanwaron Ki Duniya | Cockroach bina sar ke hafte bhar zinda! |  |
-| R100 | 17 | Thu | Desh Ke Ajoobe | Konark ke pahiye: kya ye ghadi hain? | sundial claim - verify |
+| R001 | Bijli ka taapmaan suraj ki surface se 5 guna zyada! | R | Science Wala Sach |  | Week 1 · Mon |
+| R002 | Taj Mahal: 22 saal, 20,000 mazdoor - the real cost | R | Itihaas Ke Raaz |  | Week 1 · Tue · figures are traditional estimates |
+| R003 | Octopus ke 3 dil aur neela khoon! | R | Jaanwaron Ki Duniya |  | Week 1 · Wed |
+| R004 | Kailasa Mandir: ek hi pathar, upar se neeche kaata gaya | R | Desh Ke Ajoobe |  | Week 1 · Thu |
+| R005 | Hum dimaag ka sirf 10% use karte hain? | M | Myth or Fact? |  | Week 1 · Fri · Myth |
+| R006 | Aloo, tamatar, mirch - Indian nahi hain! Portuguese laaye | R | Khaane Ka Itihaas |  | Week 1 · Sat |
+| R007 | Shahad kabhi kharab kyun nahi hota? 3,000 saal purana shahad bhi kha sakte ho | R | Science Wala Sach |  | Week 2 · Mon |
+| R008 | Mohenjo-daro mein 4,500 saal pehle drainage system tha! | R | Itihaas Ke Raaz |  | Week 2 · Tue |
+| R009 | Shukra (Venus) ka ek din uske ek saal se lamba! | R | Antriksh |  | Week 2 · Wed |
+| R010 | Delhi ka loha stambh 1,600 saal se jang kyun nahi khaata? | R | Desh Ke Ajoobe |  | Week 2 · Thu |
+| R011 | Great Wall of China space se dikhti hai? | M | Myth or Fact? |  | Week 2 · Fri · Myth |
+| R012 | ATM PIN sirf 4 digit ka kyun? | R | Paise Ki Kahani |  | Week 2 · Sat |
+| R013 | Bachche 300 haddiyon ke saath paida hote hain, bade hokar 206 kyun? | R | Science Wala Sach |  | Week 3 · Mon |
+| R014 | Akbar padh-likh nahi sakte the, phir bhi itna bada empire kaise chalaya? | R | Itihaas Ke Raaz |  | Week 3 · Tue |
+| R015 | Kauwe tumhara chehra yaad rakhte hain | R | Jaanwaron Ki Duniya |  | Week 3 · Wed |
+| R016 | Chand Baori: 13 manzil neeche, 3,500 seedhiyan | R | Desh Ke Ajoobe |  | Week 3 · Thu |
+| R017 | Bijli ek jagah do baar nahi girti? | M | Myth or Fact? |  | Week 3 · Fri · Myth |
+| R018 | Shampoo, Jungle, Pyjama, Thug - English ne Hindi se liye shabd | R | Shabdon Ki Kahani |  | Week 3 · Sat |
+| R019 | Kela ek berry hai, strawberry nahi! | R | Science Wala Sach |  | Week 4 · Mon |
+| R020 | Kohinoor: India se London tak ka safar | R | Itihaas Ke Raaz |  | Week 4 · Tue |
+| R021 | Chandrayaan-3: India first at the Moon's south pole | R | Antriksh |  | Week 4 · Wed |
+| R022 | Howrah Bridge: ek bhi nut-bolt nahi! | R | Desh Ke Ajoobe |  | Week 4 · Thu |
+| R023 | Brihadeeswarar ki parchhai zameen pe nahi padti? | M | Myth or Fact? |  | Week 4 · Fri · Myth |
+| R024 | Samosa India ka nahi, Central Asia se aaya | R | Khaane Ka Itihaas |  | Week 4 · Sat |
+| R025 | Pyaaz kaatne pe aansu kyun aate hain? | R | Science Wala Sach |  | Week 5 · Mon |
+| R026 | Lothal: duniya ka sabse purana dockyard Gujarat mein | R | Itihaas Ke Raaz |  | Week 5 · Tue · 'one of the oldest known' |
+| R027 | Sharks are older than trees | R | Jaanwaron Ki Duniya |  | Week 5 · Wed |
+| R028 | Meghalaya ke zinda pul - roots se bane bridge | R | Desh Ke Ajoobe |  | Week 5 · Thu |
+| R029 | Goldfish ki memory 3 second? | M | Myth or Fact? |  | Week 5 · Fri · Myth |
+| R030 | ₹ symbol kisne banaya? | R | Paise Ki Kahani |  | Week 5 · Sat |
+| R031 | Hichki kyun aati hai? | R | Science Wala Sach |  | Week 6 · Mon |
+| R032 | Kalinga ki jung ne Ashoka ko kaise badal diya | R | Itihaas Ke Raaz |  | Week 6 · Tue |
+| R033 | Suraj ki roshni humein 8 minute purani milti hai | R | Antriksh |  | Week 6 · Wed |
+| R034 | Ladakh ki Magnetic Hill: gaadi upar kyun chadhti hai? | R | Desh Ke Ajoobe |  | Week 6 · Thu · optical illusion |
+| R035 | Saand laal rang se bhadakta hai? | M | Myth or Fact? |  | Week 6 · Fri · Myth |
+| R036 | Shatranj ka janm India mein - Chaturanga | R | Shabdon Ki Kahani |  | Week 6 · Sat |
+| R037 | Khud ko gudgudi kyun nahi kar sakte? | R | Science Wala Sach |  | Week 7 · Mon |
+| R038 | Sher Shah Suri: the man who gave us the 'Rupiya' | R | Itihaas Ke Raaz |  | Week 7 · Tue |
+| R039 | Flamingo gulabi kyun hote hain? Khaane ki wajah se! | R | Jaanwaron Ki Duniya |  | Week 7 · Wed |
+| R040 | Lonar Jheel: meteor ne banayi jheel | R | Desh Ke Ajoobe |  | Week 7 · Thu |
+| R041 | Oont kubad mein paani bharta hai? | M | Myth or Fact? |  | Week 7 · Fri · Myth - it's fat |
+| R042 | Chai India mein popular kaise hui? | R | Khaane Ka Itihaas |  | Week 7 · Sat |
+| R043 | Rongte kyun khade hote hain? | R | Science Wala Sach |  | Week 8 · Mon |
+| R044 | Sushruta: 2,000+ saal pehle plastic surgery | R | Itihaas Ke Raaz |  | Week 8 · Tue · dating debated - say 'over 2,000 years' |
+| R045 | Space station pe din mein 16 baar suraj ugta hai | R | Antriksh |  | Week 8 · Wed |
+| R046 | Shani Shingnapur: jahan gharon mein darwaze nahi | R | Desh Ke Ajoobe |  | Week 8 · Thu |
+| R047 | Chamgadad andhe hote hain? | M | Myth or Fact? |  | Week 8 · Fri · Myth |
+| R048 | Notes kaagaz ke nahi, cotton ke bane hote hain | R | Paise Ki Kahani |  | Week 8 · Sat |
+| R049 | Aasmaan neela aur sunset naarangi kyun? | R | Science Wala Sach |  | Week 9 · Mon |
+| R050 | Nalanda: kya library sach mein 3 mahine jali? | R | Itihaas Ke Raaz |  | Week 9 · Tue · disputed - frame as question |
+| R051 | Haathi aaine mein khud ko pehchaan lete hain | R | Jaanwaron Ki Duniya |  | Week 9 · Wed |
+| R052 | Mawsynram: duniya ki sabse geeli jagah | R | Desh Ke Ajoobe |  | Week 9 · Thu |
+| R053 | Shave karne se baal ghane aate hain? | M | Myth or Fact? |  | Week 9 · Fri · Myth |
+| R054 | Snakes & Ladders aur Ludo - dono India ke khel! | R | Shabdon Ki Kahani |  | Week 9 · Sat |
+| R055 | Paani mein ungliyan sikud kyun jaati hain? | R | Science Wala Sach |  | Week 10 · Mon · grip theory = hypothesis, say so |
+| R056 | Hampi: kabhi duniya ke sabse bade shehron mein se ek | R | Itihaas Ke Raaz |  | Week 10 · Tue |
+| R057 | Aryabhata ne 1,500 saal pehle bataya ki dharti ghoomti hai | R | Antriksh |  | Week 10 · Wed |
+| R058 | Loktak: tairte huye islands aur floating national park | R | Desh Ke Ajoobe |  | Week 10 · Thu |
+| R059 | Ungliyan chatkaane se arthritis hota hai? | M | Myth or Fact? |  | Week 10 · Fri · Myth |
+| R060 | Jalebi ka safar: Persia se Bharat | R | Khaane Ka Itihaas |  | Week 10 · Sat |
+| R061 | Ubaasi kyun aati hai? Science ko bhi poora pata nahi! | R | Science Wala Sach |  | Week 11 · Mon |
+| R062 | Shivaji Maharaj ne samundar ke beech kila kaise banaya? (Sindhudurg) | R | Itihaas Ke Raaz |  | Week 11 · Tue |
+| R063 | King Cobra: the only snake that builds a nest | R | Jaanwaron Ki Duniya |  | Week 11 · Wed |
+| R064 | Jantar Mantar: pathar ki ghadi jo 2 second tak sahi time batati hai | R | Desh Ke Ajoobe |  | Week 11 · Thu |
+| R065 | Chewing gum 7 saal pet mein rehti hai? | M | Myth or Fact? |  | Week 11 · Fri · Myth |
+| R066 | Duniya ka pehla paper money - China | R | Paise Ki Kahani |  | Week 11 · Sat |
+| R067 | Neend mein jhatka kyun lagta hai? | R | Science Wala Sach |  | Week 12 · Mon · cause not fully known |
+| R068 | Rajendra Chola: the Indian king whose navy crossed the sea | R | Itihaas Ke Raaz |  | Week 12 · Tue |
+| R069 | Chand pe footprints laakhon saal tak rahenge - kyun? | R | Antriksh |  | Week 12 · Wed |
+| R070 | Mattur: the village where people still speak Sanskrit | R | Desh Ke Ajoobe |  | Week 12 · Thu |
+| R071 | Shuturmurg ret mein sar chhupata hai? | M | Myth or Fact? |  | Week 12 · Fri · Myth |
+| R072 | 'Rupee' ka matlab kya hai? | R | Shabdon Ki Kahani |  | Week 12 · Sat |
+| R073 | Barf paani pe kyun tairti hai? | R | Science Wala Sach |  | Week 13 · Mon |
+| R074 | Takshashila: duniya ki sabse purani universities mein se ek | R | Itihaas Ke Raaz |  | Week 13 · Tue |
+| R075 | Ullu apni gardan 270 degree ghuma sakta hai | R | Jaanwaron Ki Duniya |  | Week 13 · Wed |
+| R076 | Rani ki Vav: ₹100 ke note wali baori | R | Desh Ke Ajoobe |  | Week 13 · Thu |
+| R077 | Insaan ke sirf 5 senses hain? | M | Myth or Fact? |  | Week 13 · Fri · Myth |
+| R078 | Gulab jamun ke naam mein 'gulab' kyun? | R | Khaane Ka Itihaas |  | Week 13 · Sat |
+| R079 | Machhar kuch logon ko zyada kyun kaatte hain? | R | Science Wala Sach |  | Week 14 · Mon |
+| R080 | Ek company jiske paas apni army thi - East India Company | R | Itihaas Ke Raaz |  | Week 14 · Tue |
+| R081 | Ek chammach neutron star = arabon ton! | R | Antriksh |  | Week 14 · Wed |
+| R082 | Barren Island: India ka ikloota active jwalamukhi | R | Desh Ke Ajoobe |  | Week 14 · Thu |
+| R083 | Cheeni bachchon ko hyper banati hai? | M | Myth or Fact? |  | Week 14 · Fri · Myth (per studies) |
+| R084 | Gandhi ji ki photo notes pe kab aayi? | R | Paise Ki Kahani |  | Week 14 · Sat |
+| R085 | Pet ka acid pet ko hi kyun nahi gala deta? | R | Science Wala Sach |  | Week 15 · Mon |
+| R086 | Rani Lakshmibai: 1857 ki sherni | R | Itihaas Ke Raaz |  | Week 15 · Tue |
+| R087 | Sher ki dhaariyan skin pe bhi hoti hain | R | Jaanwaron Ki Duniya |  | Week 15 · Wed |
+| R088 | Chenab Bridge: duniya ka sabse ooncha railway bridge | R | Desh Ke Ajoobe |  | Week 15 · Thu |
+| R089 | Dinosaurs aur insaan saath rehte the? | M | Myth or Fact? |  | Week 15 · Fri · Myth |
+| R090 | Namaste ke peeche ka reason | R | Shabdon Ki Kahani |  | Week 15 · Sat |
+| R091 | Dimaag sharir ki 20% energy kha jaata hai | R | Science Wala Sach |  | Week 16 · Mon |
+| R092 | Chanakya vs Nanda: one insult that changed history | R | Itihaas Ke Raaz |  | Week 16 · Tue · legend - say so |
+| R093 | Space mein awaaz kyun nahi hoti? | R | Antriksh |  | Week 16 · Wed |
+| R094 | Statue of Unity: 182 meter - duniya ki sabse oonchi murti | R | Desh Ke Ajoobe |  | Week 16 · Thu |
+| R095 | Konark mein chumbak tha? | M | Myth or Fact? |  | Week 16 · Fri · Legend - say what is known |
+| R096 | Biryani ki asli kahani | R | Khaane Ka Itihaas |  | Week 16 · Sat · origin debated - say so |
+| R097 | Ek cell mein 2 meter lamba DNA! | R | Science Wala Sach |  | Week 17 · Mon |
+| R098 | Bajirao: the general who, it's said, never lost a battle | R | Itihaas Ke Raaz |  | Week 17 · Tue · claim - say so |
+| R099 | Cockroach bina sar ke hafte bhar zinda! | R | Jaanwaron Ki Duniya |  | Week 17 · Wed |
+| R100 | Konark ke pahiye: kya ye ghadi hain? | R | Desh Ke Ajoobe |  | Week 17 · Thu · sundial claim - verify |
 
 ## Long videos L01-L10 (one a month)
 Each video goes deeper than the matching reels. Its 4-6 derived reels are counted in R101-R500.
 
 | # | Month | Title | Category | Inside (beats) | Derived reels |
 |---|---|---|---|---|---|
-| L01 | 1 | 10 Wonders of India Nobody Told You About | Desh Ke Ajoobe | Kailasa, Chand Baori, iron pillar, root bridges, Lonar, Loktak, Jantar Mantar, Rani ki Vav, Barren Island, Mattur | 5 |
-| L02 | 2 | 10 Science Myths You Still Believe | Myth or Fact? | 10% brain, Great Wall from space, lightning twice, goldfish memory, bulls & red, and more | 5 |
-| L03 | 3 | Mohenjo-daro: 4,500 Saal Pehle Ka Smart City | Itihaas Ke Raaz | Planned streets, drains, Great Bath, Lothal dockyard, trade, the script nobody can read yet, why it ended (theories) | 5 |
-| L04 | 4 | Aryabhata Se Chandrayaan Tak: India's Space Story | Antriksh | Aryabhata, first rocket carried on a bicycle (1963), Aryabhata satellite, Mangalyaan, Chandrayaan-3, Aditya-L1 | 5 |
-| L05 | 5 | Aloo, Chai, Samosa: How "Indian" Food Came From Abroad | Khaane Ka Itihaas | Portuguese and the Americas, Persian sweets, the chai campaign, biryani theories | 5 |
-| L06 | 6 | The Kohinoor's Journey | Itihaas Ke Raaz | Golconda mines, the dynasties that owned it, Nadir Shah, Ranjit Singh, London | 4 |
-| L07 | 7 | Animals With Real Superpowers | Jaanwaron Ki Duniya | Octopus, crows, owls, tardigrades, mantis shrimp, elephants, cockroaches | 5 |
-| L08 | 8 | Kaudi Se UPI Tak: The Story of Indian Money | Paise Ki Kahani | Cowrie shells, punch-marked coins, Sher Shah's rupiya, first paper notes, the ₹ symbol, UPI | 5 |
-| L09 | 9 | Hampi: The Rise and Fall of a Great City | Itihaas Ke Raaz | Vijayanagara empire, foreign travellers' accounts, markets, 1565 battle of Talikota, ruins today | 4 |
-| L10 | 10 | Tumhara Sharir: 10 Crazy Body Facts | Science Wala Sach | Bones, heartbeats, DNA, stomach, brain energy, reflexes | 5 |
+| **L01** | 1 | 10 Wonders of India Nobody Told You About | Desh Ke Ajoobe | Kailasa, Chand Baori, iron pillar, root bridges, Lonar, Loktak, Jantar Mantar, Rani ki Vav, Barren Island, Mattur | 5 |
+| **L02** | 2 | 10 Science Myths You Still Believe | Myth or Fact? | 10% brain, Great Wall from space, lightning twice, goldfish memory, bulls & red, and more | 5 |
+| **L03** | 3 | Mohenjo-daro: 4,500 Saal Pehle Ka Smart City | Itihaas Ke Raaz | Planned streets, drains, Great Bath, Lothal dockyard, trade, the script nobody can read yet, why it ended (theories) | 5 |
+| **L04** | 4 | Aryabhata Se Chandrayaan Tak: India's Space Story | Antriksh | Aryabhata, first rocket carried on a bicycle (1963), Aryabhata satellite, Mangalyaan, Chandrayaan-3, Aditya-L1 | 5 |
+| **L05** | 5 | Aloo, Chai, Samosa: How "Indian" Food Came From Abroad | Khaane Ka Itihaas | Portuguese and the Americas, Persian sweets, the chai campaign, biryani theories | 5 |
+| **L06** | 6 | The Kohinoor's Journey | Itihaas Ke Raaz | Golconda mines, the dynasties that owned it, Nadir Shah, Ranjit Singh, London | 4 |
+| **L07** | 7 | Animals With Real Superpowers | Jaanwaron Ki Duniya | Octopus, crows, owls, tardigrades, mantis shrimp, elephants, cockroaches | 5 |
+| **L08** | 8 | Kaudi Se UPI Tak: The Story of Indian Money | Paise Ki Kahani | Cowrie shells, punch-marked coins, Sher Shah's rupiya, first paper notes, the ₹ symbol, UPI | 5 |
+| **L09** | 9 | Hampi: The Rise and Fall of a Great City | Itihaas Ke Raaz | Vijayanagara empire, foreign travellers' accounts, markets, 1565 battle of Talikota, ruins today | 4 |
+| **L10** | 10 | Tumhara Sharir: 10 Crazy Body Facts | Science Wala Sach | Bones, heartbeats, DNA, stomach, brain energy, reflexes | 5 |
 
 Total derived reels: about 48.
 
