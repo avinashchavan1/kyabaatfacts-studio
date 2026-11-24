@@ -1,0 +1,67 @@
+{
+ "title": "Octopus ke 3 dil aur neela khoon!",
+ "series": "Kya Baat Facts",
+ "source": "Live Science · Smithsonian Magazine · Scientific American",
+ "length": "0:46",
+ "captions": {
+  "instagram": "Hey, want to hear something? How many hearts do you have? One, right?\n\nOctopus ke 3 dil hote hain aur khoon neela! 🐙💙 Kyunki uske khoon mein lohe ki jagah TAANBA (copper) hota hai. Aur tairte waqt uska bada dil kuch pal ke liye ruk jaata hai!\n\nSources: Live Science, Smithsonian Magazine, Scientific American.\n\nAapko ye pata tha? Comment karo 👇\n\nAgla kaunsa jaanwar? Comment karo 👇\n\n📜 Source: Live Science · Smithsonian Magazine · Scientific American\n🎧 Hindi narration · English subtitles\n\nFollow @kyabaatfacts for a new 'kya baat!' fact every day.\n\n#KyaBaatFacts #JaanwaronKiDuniya #Octopus #HindiFacts #Animals #Facts",
+  "facebook": "Hey, want to hear something? How many hearts do you have? One, right?\n\nOctopus ke 3 dil hote hain aur khoon neela! 🐙💙 Kyunki uske khoon mein lohe ki jagah TAANBA (copper) hota hai. Aur tairte waqt uska bada dil kuch pal ke liye ruk jaata hai!\n\nSources: Live Science, Smithsonian Magazine, Scientific American.\n\nAapko ye pata tha? Comment karo 👇\n\nAgla kaunsa jaanwar? Comment karo 👇\n\n📜 Source: Live Science · Smithsonian Magazine · Scientific American\n🎧 Hindi narration · English subtitles\n\nFollow Kya Baat Facts for a new 'kya baat!' fact every day.\n\n#KyaBaatFacts #JaanwaronKiDuniya #Octopus #HindiFacts #Animals #Facts",
+  "youtube_title": "Octopus Ke 3 Dil Aur Neela Khoon! 🐙 | Kya Baat Facts #Shorts",
+  "youtube_description": "Hey, want to hear something? How many hearts do you have? One, right?\n\nOctopus ke 3 dil hote hain aur khoon neela! 🐙💙 Kyunki uske khoon mein lohe ki jagah TAANBA (copper) hota hai. Aur tairte waqt uska bada dil kuch pal ke liye ruk jaata hai!\n\nSources: Live Science, Smithsonian Magazine, Scientific American.\n\nAapko ye pata tha? Comment karo 👇\n\nAgla kaunsa jaanwar? Comment karo 👇\n\nSource: Live Science · Smithsonian Magazine · Scientific American\nVerses:\n• An octopus has three hearts — Live Science; Smithsonian\n• Two (branchial) hearts pump blood through the gills; the larger systemic heart pumps it to the body — Live Science; Smithsonian\n• Octopus blood is blue because its oxygen carrier, hemocyanin, uses copper (ours uses iron) — Smithsonian; Scientific American\n• The systemic heart stops for a few moments when the octopus swims; this may be why it prefers crawling (reason not certain) — Live Science; Smithsonian\n\nHindi narration · English subtitles.\nSubscribe to Kya Baat Facts for a new 'kya baat!' fact every day.\n\n#KyaBaatFacts #JaanwaronKiDuniya #Octopus #HindiFacts #Animals #Facts #Shorts",
+  "first_comment": "Agla kaunsa jaanwar? Comment karo 👇"
+ },
+ "claims": [
+  {
+   "claim": "An octopus has three hearts",
+   "ref": "Live Science; Smithsonian"
+  },
+  {
+   "claim": "Two (branchial) hearts pump blood through the gills; the larger systemic heart pumps it to the body",
+   "ref": "Live Science; Smithsonian"
+  },
+  {
+   "claim": "Octopus blood is blue because its oxygen carrier, hemocyanin, uses copper (ours uses iron)",
+   "ref": "Smithsonian; Scientific American"
+  },
+  {
+   "claim": "The systemic heart stops for a few moments when the octopus swims; this may be why it prefers crawling (reason not certain)",
+   "ref": "Live Science; Smithsonian"
+  }
+ ],
+ "verify_note": "Heart-stops-while-swimming: Live Science says no one is certain why; framed with 'शायद'.",
+ "masters": {
+  "instagram": {
+   "file": "R003_INSTAGRAM_MASTER.mp4",
+   "spec": "1080×1920 · H.264 CRF 12 · AAC 320k"
+  },
+  "facebook": {
+   "file": "R003_INSTAGRAM_MASTER.mp4",
+   "spec": "1080×1920 · H.264 CRF 12 · AAC 320k"
+  },
+  "youtube": {
+   "file": "R003_YOUTUBE_MASTER.mp4",
+   "spec": "2160×3840 (4K) · H.264 CRF 14 · AAC 384k"
+  }
+ },
+ "platforms": {
+  "instagram": {
+   "state": "todo",
+   "url": "",
+   "at": ""
+  },
+  "youtube": {
+   "state": "todo",
+   "url": "",
+   "at": ""
+  },
+  "facebook": {
+   "state": "todo",
+   "url": "",
+   "at": ""
+  }
+ },
+ "review": {
+  "done": false,
+  "at": ""
+ }
+}
