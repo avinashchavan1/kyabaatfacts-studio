@@ -39,18 +39,12 @@
  },
  "loudness_lufs": -14,
  "major_characters": {
-  "rule": "The owner picks look AND voice for major, recurring characters (show stills/audio options first). Minor characters: Claude picks, then says which.",
+  "rule": "Facts channel: the narrator (Bunty) is the only recurring voice; the googly-eyes mascot is the recurring visual (brand/kit/eye_expressions.png).",
   "locked": [
    "narrator"
   ],
-  "ask_user_when_first_needed": [
-   "hero",
-   "heroine"
-  ],
-  "minor_examples": [
-   "villager",
-   "hunter"
-  ]
+  "ask_user_when_first_needed": [],
+  "minor_examples": []
  },
  "character_looks": {},
  "address": {
@@ -77,26 +71,7 @@
   "notes": {},
   "major_extra": []
  },
- "locations": [
-  {
-   "key": "hermitage",
-   "name": "Forest hermitage by a river",
-   "builder": "buildHermitage(tod)",
-   "description": "Hut, tree, river band, moon."
-  },
-  {
-   "key": "court",
-   "name": "Royal court by day",
-   "builder": "buildCourt()",
-   "description": "Sandstone arches, festoons."
-  },
-  {
-   "key": "manuscript",
-   "name": "Palm-leaf manuscript",
-   "builder": "buildManuscript()",
-   "description": "Source, verse and quote cards."
-  }
- ],
+ "locations": [],
  "plan_file": "PLAN.md",
  "channel": {
   "name": "Kya Baat Facts",

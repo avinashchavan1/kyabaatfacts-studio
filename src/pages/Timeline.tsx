@@ -7,6 +7,8 @@ import { useAllFiles, useMediaUrl, usePublications, useReels } from "../lib/api"
 import { KIND_LABEL, type FileRow, type Publication, type Reel } from "../lib/types";
 import { doubleCandidate, weeklyOn, MAJOR, MIN_BACKLOG, occasionsOn, upcoming } from "../lib/occasions";
 import { bestHour, confidence, dayName, fmtHour, istParts, observations, planDays, type Main, type Obs } from "../lib/bestTime";
+import calendarCfg from "../../calendar.json";
+const SHOW_FEST = (calendarCfg as { festival_plan?: boolean }).festival_plan !== false;   // calendar.json → festival_plan: false hides the Festival plan
 
 // All dates are India time. Posting days and times are suggestions from lib/bestTime.ts.
 const TZ = "Asia/Kolkata";
@@ -83,7 +85,7 @@ export default function Timeline() {
           <span className="rounded-full bg-gold px-3 py-1 text-xs font-extrabold uppercase tracking-widest text-night-950 shadow">Today · {dayLabel(now)}</span>
           <span className="h-px flex-1 bg-gold/60" />
         </li>
-        {(todayTags.length > 0) && <li className="-mt-2 mb-3 flex flex-wrap gap-1.5">{todayTags.map((t) => <span key={t} className="flex items-center gap-1 rounded-full bg-vermilion/10 px-2.5 py-0.5 text-xs font-semibold text-vermilion"><Flame size={12} />{t}</span>)}</li>}
+        {SHOW_FEST && (todayTags.length > 0) && <li className="-mt-2 mb-3 flex flex-wrap gap-1.5">{todayTags.map((t) => <span key={t} className="flex items-center gap-1 rounded-full bg-vermilion/10 px-2.5 py-0.5 text-xs font-semibold text-vermilion"><Flame size={12} />{t}</span>)}</li>}
 
         <Phase icon={<CalendarClock size={16} />} tone="amber" title="Ready to post" note="Watch it, check the citations, then post from the reel page" />
         {ready.length === 0 && <Empty>Nothing waiting. The next reel is in production.</Empty>}
@@ -95,6 +97,7 @@ export default function Timeline() {
         {making.length === 0 && <Empty>Starting the next one from the plan.</Empty>}
         {making.map((r) => <Item key={r.id} r={r} cover={covers[r.id]} when="Being made" dot="violet" />)}
 
+        {SHOW_FEST && <>
         <Phase icon={<Flame size={16} />} tone="amber" title="Festival plan" note="Occasions in the next 6 months and the reels that fit them (make them in time)" />
         {fest.map(({ o, day, reels: rs }) => {
           const daysTo = day - todayN, need = rs.filter((r) => r.stage === "idea" || PRODUCTION.includes(r.stage));
@@ -109,6 +112,7 @@ export default function Timeline() {
             </li>
           );
         })}
+        </>}
 
         <Phase icon={<Lightbulb size={16} />} tone="stone" title="Coming up" note="From the plan, strongest audience pull first" />
         {(allIdeas ? ideas : ideas.slice(0, 10)).map((r, i) => <Item key={r.id} r={r} when={i === 0 && making.length === 0 ? "Next" : `#${r.plan_no ?? "–"}`} dot="stone" compact />)}

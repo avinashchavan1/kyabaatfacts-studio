@@ -46,7 +46,7 @@ rows += [{"series_id": SID, "key": k, "name": k.title(), "tier": "major", "statu
 upsert("characters", rows, "series_id,key")
 upsert("locations", [{"series_id": SID, "key": L["key"], "name": L["name"], "builder": L["builder"], "description": L.get("description", "")} for L in sj.get("locations", [])], "series_id,key")   # series.json → locations
 upsert("docs", [{"series_id": sid, "slug": slug, "title": t, "kind": kind, "body_md": open(p).read()} for slug, t, kind, p, sid in [
-    ("style-guide", "Studio style guide", "style_guide", os.path.join(ST, "STYLE_GUIDE.md"), None),
+    ("style-guide", "Studio style guide", "style_guide", os.path.join(SER, "STYLE_GUIDE.md") if os.path.exists(os.path.join(SER, "STYLE_GUIDE.md")) else os.path.join(ST, "STYLE_GUIDE.md"), None),   # a series may ship its own guide
     ("make-reel-skill", "make-reel workflow", "skill", os.path.join(ST, ".claude/skills/make-reel/SKILL.md"), None),
     ("studio-readme", "Studio engine README", "readme", os.path.join(ST, "README.md"), None),
     ("plan", C["series"]["name"] + " — the plan", "plan", os.path.join(SER, sj.get("plan_file", "PLAN.md")), SID)]], "slug")

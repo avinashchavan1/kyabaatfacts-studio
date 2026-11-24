@@ -19,6 +19,7 @@ function channelBrand(): Plugin {
       let out = html.replace(/<title>.*?<\/title>/, `<title>${CH.app_title ?? "Storyreel Studio"}</title>`)
         .replace(/<link rel="icon"[^>]*>/, `<link rel="icon" href="${ICON_URL}" type="${ICON_TYPE}" />\n    <link rel="apple-touch-icon" href="${ICON_URL}" />`);
       if (T.google_fonts) out = out.replace(/https:\/\/fonts\.googleapis\.com\/css2\?[^"]+/, T.google_fonts);
+      if (T.style) out = out.replace("<body class=\"", `<body class="theme-${T.style} `);   // e.g. "sticker": bold outlines + hard shadows (src/index.css)
       if (T.theme_color) out = out.replace("</head>", `  <meta name="theme-color" content="${T.theme_color}" />\n  </head>`);
       return out;
     },

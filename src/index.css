@@ -37,3 +37,20 @@ body { font-family: theme(fontFamily.sans); -webkit-font-smoothing: antialiased;
 
 /* Grid items never force the page wider than the screen (long titles, links, IDs wrap or truncate instead) */
 .grid > * { min-width: 0; }
+
+/* Optional channel style (channel.json → brand.app_theme.style = "sticker"): bold ink outlines, hard offset shadows, halftone dots */
+.theme-sticker { background-image: radial-gradient(theme(colors.gold.soft) 1.6px, transparent 1.8px); background-size: 24px 24px; }
+.theme-sticker .rounded-2xl.border:not(.border-dashed), .theme-sticker .rounded-xl.border:not(.border-dashed), .theme-sticker .rounded-3xl.border:not(.border-dashed) {
+  border-width: 2px; border-color: theme(colors.ink.DEFAULT); box-shadow: 4px 4px 0 theme(colors.ink.DEFAULT); }
+.theme-sticker .border-dashed { border-color: theme(colors.ink.soft); border-width: 2px; }
+.theme-sticker button.bg-gold, .theme-sticker a.bg-gold, .theme-sticker button.bg-night-950, .theme-sticker button.bg-ink, .theme-sticker a.bg-ink {
+  border: 2px solid theme(colors.ink.DEFAULT); box-shadow: 3px 3px 0 theme(colors.ink.DEFAULT); font-weight: 800; }
+.theme-sticker button.bg-gold:active, .theme-sticker a.bg-gold:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 theme(colors.ink.DEFAULT); }
+.theme-sticker h1, .theme-sticker h2 { font-weight: 900; letter-spacing: -0.01em; }
+.theme-sticker aside a.bg-gold, .theme-sticker nav a.bg-gold { box-shadow: 3px 3px 0 #000; border-color: #000; }
+@media (prefers-color-scheme: dark) {
+  .theme-sticker { background-image: radial-gradient(theme(colors.night.800) 1.6px, transparent 1.8px); }
+  .theme-sticker .rounded-2xl.border:not(.border-dashed), .theme-sticker .rounded-xl.border:not(.border-dashed), .theme-sticker .rounded-3xl.border:not(.border-dashed) {
+    border-color: theme(colors.night.600); box-shadow: 4px 4px 0 #000; }
+  .theme-sticker button.bg-gold, .theme-sticker a.bg-gold { border-color: #000; box-shadow: 3px 3px 0 #000; }
+}

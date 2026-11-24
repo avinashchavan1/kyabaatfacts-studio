@@ -6,6 +6,7 @@ import { Card, CopyButton, ErrorNote, SectionTitle, Spinner, StageBadge } from "
 import { mediaUrl } from "../lib/api";
 import { supabase } from "../lib/supabase";
 import type { Stage } from "../lib/types";
+import { W } from "../lib/channel";
 
 // Long-form: full-length 16:9 videos (~10-12 min) and the 9:16 reels derived from them.
 // Data: studio/series/<id>/longform/<code>/longform.json, synced by scripts/sync.py into longform_videos.
@@ -105,7 +106,7 @@ function Detail({ row, many }: { row: Row; many: boolean }) {
 
       {p.opening_sloka && (
         <Card>
-          <SectionTitle>Opening śloka · Valmiki Ramayana {p.opening_sloka.ref}</SectionTitle>
+          <SectionTitle>{W.opening} {p.opening_sloka.ref}</SectionTitle>
           <div className="font-[Mukta] text-xl leading-relaxed">{p.opening_sloka.lines.map((l, i) => <div key={i}>{l}</div>)}</div>
           {p.opening_sloka.translit && <p className="mt-2 text-sm italic text-ink-soft dark:text-parchment/60">{p.opening_sloka.translit}</p>}
           <p className="mt-2">{p.opening_sloka.en}</p>

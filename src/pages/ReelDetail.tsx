@@ -6,7 +6,7 @@ import { Button, Card, Code, CopyButton, Empty, ErrorNote, LinkButton, PubBadge,
 import { mediaUrl, studio, type ProviderStatus, useClaims, useConnections, useFiles, useJobs, useMediaUrl, usePublications, usePublishNow, useReel, useSaveCaptions, useSetStage, useUpdateReel, useUpsertPublication, type PublishJob } from "../lib/api";
 import { Target } from "../components/Target";
 import { KIND_LABEL, PLATFORMS, STAGES, type FileRow, type Publication, type Reel, type Stage } from "../lib/types";
-import { CHANNEL, IG } from "../lib/channel";
+import { CHANNEL, IG, W } from "../lib/channel";
 
 const TABS = ["Publish", "Script", "Citations", "Files", "Notes"] as const;
 type Tab = (typeof TABS)[number];
@@ -137,8 +137,8 @@ function PublishTab({ r, files }: { r: Reel; files: FileRow[] }) {
         <input id="reviewed" type="checkbox" className="mt-1 h-5 w-5 accent-gold-deep" checked={r.reviewed}
           onChange={(e) => update.mutate({ reel: r, patch: { reviewed: e.target.checked, reviewed_at: e.target.checked ? new Date().toISOString() : null, stage: e.target.checked && r.stage === "review" ? "approved" : r.stage }, action: e.target.checked ? "citations reviewed" : "review cleared" })} />
         <span className="text-sm">
-          <b className="flex items-center gap-1.5"><ShieldCheck size={16} /> I checked the citations against the text</b>
-          {r.reviewed ? <span className="text-emerald-800 dark:text-emerald-300">Reviewed {fmtDate(r.reviewed_at)}. Posting is unlocked.</span> : <span>Open the Citations tab, read each claim against its verse, then tick this. Posting stays locked until then.</span>}
+          <b className="flex items-center gap-1.5"><ShieldCheck size={16} /> I checked the citations against {W.text}</b>
+          {r.reviewed ? <span className="text-emerald-800 dark:text-emerald-300">Reviewed {fmtDate(r.reviewed_at)}. Posting is unlocked.</span> : <span>Open the Citations tab, read each claim {W.against}, then tick this. Posting stays locked until then.</span>}
         </span>
       </label>
       {!canAuto.youtube && !canAuto.instagram && !conn.isLoading && (
@@ -269,7 +269,7 @@ function ScriptTab({ r }: { r: Reel }) {
       {r.script?.source && <p className="text-sm text-ink-soft dark:text-parchment/60">Source: {r.script.source}</p>}
       <div className="overflow-x-auto rounded-2xl border border-parchment-deep dark:border-night-700">
         <table className="w-full min-w-[640px] text-sm">
-          <thead className="bg-black/[.03] text-left text-xs uppercase tracking-wider text-ink-soft dark:bg-white/5 dark:text-parchment/60"><tr><th className="p-3">#</th><th className="p-3">Voice</th><th className="p-3">Line (Hindi / English)</th><th className="p-3">Verse</th></tr></thead>
+          <thead className="bg-black/[.03] text-left text-xs uppercase tracking-wider text-ink-soft dark:bg-white/5 dark:text-parchment/60"><tr><th className="p-3">#</th><th className="p-3">Voice</th><th className="p-3">Line (Hindi / English)</th><th className="p-3">{W.ref}</th></tr></thead>
           <tbody>
             {shots.map((s) => (
               <tr key={s.id} className="border-t border-parchment-deep align-top dark:border-night-800">
@@ -289,7 +289,7 @@ function ScriptTab({ r }: { r: Reel }) {
 function ClaimsTab({ r }: { r: Reel }) {
   const claims = useClaims(r.id);
   if (claims.isLoading) return <Spinner />;
-  if (!claims.data?.length) return <Empty>No claims recorded yet. Every factual claim needs a verse reference before the reel can be scripted.</Empty>;
+  if (!claims.data?.length) return <Empty>No claims recorded yet. {W.needRef}</Empty>;
   return (
     <div className="grid gap-3">
       {claims.data.map((c) => (

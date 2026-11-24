@@ -30,7 +30,7 @@ export default {
         sans: theme.fonts?.sans ?? DEFAULT.fonts.sans,
         mono: ['"JetBrains Mono"', "ui-monospace", "monospace"],
       },
-      colors: merge(DEFAULT.colors, theme.colors ?? {}),
+      colors: { ...merge(DEFAULT.colors, theme.colors ?? {}), ...(theme.palettes ?? {}) },   // palettes: replace stock Tailwind scales (amber, emerald…) with brand ones
     },
   },
   plugins: [],
