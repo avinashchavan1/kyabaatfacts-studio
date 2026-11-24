@@ -163,7 +163,7 @@
   }
  ],
  "thumbnail": {
-  "frame": "8s",
+  "frame": "5.2s",
   "hook": "ALOO TAMATAR MIRCH",
   "stamp": "INDIAN NAHI!",
   "line": "All three came from the Americas",
@@ -185,7 +185,7 @@
   "claiming Vasco da Gama personally brought them"
  ],
  "verify_note": "Tomato: introduced earlier, but common only from the 1800s (Heidelberg). Potato ~1600 (Wikipedia).",
- "caption": "Aloo, tamatar aur mirch — teeno Indian nahi hain! 🥔🍅🌶️ Teeno America ke hain aur Portuguese vyapari inhe Bharat laaye. Aur tamatar aam taur par 1800s mein jaake khaaya jaane laga!\n\nSources: Asia Times, Wikipedia, Heidelberg University Publishing.\n\nAapki favourite sabzi kaunsi hai? Comment karo 👇",
+ "caption": "Aloo, tamatar aur mirch — teeno Indian nahi hain! 🥔🍅🌶️ Teeno America ke hain aur Portuguese vyapari inhe Bharat laaye. Aur tamatar aam taur par 1800s mein jaake khaaya jaane laga!\n\nSources: Asia Times, Wikipedia, Heidelberg University Publishing.\nPhotos: JimReeves / Flickr (CC BY 2.0); 16:9clue / Flickr (CC BY 2.0).\n\nAapki favourite sabzi kaunsi hai? Comment karo 👇",
  "youtube_title": "Aloo, Tamatar, Mirch Indian Nahi Hain! 🥔🍅🌶️ | Kya Baat Facts #Shorts",
  "comment_prompt": "Aloo ke bina kaunsi dish sochi bhi nahi ja sakti? 👇",
  "hashtags": [
@@ -195,5 +195,23 @@
   "#HindiFacts",
   "#FoodHistory",
   "#Facts"
+ ],
+ "media": [
+  {
+   "file": "src/proof_chillies.jpg",
+   "what": "Kashmiri red chillies drying",
+   "source": "https://www.flickr.com/photos/39364848@N00/70107637",
+   "license": "CC BY 2.0",
+   "credit": "JimReeves / Flickr",
+   "shot": 3
+  },
+  {
+   "file": "src/proof_potatoes.jpg",
+   "what": "Potatoes",
+   "source": "https://www.flickr.com/photos/53255320@N07/6762195603",
+   "license": "CC BY 2.0",
+   "credit": "16:9clue / Flickr",
+   "shot": 5
+  }
  ]
 }

@@ -184,7 +184,7 @@
   }
  ],
  "thumbnail": {
-  "frame": "8s",
+  "frame": "8.7s",
   "hook": "4,500 SAAL PEHLE NAALIYAAN!",
   "stamp": "DHAKI HUI!",
   "line": "Mohenjo-daro, Indus Valley",
@@ -206,7 +206,7 @@
   "UNESCO year (not checked)"
  ],
  "verify_note": "Covered brick drains, lift-off covers, house drains, sediment traps, walk-in Great Bath drain.",
- "caption": "4,500 saal pehle Mohenjo-daro mein dhaki hui naaliyaan thi! 🧱 Safai ke liye uthne waale dhakkan, gharon ke bathroom seedhe sadak ki naali se jude — aur ek naali itni badi ki usme chal sakte ho!\n\nSources: Harappa.com, Wikipedia.\n\nAapke sheher ki naaliyaan kaisi hain? 😅👇",
+ "caption": "4,500 saal pehle Mohenjo-daro mein dhaki hui naaliyaan thi! 🧱 Safai ke liye uthne waale dhakkan, gharon ke bathroom seedhe sadak ki naali se jude — aur ek naali itni badi ki usme chal sakte ho!\n\nSources: Harappa.com, Wikipedia.\nPhoto: Emmanuel Dyan / Flickr (CC BY 2.0).\n\nAapke sheher ki naaliyaan kaisi hain? 😅👇",
  "youtube_title": "4,500 Saal Pehle Drainage System! 🧱 Mohenjo-daro | Kya Baat Facts #Shorts",
  "comment_prompt": "Aapke sheher ki naaliyaan kaisi hain? 😅👇",
  "hashtags": [
@@ -216,5 +216,15 @@
   "#IndusValley",
   "#HindiFacts",
   "#History"
+ ],
+ "media": [
+  {
+   "file": "src/proof_lothal.jpg",
+   "what": "Indus-era brick drain channel at Lothal, Gujarat (same civilisation as Mohenjo-daro; labelled as Lothal on screen)",
+   "source": "https://www.flickr.com/photos/17616316@N00/5934175064",
+   "license": "CC BY 2.0",
+   "credit": "Emmanuel Dyan / Flickr",
+   "shot": 2
+  }
  ]
 }

@@ -165,7 +165,7 @@
   }
  ],
  "thumbnail": {
-  "frame": "8s",
+  "frame": "9.2s",
   "hook": "VENUS: DIN > SAAL!",
   "stamp": "243 vs 225!",
   "line": "And the Sun rises in the west",
@@ -186,7 +186,7 @@
   "saying 'one day is 243 days' without 'ek chakkar' framing at the twist"
  ],
  "verify_note": "243-day = one spin (sidereal). Twist explains solar day ~117 days.",
- "caption": "Venus (Shukra) par ek din, ek saal se lamba hai! 🪐 Ek chakkar = 243 din, Suraj ka ek chakkar = 225 din. Aur wahan Suraj PASCHIM se ugta hai! Twist: sunrise se sunrise tak ~117 din.\n\nSources: NASA Space Place, Snopes, National Geographic Kids.\n\nKaunse planet par rehna chahoge? 👇",
+ "caption": "Venus (Shukra) par ek din, ek saal se lamba hai! 🪐 Ek chakkar = 243 din, Suraj ka ek chakkar = 225 din. Aur wahan Suraj PASCHIM se ugta hai! Twist: sunrise se sunrise tak ~117 din.\n\nSources: NASA Space Place, Snopes, National Geographic Kids.\nPhoto: NASA Mariner 10 (Public domain).\n\nKaunse planet par rehna chahoge? 👇",
  "youtube_title": "Venus Ka 1 Din, 1 Saal Se Lamba! 🪐 | Kya Baat Facts #Shorts",
  "comment_prompt": "Kaunse planet par rehna chahoge? 👇",
  "hashtags": [
@@ -196,5 +196,15 @@
   "#Space",
   "#HindiFacts",
   "#Facts"
+ ],
+ "media": [
+  {
+   "file": "src/proof_venus.jpg",
+   "what": "Venus from Mariner 10 (one of two views, cropped)",
+   "source": "https://images.nasa.gov/details/PIA23791",
+   "license": "Public domain (NASA)",
+   "credit": "NASA Mariner 10",
+   "shot": 3
+  }
  ]
 }

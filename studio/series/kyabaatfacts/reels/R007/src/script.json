@@ -176,7 +176,7 @@
   }
  ],
  "thumbnail": {
-  "frame": "8s",
+  "frame": "4.1s",
   "hook": "SHAHAD KABHI KHARAB NAHI?",
   "stamp": "HAZAARON SAAL!",
   "line": "Found in ancient Egyptian tombs",
@@ -197,7 +197,7 @@
   "an exact '3,000 years' figure (say 'hazaaron saal')"
  ],
  "verify_note": "All from Smithsonian / Discover.",
- "caption": "Shahad kabhi kharab kyun nahi hota? 🍯 Misr ke maqbaron mein hazaaron saal purana shahad mila — aur woh ab bhi theek tha! Kam paani + acid + hydrogen peroxide = super shelf life. Par dhakkan khula chhoda to kharab ho sakta hai!\n\nSources: Smithsonian Magazine, Discover Magazine.\n\nAapke ghar mein shahad kitna purana hai? 👇",
+ "caption": "Shahad kabhi kharab kyun nahi hota? 🍯 Misr ke maqbaron mein hazaaron saal purana shahad mila — aur woh ab bhi theek tha! Kam paani + acid + hydrogen peroxide = super shelf life. Par dhakkan khula chhoda to kharab ho sakta hai!\n\nSources: Smithsonian Magazine, Discover Magazine.\nPhoto: BotheredByBees / Flickr (CC BY 2.0).\n\nAapke ghar mein shahad kitna purana hai? 👇",
  "youtube_title": "Shahad Kabhi Kharab Kyun Nahi Hota? 🍯 | Kya Baat Facts #Shorts",
  "comment_prompt": "Aapke ghar mein shahad kitna purana hai? 👇",
  "hashtags": [
@@ -207,5 +207,15 @@
   "#HindiFacts",
   "#Science",
   "#Facts"
+ ],
+ "media": [
+  {
+   "file": "src/proof_honeycomb.jpg",
+   "what": "Honeybee on honeycomb",
+   "source": "https://www.flickr.com/photos/87273935@N00/245215850",
+   "license": "CC BY 2.0",
+   "credit": "BotheredByBees / Flickr",
+   "shot": 5
+  }
  ]
 }
