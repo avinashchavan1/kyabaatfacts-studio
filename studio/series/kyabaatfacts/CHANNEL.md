@@ -171,3 +171,8 @@ Full content plan: PLAN.md (same folder)
 ## Studio app access
 - App: https://kyabaatfacts-studio.netlify.app (email login link)
 - Admins (public.app_admins): sonamrathod888@gmail.com, avinashchavan1433@gmail.com
+
+## Narrator (locked Nov 24 2026)
+- Voice: Bunty - Fun Podcast Host (ElevenLabs library, voice 3OUAuH7CeDSQhCCijs1Y), model eleven_v4, stability 0.5.
+- Style: excited and chatty, like telling a friend ("अरे, एक बात बताऊँ?"). Round 1 calm/formal voices were rejected.
+- Catchphrase: "क्या बात है!" - one fixed recorded clip (cast/signature/kya_baat_hai.mp3) closes every reveal.

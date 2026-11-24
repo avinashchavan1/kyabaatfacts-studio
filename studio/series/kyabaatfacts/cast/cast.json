@@ -3,19 +3,24 @@
  "voices": {
   "narrator": {
    "engine": "elevenlabs",
-   "voice_id": "vIdhHAZdn1bGjKe1dFw8",
-   "name": "Rudra – Intense Documentary Narrator (ElevenLabs library; replace after your own audition)",
+   "voice_id": "3OUAuH7CeDSQhCCijs1Y",
+   "name": "Bunty - Fun Podcast Host (ElevenLabs library)",
    "model": "eleven_v4",
    "language": "hi",
-   "delivery": "eleven_v4 audio tags per line, e.g. [curious], [dramatically], [softly], [intense], [deep voice], [pause]",
+   "voice_settings": {
+    "stability": 0.5
+   },
+   "delivery": "House style (owner's choice, Nov 24 2026): chatty, excited, like telling a friend. Hinglish in Devanagari ('अरे, एक बात बताऊँ?', 'यार'). Tags: [excited] on most lines, [curious] for questions, [pause] before reveals, [amazed]/[laughs] on reactions.",
+   "catchphrase": {
+    "text": "क्या बात है!",
+    "clip": "studio/series/kyabaatfacts/cast/signature/kya_baat_hai.mp3",
+    "rule": "Every reel's reveal ends on this exact recorded clip (never re-record it per reel)."
+   },
    "processing": "light polish only: highpass 45Hz, gentle 2:1 compression, tiny room",
    "fx": "highpass=f=45,acompressor=threshold=-20dB:ratio=2:attack=15:release=200:makeup=1,aecho=0.9:0.12:35|60:0.05|0.03",
    "mix_gain": 1.0,
-   "f0_hz": 125,
-   "f0_max_rise": 40,
-   "calm_rule": "Calm storyteller: only [softly] [warmly] [curious] [serious] [thoughtfully] [pause]; the picker drops takes > f0_hz + f0_max_rise (shouting)",
-   "sloka": "USER choice (Nov 21 2026): the narrator Rudra also recites the Sanskrit ślokas, after an audition against Shardul K, Hari Kavi, Sudhir, Shrey and Kanika (cast/audition/sloka/).",
-   "chosen": "example only: audition 4-6 narrators and let the owner pick"
+   "energy_rule": "Excited delivery is the channel's style; the shouting guard still drops takes that tip into shouting (re-measure f0 on the first reel and set f0_hz/f0_max_rise).",
+   "chosen": "Owner picked after 3 rounds (Nov 24 2026): round 1 calm voices rejected (too formal/flat), round 2 picked Bunty (podcast), hype take A (excited tags, stability 0.5), ending 2 'क्या बात है!' (cast/audition/, not in git)."
   }
  },
  "fx": {}

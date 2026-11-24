@@ -6,6 +6,8 @@
   "verse", "base text" or `source_verse.py`, read: every claim lists its own source (publisher, title, URL) and is verified by
   reading that source, never from memory. Disputed or legendary claims are framed honestly or dropped. The opening-verse and
   quote-card rules become: show the source on screen when a claim is surprising. (Engine support for per-reel sources: still to do.)
+- **Narrator (overrides the calm-narrator rule below):** Bunty (ElevenLabs, eleven_v4, stability 0.5), excited, chatty Hinglish like
+  telling a friend; every reveal ends on the fixed clip `cast/signature/kya_baat_hai.mp3` ("क्या बात है!"). See `cast/cast.json`.
 - Brand: "Hairaan Aankhen" logo (googly eyes over the AA of BAAT), yellow #FFC83D / ink #14123A / punch #FF4B3E, Montserrat + Mukta.
   Kit in `brand/kit/`, regenerate with `python3 brand/make_kyabaat_brand.py brand brand/kit`; upload with `python3 scripts/brand.py --no-render`.
 

@@ -8,7 +8,7 @@
  "tagline": "Har fact pe bologe: kya baat!",
  "series_name": "KYA BAAT FACTS",
  "source_title": "Mixed sources (cited per reel)",
- "cta_hi": "ऐसे और facts के लिए, फ़ॉलो करें।",
+ "cta_hi": "ऐसे और facts के लिए, फ़ॉलो करो!",
  "source": {
   "book": "Mixed sources (cited per reel)",
   "edition": "Primary and reputable sources",
@@ -125,5 +125,6 @@
   "॥ श्रीः ॥",
   "॥ इति कथा ॥"
  ],
- "mascot": "Hairaan Aankhen: two googly eyes that react in intros (Kya baat! / Hmm... / Sach mein? / Wow!) - see brand/kit/eye_expressions.png"
+ "mascot": "Hairaan Aankhen: two googly eyes that react in intros (Kya baat! / Hmm... / Sach mein? / Wow!) - see brand/kit/eye_expressions.png",
+ "narration_energy": "excited"
 }
