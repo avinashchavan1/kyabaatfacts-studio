@@ -1,0 +1,200 @@
+{
+ "reel": "R009",
+ "title": "Shukra (Venus) ka ek din uske ek saal se lamba!",
+ "series": "kyabaatfacts",
+ "fps": 24,
+ "status": "DRAFT — not verified",
+ "source": "NASA Space Place · Snopes · National Geographic Kids",
+ "source_card": {
+  "title": [
+   "KYA BAAT",
+   "FACTS"
+  ],
+  "sub": "NASA Space Place · Snopes · National Geographic Kids",
+  "edition": "SOURCES CHECKED"
+ },
+ "claims": [
+  {
+   "claim": "Venus takes 243 Earth days to spin once",
+   "ref": "NASA Space Place",
+   "verified": true,
+   "sources": [
+    "https://spaceplace.nasa.gov/all-about-venus/en/"
+   ]
+  },
+  {
+   "claim": "Venus takes 225 Earth days to orbit the Sun (one Venus year)",
+   "ref": "NASA Space Place",
+   "verified": true,
+   "sources": [
+    "https://spaceplace.nasa.gov/all-about-venus/en/"
+   ]
+  },
+  {
+   "claim": "Venus spins the opposite way to Earth and most planets, so the Sun would rise in the west",
+   "ref": "NASA Space Place; National Geographic Kids",
+   "verified": true,
+   "sources": [
+    "https://spaceplace.nasa.gov/all-about-venus/en/",
+    "https://kids.nationalgeographic.com/space/article/mission-to-venus"
+   ]
+  },
+  {
+   "claim": "Sunrise to sunrise (the solar day) on Venus is about 117 Earth days",
+   "ref": "Snopes (fact check)",
+   "verified": true,
+   "sources": [
+    "https://www.snopes.com/fact-check/one-day-on-venus-is-longer-than-a-year-on-venus/"
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "id": 1,
+   "voice": "narrator",
+   "hi": "अरे, एक बात बताऊँ? एक ऐसा ग्रह... जहाँ एक दिन, एक साल से भी लंबा है!",
+   "en": "Hey, want to hear something? A planet where one day is longer than one year!",
+   "units": [
+    "[excited] अरे, एक बात बताऊँ?",
+    "[curious] एक ऐसा ग्रह... जहाँ एक दिन, एक साल से भी लंबा है!"
+   ],
+   "lead": 0.25,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "card": [
+    [
+     "EK DIN > EK SAAL?",
+     null
+    ],
+    [
+     "KAHAN?",
+     "#FFC83D"
+    ]
+   ],
+   "min": 3.5
+  },
+  {
+   "id": 2,
+   "voice": "narrator",
+   "hi": "ये है शुक्र... यानी Venus!",
+   "en": "It's Venus!",
+   "units": [
+    "[excited] ये है शुक्र... यानी Venus!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "cite": "NASA",
+   "reveal": true
+  },
+  {
+   "id": 3,
+   "voice": "narrator",
+   "hi": "Venus को अपनी धुरी पर एक चक्कर लगाने में लगते हैं... दो सौ तैंतालीस दिन! लेकिन सूरज का एक चक्कर? सिर्फ़ दो सौ पच्चीस दिन!",
+   "en": "Venus takes 243 days to spin once... but only 225 days to go around the Sun!",
+   "units": [
+    "[curious] Venus को अपनी धुरी पर एक चक्कर लगाने में लगते हैं... दो सौ तैंतालीस दिन!",
+    "[excited] लेकिन सूरज का एक चक्कर? सिर्फ़ दो सौ पच्चीस दिन!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "NASA Space Place"
+  },
+  {
+   "id": 4,
+   "voice": "narrator",
+   "hi": "यानी एक चक्कर पूरा होने से पहले ही... नया साल आ जाता है! क्या बात है!",
+   "en": "So a new year begins before one spin is even done! Kya baat hai!",
+   "units": [
+    "[amazed] यानी एक चक्कर पूरा होने से पहले ही... नया साल आ जाता है!",
+    "क्या बात है!"
+   ],
+   "lead": 0.15,
+   "tail": 0.45,
+   "unit_gap": 0.3,
+   "signature_unit": 1,
+   "force_take": {
+    "1": 1
+   },
+   "no_cut": [
+    1
+   ],
+   "reveal": true,
+   "cite": "NASA Space Place"
+  },
+  {
+   "id": 5,
+   "voice": "narrator",
+   "hi": "और ये उल्टा घूमता है... तो वहाँ सूरज उगता है... पश्चिम से!",
+   "en": "And it spins backwards... so the Sun rises in the west!",
+   "units": [
+    "[playfully] और ये उल्टा घूमता है...",
+    "[excited] तो वहाँ सूरज उगता है... पश्चिम से!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "NASA Space Place"
+  },
+  {
+   "id": 6,
+   "voice": "narrator",
+   "hi": "लेकिन twist ये है... एक सूर्योदय से अगले सूर्योदय तक... लगभग एक सौ सत्रह दिन लगते हैं।",
+   "en": "But here's the twist... from one sunrise to the next takes about 117 days.",
+   "units": [
+    "[curious] लेकिन twist ये है...",
+    "[excited] एक सूर्योदय से अगले सूर्योदय तक... लगभग एक सौ सत्रह दिन लगते हैं।"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "Snopes"
+  },
+  {
+   "id": 7,
+   "voice": "narrator",
+   "hi": "ऐसे और मज़ेदार facts के लिए... फ़ॉलो करो!",
+   "en": "",
+   "units": [
+    "[excited] ऐसे और मज़ेदार facts के लिए... फ़ॉलो करो!"
+   ],
+   "cta": true,
+   "lead": 0.3,
+   "tail": 0.7,
+   "min": 3.7
+  }
+ ],
+ "thumbnail": {
+  "frame": "8s",
+  "hook": "VENUS: DIN > SAAL!",
+  "stamp": "243 vs 225!",
+  "line": "And the Sun rises in the west",
+  "badge": "ANTRIKSH",
+  "art_shift": 0
+ },
+ "score": {
+  "engine": "reused",
+  "file": "audio/score.mp3",
+  "duration_s": 55,
+  "gain": 1.6,
+  "duck": 0.6,
+  "take": "reused from R003",
+  "prompt": "reused (credit saving)"
+ },
+ "category": "Antriksh",
+ "avoid": [
+  "saying 'one day is 243 days' without 'ek chakkar' framing at the twist"
+ ],
+ "verify_note": "243-day = one spin (sidereal). Twist explains solar day ~117 days.",
+ "caption": "Venus (Shukra) par ek din, ek saal se lamba hai! 🪐 Ek chakkar = 243 din, Suraj ka ek chakkar = 225 din. Aur wahan Suraj PASCHIM se ugta hai! Twist: sunrise se sunrise tak ~117 din.\n\nSources: NASA Space Place, Snopes, National Geographic Kids.\n\nKaunse planet par rehna chahoge? 👇",
+ "youtube_title": "Venus Ka 1 Din, 1 Saal Se Lamba! 🪐 | Kya Baat Facts #Shorts",
+ "comment_prompt": "Kaunse planet par rehna chahoge? 👇",
+ "hashtags": [
+  "#KyaBaatFacts",
+  "#Antriksh",
+  "#Venus",
+  "#Space",
+  "#HindiFacts",
+  "#Facts"
+ ]
+}

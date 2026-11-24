@@ -1,0 +1,220 @@
+{
+ "reel": "R008",
+ "title": "Mohenjo-daro mein 4,500 saal pehle drainage system tha!",
+ "series": "kyabaatfacts",
+ "fps": 24,
+ "status": "DRAFT — not verified",
+ "source": "Harappa.com · Wikipedia (Sanitation of the Indus Valley civilisation)",
+ "source_card": {
+  "title": [
+   "KYA BAAT",
+   "FACTS"
+  ],
+  "sub": "Harappa.com · Wikipedia (Sanitation of the Indus Valley civilisation)",
+  "edition": "SOURCES CHECKED"
+ },
+ "claims": [
+  {
+   "claim": "Mohenjo-daro had a drainage system about 4,500 years ago",
+   "ref": "Harappa.com",
+   "verified": true,
+   "sources": [
+    "https://www.harappa.com/blog/ancient-indus-city-drains"
+   ]
+  },
+  {
+   "claim": "Street drains were built of baked brick and covered; covers could be lifted for cleaning",
+   "ref": "Harappa.com; Wikipedia",
+   "verified": true,
+   "sources": [
+    "https://www.harappa.com/blog/mohenjo-daro-street-drains",
+    "https://en.wikipedia.org/wiki/Sanitation_of_the_Indus_Valley_civilisation"
+   ]
+  },
+  {
+   "claim": "Drains from house bathing floors flowed into the street drains",
+   "ref": "Wikipedia; Harappa.com",
+   "verified": true,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sanitation_of_the_Indus_Valley_civilisation",
+    "https://www.harappa.com/blog/mohenjo-daro-street-drains"
+   ]
+  },
+  {
+   "claim": "Settling pools / sediment traps were built into the drainage",
+   "ref": "Wikipedia",
+   "verified": true,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sanitation_of_the_Indus_Valley_civilisation"
+   ]
+  },
+  {
+   "claim": "The corbelled drain leaving the Great Bath is large enough to walk into",
+   "ref": "Harappa.com",
+   "verified": true,
+   "sources": [
+    "https://www.harappa.com/blog/mohenjo-daro-street-drains"
+   ]
+  },
+  {
+   "claim": "Mohenjo-daro is in present-day Sindh, Pakistan",
+   "ref": "Wikipedia",
+   "verified": true,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mohenjo-daro"
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "id": 1,
+   "voice": "narrator",
+   "hi": "अरे, एक बात बताऊँ? चार हज़ार पाँच सौ साल पहले... ढकी हुई नालियाँ?",
+   "en": "Hey, want to hear something? Covered drains... four and a half thousand years ago?",
+   "units": [
+    "[excited] अरे, एक बात बताऊँ?",
+    "[curious] चार हज़ार पाँच सौ साल पहले... ढकी हुई नालियाँ?"
+   ],
+   "lead": 0.25,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "card": [
+    [
+     "4,500 SAAL PEHLE",
+     null
+    ],
+    [
+     "DHAKI HUI NAALIYAAN?",
+     "#FFC83D"
+    ]
+   ],
+   "min": 3.5
+  },
+  {
+   "id": 2,
+   "voice": "narrator",
+   "hi": "मोहनजोदड़ो में... बिल्कुल थीं! पक्की ईंटों की नालियाँ, ऊपर से ढकी हुई!",
+   "en": "In Mohenjo-daro... absolutely! Baked-brick drains, covered on top!",
+   "units": [
+    "[excited] मोहनजोदड़ो में... बिल्कुल थीं!",
+    "[amazed] पक्की ईंटों की नालियाँ, ऊपर से ढकी हुई!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "Harappa.com",
+   "reveal": true
+  },
+  {
+   "id": 3,
+   "voice": "narrator",
+   "hi": "और सफ़ाई के लिए? ढक्कन उठाओ, कचरा निकालो, वापस रखो!",
+   "en": "And for cleaning? Lift the cover, clear it out, put it back!",
+   "units": [
+    "[curious] और सफ़ाई के लिए?",
+    "[excited] ढक्कन उठाओ, कचरा निकालो, वापस रखो!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "Harappa.com"
+  },
+  {
+   "id": 4,
+   "voice": "narrator",
+   "hi": "घरों के नहाने की जगह का पानी... सीधा जाता था सड़क की नाली में। और बीच में बने थे गड्ढे, जहाँ कचरा नीचे बैठ जाए!",
+   "en": "Water from the houses' bathing floors flowed straight into the street drain. And pits along the way let the sludge settle!",
+   "units": [
+    "[curious] घरों के नहाने की जगह का पानी... सीधा जाता था सड़क की नाली में।",
+    "[excited] और बीच में बने थे गड्ढे, जहाँ कचरा नीचे बैठ जाए!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "Wikipedia"
+  },
+  {
+   "id": 5,
+   "voice": "narrator",
+   "hi": "यानी चार हज़ार पाँच सौ साल पहले... पूरा smart city plan! क्या बात है!",
+   "en": "So four and a half thousand years ago... a full smart-city plan! Kya baat hai!",
+   "units": [
+    "[amazed] यानी चार हज़ार पाँच सौ साल पहले... पूरा smart city plan!",
+    "क्या बात है!"
+   ],
+   "lead": 0.15,
+   "tail": 0.45,
+   "unit_gap": 0.3,
+   "signature_unit": 1,
+   "force_take": {
+    "1": 1
+   },
+   "no_cut": [
+    1
+   ],
+   "reveal": true,
+   "cite": "Harappa.com"
+  },
+  {
+   "id": 6,
+   "voice": "narrator",
+   "hi": "और एक नाली इतनी बड़ी थी... कि उसमें आदमी चल सके! वैसे मोहनजोदड़ो आज... पाकिस्तान के सिंध में है।",
+   "en": "And one drain was so big a person could walk inside it! By the way, Mohenjo-daro is in Sindh, Pakistan today.",
+   "units": [
+    "[playfully] और एक नाली इतनी बड़ी थी... कि उसमें आदमी चल सके!",
+    "[curious] वैसे मोहनजोदड़ो आज... पाकिस्तान के सिंध में है।"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "Harappa.com · Wikipedia"
+  },
+  {
+   "id": 7,
+   "voice": "narrator",
+   "hi": "ऐसे और मज़ेदार facts के लिए... फ़ॉलो करो!",
+   "en": "",
+   "units": [
+    "[excited] ऐसे और मज़ेदार facts के लिए... फ़ॉलो करो!"
+   ],
+   "cta": true,
+   "lead": 0.3,
+   "tail": 0.7,
+   "min": 3.7
+  }
+ ],
+ "thumbnail": {
+  "frame": "8s",
+  "hook": "4,500 SAAL PEHLE NAALIYAAN!",
+  "stamp": "DHAKI HUI!",
+  "line": "Mohenjo-daro, Indus Valley",
+  "badge": "ITIHAAS KE RAAZ",
+  "art_shift": 0
+ },
+ "score": {
+  "engine": "reused",
+  "file": "audio/score.mp3",
+  "duration_s": 55,
+  "gain": 1.6,
+  "duck": 0.6,
+  "take": "reused from R004",
+  "prompt": "reused (credit saving)"
+ },
+ "category": "Itihaas Ke Raaz",
+ "avoid": [
+  "toilet details tagged 'citation needed'",
+  "UNESCO year (not checked)"
+ ],
+ "verify_note": "Covered brick drains, lift-off covers, house drains, sediment traps, walk-in Great Bath drain.",
+ "caption": "4,500 saal pehle Mohenjo-daro mein dhaki hui naaliyaan thi! 🧱 Safai ke liye uthne waale dhakkan, gharon ke bathroom seedhe sadak ki naali se jude — aur ek naali itni badi ki usme chal sakte ho!\n\nSources: Harappa.com, Wikipedia.\n\nAapke sheher ki naaliyaan kaisi hain? 😅👇",
+ "youtube_title": "4,500 Saal Pehle Drainage System! 🧱 Mohenjo-daro | Kya Baat Facts #Shorts",
+ "comment_prompt": "Aapke sheher ki naaliyaan kaisi hain? 😅👇",
+ "hashtags": [
+  "#KyaBaatFacts",
+  "#ItihaasKeRaaz",
+  "#MohenjoDaro",
+  "#IndusValley",
+  "#HindiFacts",
+  "#History"
+ ]
+}

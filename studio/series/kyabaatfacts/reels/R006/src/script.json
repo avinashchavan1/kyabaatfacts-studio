@@ -1,0 +1,199 @@
+{
+ "reel": "R006",
+ "title": "Aloo, tamatar, mirch - Indian nahi hain! Portuguese laaye",
+ "series": "kyabaatfacts",
+ "fps": 24,
+ "status": "DRAFT — not verified",
+ "source": "Asia Times · Wikipedia (Origins of North Indian foods) · Heidelberg University (food history)",
+ "source_card": {
+  "title": [
+   "KYA BAAT",
+   "FACTS"
+  ],
+  "sub": "Asia Times · Wikipedia (Origins of North Indian foods) · Heidelberg University (food history)",
+  "edition": "SOURCES CHECKED"
+ },
+ "claims": [
+  {
+   "claim": "Potato, tomato and chilli are native to the Americas",
+   "ref": "Asia Times; Wikipedia",
+   "verified": true,
+   "sources": [
+    "https://asiatimes.com/2019/12/how-south-american-ingredients-enhanced-indian-cuisine/",
+    "https://en.wikipedia.org/wiki/Origins_of_North_Indian_and_Pakistani_foods"
+   ]
+  },
+  {
+   "claim": "Chillies were brought to India by the Portuguese (via Goa)",
+   "ref": "Asia Times",
+   "verified": true,
+   "sources": [
+    "https://asiatimes.com/2019/12/how-south-american-ingredients-enhanced-indian-cuisine/"
+   ]
+  },
+  {
+   "claim": "The potato was likely introduced by Portuguese traders around 1600",
+   "ref": "Wikipedia (Origins of North Indian and Pakistani foods)",
+   "verified": true,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Origins_of_North_Indian_and_Pakistani_foods"
+   ]
+  },
+  {
+   "claim": "The tomato arrived earlier, but routine use in Indian cooking is recorded only from the first half of the 19th century",
+   "ref": "Heidelberg University Publishing (food history)",
+   "verified": true,
+   "sources": [
+    "https://hasp.ub.uni-heidelberg.de/catalog/view/366/517/81613"
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "id": 1,
+   "voice": "narrator",
+   "hi": "अरे, एक बात बताऊँ? आलू, टमाटर और मिर्च... ये तो पक्के Indian हैं ना?",
+   "en": "Hey, want to hear something? Potato, tomato and chilli... these are totally Indian, right?",
+   "units": [
+    "[excited] अरे, एक बात बताऊँ?",
+    "[curious] आलू, टमाटर और मिर्च... ये तो पक्के Indian हैं ना?"
+   ],
+   "lead": 0.25,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "card": [
+    [
+     "ALOO · TAMATAR · MIRCH",
+     null
+    ],
+    [
+     "PAKKE INDIAN?",
+     "#FFC83D"
+    ]
+   ],
+   "min": 3.5
+  },
+  {
+   "id": 2,
+   "voice": "narrator",
+   "hi": "नहीं यार! ये तीनों... अमेरिका महाद्वीप से आए हैं!",
+   "en": "No way! All three came from the Americas!",
+   "units": [
+    "[excited] नहीं यार! ये तीनों... अमेरिका महाद्वीप से आए हैं!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "cite": "Asia Times",
+   "reveal": true
+  },
+  {
+   "id": 3,
+   "voice": "narrator",
+   "hi": "और इन्हें भारत लाए... पुर्तगाली व्यापारी! मिर्च आई गोवा के रास्ते!",
+   "en": "And Portuguese traders brought them to India! Chilli came in through Goa!",
+   "units": [
+    "[curious] और इन्हें भारत लाए... पुर्तगाली व्यापारी!",
+    "[excited] मिर्च आई गोवा के रास्ते!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "Asia Times"
+  },
+  {
+   "id": 4,
+   "voice": "narrator",
+   "hi": "यानी जिस मिर्च के बिना आज हमारा खाना अधूरा है... वो बाहर से आई थी! क्या बात है!",
+   "en": "So the chilli our food can't live without... came from outside! Kya baat hai!",
+   "units": [
+    "[amazed] यानी जिस मिर्च के बिना आज हमारा खाना अधूरा है... वो बाहर से आई थी!",
+    "क्या बात है!"
+   ],
+   "lead": 0.15,
+   "tail": 0.45,
+   "unit_gap": 0.3,
+   "signature_unit": 1,
+   "force_take": {
+    "1": 1
+   },
+   "no_cut": [
+    1
+   ],
+   "reveal": true,
+   "cite": "Asia Times"
+  },
+  {
+   "id": 5,
+   "voice": "narrator",
+   "hi": "और आलू? वो आया लगभग सोलह सौ के आसपास...",
+   "en": "And the potato? It arrived around 1600...",
+   "units": [
+    "[curious] और आलू? वो आया लगभग सोलह सौ के आसपास..."
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "cite": "Wikipedia"
+  },
+  {
+   "id": 6,
+   "voice": "narrator",
+   "hi": "और टमाटर का twist सुनो... वो आया तो पहले था... लेकिन आम तौर पर खाया जाने लगा अठारह सौ के दशक में!",
+   "en": "And here's the tomato twist... it arrived earlier, but people commonly started eating it only in the 1800s!",
+   "units": [
+    "[playfully] और टमाटर का twist सुनो...",
+    "[excited] वो आया तो पहले था... लेकिन आम तौर पर खाया जाने लगा अठारह सौ के दशक में!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "Heidelberg University"
+  },
+  {
+   "id": 7,
+   "voice": "narrator",
+   "hi": "ऐसे और मज़ेदार facts के लिए... फ़ॉलो करो!",
+   "en": "",
+   "units": [
+    "[excited] ऐसे और मज़ेदार facts के लिए... फ़ॉलो करो!"
+   ],
+   "cta": true,
+   "lead": 0.3,
+   "tail": 0.7,
+   "min": 3.7
+  }
+ ],
+ "thumbnail": {
+  "frame": "8s",
+  "hook": "ALOO TAMATAR MIRCH",
+  "stamp": "INDIAN NAHI!",
+  "line": "All three came from the Americas",
+  "badge": "KHAANE KA ITIHAAS",
+  "art_shift": 0
+ },
+ "score": {
+  "engine": "reused",
+  "file": "audio/score.mp3",
+  "duration_s": 55,
+  "gain": 1.6,
+  "duck": 0.6,
+  "take": "reused from R001",
+  "prompt": "reused (credit saving)"
+ },
+ "category": "Khaane Ka Itihaas",
+ "avoid": [
+  "exact arrival years for tomato (debated)",
+  "claiming Vasco da Gama personally brought them"
+ ],
+ "verify_note": "Tomato: introduced earlier, but common only from the 1800s (Heidelberg). Potato ~1600 (Wikipedia).",
+ "caption": "Aloo, tamatar aur mirch — teeno Indian nahi hain! 🥔🍅🌶️ Teeno America ke hain aur Portuguese vyapari inhe Bharat laaye. Aur tamatar aam taur par 1800s mein jaake khaaya jaane laga!\n\nSources: Asia Times, Wikipedia, Heidelberg University Publishing.\n\nAapki favourite sabzi kaunsi hai? Comment karo 👇",
+ "youtube_title": "Aloo, Tamatar, Mirch Indian Nahi Hain! 🥔🍅🌶️ | Kya Baat Facts #Shorts",
+ "comment_prompt": "Aloo ke bina kaunsi dish sochi bhi nahi ja sakti? 👇",
+ "hashtags": [
+  "#KyaBaatFacts",
+  "#KhaaneKaItihaas",
+  "#IndianFood",
+  "#HindiFacts",
+  "#FoodHistory",
+  "#Facts"
+ ]
+}

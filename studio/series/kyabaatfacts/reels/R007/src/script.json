@@ -1,0 +1,211 @@
+{
+ "reel": "R007",
+ "title": "Shahad kabhi kharab kyun nahi hota?",
+ "series": "kyabaatfacts",
+ "fps": 24,
+ "status": "DRAFT — not verified",
+ "source": "Smithsonian Magazine · Discover Magazine",
+ "source_card": {
+  "title": [
+   "KYA BAAT",
+   "FACTS"
+  ],
+  "sub": "Smithsonian Magazine · Discover Magazine",
+  "edition": "SOURCES CHECKED"
+ },
+ "claims": [
+  {
+   "claim": "Pots of honey thousands of years old, found in ancient Egyptian tombs, were still preserved",
+   "ref": "Smithsonian",
+   "verified": true,
+   "sources": [
+    "https://www.smithsonianmag.com/science-nature/the-science-behind-honeys-eternal-shelf-life-1218690/"
+   ]
+  },
+  {
+   "claim": "Honey has very little water, so microbes can't grow in it",
+   "ref": "Smithsonian; Discover",
+   "verified": true,
+   "sources": [
+    "https://www.smithsonianmag.com/science-nature/the-science-behind-honeys-eternal-shelf-life-1218690/",
+    "https://www.discovermagazine.com/planet-earth/honeys-eternal-shelf-life-explained"
+   ]
+  },
+  {
+   "claim": "Honey is acidic (pH about 3 to 4.5)",
+   "ref": "Smithsonian",
+   "verified": true,
+   "sources": [
+    "https://www.smithsonianmag.com/science-nature/the-science-behind-honeys-eternal-shelf-life-1218690/"
+   ]
+  },
+  {
+   "claim": "Bees add an enzyme (glucose oxidase) that produces hydrogen peroxide, which fights microbes",
+   "ref": "Smithsonian; Discover",
+   "verified": true,
+   "sources": [
+    "https://www.smithsonianmag.com/science-nature/the-science-behind-honeys-eternal-shelf-life-1218690/",
+    "https://www.discovermagazine.com/planet-earth/honeys-eternal-shelf-life-explained"
+   ]
+  },
+  {
+   "claim": "Left open in a humid place, honey absorbs moisture and can spoil; the seal matters",
+   "ref": "Smithsonian",
+   "verified": true,
+   "sources": [
+    "https://www.smithsonianmag.com/science-nature/the-science-behind-honeys-eternal-shelf-life-1218690/"
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "id": 1,
+   "voice": "narrator",
+   "hi": "अरे, एक बात बताऊँ? क्या शहद कभी ख़राब होता है?",
+   "en": "Hey, want to hear something? Does honey ever go bad?",
+   "units": [
+    "[excited] अरे, एक बात बताऊँ?",
+    "[curious] क्या शहद कभी ख़राब होता है?"
+   ],
+   "lead": 0.25,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "card": [
+    [
+     "SHAHAD KABHI",
+     null
+    ],
+    [
+     "KHARAB HOTA HAI?",
+     "#FFC83D"
+    ]
+   ],
+   "min": 3.5
+  },
+  {
+   "id": 2,
+   "voice": "narrator",
+   "hi": "मिस्र के पुराने मकबरों में मिले... हज़ारों साल पुराने शहद के बर्तन! और वो शहद... अब भी सही-सलामत था!",
+   "en": "In ancient Egyptian tombs, pots of honey thousands of years old were found! And the honey was still preserved!",
+   "units": [
+    "[excited] मिस्र के पुराने मकबरों में मिले... हज़ारों साल पुराने शहद के बर्तन!",
+    "[amazed] और वो शहद... अब भी सही-सलामत था!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "Smithsonian",
+   "reveal": true
+  },
+  {
+   "id": 3,
+   "voice": "narrator",
+   "hi": "राज़ नंबर एक: शहद में पानी बहुत कम होता है... तो कीटाणु उसमें पनप ही नहीं पाते!",
+   "en": "Secret number one: honey has very little water... so germs just can't grow in it!",
+   "units": [
+    "[curious] राज़ नंबर एक: शहद में पानी बहुत कम होता है...",
+    "[excited] तो कीटाणु उसमें पनप ही नहीं पाते!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "Smithsonian"
+  },
+  {
+   "id": 4,
+   "voice": "narrator",
+   "hi": "राज़ नंबर दो: शहद खट्टा... यानी acidic होता है। और राज़ नंबर तीन: मधुमक्खियाँ उसमें डालती हैं एक enzyme... जिससे बनता है hydrogen peroxide!",
+   "en": "Secret two: honey is acidic. And secret three: bees add an enzyme that makes hydrogen peroxide!",
+   "units": [
+    "[curious] राज़ नंबर दो: शहद खट्टा... यानी acidic होता है।",
+    "[excited] और राज़ नंबर तीन: मधुमक्खियाँ उसमें डालती हैं एक enzyme... जिससे बनता है hydrogen peroxide!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "Smithsonian · Discover"
+  },
+  {
+   "id": 5,
+   "voice": "narrator",
+   "hi": "यानी मधुमक्खियों ने बना दिया... कुदरत का अपना preservative! क्या बात है!",
+   "en": "So bees made nature's own preservative! Kya baat hai!",
+   "units": [
+    "[amazed] यानी मधुमक्खियों ने बना दिया... कुदरत का अपना preservative!",
+    "क्या बात है!"
+   ],
+   "lead": 0.15,
+   "tail": 0.45,
+   "unit_gap": 0.3,
+   "signature_unit": 1,
+   "force_take": {
+    "1": 1
+   },
+   "no_cut": [
+    1
+   ],
+   "reveal": true,
+   "cite": "Smithsonian"
+  },
+  {
+   "id": 6,
+   "voice": "narrator",
+   "hi": "लेकिन ध्यान रहे... अगर ढक्कन खुला छोड़ा, तो शहद हवा से नमी सोख लेता है... और ख़राब भी हो सकता है!",
+   "en": "But careful... leave the lid open and honey soaks up moisture from the air... and can actually spoil!",
+   "units": [
+    "[playfully] लेकिन ध्यान रहे...",
+    "[excited] अगर ढक्कन खुला छोड़ा, तो शहद हवा से नमी सोख लेता है... और ख़राब भी हो सकता है!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "Smithsonian"
+  },
+  {
+   "id": 7,
+   "voice": "narrator",
+   "hi": "ऐसे और मज़ेदार facts के लिए... फ़ॉलो करो!",
+   "en": "",
+   "units": [
+    "[excited] ऐसे और मज़ेदार facts के लिए... फ़ॉलो करो!"
+   ],
+   "cta": true,
+   "lead": 0.3,
+   "tail": 0.7,
+   "min": 3.7
+  }
+ ],
+ "thumbnail": {
+  "frame": "8s",
+  "hook": "SHAHAD KABHI KHARAB NAHI?",
+  "stamp": "HAZAARON SAAL!",
+  "line": "Found in ancient Egyptian tombs",
+  "badge": "SCIENCE WALA SACH",
+  "art_shift": 0
+ },
+ "score": {
+  "engine": "reused",
+  "file": "audio/score.mp3",
+  "duration_s": 55,
+  "gain": 1.6,
+  "duck": 0.6,
+  "take": "reused from R005",
+  "prompt": "reused (credit saving)"
+ },
+ "category": "Science Wala Sach",
+ "avoid": [
+  "an exact '3,000 years' figure (say 'hazaaron saal')"
+ ],
+ "verify_note": "All from Smithsonian / Discover.",
+ "caption": "Shahad kabhi kharab kyun nahi hota? 🍯 Misr ke maqbaron mein hazaaron saal purana shahad mila — aur woh ab bhi theek tha! Kam paani + acid + hydrogen peroxide = super shelf life. Par dhakkan khula chhoda to kharab ho sakta hai!\n\nSources: Smithsonian Magazine, Discover Magazine.\n\nAapke ghar mein shahad kitna purana hai? 👇",
+ "youtube_title": "Shahad Kabhi Kharab Kyun Nahi Hota? 🍯 | Kya Baat Facts #Shorts",
+ "comment_prompt": "Aapke ghar mein shahad kitna purana hai? 👇",
+ "hashtags": [
+  "#KyaBaatFacts",
+  "#ScienceWalaSach",
+  "#Honey",
+  "#HindiFacts",
+  "#Science",
+  "#Facts"
+ ]
+}
