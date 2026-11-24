@@ -1,0 +1,250 @@
+{
+ "reel": "R010",
+ "title": "Delhi ka loha stambh: 1,600 saal, phir bhi zang nahi!",
+ "series": "kyabaatfacts",
+ "fps": 24,
+ "status": "DRAFT — not verified",
+ "source": "Wikipedia · Britannica · Down to Earth (IIT Kanpur) · IUPAC · Delhi Tourism",
+ "source_card": {
+  "title": [
+   "KYA BAAT",
+   "FACTS"
+  ],
+  "sub": "Wikipedia · Britannica · Down to Earth · IUPAC",
+  "edition": "SOURCES CHECKED"
+ },
+ "claims": [
+  {
+   "claim": "The iron pillar stands in the Qutb complex, Mehrauli, Delhi, and is about 7.2 m tall",
+   "ref": "Wikipedia",
+   "verified": true,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Iron_pillar_of_Delhi"
+   ]
+  },
+  {
+   "claim": "Made in the Gupta period about 1,600 years ago; its oldest inscription names a king Chandra, generally identified as Chandragupta II",
+   "ref": "Wikipedia; Britannica",
+   "verified": true,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Iron_pillar_of_Delhi",
+    "https://www.britannica.com/topic/iron-pillar"
+   ]
+  },
+  {
+   "claim": "It rusts only very slightly: a thin protective layer keeps corrosion minimal",
+   "ref": "Wikipedia; IUPAC",
+   "verified": true,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Iron_pillar_of_Delhi",
+    "https://old.iupac.org/publications/ci/2005/2706/3_veazey.html"
+   ]
+  },
+  {
+   "claim": "High phosphorus in the iron helps form the thin protective layer (Balasubramaniam, IIT Kanpur)",
+   "ref": "Down to Earth; IUPAC; Britannica",
+   "verified": true,
+   "sources": [
+    "https://www.downtoearth.org.in/environment/iron-mask-15049",
+    "https://old.iupac.org/publications/ci/2005/2706/3_veazey.html",
+    "https://www.britannica.com/topic/iron-pillar"
+   ]
+  },
+  {
+   "claim": "Made by forge welding: hot pieces of wrought iron hammered together, not cast",
+   "ref": "Wikipedia; Britannica",
+   "verified": true,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Iron_pillar_of_Delhi",
+    "https://www.britannica.com/topic/iron-pillar"
+   ]
+  },
+  {
+   "claim": "Visitors used to hug it for wishes; a fence was put around it in 1997",
+   "ref": "Delhi Tourism; Culture Trip",
+   "verified": true,
+   "sources": [
+    "https://delhitourism.travel/iron-pillar-delhi",
+    "https://theculturetrip.com/asia/india/articles/the-mystery-of-delhis-iron-pillar-the-wishing-pillar-that-refuses-to-rust"
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "id": 1,
+   "voice": "narrator",
+   "hi": "ये लोहे का खंभा... सोलह सौ साल से धूप और बारिश में खड़ा है... और आज तक ज़ंग से ख़राब नहीं हुआ!",
+   "en": "This iron pillar has stood in sun and rain for 1,600 years... and rust still hasn't ruined it!",
+   "units": [
+    "[excited] ये लोहे का खंभा... सोलह सौ साल से धूप और बारिश में खड़ा है...",
+    "[amazed] और आज तक ज़ंग से ख़राब नहीं हुआ!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "card": [
+    [
+     "1,600 SAAL KA LOHA",
+     null
+    ],
+    [
+     "ZANG? NAHI!",
+     "#FFC83D"
+    ]
+   ],
+   "min": 3.0
+  },
+  {
+   "id": 2,
+   "voice": "narrator",
+   "hi": "यकीन नहीं होता? ये है दिल्ली का लौह स्तंभ... क़ुतुब मीनार के पास, लगभग सात मीटर ऊँचा!",
+   "en": "Don't believe it? This is Delhi's Iron Pillar... next to the Qutub Minar, about seven metres tall!",
+   "units": [
+    "[curious] यकीन नहीं होता? ये है दिल्ली का लौह स्तंभ...",
+    "[excited] क़ुतुब मीनार के पास, लगभग सात मीटर ऊँचा!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "Wikipedia",
+   "reveal": true
+  },
+  {
+   "id": 3,
+   "voice": "narrator",
+   "hi": "इस पर एक राजा का नाम लिखा है... चंद्र। ज़्यादातर experts मानते हैं, ये थे गुप्त राजा चंद्रगुप्त दूसरे!",
+   "en": "It carries a king's name... Chandra. Most experts think he was the Gupta king Chandragupta the Second!",
+   "units": [
+    "[curious] इस पर एक राजा का नाम लिखा है... चंद्र।",
+    "[excited] ज़्यादातर experts मानते हैं, ये थे गुप्त राजा चंद्रगुप्त दूसरे!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "Wikipedia · Britannica"
+  },
+  {
+   "id": 4,
+   "voice": "narrator",
+   "hi": "अब सोचो, घर का लोहे का gate... कुछ ही साल में ज़ंग खा जाता है। तो ये खंभा क्यों नहीं?",
+   "en": "Now think: the iron gate at home rusts in just a few years. So why not this pillar?",
+   "units": [
+    "[playfully] अब सोचो, घर का लोहे का gate... कुछ ही साल में ज़ंग खा जाता है।",
+    "[curious] तो ये खंभा क्यों नहीं?"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3
+  },
+  {
+   "id": 5,
+   "voice": "narrator",
+   "hi": "राज़ है इसके लोहे में! इसमें phosphorus ज़्यादा है... जो ऊपर एक बहुत पतली परत बना देता है, और वही परत ज़ंग को रोकती है! क्या बात है!",
+   "en": "The secret is in its iron! It has extra phosphorus... which forms a very thin layer on top, and that layer holds the rust back! Kya baat hai!",
+   "units": [
+    "[excited] राज़ है इसके लोहे में! इसमें phosphorus ज़्यादा है...",
+    "[amazed] जो ऊपर एक बहुत पतली परत बना देता है, और वही परत ज़ंग को रोकती है!",
+    "क्या बात है!"
+   ],
+   "lead": 0.15,
+   "tail": 0.45,
+   "unit_gap": 0.3,
+   "cite": "IIT Kanpur (Balasubramaniam) via Down to Earth · IUPAC",
+   "signature_unit": 2,
+   "force_take": {
+    "2": 1
+   },
+   "no_cut": [
+    2
+   ],
+   "reveal": true
+  },
+  {
+   "id": 6,
+   "voice": "narrator",
+   "hi": "और ये एक साँचे में नहीं ढला... गरम लोहे के टुकड़ों को पीट-पीटकर जोड़ा गया था! लोग इसे पीठ लगाकर बाहों में भरते थे, wish के लिए... इसलिए उन्नीस सौ सत्तानवे में इसके चारों ओर जाली लगा दी गई!",
+   "en": "And it wasn't poured into a mould... hot pieces of iron were hammered together! People used to hug it, back against it, for a wish... so in 1997 a fence was put around it!",
+   "units": [
+    "[curious] और ये एक साँचे में नहीं ढला... गरम लोहे के टुकड़ों को पीट-पीटकर जोड़ा गया था!",
+    "[playfully] लोग इसे पीठ लगाकर बाहों में भरते थे, wish के लिए... इसलिए उन्नीस सौ सत्तानवे में इसके चारों ओर जाली लगा दी गई!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "Wikipedia · Delhi Tourism"
+  },
+  {
+   "id": 7,
+   "voice": "narrator",
+   "hi": "तो अगली बार क़ुतुब मीनार जाओ... तो इस सोलह सौ साल पुराने खंभे को ज़रूर देखना!",
+   "en": "So next time you visit the Qutub Minar... don't miss this 1,600-year-old pillar!",
+   "units": [
+    "[excited] तो अगली बार क़ुतुब मीनार जाओ... तो इस सोलह सौ साल पुराने खंभे को ज़रूर देखना!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3
+  },
+  {
+   "id": 8,
+   "voice": "narrator",
+   "hi": "ऐसे और मज़ेदार facts के लिए... फ़ॉलो करो!",
+   "en": "",
+   "units": [
+    "[excited] ऐसे और मज़ेदार facts के लिए... फ़ॉलो करो!"
+   ],
+   "cta": true,
+   "lead": 0.3,
+   "tail": 0.7,
+   "min": 3.7
+  }
+ ],
+ "thumbnail": {
+  "frame": "3.0s",
+  "hook": "1,600 SAAL KA LOHA",
+  "stamp": "ZANG NAHI!",
+  "line": "Iron Pillar, Qutub complex, Delhi",
+  "badge": "DESH KE AJOOBE",
+  "art_shift": 0
+ },
+ "score": {
+  "engine": "reused",
+  "file": "audio/score.mp3",
+  "duration_s": 55,
+  "gain": 1.6,
+  "duck": 0.6,
+  "take": "reused from R002",
+  "prompt": "reused (credit saving)"
+ },
+ "layout": "safe_v2",
+ "category": "Desh Ke Ajoobe",
+ "avoid": [
+  "exact phosphorus % (sources differ)",
+  "weight (sources differ)",
+  "who moved it to Delhi (disputed)",
+  "'never rusts at all'",
+  "original site (uncertain)"
+ ],
+ "verify_note": "Qutb complex, ~7.2 m, Gupta era ~1,600 yrs, king Chandra = Chandragupta II (generally identified), phosphorus protective layer, forge-welded, hug tradition + 1997 fence.",
+ "caption": "Ye lohe ka khamba 1,600 saal se dhoop-baarish mein khada hai, aur zang se kharab nahi hua 🏛️\n\n🔩 Raaz: iske lohe mein zyada phosphorus, jo upar ek patli si parat bana deta hai. Aur ye ek saanche mein nahi dhala, garam lohe ke tukdon ko peet-peet kar joda gaya tha!\n\nSources: Wikipedia, Britannica, Down to Earth (IIT Kanpur research), IUPAC, Delhi Tourism.\nPhoto: 03Ani03 / Wikimedia Commons (CC BY-SA 4.0).\n\nComment karo: aapne ye khamba dekha hai? 👇",
+ "youtube_title": "1,600 Saal Ka Loha, Phir Bhi Zang Nahi! 🏛️ Delhi Iron Pillar | Kya Baat Facts #Shorts",
+ "comment_prompt": "Aapne ye khamba dekha hai? 👇",
+ "hashtags": [
+  "#KyaBaatFacts",
+  "#DeshKeAjoobe",
+  "#IronPillar",
+  "#Delhi",
+  "#QutubMinar",
+  "#HindiFacts"
+ ],
+ "media": [
+  {
+   "file": "src/proof_pillar.jpg",
+   "what": "Delhi Iron Pillar framed in the Quwwat-ul-Islam arch (cropped, no people)",
+   "source": "https://commons.wikimedia.org/w/index.php?curid=146843829",
+   "license": "CC BY-SA 4.0",
+   "credit": "03Ani03 / Wikimedia Commons",
+   "shot": 2
+  }
+ ]
+}
