@@ -176,3 +176,11 @@ Full content plan: PLAN.md (same folder)
 - Voice: Bunty - Fun Podcast Host (ElevenLabs library, voice 3OUAuH7CeDSQhCCijs1Y), model eleven_v4, stability 0.5.
 - Style: excited and chatty, like telling a friend ("अरे, एक बात बताऊँ?"). Round 1 calm/formal voices were rejected.
 - Catchphrase: "क्या बात है!" - one fixed recorded clip (cast/signature/kya_baat_hai.mp3) closes every reveal.
+
+## Posting frequency (decided 24 Nov 2026)
+- Phase 1, weeks 1-4: 4 Shorts a week (Mon Science, Tue History, Thu Wonders, Fri Myth or Fact?) → `calendar.json → post_days: [1,2,4,5]`.
+- Phase 2, weeks 5-12: 6 a week (Mon-Sat) once 7-10 reels are ready in advance and the new ElevenLabs plan is in place → post_days [1,2,3,4,5,6].
+- Phase 3, month 3+: 6 a week + 1 long video a month (which also yields 4-6 Shorts).
+- Each reel goes to YouTube Shorts, Instagram Reels and Facebook Reels the same day; max 1 Short a day; evenings ~6-9 PM IST (the app's Timeline suggests times and learns).
+- Keep a buffer of 7+ ready reels; below 5, slow down rather than rush. Review retention at 48 h.
+- Credits: ~25k/month (launch), ~30k (6 a week), ~50k (+ long video).
