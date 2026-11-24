@@ -99,3 +99,49 @@ endCard = function (ctx, u, p, sh, t, post) {
     if (handles) [].concat(handles).forEach((l, i) => text(c, l, 540, 1530 + i * 56, { size: 38, weight: 800, color: KB.INK, ls: 2, alpha: ease(u, 1.1, 1.5), shadow: 0 }));
   };
 };
+
+// ---- shared reel helpers (R002+) ----
+function kbStamp(c, str, x, y, u, at, col = KB.RED, size = 120, rot = -0.1) {
+  const b = backOut(map(u, at, at + 0.35)); if (b <= 0) return;
+  c.save(); c.translate(x, y); c.rotate(rot); c.scale(b, b); c.font = `900 ${size}px Montserrat`; c.letterSpacing = '2px';
+  const w = Math.min(c.measureText(str).width + 80, 980), h = size * 1.25;
+  c.fillStyle = KB.INK; c.beginPath(); c.roundRect(-w / 2 + 12, -h / 2 + 12, w, h, 30); c.fill();
+  c.fillStyle = col; c.strokeStyle = KB.INK; c.lineWidth = 10; c.beginPath(); c.roundRect(-w / 2, -h / 2, w, h, 30); c.fill(); c.stroke(); c.restore();
+  c.save(); c.translate(x, y); c.rotate(rot); c.scale(b, b); textFit(c, str, 0, size * 0.36, { size, weight: 900, color: KB.W, shadow: 0 }, 900); c.restore();
+}
+function kbShake(ctx, u, at, amt = 18, len = 0.35) { const k = 1 - map(u, at, at + len); if (u < at || k <= 0) return; ctx.translate(Math.sin(u * 90) * amt * k, Math.cos(u * 77) * amt * k); }
+// speech/label panel with text (fades in at `at`)
+function kbLabel(c, str, y, u, at = 0.2, o = {}) {
+  const q = ease(u, at, at + 0.35); if (q <= 0) return; const { size = 56, fill = KB.W, col = KB.INK, w = 880 } = o;
+  c.save(); c.globalAlpha = q; kbPanel(c, 540 - w / 2, y + (1 - q) * 24, w, size * 2.6, fill, size * 1.3); c.restore();
+  textFit(c, str, 540, y + size * 1.6 + (1 - q) * 24, { size, weight: 900, color: col, alpha: q, shadow: 0 }, w - 60);
+}
+function kbPin(c, x, y, label, u, at = 0.3, col = KB.RED) {
+  const b = backOut(map(u, at, at + 0.4)); if (b <= 0) return;
+  c.save(); c.translate(x, y); c.scale(b, b); c.fillStyle = col; c.strokeStyle = KB.INK; c.lineWidth = 8;
+  c.beginPath(); c.moveTo(0, 0); c.bezierCurveTo(-60, -70, -60, -140, 0, -140); c.bezierCurveTo(60, -140, 60, -70, 0, 0); c.fill(); c.stroke();
+  c.fillStyle = KB.W; c.beginPath(); c.arc(0, -95, 20, 0, Math.PI * 2); c.fill(); c.stroke(); c.restore();
+  if (label) { c.save(); c.globalAlpha = ease(u, at + 0.2, at + 0.5); c.font = '900 40px Montserrat'; const w = c.measureText(label).width + 50; kbPanel(c, x - w / 2, y + 20, w, 70, KB.W, 35, 8); c.restore(); text(c, label, x, y + 68, { size: 40, weight: 900, color: KB.INK, alpha: ease(u, at + 0.2, at + 0.5), shadow: 0 }); }
+}
+function kbHeart(c, x, y, s, col = KB.RED, beat = 1) {
+  c.save(); c.translate(x, y); c.scale(s * beat, s * beat); c.fillStyle = col; c.strokeStyle = KB.INK; c.lineWidth = 8 / Math.max(s, 0.3);
+  c.beginPath(); c.moveTo(0, 30); c.bezierCurveTo(-60, -10, -40, -60, 0, -30); c.bezierCurveTo(40, -60, 60, -10, 0, 30); c.fill(); c.stroke(); c.restore();
+}
+function kbArrow(c, x0, y0, x1, y1, col = KB.INK, w = 12) {
+  c.save(); c.strokeStyle = col; c.fillStyle = col; c.lineWidth = w; c.lineCap = 'round'; c.beginPath(); c.moveTo(x0, y0); c.lineTo(x1, y1); c.stroke();
+  const a = Math.atan2(y1 - y0, x1 - x0), L = w * 3; c.beginPath(); c.moveTo(x1 + Math.cos(a) * w, y1 + Math.sin(a) * w); c.lineTo(x1 - Math.cos(a - 0.5) * L, y1 - Math.sin(a - 0.5) * L); c.lineTo(x1 - Math.cos(a + 0.5) * L, y1 - Math.sin(a + 0.5) * L); c.closePath(); c.fill(); c.restore();
+}
+function kbBubbles(c, t, n = 18, seed = 3, col = 'rgba(255,255,255,0.35)') {
+  const r = rng(seed); c.save(); c.strokeStyle = col; c.lineWidth = 4;
+  for (let i = 0; i < n; i++) { const x = r() * W, sp = 60 + r() * 90, rad = 6 + r() * 16, y = H - ((t * sp + r() * H) % (H + 100)); c.beginPath(); c.arc(x + Math.sin(t * 2 + i) * 10, y, rad, 0, Math.PI * 2); c.stroke(); }
+  c.restore();
+}
+// counting number (0 → n) formatted Indian style
+function kbCount(n, u, a, b) { const v = Math.round(n * easeOut(map(u, a, b))); return v.toLocaleString('en-IN'); }
+// the catchphrase overlay: yellow wash + giant WOW eyes + "KYA BAAT HAI!" from time `at`
+function kbKyaBaat(c, u, t, at) {
+  if (u < at - 0.1) return; const q = backOut(map(u, at - 0.1, at + 0.3));
+  c.save(); c.fillStyle = rgba(KB.Y, 0.93 * Math.min(1, q)); c.fillRect(0, 0, W, H); c.restore();
+  c.save(); c.translate(540, 900); c.scale(q, q); kbEyes(c, 0, 0, 170, t, 'wow', 1); c.restore();
+  text(c, 'KYA BAAT HAI!', 540, 1310, { size: 118 * Math.min(1, q), weight: 900, color: KB.INK, shadow: 0 });
+}
