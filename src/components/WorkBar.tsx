@@ -68,7 +68,7 @@ function Panel({ s, onClose }: { s: WorkStatus; onClose: () => void }) {
   const phases = info.phases ?? [], queue = info.queue ?? [], events = (info.events ?? []).slice(-5).reverse();
   return (
     <div role="status" aria-live="polite"
-      className={clsx("border-b px-4 py-3 text-[13px] sm:px-6 lg:px-10", waiting ? "border-amber-300 bg-amber-50 text-amber-950 dark:border-amber-800 dark:bg-amber-950 dark:text-amber-100" : "border-gold/40 bg-night-900 text-parchment")}>
+      className={clsx("max-h-[55vh] overflow-y-auto overscroll-contain border-b px-4 py-3 text-[13px] sm:px-6 lg:max-h-[70vh] lg:px-10", waiting ? "border-amber-300 bg-amber-50 text-amber-950 dark:border-amber-800 dark:bg-amber-950 dark:text-amber-100" : "border-gold/40 bg-night-900 text-parchment")}>
       <div className="mx-auto max-w-7xl">
         {/* headline */}
         <div className="flex items-start gap-2.5">
@@ -194,7 +194,7 @@ function Batch({ info, current }: { info: NonNullable<WorkStatus["info"]>; curre
         <div className="text-xs font-semibold opacity-80"><span className="tabular">{doneN}</span> of <span className="tabular">{codes.length}</span> reels ready · <span className="tabular">{pct}%</span></div>
       </div>
       <div className="mt-2 flex items-center gap-2"><Bar pct={pct} big /></div>
-      <div className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-3 grid grid-cols-2 gap-2 lg:grid-cols-4">
         {codes.map((c) => {
           const r = reels[c], st = r.state ?? "queued", step = r.step ?? 0, live = c === current && st === "running";
           return (
