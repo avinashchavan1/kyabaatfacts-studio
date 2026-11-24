@@ -1,4 +1,6 @@
 // ===== R008 · Mohenjo-daro: 4,500 saal pehle drainage! (Itihaas Ke Raaz) — Kya Baat look =====
+const KB_SAFE = true;                                   // safe-zone layout (v2)
+const SUB_STYLE = { maxW: 640, bottom: 1400 };
 const R8_CAT = { label: 'ITIHAAS KE RAAZ', col: '#C47832' };
 function buildScenes() { return kbLoadImg('lothal', 'proof_lothal.jpg'); }
 const R8_BRICK = '#C8704A', R8_BRICK2 = '#A9573A';
@@ -24,7 +26,7 @@ const SHOTS = {
   1(ctx, u, p, sh, t, post) {
     const st = sentenceStarts(sh, 2); r8Sky(ctx); r8Drain(ctx, t, 0, 0);
     r8Bricks(ctx, 60, 760, 300, 340); r8Bricks(ctx, 720, 700, 300, 400);
-    post.ui = c => { kbBadge(c, R8_CAT.label, R8_CAT.col, ease(u, 0, 0.3)); (sh.card || []).forEach(([s, col], i) => { const q = ease(u, (i ? st[1] : 0.05) - 0.05, (i ? st[1] : 0.05) + 0.3); if (q > 0) textFit(c, s, 540, 430 + i * 130 + (1 - q) * 22, { size: 96, weight: 900, color: col || KB.W, alpha: q, stroke: 14, shadow: 0 }, 980); }); kbEyes(c, 540, 900, 44, t, u < st[1] ? 'hmm' : 'sach', 2); };
+    post.ui = c => { kbBadge(c, R8_CAT.label, R8_CAT.col, ease(u, 0, 0.3)); (sh.card || []).forEach(([s, col], i) => { const q = i ? ease(u, st[1] - 0.05, st[1] + 0.3) : 1; if (q > 0) textFit(c, s, 540, 430 + i * 130 + (1 - q) * 22, { size: 96, weight: 900, color: col || KB.W, alpha: q, stroke: 14, shadow: 0 }, 980); }); kbEyes(c, 540, 900, 44, t, u < st[1] ? 'hmm' : 'sach', 2); };
   },
   2(ctx, u, p, sh, t, post) {
     const st = sentenceStarts(sh, 2); r8Sky(ctx); r8Drain(ctx, t, 0, 1);

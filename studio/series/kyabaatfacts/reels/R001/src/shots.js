@@ -1,4 +1,6 @@
 // ===== R001 · Bijli vs Suraj (Science Wala Sach) — Kya Baat look (series/art/brand.js) =====
+const KB_SAFE = true;                                   // safe-zone layout (v2)
+const SUB_STYLE = { maxW: 640, bottom: 1400 };
 // Every shot: (ctx, u = seconds into shot, p = 0..1, sh = timeline entry, t = global seconds, post = {ui, sat, flash, noLogo})
 const R1_CAT = { label: 'SCIENCE WALA SACH', col: '#20B2A6' };
 function buildScenes() { return Promise.all([kbLoadImg('sun', 'proof_sun.jpg'), kbLoadImg('ltn', 'proof_lightning.jpg')]); }
@@ -72,7 +74,7 @@ const SHOTS = {
     post.ui = c => {
       kbBadge(c, R1_CAT.label, R1_CAT.col, ease(u, 0, 0.3));
       const b = backOut(map(u, 0.1, 0.5)); c.save(); c.translate(540, 1000); c.scale(b, b); c.fillStyle = KB.RED; c.strokeStyle = KB.INK; c.lineWidth = 10; c.beginPath(); c.arc(0, 0, 95, 0, Math.PI * 2); c.fill(); c.stroke(); text(c, 'VS', 0, 30, { size: 88, weight: 900, color: KB.W, shadow: 0 }); c.restore();
-      (sh.card || []).forEach(([s, col], i) => { const q = ease(u, (i ? st[1] : 0.05) - 0.05, (i ? st[1] : 0.05) + 0.3); if (q > 0) textFit(c, s, 540, 430 + i * 130 + (1 - q) * 22, { size: 104, weight: 900, color: col || KB.W, alpha: q, stroke: 14, shadow: 0 }); });
+      (sh.card || []).forEach(([s, col], i) => { const q = i ? ease(u, st[1] - 0.05, st[1] + 0.3) : 1; if (q > 0) textFit(c, s, 540, 430 + i * 130 + (1 - q) * 22, { size: 104, weight: 900, color: col || KB.W, alpha: q, stroke: 14, shadow: 0 }); });
       const look = Math.sin(u * 2.2) > 0 ? [-0.8, 0] : [0.8, 0]; kbEye(c, 488, 1250, 46, look, {}); kbEye(c, 592, 1250, 46, look, {});
     };
   },
@@ -85,8 +87,8 @@ const SHOTS = {
     ctx.restore();
     post.ui = c => {
       kbBadge(c, R1_CAT.label, R1_CAT.col);
-      const q = ease(u, 0.6, 1.0); if (q > 0) { kbPanel(c, 170, 300 + (1 - q) * 30, 740, 170, KB.W, 85); text(c, 'SURAJ! ☀', 540, 418 + (1 - q) * 30, { size: 92, weight: 900, color: KB.INK, alpha: q, shadow: 0 }); }
-      r1Stamp(c, 'RUKO!', 540, 560, u, st[1], KB.RED, 130);
+      kbLabel(c, 'YAKEEN NAHI HOTA?', 330, u, 0.1, { size: 54 });
+      kbStamp(c, 'NUMBERS DEKHO!', 540, 620, u, st[1], KB.RED, 100);
     };
   },
   // 3 — the Sun's surface: thermometer rises, fact card 5,500°C

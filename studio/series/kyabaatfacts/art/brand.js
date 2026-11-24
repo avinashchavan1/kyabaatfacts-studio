@@ -227,3 +227,6 @@ endCard = function (ctx, u, p, sh, t, post) {
     if (handles) [].concat(handles).forEach((l, i) => text(c, l, 540, 1290 + i * 52, { size: 34, weight: 800, color: KB.INK, ls: 2, alpha: ease(u, 1.1, 1.5), shadow: 0 }));
   };
 };
+// safe zone: map pins keep their label clear of the action rail
+const _kbPin0 = kbPin;
+kbPin = function (c, x, y, label, u, at = 0.3, col = KB.RED) { return _kbPin0(c, KB_S() ? Math.min(Math.max(x, 220), 760) : x, KB_S() ? Math.min(y, 1300) : y, label, u, at, col); };

@@ -1,4 +1,6 @@
 // ===== R005 · Sirf 10% dimaag? MYTH! (Myth or Fact?) — Kya Baat look =====
+const KB_SAFE = true;                                   // safe-zone layout (v2)
+const SUB_STYLE = { maxW: 640, bottom: 1400 };
 const R5_CAT = { label: 'MYTH OR FACT?', col: '#FF4B3E' };
 const R5_FACTS = { 5: { big: '2% → 20%', label: 'WAZAN → ENERGY', src: 'MIT McGOVERN INSTITUTE' } };
 function buildScenes() { return kbLoadImg('fmri', 'proof_fmri.jpg'); }
@@ -34,7 +36,7 @@ const SHOTS = {
     r5Brain(ctx, 540, 1060, 1.35, t, { fill: 0.1 * easeOut(map(u, 0.4, 1.4)), eyes: 'hmm' });
     post.ui = c => {
       kbBadge(c, R5_CAT.label, R5_CAT.col, ease(u, 0, 0.3));
-      (sh.card || []).forEach(([s, col], i) => { const q = ease(u, (i ? Math.max(st[1] || 0, sh.dur * 0.55) : 0.05) - 0.05, (i ? Math.max(st[1] || 0, sh.dur * 0.55) : 0.05) + 0.3); if (q > 0) textFit(c, s, 540, 430 + i * 130 + (1 - q) * 22, { size: 104, weight: 900, color: col || KB.W, alpha: q, stroke: 14, shadow: 0 }); });
+      (sh.card || []).forEach(([s, col], i) => { const q = i ? ease(u, st[1] - 0.05, st[1] + 0.3) : 1; if (q > 0) textFit(c, s, 540, 430 + i * 130 + (1 - q) * 22, { size: 104, weight: 900, color: col || KB.W, alpha: q, stroke: 14, shadow: 0 }); });
       text(c, '10%', 540, 760, { size: 90, weight: 900, color: KB.Y, stroke: 14, shadow: 0, alpha: ease(u, 0.6, 1.0) });
     };
   },

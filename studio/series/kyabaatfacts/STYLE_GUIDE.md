@@ -19,7 +19,18 @@ Trust is the brand. One wrong fact costs more than ten good ones earn.
 - The reveal always ends on the fixed catchphrase clip **"क्या बात है!"** (`cast/signature/kya_baat_hai.mp3`), never re-recorded.
 - Ending: "ऐसे और मज़ेदार facts के लिए… फ़ॉलो करो!" (Instagram) / "…सब्सक्राइब करो!" (YouTube).
 
-## 4. Reel structure (45–75 s)
+- **Easy words, always.** Say it the way people talk at home, not textbook Hindi: "Egypt की पुरानी कब्रें" not "मिस्र के मकबरे",
+  "America" not "अमेरिका महाद्वीप", "sunrise" not "सूर्योदय", "percent" not "प्रतिशत", "UNESCO World Heritage" not "यूनेस्को विश्व धरोहर".
+  English words people already use are welcome. If a 12-year-old wouldn't get a word, change it.
+
+## 4. Reel structure (45–60 s) — v2 (owner-approved, from the instagram-agent-skill pilot)
+- **Hook = the claim itself, first words.** No "अरे, एक बात बताऊँ?" opener. On screen from frame 1.
+- **Loop ending:** the last story line echoes a word from the hook.
+- **Safe zone:** every reel sets `KB_SAFE = true` and `SUB_STYLE = { maxW: 640, bottom: 1400 }` in shots.js (nothing above y 230,
+  below y 1440 or in the right 230 px).
+- **Caption:** first line ≤125 characters (it is all the feed shows), no em dashes, one comment ask at the end.
+
+### Older structure notes
 1. **Hook** (first second): a question card on screen, e.g. "BIJLI vs SURAJ — KAUN ZYADA GARAM?"
 2. **The common belief**, then "लेकिन रुको!"
 3. **Steps**: one fact per shot, each with a fact card and its source.

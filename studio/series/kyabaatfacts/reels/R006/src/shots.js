@@ -1,4 +1,6 @@
 // ===== R006 · Aloo, tamatar, mirch: Indian nahi! (Khaane Ka Itihaas) — Kya Baat look =====
+const KB_SAFE = true;                                   // safe-zone layout (v2)
+const SUB_STYLE = { maxW: 640, bottom: 1400 };
 const R6_CAT = { label: 'KHAANE KA ITIHAAS', col: '#E24682' };
 function buildScenes() { return Promise.all([kbLoadImg('chilli', 'proof_chillies.jpg'), kbLoadImg('potato', 'proof_potatoes.jpg')]); }
 
@@ -39,7 +41,7 @@ const SHOTS = {
     kbYellow(ctx, t);
     const b = i => backOut(map(u, 0.2 + i * 0.25, 0.5 + i * 0.25));
     if (b(0) > 0) r6Potato(ctx, 270, 1080, 0.9 * b(0), t); if (b(1) > 0) r6Tomato(ctx, 540, 1020, 0.95 * b(1), t); if (b(2) > 0) r6Chilli(ctx, 820, 1080, 1.1 * b(2), t);
-    post.ui = c => { kbBadge(c, R6_CAT.label, R6_CAT.col, ease(u, 0, 0.3)); (sh.card || []).forEach(([s, col], i) => { const q = ease(u, (i ? st[1] : 0.05) - 0.05, (i ? st[1] : 0.05) + 0.3); if (q > 0) textFit(c, s, 540, 430 + i * 130 + (1 - q) * 22, { size: 96, weight: 900, color: col || KB.W, alpha: q, stroke: 14, shadow: 0 }, 980); }); };
+    post.ui = c => { kbBadge(c, R6_CAT.label, R6_CAT.col, ease(u, 0, 0.3)); (sh.card || []).forEach(([s, col], i) => { const q = i ? ease(u, st[1] - 0.05, st[1] + 0.3) : 1; if (q > 0) textFit(c, s, 540, 430 + i * 130 + (1 - q) * 22, { size: 96, weight: 900, color: col || KB.W, alpha: q, stroke: 14, shadow: 0 }, 980); }); };
   },
   2(ctx, u, p, sh, t, post) {
     kbYellow(ctx, t);

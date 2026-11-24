@@ -1,4 +1,6 @@
 // ===== R002 · Taj Mahal: 22 saal, 20,000 kaarigar (Itihaas Ke Raaz) — Kya Baat look =====
+const KB_SAFE = true;                                   // safe-zone layout (v2)
+const SUB_STYLE = { maxW: 640, bottom: 1400 };
 const R2_CAT = { label: 'ITIHAAS KE RAAZ', col: '#C47832' };
 const R2_FACTS = { 2: { big: '22 SAAL', label: '1631 – 1653', src: 'TAJMAHAL.GOV.IN' }, 3: { big: '~20,000', label: 'MAZDOOR AUR KAARIGAR', src: 'TAJMAHAL.GOV.IN' }, 5: { big: 'MAKRANA', label: 'SAFED SANGMARMAR · RAJASTHAN', src: 'MAKRANA MARBLE' } };
 function buildScenes() { return Promise.all([kbLoadImg('taj', 'proof_taj.jpg'), kbLoadImg('inlay', 'proof_inlay.jpg')]); }
@@ -40,7 +42,7 @@ const SHOTS = {
     ctx.fillStyle = '#9BC9E8'; ctx.fillRect(0, 1405, W, H - 1405);
     post.ui = c => {
       kbBadge(c, R2_CAT.label, R2_CAT.col, ease(u, 0, 0.3));
-      (sh.card || []).forEach(([s, col], i) => { const q = ease(u, (i ? st[1] : 0.05) - 0.05, (i ? st[1] : 0.05) + 0.3); if (q > 0) textFit(c, s, 540, 430 + i * 130 + (1 - q) * 22, { size: 112, weight: 900, color: col || KB.W, alpha: q, stroke: 14, shadow: 0 }); });
+      (sh.card || []).forEach(([s, col], i) => { const q = i ? ease(u, st[1] - 0.05, st[1] + 0.3) : 1; if (q > 0) textFit(c, s, 540, 430 + i * 130 + (1 - q) * 22, { size: 112, weight: 900, color: col || KB.W, alpha: q, stroke: 14, shadow: 0 }); });
       kbEyes(c, 540, 1600, 44, t, u < st[1] ? 'hmm' : 'kya', 3);
     };
   },
@@ -48,15 +50,15 @@ const SHOTS = {
   2(ctx, u, p, sh, t, post) {
     const st = sentenceStarts(sh, 2), s2 = st[1];
     kbYellow(ctx, t); ctx.save(); kbShake(ctx, u, s2 + 0.9, 16);
-    const yr = u < s2 ? (u < s2 / 2 ? 1 : 5) : Math.round(lerp(1, 22, easeOut(map(u, s2, s2 + 1.2))));
+    const yr = Math.round(lerp(0, 22, easeOut(map(u, 0.3, Math.max(1.5, sh.dur - 0.6)))));
     kbPanel(ctx, 240, 720, 600, 560, KB.W, 40);
     ctx.fillStyle = KB.RED; ctx.beginPath(); ctx.roundRect(240, 720, 600, 130, [40, 40, 0, 0]); ctx.fill();
     for (const rx of [360, 720]) { ctx.fillStyle = KB.INK; ctx.beginPath(); ctx.roundRect(rx - 14, 690, 28, 70, 14); ctx.fill(); }
-    text(ctx, u < s2 ? 'SAAL?' : 'SAAL', 540, 815, { size: 64, weight: 900, color: KB.W, shadow: 0 });
+    text(ctx, 'SAAL', 540, 815, { size: 64, weight: 900, color: KB.W, shadow: 0 });
     text(ctx, String(yr), 540, 1150, { size: 280, weight: 900, color: KB.INK, shadow: 0 });
-    if (u >= s2) text(ctx, String(1631 + yr), 540, 1240, { size: 54, weight: 800, color: KB.RED, shadow: 0, alpha: ease(u, s2, s2 + 0.3) });
+    text(ctx, String(1631 + yr), 540, 1240, { size: 54, weight: 800, color: KB.RED, shadow: 0 });
     ctx.restore();
-    post.ui = c => { kbBadge(c, R2_CAT.label, R2_CAT.col); if (u < s2) kbLabel(c, u < s2 / 2 ? 'EK SAAL?' : 'PAANCH SAAL?', 320, u, 0.1); else kbStamp(c, '22 SAAL!', 540, 470, u, s2 + 0.9, KB.RED, 130); };
+    post.ui = c => { kbBadge(c, R2_CAT.label, R2_CAT.col); kbLabel(c, u < s2 ? '1631: KAAM SHURU' : '1653: POORA!', 330, u, u < s2 ? 0.1 : s2, { size: 54, fill: u < s2 ? KB.W : KB.Y }); if (u > s2) kbStamp(c, '22 SAAL!', 540, 620, u, s2 + 0.9, KB.RED, 120); };
   },
   // 3 — the workforce: workers keep arriving, counter → 20,000
   3(ctx, u, p, sh, t, post) {

@@ -1,4 +1,6 @@
 // ===== R003 · Octopus ke 3 dil aur neela khoon (Jaanwaron Ki Duniya) — Kya Baat look =====
+const KB_SAFE = true;                                   // safe-zone layout (v2)
+const SUB_STYLE = { maxW: 640, bottom: 1400 };
 const R3_CAT = { label: 'JAANWARON KI DUNIYA', col: '#58AA32' };
 const R3_FACTS = { 2: { big: '3 DIL', label: 'OCTOPUS', src: 'LIVE SCIENCE · SMITHSONIAN' } };
 function buildScenes() { return kbLoadImg('octo', 'proof_octopus.jpg'); }
@@ -53,7 +55,7 @@ const SHOTS = {
     ctx.save(); ctx.globalAlpha = ease(u, st[1], st[1] + 0.5); r3Octo(ctx, 760, 1180, 0.75, t, { mood: 'hmm' }); ctx.restore();
     post.ui = c => {
       kbBadge(c, R3_CAT.label, R3_CAT.col, ease(u, 0, 0.3));
-      (sh.card || []).forEach(([s, col], i) => { const q = ease(u, (i ? st[1] : 0.05) - 0.05, (i ? st[1] : 0.05) + 0.3); if (q > 0) textFit(c, s, 540, 430 + i * 130 + (1 - q) * 22, { size: 104, weight: 900, color: col || KB.W, alpha: q, stroke: 14, shadow: 0 }); });
+      (sh.card || []).forEach(([s, col], i) => { const q = i ? ease(u, st[1] - 0.05, st[1] + 0.3) : 1; if (q > 0) textFit(c, s, 540, 430 + i * 130 + (1 - q) * 22, { size: 104, weight: 900, color: col || KB.W, alpha: q, stroke: 14, shadow: 0 }); });
       const b = backOut(map(u, 0.6, 1.0)); if (b > 0) { c.save(); c.translate(300, 1000); c.scale(b, b); kbHeart(c, 0, 0, 2.2, KB.RED, 1 + Math.sin(u * 7) * 0.06); c.restore(); text(c, '1', 300, 1030, { size: 90, weight: 900, color: KB.W, shadow: 0, alpha: b > 0.5 ? 1 : 0 }); }
     };
   },

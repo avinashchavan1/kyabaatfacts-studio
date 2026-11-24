@@ -1,4 +1,6 @@
 // ===== R004 · Kailasa Mandir: ek hi chattan, upar se neeche (Desh Ke Ajoobe) — Kya Baat look =====
+const KB_SAFE = true;                                   // safe-zone layout (v2)
+const SUB_STYLE = { maxW: 640, bottom: 1400 };
 const R4_CAT = { label: 'DESH KE AJOOBE', col: '#F06E28' };
 function buildScenes() { return Promise.all([kbLoadImg('top', 'proof_kailasa_top.jpg'), kbLoadImg('scarp', 'proof_kailasa_scarp.jpg')]); }
 
@@ -46,7 +48,7 @@ const SHOTS = {
     ctx.fillStyle = '#C9A06A'; ctx.fillRect(0, 1560, W, H - 1560);
     post.ui = c => {
       kbBadge(c, R4_CAT.label, R4_CAT.col, ease(u, 0, 0.3));
-      (sh.card || []).forEach(([s, col], i) => { const q = ease(u, (i ? st[1] : 0.05) - 0.05, (i ? st[1] : 0.05) + 0.3); if (q > 0) textFit(c, s, 540, 430 + i * 130 + (1 - q) * 22, { size: 100, weight: 900, color: col || KB.W, alpha: q, stroke: 14, shadow: 0 }); });
+      (sh.card || []).forEach(([s, col], i) => { const q = i ? ease(u, st[1] - 0.05, st[1] + 0.3) : 1; if (q > 0) textFit(c, s, 540, 430 + i * 130 + (1 - q) * 22, { size: 100, weight: 900, color: col || KB.W, alpha: q, stroke: 14, shadow: 0 }); });
       const b = backOut(map(u, st[1] + 0.2, st[1] + 0.6)); if (b > 0) { c.save(); c.translate(540, 760); c.scale(b, b); r4Brick(c, 0, 0, 1); c.strokeStyle = KB.RED; c.lineWidth = 18; c.lineCap = 'round'; c.beginPath(); c.moveTo(-120, -80); c.lineTo(120, 80); c.moveTo(120, -80); c.lineTo(-120, 80); c.stroke(); c.restore(); }
     };
   },
@@ -87,7 +89,7 @@ const SHOTS = {
     post.ui = c => {
       kbBadge(c, R4_CAT.label, R4_CAT.col);
       const pe = Math.min(2.2, st[1] - 0.2), a1 = ease(u, pe + 0.1, pe + 0.5), a2 = ease(u, st[1], st[1] + 0.4);
-      if (a1 > 0) { c.save(); c.globalAlpha = a1; kbArrow(c, 120, 1640, 960, 1640, KB.INK, 10); kbArrow(c, 960, 1640, 120, 1640, KB.INK, 10); c.restore(); kbStamp(c, '~300 FT LAMBA', 540, 380, u, pe + 0.1, KB.RED, 84, -0.04); }
+      if (a1 > 0) { c.save(); c.globalAlpha = a1; kbArrow(c, 160, 1420, 840, 1420, KB.INK, 10); kbArrow(c, 840, 1420, 160, 1420, KB.INK, 10); c.restore(); kbStamp(c, '~300 FT LAMBA', 540, 380, u, pe + 0.1, KB.RED, 84, -0.04); }
       kbProof(c, 'scarp', u, 0.1, pe - 0.1, 'POORI CHATTAN', 'Photo: Arian Zwegers / Flickr · CC BY 2.0', 0.03);
       if (a2 > 0) kbStamp(c, '~175 FT CHAUDA', 540, 560, u, st[1], '#F06E28', 84, 0.04);
     };

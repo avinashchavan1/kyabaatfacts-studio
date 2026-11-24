@@ -9,6 +9,8 @@
 - **Proof shots:** 1-2 real photos per reel (2-3 s, `kbProof` in `series/art/brand.js`), openly licensed (Wikimedia Commons / public domain preferred), no logos, text or identifiable people; record each in `script.json → media` + research notes and credit it on screen and in the caption.
 - **Narrator (overrides the calm-narrator rule below):** Bunty (ElevenLabs, eleven_v4, stability 0.5), excited, chatty Hinglish like
   telling a friend; every reveal ends on the fixed clip `cast/signature/kya_baat_hai.mp3` ("क्या बात है!"). See `cast/cast.json`.
+- **v2 reel rules (owner-approved):** claim-first hook (no "अरे, एक बात बताऊँ?"), easy everyday Hinglish words, loop ending that echoes the hook,
+  safe-zone layout (`KB_SAFE`, `SUB_STYLE` in shots.js), caption first line ≤125 chars. Details: `studio/series/kyabaatfacts/STYLE_GUIDE.md`.
 - Brand: "Hairaan Aankhen" logo (googly eyes over the AA of BAAT), yellow #FFC83D / ink #14123A / punch #FF4B3E, Montserrat + Mukta.
   Kit in `brand/kit/`, regenerate with `python3 brand/make_kyabaat_brand.py brand brand/kit`; upload with `python3 scripts/brand.py --no-render`.
 
