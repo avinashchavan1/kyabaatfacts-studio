@@ -1,0 +1,222 @@
+{
+ "reel": "R002",
+ "title": "Taj Mahal: 22 saal, 20,000 mazdoor - the real cost",
+ "series": "kyabaatfacts",
+ "fps": 24,
+ "status": "DRAFT — not verified",
+ "source": "Taj Mahal official site (Govt. of India / ASI) · National Geographic · Britannica",
+ "source_card": {
+  "title": [
+   "KYA BAAT",
+   "FACTS"
+  ],
+  "sub": "Taj Mahal official site (Govt. of India / ASI) · National Geographic · Britannica",
+  "edition": "SOURCES CHECKED"
+ },
+ "claims": [
+  {
+   "claim": "Construction of the Taj complex began about 1631 and the whole complex was finished in 1653 (about 22 years)",
+   "ref": "tajmahal.gov.in, Creation history",
+   "verified": true,
+   "sources": [
+    "https://tajmahal.gov.in/creation-history-of-taj-mahal.aspx",
+    "https://kids.britannica.com/students/article/Taj-Mahal/277251"
+   ]
+  },
+  {
+   "claim": "About 20,000 workers were recruited from across northern India",
+   "ref": "tajmahal.gov.in, Creation history",
+   "verified": true,
+   "sources": [
+    "https://tajmahal.gov.in/creation-history-of-taj-mahal.aspx"
+   ]
+  },
+  {
+   "claim": "The main mausoleum was completed in 1648; the outlying buildings and gardens five years later, in 1653",
+   "ref": "tajmahal.gov.in, Creation history",
+   "verified": true,
+   "sources": [
+    "https://tajmahal.gov.in/creation-history-of-taj-mahal.aspx"
+   ]
+  },
+  {
+   "claim": "The main mausoleum is built of white Makrana marble from Rajasthan",
+   "ref": "Makrana marble; EGU 2020 geology presentation",
+   "verified": true,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Makrana_marble",
+    "https://presentations.copernicus.org/EGU2020/EGU2020-12693_presentation.pdf"
+   ]
+  },
+  {
+   "claim": "Shah Jahan built it as a tomb for his wife Mumtaz Mahal",
+   "ref": "National Geographic; tajmahal.gov.in",
+   "verified": true,
+   "sources": [
+    "https://www.nationalgeographic.com/history/history-magazine/article/a-husbands-love-built-the-taj-mahal-but-cost-him-an-empire",
+    "https://tajmahal.gov.in/creation-history-of-taj-mahal.aspx"
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "id": 1,
+   "voice": "narrator",
+   "hi": "अरे, एक बात बताऊँ? ताज महल बनाने में... कितना time लगा होगा?",
+   "en": "Hey, want to hear something? How long do you think the Taj Mahal took to build?",
+   "units": [
+    "[excited] अरे, एक बात बताऊँ?",
+    "[curious] ताज महल बनाने में... कितना time लगा होगा?"
+   ],
+   "lead": 0.25,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "card": [
+    [
+     "TAJ MAHAL",
+     null
+    ],
+    [
+     "KITNE SAAL?",
+     "#FFC83D"
+    ]
+   ],
+   "min": 3.5
+  },
+  {
+   "id": 2,
+   "voice": "narrator",
+   "hi": "एक साल? पाँच साल? नहीं यार... पूरे बाईस साल!",
+   "en": "One year? Five years? No way... a full twenty-two years!",
+   "units": [
+    "[playfully] एक साल? पाँच साल?",
+    "[excited] नहीं यार... पूरे बाईस साल!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "tajmahal.gov.in"
+  },
+  {
+   "id": 3,
+   "voice": "narrator",
+   "hi": "और काम किया लगभग बीस हज़ार मज़दूरों और कारीगरों ने... पूरे उत्तर भारत से आए हुए।",
+   "en": "And about twenty thousand workers and craftsmen worked on it... from all over northern India.",
+   "units": [
+    "[curious] और काम किया लगभग बीस हज़ार मज़दूरों और कारीगरों ने... पूरे उत्तर भारत से आए हुए।"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "cite": "tajmahal.gov.in"
+  },
+  {
+   "id": 4,
+   "voice": "narrator",
+   "hi": "बाईस साल... बीस हज़ार लोग... एक इमारत के लिए! क्या बात है!",
+   "en": "Twenty-two years... twenty thousand people... for one building! Kya baat hai!",
+   "units": [
+    "[amazed] बाईस साल... बीस हज़ार लोग... एक इमारत के लिए!",
+    "क्या बात है!"
+   ],
+   "lead": 0.15,
+   "tail": 0.45,
+   "unit_gap": 0.3,
+   "signature_unit": 1,
+   "force_take": {
+    "1": 1
+   },
+   "no_cut": [
+    1
+   ],
+   "reveal": true,
+   "cite": "tajmahal.gov.in"
+  },
+  {
+   "id": 5,
+   "voice": "narrator",
+   "hi": "इसका सफ़ेद संगमरमर आया था... राजस्थान के मकराना से। वही मार्बल, जो आज भी चमकता है!",
+   "en": "Its white marble came from Makrana in Rajasthan. The same marble that still shines today!",
+   "units": [
+    "[curious] इसका सफ़ेद संगमरमर आया था... राजस्थान के मकराना से।",
+    "[excited] वही मार्बल, जो आज भी चमकता है!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "Makrana marble"
+  },
+  {
+   "id": 6,
+   "voice": "narrator",
+   "hi": "लेकिन एक twist है। असली मकबरा तो सोलह सौ अड़तालीस में ही बन गया था... बाक़ी बाग़ और इमारतें, पाँच साल और!",
+   "en": "But here's a twist. The main tomb was ready in 1648... the gardens and other buildings took five more years!",
+   "units": [
+    "[playfully] लेकिन एक twist है।",
+    "[excited] असली मकबरा तो सोलह सौ अड़तालीस में ही बन गया था... बाक़ी बाग़ और इमारतें, पाँच साल और!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "tajmahal.gov.in"
+  },
+  {
+   "id": 7,
+   "voice": "narrator",
+   "hi": "और ये सब, शाहजहाँ ने बनवाया... अपनी पत्नी मुमताज़ महल की याद में।",
+   "en": "And Shah Jahan built all this... in memory of his wife Mumtaz Mahal.",
+   "units": [
+    "[curious] और ये सब, शाहजहाँ ने बनवाया... अपनी पत्नी मुमताज़ महल की याद में।"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "cite": "National Geographic"
+  },
+  {
+   "id": 8,
+   "voice": "narrator",
+   "hi": "ऐसे और मज़ेदार facts के लिए... फ़ॉलो करो!",
+   "en": "",
+   "units": [
+    "[excited] ऐसे और मज़ेदार facts के लिए... फ़ॉलो करो!"
+   ],
+   "cta": true,
+   "lead": 0.3,
+   "tail": 0.7,
+   "min": 3.7
+  }
+ ],
+ "thumbnail": {
+  "frame": "10s",
+  "hook": "TAJ MAHAL: KITNE SAAL?",
+  "stamp": "22 SAAL!",
+  "line": "And about 20,000 workers",
+  "badge": "ITIHAAS KE RAAZ",
+  "art_shift": 0
+ },
+ "score": {
+  "engine": "elevenlabs music_v1",
+  "file": "audio/score.mp3",
+  "duration_s": 55,
+  "gain": 1.6,
+  "duck": 0.6,
+  "prompt": "Playful, curious, upbeat underscore for a fun facts short. Mughal flavour: sitar and shehnai with soft tabla and strings. Building tension before a reveal, a bright happy hit, then bouncy and light. Instrumental only, sits under a spoken voice, no vocals."
+ },
+ "category": "Itihaas Ke Raaz",
+ "avoid": [
+  "the '28 types of stones' figure (secondary sources only)",
+  "UNESCO year (sources disagree)",
+  "the hands-cut-off legend (no evidence)"
+ ],
+ "verify_note": "22 years = the whole complex (1631-1653, official site). Main tomb 1648.",
+ "caption": "Taj Mahal banane mein kitna time laga? 🕌 Pure 22 saal (1631–1653) aur lagbhag 20,000 kaarigar! Main maqbara 1648 mein ban gaya tha — baag aur baaki imaaratein 5 saal baad.\n\nSources: Taj Mahal official site (tajmahal.gov.in), National Geographic, Britannica.\n\nAapko ye pata tha? Comment karo 👇",
+ "youtube_title": "Taj Mahal Banane Mein 22 Saal? 🕌 | Kya Baat Facts #Shorts",
+ "comment_prompt": "Aap Taj Mahal gaye ho? Comment karo 👇",
+ "hashtags": [
+  "#KyaBaatFacts",
+  "#ItihaasKeRaaz",
+  "#TajMahal",
+  "#HindiFacts",
+  "#History",
+  "#Facts"
+ ]
+}

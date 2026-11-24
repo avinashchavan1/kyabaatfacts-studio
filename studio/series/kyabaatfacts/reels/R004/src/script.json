@@ -1,0 +1,213 @@
+{
+ "reel": "R004",
+ "title": "Kailasa Mandir: ek hi pathar, upar se neeche kaata gaya",
+ "series": "kyabaatfacts",
+ "fps": 24,
+ "status": "DRAFT — not verified",
+ "source": "Indian Culture portal (Govt. of India) · Britannica · Live History India",
+ "source_card": {
+  "title": [
+   "KYA BAAT",
+   "FACTS"
+  ],
+  "sub": "Indian Culture portal (Govt. of India) · Britannica · Live History India",
+  "edition": "SOURCES CHECKED"
+ },
+ "claims": [
+  {
+   "claim": "The Kailasa temple (Ellora Cave 16, Maharashtra) is carved entirely out of a single rock",
+   "ref": "Indian Culture portal; Britannica",
+   "verified": true,
+   "sources": [
+    "https://indianculture.gov.in/stories/kailasa-majestic-temple-ellora",
+    "https://www.britannica.com/place/Ellora-Caves"
+   ]
+  },
+  {
+   "claim": "It was carved from the top of the rock downward",
+   "ref": "Live History India; Wikipedia (Kailasa temple)",
+   "verified": true,
+   "sources": [
+    "https://livehistoryindia.com/story/amazing-india/ellora-kailasa-temple",
+    "https://en.wikipedia.org/wiki/Kailasa_temple,_Ellora"
+   ]
+  },
+  {
+   "claim": "It is about 300 feet long and 175 feet wide",
+   "ref": "Indian Culture portal",
+   "verified": true,
+   "sources": [
+    "https://indianculture.gov.in/stories/kailasa-majestic-temple-ellora"
+   ]
+  },
+  {
+   "claim": "It was made in the Rashtrakuta period, generally attributed to King Krishna I (8th century) — over 1,200 years ago",
+   "ref": "Wikipedia; Indian Culture portal",
+   "verified": true,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Kailasa_temple,_Ellora",
+    "https://indianculture.gov.in/stories/kailasa-majestic-temple-ellora"
+   ]
+  },
+  {
+   "claim": "The Ellora Caves are a UNESCO World Heritage Site (1983)",
+   "ref": "Britannica",
+   "verified": true,
+   "sources": [
+    "https://www.britannica.com/place/Ellora-Caves"
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "id": 1,
+   "voice": "narrator",
+   "hi": "अरे, एक बात बताऊँ? एक पूरा मंदिर... बिना एक भी ईंट जोड़े?",
+   "en": "Hey, want to hear something? A whole temple... without joining a single brick?",
+   "units": [
+    "[excited] अरे, एक बात बताऊँ?",
+    "[curious] एक पूरा मंदिर... बिना एक भी ईंट जोड़े?"
+   ],
+   "lead": 0.25,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "card": [
+    [
+     "EK POORA MANDIR",
+     null
+    ],
+    [
+     "BINA EK BHI EENT?",
+     "#FFC83D"
+    ]
+   ],
+   "min": 3.5
+  },
+  {
+   "id": 2,
+   "voice": "narrator",
+   "hi": "महाराष्ट्र के एलोरा में है कैलाश मंदिर... और ये पूरा का पूरा... एक ही चट्टान को काटकर बनाया गया है!",
+   "en": "In Ellora, Maharashtra, there's the Kailasa temple... and the whole thing was carved out of a single rock!",
+   "units": [
+    "[excited] महाराष्ट्र के एलोरा में है कैलाश मंदिर...",
+    "[amazed] और ये पूरा का पूरा... एक ही चट्टान को काटकर बनाया गया है!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "Indian Culture portal",
+   "reveal": true
+  },
+  {
+   "id": 3,
+   "voice": "narrator",
+   "hi": "और काटा कैसे? नीचे से ऊपर नहीं... ऊपर से नीचे! चट्टान की चोटी से शुरू करके!",
+   "en": "And how was it carved? Not bottom to top... top to bottom! Starting from the top of the rock!",
+   "units": [
+    "[curious] और काटा कैसे? नीचे से ऊपर नहीं...",
+    "[excited] ऊपर से नीचे! चट्टान की चोटी से शुरू करके!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "Live History India"
+  },
+  {
+   "id": 4,
+   "voice": "narrator",
+   "hi": "यानी एक बार पत्थर कटा, तो वापस नहीं जुड़ता... ग़लती की कोई जगह ही नहीं! क्या बात है!",
+   "en": "Once stone is cut, it can't be put back... no room for a single mistake! Kya baat hai!",
+   "units": [
+    "[amazed] यानी एक बार पत्थर कटा, तो वापस नहीं जुड़ता... ग़लती की कोई जगह ही नहीं!",
+    "क्या बात है!"
+   ],
+   "lead": 0.15,
+   "tail": 0.45,
+   "unit_gap": 0.3,
+   "signature_unit": 1,
+   "force_take": {
+    "1": 1
+   },
+   "no_cut": [
+    1
+   ],
+   "reveal": true,
+   "cite": "Live History India"
+  },
+  {
+   "id": 5,
+   "voice": "narrator",
+   "hi": "और साइज़? लगभग तीन सौ फ़ुट लंबा... और एक सौ पचहत्तर फ़ुट चौड़ा!",
+   "en": "And the size? About three hundred feet long... and one hundred seventy-five feet wide!",
+   "units": [
+    "[curious] और साइज़? लगभग तीन सौ फ़ुट लंबा...",
+    "[excited] और एक सौ पचहत्तर फ़ुट चौड़ा!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "Indian Culture portal"
+  },
+  {
+   "id": 6,
+   "voice": "narrator",
+   "hi": "ये बना था बारह सौ साल से भी पहले... राष्ट्रकूट राजाओं के समय में। और आज एलोरा की गुफ़ाएँ... यूनेस्को विश्व धरोहर हैं!",
+   "en": "It was made over twelve hundred years ago, in the time of the Rashtrakuta kings. And today the Ellora caves are a UNESCO World Heritage Site!",
+   "units": [
+    "[curious] ये बना था बारह सौ साल से भी पहले... राष्ट्रकूट राजाओं के समय में।",
+    "[playfully] और आज एलोरा की गुफ़ाएँ... यूनेस्को विश्व धरोहर हैं!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "Britannica"
+  },
+  {
+   "id": 7,
+   "voice": "narrator",
+   "hi": "ऐसे और मज़ेदार facts के लिए... फ़ॉलो करो!",
+   "en": "",
+   "units": [
+    "[excited] ऐसे और मज़ेदार facts के लिए... फ़ॉलो करो!"
+   ],
+   "cta": true,
+   "lead": 0.3,
+   "tail": 0.7,
+   "min": 3.7
+  }
+ ],
+ "thumbnail": {
+  "frame": "8s",
+  "hook": "EK HI PATHAR SE MANDIR!",
+  "stamp": "UPAR SE NEECHE!",
+  "line": "Kailasa Temple, Ellora",
+  "badge": "DESH KE AJOOBE",
+  "art_shift": 0
+ },
+ "score": {
+  "engine": "elevenlabs music_v1",
+  "file": "audio/score.mp3",
+  "duration_s": 55,
+  "gain": 1.6,
+  "duck": 0.6,
+  "prompt": "Playful, curious, upbeat underscore for a fun facts short. Grand Indian feel: veena and bansuri over warm strings and mridangam. Building tension before a reveal, a bright happy hit, then bouncy and light. Instrumental only, sits under a spoken voice, no vocals."
+ },
+ "category": "Desh Ke Ajoobe",
+ "avoid": [
+  "'200,000 tonnes removed' (unconfirmed)",
+  "'world's largest monolith' as fact (contested; not used)",
+  "a single king built it (debated)"
+ ],
+ "verify_note": "Dating: Rashtrakuta, 8th century; said 'राष्ट्रकूट राजाओं के समय' (not one king).",
+ "caption": "Ek poora mandir — EK HI CHATTAN se kaata gaya! 🛕 Ellora ka Kailasa Mandir upar se neeche ki taraf tarasha gaya, ~300 ft lamba aur ~175 ft chauda, 1,200 saal se bhi pehle!\n\nSources: Indian Culture portal (Govt. of India), Britannica, Live History India.\n\nAap Ellora gaye ho? Comment karo 👇",
+ "youtube_title": "Ek Hi Pathar Se Poora Mandir! 🛕 Kailasa Ellora | Kya Baat Facts #Shorts",
+ "comment_prompt": "Aap Ellora gaye ho? Comment karo 👇",
+ "hashtags": [
+  "#KyaBaatFacts",
+  "#DeshKeAjoobe",
+  "#Ellora",
+  "#KailasaTemple",
+  "#HindiFacts",
+  "#India"
+ ]
+}

@@ -1,0 +1,202 @@
+{
+ "reel": "R003",
+ "title": "Octopus ke 3 dil aur neela khoon!",
+ "series": "kyabaatfacts",
+ "fps": 24,
+ "status": "DRAFT — not verified",
+ "source": "Live Science · Smithsonian Magazine · Scientific American",
+ "source_card": {
+  "title": [
+   "KYA BAAT",
+   "FACTS"
+  ],
+  "sub": "Live Science · Smithsonian Magazine · Scientific American",
+  "edition": "SOURCES CHECKED"
+ },
+ "claims": [
+  {
+   "claim": "An octopus has three hearts",
+   "ref": "Live Science; Smithsonian",
+   "verified": true,
+   "sources": [
+    "https://www.livescience.com/how-many-hearts-does-an-octopus-have",
+    "https://www.smithsonianmag.com/science-nature/ten-wild-facts-about-octopuses-they-have-three-hearts-big-brains-and-blue-blood-7625828/"
+   ]
+  },
+  {
+   "claim": "Two (branchial) hearts pump blood through the gills; the larger systemic heart pumps it to the body",
+   "ref": "Live Science; Smithsonian",
+   "verified": true,
+   "sources": [
+    "https://www.livescience.com/how-many-hearts-does-an-octopus-have",
+    "https://www.smithsonianmag.com/science-nature/ten-wild-facts-about-octopuses-they-have-three-hearts-big-brains-and-blue-blood-7625828/"
+   ]
+  },
+  {
+   "claim": "Octopus blood is blue because its oxygen carrier, hemocyanin, uses copper (ours uses iron)",
+   "ref": "Smithsonian; Scientific American",
+   "verified": true,
+   "sources": [
+    "https://www.smithsonianmag.com/science-nature/ten-wild-facts-about-octopuses-they-have-three-hearts-big-brains-and-blue-blood-7625828/",
+    "https://www.scientificamerican.com/blog/octopus-chronicles/octopuses-survive-sub-zero-temps-thanks-to-specialized-blue-blood/"
+   ]
+  },
+  {
+   "claim": "The systemic heart stops for a few moments when the octopus swims; this may be why it prefers crawling (reason not certain)",
+   "ref": "Live Science; Smithsonian",
+   "verified": true,
+   "sources": [
+    "https://www.livescience.com/how-many-hearts-does-an-octopus-have",
+    "https://www.smithsonianmag.com/science-nature/ten-wild-facts-about-octopuses-they-have-three-hearts-big-brains-and-blue-blood-7625828/"
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "id": 1,
+   "voice": "narrator",
+   "hi": "अरे, एक बात बताऊँ? तुम्हारे पास कितने दिल हैं? एक ना?",
+   "en": "Hey, want to hear something? How many hearts do you have? One, right?",
+   "units": [
+    "[excited] अरे, एक बात बताऊँ?",
+    "[curious] तुम्हारे पास कितने दिल हैं? एक ना?"
+   ],
+   "lead": 0.25,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "card": [
+    [
+     "TUMHARA 1 DIL",
+     null
+    ],
+    [
+     "OCTOPUS KE...?",
+     "#FFC83D"
+    ]
+   ],
+   "min": 3.5
+  },
+  {
+   "id": 2,
+   "voice": "narrator",
+   "hi": "ऑक्टोपस के होते हैं... पूरे तीन दिल!",
+   "en": "An octopus has... three whole hearts!",
+   "units": [
+    "[excited] ऑक्टोपस के होते हैं... पूरे तीन दिल!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "cite": "Live Science",
+   "reveal": true
+  },
+  {
+   "id": 3,
+   "voice": "narrator",
+   "hi": "दो छोटे दिल, गलफड़ों में खून पंप करते हैं... और तीसरा, बड़ा वाला... पूरे शरीर में!",
+   "en": "Two small hearts pump blood through the gills... and the third, the big one... to the whole body!",
+   "units": [
+    "[curious] दो छोटे दिल, गलफड़ों में खून पंप करते हैं...",
+    "[excited] और तीसरा, बड़ा वाला... पूरे शरीर में!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "Smithsonian"
+  },
+  {
+   "id": 4,
+   "voice": "narrator",
+   "hi": "और उसका खून? लाल नहीं यार... नीला! क्या बात है!",
+   "en": "And its blood? Not red... blue! Kya baat hai!",
+   "units": [
+    "[excited] और उसका खून? लाल नहीं यार... नीला!",
+    "क्या बात है!"
+   ],
+   "lead": 0.15,
+   "tail": 0.45,
+   "unit_gap": 0.3,
+   "signature_unit": 1,
+   "force_take": {
+    "1": 1
+   },
+   "no_cut": [
+    1
+   ],
+   "reveal": true,
+   "cite": "Smithsonian"
+  },
+  {
+   "id": 5,
+   "voice": "narrator",
+   "hi": "क्यों? क्योंकि हमारे खून में होता है लोहा... और ऑक्टोपस के खून में... तांबा! यानी copper!",
+   "en": "Why? Because our blood carries iron... and octopus blood carries copper!",
+   "units": [
+    "[curious] क्यों? क्योंकि हमारे खून में होता है लोहा...",
+    "[excited] और ऑक्टोपस के खून में... तांबा! यानी copper!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "Scientific American"
+  },
+  {
+   "id": 6,
+   "voice": "narrator",
+   "hi": "और मज़ेदार बात? जब ऑक्टोपस तैरता है... उसका बड़ा दिल कुछ पल के लिए रुक जाता है! शायद इसीलिए वो तैरने से ज़्यादा... रेंगना पसंद करता है।",
+   "en": "And the fun part? When an octopus swims... its big heart stops for a moment! Maybe that's why it prefers crawling to swimming.",
+   "units": [
+    "[playfully] और मज़ेदार बात? जब ऑक्टोपस तैरता है... उसका बड़ा दिल कुछ पल के लिए रुक जाता है!",
+    "[laughs] शायद इसीलिए वो तैरने से ज़्यादा... रेंगना पसंद करता है।"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "Live Science · Smithsonian"
+  },
+  {
+   "id": 7,
+   "voice": "narrator",
+   "hi": "ऐसे और मज़ेदार facts के लिए... फ़ॉलो करो!",
+   "en": "",
+   "units": [
+    "[excited] ऐसे और मज़ेदार facts के लिए... फ़ॉलो करो!"
+   ],
+   "cta": true,
+   "lead": 0.3,
+   "tail": 0.7,
+   "min": 3.7
+  }
+ ],
+ "thumbnail": {
+  "frame": "16s",
+  "hook": "OCTOPUS KE 3 DIL!",
+  "stamp": "NEELA KHOON!",
+  "line": "Copper instead of iron",
+  "badge": "JAANWARON KI DUNIYA",
+  "art_shift": 0
+ },
+ "score": {
+  "engine": "elevenlabs music_v1",
+  "file": "audio/score.mp3",
+  "duration_s": 55,
+  "gain": 1.6,
+  "duck": 0.6,
+  "prompt": "Playful, curious, upbeat underscore for a fun facts short. Underwater feel: bubbly marimba, soft synth pads, light percussion. Building tension before a reveal, a bright happy hit, then bouncy and light. Instrumental only, sits under a spoken voice, no vocals."
+ },
+ "category": "Jaanwaron Ki Duniya",
+ "avoid": [
+  "stating the crawling reason as certain (say 'shayad')"
+ ],
+ "verify_note": "Heart-stops-while-swimming: Live Science says no one is certain why; framed with 'शायद'.",
+ "caption": "Octopus ke 3 dil hote hain aur khoon neela! 🐙💙 Kyunki uske khoon mein lohe ki jagah TAANBA (copper) hota hai. Aur tairte waqt uska bada dil kuch pal ke liye ruk jaata hai!\n\nSources: Live Science, Smithsonian Magazine, Scientific American.\n\nAapko ye pata tha? Comment karo 👇",
+ "youtube_title": "Octopus Ke 3 Dil Aur Neela Khoon! 🐙 | Kya Baat Facts #Shorts",
+ "comment_prompt": "Agla kaunsa jaanwar? Comment karo 👇",
+ "hashtags": [
+  "#KyaBaatFacts",
+  "#JaanwaronKiDuniya",
+  "#Octopus",
+  "#HindiFacts",
+  "#Animals",
+  "#Facts"
+ ]
+}

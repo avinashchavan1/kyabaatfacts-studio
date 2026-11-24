@@ -1,0 +1,200 @@
+{
+ "reel": "R005",
+ "title": "Hum dimaag ka sirf 10% use karte hain?",
+ "series": "kyabaatfacts",
+ "fps": 24,
+ "status": "DRAFT — not verified",
+ "source": "MIT McGovern Institute · Britannica · Association for Psychological Science",
+ "source_card": {
+  "title": [
+   "KYA BAAT",
+   "FACTS"
+  ],
+  "sub": "MIT McGovern Institute · Britannica · Association for Psychological Science",
+  "edition": "SOURCES CHECKED"
+ },
+ "claims": [
+  {
+   "claim": "The idea that we use only 10% of our brain is a myth",
+   "ref": "MIT McGovern Institute; Britannica; APS",
+   "verified": true,
+   "sources": [
+    "https://mcgovern.mit.edu/2024/01/26/do-we-use-only-10-percent-of-our-brain/",
+    "https://www.britannica.com/story/do-we-really-use-only-10-percent-of-our-brain",
+    "https://www.psychologicalscience.org/teaching/myth-we-only-use-10-of-our-brains.html"
+   ]
+  },
+  {
+   "claim": "We use our entire brain every day; it is constantly active, even at rest",
+   "ref": "MIT McGovern Institute; Britannica",
+   "verified": true,
+   "sources": [
+    "https://mcgovern.mit.edu/2024/01/26/do-we-use-only-10-percent-of-our-brain/",
+    "https://www.britannica.com/story/do-we-really-use-only-10-percent-of-our-brain"
+   ]
+  },
+  {
+   "claim": "The brain is about 2% of body weight but uses about 20% of the body's energy (calories)",
+   "ref": "MIT McGovern Institute",
+   "verified": true,
+   "sources": [
+    "https://mcgovern.mit.edu/2024/01/26/do-we-use-only-10-percent-of-our-brain/"
+   ]
+  },
+  {
+   "claim": "If only 10% were needed, most brain injuries would have no effect; in fact almost any damaged area causes some loss",
+   "ref": "Britannica; Wikipedia (Ten percent of the brain myth)",
+   "verified": true,
+   "sources": [
+    "https://www.britannica.com/story/do-we-really-use-only-10-percent-of-our-brain",
+    "https://en.wikipedia.org/wiki/Ten_percent_of_the_brain_myth"
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "id": 1,
+   "voice": "narrator",
+   "hi": "क्या हम अपने दिमाग़ का... सिर्फ़ दस प्रतिशत use करते हैं?",
+   "en": "Do we use only ten percent of our brain?",
+   "units": [
+    "[curious] क्या हम अपने दिमाग़ का... सिर्फ़ दस प्रतिशत use करते हैं?"
+   ],
+   "lead": 0.25,
+   "tail": 0.3,
+   "card": [
+    [
+     "SIRF 10% DIMAAG?",
+     null
+    ],
+    [
+     "MYTH YA FACT?",
+     "#FFC83D"
+    ]
+   ],
+   "min": 3.5
+  },
+  {
+   "id": 2,
+   "voice": "narrator",
+   "hi": "ये बात तुमने कई बार सुनी होगी... लेकिन सच क्या है?",
+   "en": "You've heard this many times... but what's the truth?",
+   "units": [
+    "[excited] ये बात तुमने कई बार सुनी होगी...",
+    "[playfully] लेकिन सच क्या है?"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3
+  },
+  {
+   "id": 3,
+   "voice": "narrator",
+   "hi": "ये पूरी तरह... एक myth है!",
+   "en": "It's completely... a myth!",
+   "units": [
+    "[excited] ये पूरी तरह... एक myth है!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "cite": "MIT McGovern Institute",
+   "reveal": true
+  },
+  {
+   "id": 4,
+   "voice": "narrator",
+   "hi": "Brain scans दिखाते हैं कि दिन भर में... हम अपने पूरे दिमाग़ का इस्तेमाल करते हैं। आराम करते वक़्त भी!",
+   "en": "Brain scans show that over a day... we use our whole brain. Even while resting!",
+   "units": [
+    "[curious] Brain scans दिखाते हैं कि दिन भर में... हम अपने पूरे दिमाग़ का इस्तेमाल करते हैं।",
+    "[excited] आराम करते वक़्त भी!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "MIT McGovern Institute · Britannica"
+  },
+  {
+   "id": 5,
+   "voice": "narrator",
+   "hi": "और सोचो... दिमाग़ हमारे शरीर के वज़न का सिर्फ़ दो प्रतिशत है... लेकिन खाता है बीस प्रतिशत energy! क्या बात है!",
+   "en": "And think about it... the brain is only two percent of our body weight... but it uses twenty percent of our energy! Kya baat hai!",
+   "units": [
+    "[excited] और सोचो... दिमाग़ हमारे शरीर के वज़न का सिर्फ़ दो प्रतिशत है... लेकिन खाता है बीस प्रतिशत energy!",
+    "क्या बात है!"
+   ],
+   "lead": 0.15,
+   "tail": 0.45,
+   "unit_gap": 0.3,
+   "signature_unit": 1,
+   "force_take": {
+    "1": 1
+   },
+   "no_cut": [
+    1
+   ],
+   "reveal": true,
+   "cite": "MIT McGovern Institute"
+  },
+  {
+   "id": 6,
+   "voice": "narrator",
+   "hi": "अगर सच में नब्बे प्रतिशत बेकार होता... तो दिमाग़ की चोट से कोई फ़र्क़ ही नहीं पड़ता। लेकिन लगभग हर हिस्से की चोट... कोई ना कोई असर ज़रूर डालती है।",
+   "en": "If ninety percent were really useless... brain injuries wouldn't matter. But an injury to almost any part has some effect.",
+   "units": [
+    "[playfully] अगर सच में नब्बे प्रतिशत बेकार होता... तो दिमाग़ की चोट से कोई फ़र्क़ ही नहीं पड़ता।",
+    "[curious] लेकिन लगभग हर हिस्से की चोट... कोई ना कोई असर ज़रूर डालती है।"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "Britannica"
+  },
+  {
+   "id": 7,
+   "voice": "narrator",
+   "hi": "ऐसे और मज़ेदार facts के लिए... फ़ॉलो करो!",
+   "en": "",
+   "units": [
+    "[excited] ऐसे और मज़ेदार facts के लिए... फ़ॉलो करो!"
+   ],
+   "cta": true,
+   "lead": 0.3,
+   "tail": 0.7,
+   "min": 3.7
+  }
+ ],
+ "thumbnail": {
+  "frame": "9s",
+  "hook": "SIRF 10% DIMAAG?",
+  "stamp": "MYTH!",
+  "line": "We use our whole brain",
+  "badge": "MYTH OR FACT?",
+  "art_shift": 0
+ },
+ "score": {
+  "engine": "elevenlabs music_v1",
+  "file": "audio/score.mp3",
+  "duration_s": 55,
+  "gain": 1.6,
+  "duck": 0.6,
+  "prompt": "Playful, curious, upbeat underscore for a fun facts short. Quirky detective feel: pizzicato strings, light synth bleeps, finger snaps. Building tension before a reveal, a bright happy hit, then bouncy and light. Instrumental only, sits under a spoken voice, no vocals."
+ },
+ "category": "Myth or Fact?",
+ "avoid": [
+  "naming a specific film",
+  "claiming a single origin of the myth (unclear)"
+ ],
+ "verify_note": "All four claims from MIT McGovern / Britannica.",
+ "caption": "Kya hum dimaag ka sirf 10% use karte hain? ❌ MYTH! Brain scans dikhate hain ki hum din bhar poora dimaag use karte hain. Dimaag body weight ka sirf 2% hai, par 20% energy khaata hai! 🧠\n\nSources: MIT McGovern Institute, Britannica, APS.\n\nAapne ye myth suna tha? Comment karo 👇",
+ "youtube_title": "Sirf 10% Dimaag? MYTH! 🧠 | Kya Baat Facts #Shorts",
+ "comment_prompt": "Agla myth kaunsa bust karein? Comment karo 👇",
+ "hashtags": [
+  "#KyaBaatFacts",
+  "#MythOrFact",
+  "#Brain",
+  "#HindiFacts",
+  "#Science",
+  "#Myth"
+ ]
+}
