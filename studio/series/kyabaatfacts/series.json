@@ -2,8 +2,8 @@
  "id": "kyabaatfacts",
  "logo": "KYA BAAT FACTS",
  "title": [
-  "KYA",
-  "BAAT FACTS"
+  "KYA BAAT!",
+  "FACTS"
  ],
  "tagline": "Har fact pe bologe: kya baat!",
  "series_name": "KYA BAAT FACTS",
@@ -24,10 +24,14 @@
   "captions_titles": "English"
  },
  "palette": {
-  "yellow": "#FFC83D",
+  "gold": "#FFC83D",
+  "ivory": "#FFFFFF",
+  "red": "#FF4B3E",
   "ink": "#14123A",
+  "yellow": "#FFC83D",
   "punch": "#FF4B3E",
-  "white": "#FFFFFF"
+  "white": "#FFFFFF",
+  "dots": "#F5BA28"
  },
  "fonts": {
   "title": "Montserrat",
@@ -106,7 +110,7 @@
  "cta": {
   "instagram": {
    "button": "FOLLOW",
-   "say": "ऐसी और कहानियों के लिए, फ़ॉलो करें।",
+   "say": "[excited] ऐसे और मज़ेदार facts के लिए... फ़ॉलो करो!",
    "handles_line": [
     "INSTAGRAM  @kyabaatfacts",
     "YOUTUBE  @kyabaatfacts"
@@ -114,7 +118,7 @@
   },
   "youtube": {
    "button": "SUBSCRIBE",
-   "say": "ऐसी और कहानियों के लिए, सब्सक्राइब करें।",
+   "say": "[excited] ऐसे और मज़ेदार facts के लिए... सब्सक्राइब करो!",
    "handles_line": [
     "YOUTUBE  @kyabaatfacts",
     "INSTAGRAM  @kyabaatfacts"

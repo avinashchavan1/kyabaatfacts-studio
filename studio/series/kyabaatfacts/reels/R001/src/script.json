@@ -1,0 +1,236 @@
+{
+ "reel": "R001",
+ "title": "Bijli ka taapmaan suraj ki surface se 5 guna zyada!",
+ "series": "kyabaatfacts",
+ "fps": 24,
+ "status": "DRAFT — not verified",
+ "source": "NOAA National Weather Service · UCAR · NASA",
+ "source_card": {
+  "title": [
+   "SCIENCE",
+   "WALA SACH"
+  ],
+  "sub": "NOAA · NASA · UCAR",
+  "edition": "SOURCES CHECKED"
+ },
+ "claims": [
+  {
+   "claim": "Lightning can heat the air around it to about 50,000 °F (≈ 28,000 °C)",
+   "ref": "NOAA NWS, Lightning temperature",
+   "verified": true,
+   "sources": [
+    "https://www.weather.gov/safety/lightning-temperature",
+    "https://www.nssl.noaa.gov/education/svrwx101/lightning/"
+   ]
+  },
+  {
+   "claim": "That is about 5 times hotter than the surface of the Sun",
+   "ref": "NOAA NWS, Lightning temperature",
+   "verified": true,
+   "sources": [
+    "https://www.weather.gov/safety/lightning-temperature"
+   ]
+  },
+  {
+   "claim": "The Sun's visible surface is about 5,500 °C",
+   "ref": "UCAR SciEd, The Surface of the Sun; Britannica",
+   "verified": true,
+   "sources": [
+    "https://scied.ucar.edu/learning-zone/sun-space-weather/sun-photosphere",
+    "https://britannica.com/science/How-Hot-Is-the-Sun"
+   ]
+  },
+  {
+   "claim": "The heated air expands suddenly, then contracts: that makes the sound wave we hear as thunder",
+   "ref": "NOAA NWS, Lightning science: thunder",
+   "verified": true,
+   "sources": [
+    "https://www.weather.gov/safety/lightning-science-thunder"
+   ]
+  },
+  {
+   "claim": "The Sun's core is about 15 million °C",
+   "ref": "NASA Science, Sun facts",
+   "verified": true,
+   "sources": [
+    "https://science.nasa.gov/sun/facts"
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "id": 1,
+   "voice": "narrator",
+   "hi": "अरे, एक बात बताऊँ? बिजली और सूरज... इनमें से ज़्यादा गरम कौन है?",
+   "en": "Hey, want to hear something? Lightning or the Sun... which one is hotter?",
+   "units": [
+    "[excited] अरे, एक बात बताऊँ?",
+    "[curious] बिजली और सूरज... इनमें से ज़्यादा गरम कौन है?"
+   ],
+   "unit_gap": 0.3,
+   "card": [
+    [
+     "BIJLI vs SURAJ",
+     null
+    ],
+    [
+     "KAUN ZYADA GARAM?",
+     "#FFC83D"
+    ]
+   ],
+   "lead": 0.25,
+   "tail": 0.3,
+   "min": 3.5
+  },
+  {
+   "id": 2,
+   "voice": "narrator",
+   "hi": "ज़्यादातर लोग कहेंगे... सूरज! लेकिन रुको!",
+   "en": "Most people would say... the Sun! But wait!",
+   "units": [
+    "[playfully] ज़्यादातर लोग कहेंगे... सूरज!",
+    "[excited] लेकिन रुको!"
+   ],
+   "unit_gap": 0.25,
+   "lead": 0.15,
+   "tail": 0.25
+  },
+  {
+   "id": 3,
+   "voice": "narrator",
+   "hi": "सूरज की सतह का तापमान है... लगभग पाँच हज़ार पाँच सौ डिग्री सेल्सियस।",
+   "en": "The surface of the Sun is about 5,500 degrees Celsius.",
+   "units": [
+    "[curious] सूरज की सतह का तापमान है... लगभग पाँच हज़ार पाँच सौ डिग्री सेल्सियस।"
+   ],
+   "cite": "UCAR · Britannica",
+   "fact": {
+    "big": "5,500°C",
+    "label": "SURAJ KI SURFACE",
+    "src": "UCAR · BRITANNICA"
+   },
+   "lead": 0.15,
+   "tail": 0.35
+  },
+  {
+   "id": 4,
+   "voice": "narrator",
+   "hi": "और बिजली? जब वो गिरती है, तो अपने आसपास की हवा को... लगभग अट्ठाईस हज़ार डिग्री तक गरम कर देती है!",
+   "en": "And lightning? When it strikes, it heats the air around it to about 28,000 degrees!",
+   "units": [
+    "[excited] और बिजली? जब वो गिरती है, तो अपने आसपास की हवा को... लगभग अट्ठाईस हज़ार डिग्री तक गरम कर देती है!"
+   ],
+   "cite": "NOAA National Weather Service",
+   "fact": {
+    "big": "28,000°C",
+    "label": "BIJLI KE AASPAAS KI HAWA",
+    "src": "NOAA · NATIONAL WEATHER SERVICE"
+   },
+   "reveal": true,
+   "lead": 0.15,
+   "tail": 0.3
+  },
+  {
+   "id": 5,
+   "voice": "narrator",
+   "hi": "यानी सूरज की सतह से... पाँच गुना ज़्यादा! क्या बात है!",
+   "en": "That's five times hotter than the Sun's surface! Kya baat hai!",
+   "units": [
+    "[amazed] यानी सूरज की सतह से... पाँच गुना ज़्यादा!",
+    "क्या बात है!"
+   ],
+   "unit_gap": 0.35,
+   "signature_unit": 1,
+   "force_take": {
+    "1": 1
+   },
+   "no_cut": [
+    1
+   ],
+   "cite": "NOAA National Weather Service",
+   "reveal": true,
+   "lead": 0.1,
+   "tail": 0.45
+  },
+  {
+   "id": 6,
+   "voice": "narrator",
+   "hi": "और पता है, बादल गरजते क्यों हैं? इतनी गरमी से हवा एक झटके में फैलती है... और फिर सिकुड़ती है। यही धमाका गड़गड़ाहट बनकर हमें सुनाई देता है!",
+   "en": "And do you know why clouds thunder? The heat makes the air expand in an instant... then contract. That blast is the thunder we hear!",
+   "units": [
+    "[curious] और पता है, बादल गरजते क्यों हैं?",
+    "[excited] इतनी गरमी से हवा एक झटके में फैलती है... और फिर सिकुड़ती है। यही धमाका गड़गड़ाहट बनकर हमें सुनाई देता है!"
+   ],
+   "unit_gap": 0.3,
+   "cite": "NOAA National Weather Service",
+   "lead": 0.15,
+   "tail": 0.3
+  },
+  {
+   "id": 7,
+   "voice": "narrator",
+   "hi": "लेकिन सूरज को कम मत समझना। उसके अंदर, core में... तापमान है डेढ़ करोड़ डिग्री! तो असली बॉस... अभी भी सूरज ही है।",
+   "en": "But don't underestimate the Sun. Deep inside, at its core... it's 15 million degrees! So the real boss is still the Sun.",
+   "units": [
+    "[playfully] लेकिन सूरज को कम मत समझना।",
+    "[excited] उसके अंदर, core में... तापमान है डेढ़ करोड़ डिग्री!",
+    "[laughs] तो असली बॉस... अभी भी सूरज ही है।"
+   ],
+   "unit_gap": 0.3,
+   "cite": "NASA",
+   "fact": {
+    "big": "1.5 CRORE °C",
+    "label": "SURAJ KA CORE",
+    "src": "NASA"
+   },
+   "lead": 0.15,
+   "tail": 0.4
+  },
+  {
+   "id": 8,
+   "voice": "narrator",
+   "hi": "ऐसे और मज़ेदार facts के लिए... फ़ॉलो करो!",
+   "en": "",
+   "units": [
+    "[excited] ऐसे और मज़ेदार facts के लिए... फ़ॉलो करो!"
+   ],
+   "cta": true,
+   "lead": 0.3,
+   "tail": 0.7,
+   "min": 3.7
+  }
+ ],
+ "thumbnail": {
+  "frame": "14s",
+  "hook": "BIJLI vs SURAJ",
+  "stamp": "5X GARAM!",
+  "line": "Lightning is 5x hotter than the Sun's surface",
+  "badge": "SCIENCE WALA SACH",
+  "art_shift": 0
+ },
+ "score": {
+  "engine": "elevenlabs music_v1",
+  "file": "audio/score.mp3",
+  "duration_s": 55,
+  "gain": 1.6,
+  "duck": 0.6,
+  "prompt": "Playful, curious, upbeat underscore for a fun science-facts short. Light electronic pulse with tabla and plucked strings, a building tension before a big reveal, a bright happy hit, then bouncy and light. Instrumental only, sits under a spoken voice, no vocals."
+ },
+ "category": "Science Wala Sach",
+ "avoid": [
+  "saying lightning is hotter than 'the Sun' without 'surface'",
+  "exact bolt width or duration (weak sources)"
+ ],
+ "verify_note": "Compare with the Sun's VISIBLE SURFACE only; the core twist keeps it honest. 50,000 °F ≈ 27,760 °C → 'लगभग 28 हज़ार'.",
+ "caption": "Bijli vs Suraj: kaun zyada garam? ⚡☀️ Bijli apne aaspaas ki hawa ko ~28,000°C tak garam kar deti hai — Suraj ki surface (~5,500°C) se 5 guna zyada! Lekin Suraj ka core? 1.5 crore °C 😎\n\nSources: NOAA National Weather Service, NASA, UCAR.\n\nAapko ye pata tha? Comment karo 👇",
+ "youtube_title": "Bijli Suraj Se 5 Guna Garam? ⚡ | Kya Baat Facts #Shorts",
+ "comment_prompt": "Aapko ye pata tha? Haan ya naa — comment karo 👇",
+ "hashtags": [
+  "#KyaBaatFacts",
+  "#ScienceWalaSach",
+  "#HindiFacts",
+  "#Lightning",
+  "#Science",
+  "#Facts"
+ ]
+}

@@ -62,11 +62,14 @@ def check(reel):
     EXPRESSIVE = {"reverently", "solemnly", "chanting", "with devotion", "with deep devotion", "slowly", "expressively", "majestically", "with feeling"}   # śloka line only (sloka_unit); the pitch guard still drops shouted takes
     ENERGY = {"excited", "dramatically", "intense", "energetic", "urgently", "with energy"}   # narration_energy test: hook + reveal only
     energy_on = s.get("narration_energy") == "hook_reveal"                               # owner's A/B test (Nov 21 2026); shouting guard still applies
+    HOUSE = ENERGY | {"amazed", "laughs", "playfully", "impressed", "curious", "surprised"}   # series.json → narration_energy "excited": a lively house style (owner's choice)
+    house_on = ser_.get("narration_energy") == "excited"
     for sh in s["shots"]:
         if sh.get("voice") != "narrator": continue
         for ui, u in enumerate(sh.get("units") or []):
             ok_tags = CALM | (EXPRESSIVE if ui == sh.get("sloka_unit") else set())   # the opening śloka may be recited with feeling (owner's request)
             if energy_on and (sh["id"] == s["shots"][0]["id"] or sh.get("reveal")): ok_tags = ok_tags | ENERGY
+            if house_on: ok_tags = ok_tags | HOUSE
             for tag in re.findall(r"\[([^\]]+)\]", u if isinstance(u, str) else u.get("say", "")):
                 if tag.strip().lower() not in ok_tags: probs.append(f"shot {sh['id']}: narrator tag [{tag}] makes him shout; use one of {sorted(ok_tags)}")
     th = s.get("thumbnail") or {}
@@ -75,6 +78,8 @@ def check(reel):
     if not s["shots"][0].get("card"): probs.append("shot 1 has no 'card': the hook must be on screen in the first second, not only in the subtitle")
     for c in s.get("claims", []):
         if not c.get("verified"): probs.append(f"UNVERIFIED claim: {c['claim']} ({c.get('ref')})")
+        if not CHN.get("source", {}).get("verse_url") and not any(str(x).startswith("http") for x in c.get("sources", [])):   # no single base text (e.g. a facts channel): every claim links its source
+            probs.append(f"claim without a source link: {c['claim']} (add 'sources': [url, ...])")
     print(f"{s['reel']} — {s['title']}\n  shots {len(s['shots'])} · est. length {est:.0f}s (target 60-90, up to ~120 when the evidence needs it) · ElevenLabs chars/take {narr}")
     for p in probs: print("  ⚠", p)
     if not probs: print("  ✓ script passes")
