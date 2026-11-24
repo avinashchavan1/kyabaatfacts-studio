@@ -16,6 +16,7 @@ import Reels from "./pages/Reels";
 import SettingsPage from "./pages/Settings";
 import Timeline from "./pages/Timeline";
 import World from "./pages/World";
+import { WorkPage } from "./components/WorkBar";
 import { About, Privacy, Terms } from "./pages/Legal";
 import { CHANNEL } from "./lib/channel";
 
@@ -47,6 +48,7 @@ createRoot(document.getElementById("root")!).render(
               <Route path="docs" element={<Docs />} />
               <Route path="docs/:slug" element={<Docs />} />
               <Route path="settings" element={<SettingsPage />} />
+              <Route path="work" element={<WorkPage />} />
               <Route path="*" element={<div className="py-20 text-center">Page not found.</div>} />
             </Route>
           </Routes></AuthGate>} />

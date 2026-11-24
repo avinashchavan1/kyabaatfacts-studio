@@ -1,15 +1,12 @@
 import clsx from "clsx";
-import { Check, ChevronDown, ChevronUp, Circle, Hand, ListOrdered, Loader2 } from "lucide-react";
+import { ArrowLeft, Check, ChevronRight, Circle, Hand, ListOrdered, Loader2, Moon } from "lucide-react";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useWorkStatus, type WorkStatus } from "../lib/api";
 
 // The live work panel: what Claude is doing, on which reel, how far along and how long is left, plus the render phases,
-// the queue of reels and recent events. Collapses into a small corner pill (remembered per browser).
+// the queue of reels and recent events. Every page shows a small strip/pill; tapping it opens the full view on its own page (/work).
 const STEPS = ["Research", "Script", "Voices", "Music", "Art", "Preview", "Masters", "Cover & upload"];
-const KEY = "workbar-collapsed";
-const readCollapsed = () => { try { return localStorage.getItem(KEY) === "1"; } catch { return false; } };
-const writeCollapsed = (v: boolean) => { try { localStorage.setItem(KEY, v ? "1" : "0"); } catch { /* private mode: not remembered */ } };
 
 const mins = (m: number | null | undefined) => {
   if (m === null || m === undefined || !isFinite(Number(m))) return null;
@@ -21,14 +18,33 @@ const ago = (iso: string) => {
   return s < 60 ? `${s}s ago` : s < 3600 ? `${Math.round(s / 60)} min ago` : `${Math.round(s / 3600)} h ago`;
 };
 
+const useTick = () => { const [, tick] = useState(0); useEffect(() => { const i = setInterval(() => tick((n) => n + 1), 5000); return () => clearInterval(i); }, []); };
+
 export default function WorkBar() {
   const { data: s } = useWorkStatus();
-  const [collapsed, setCollapsed] = useState(readCollapsed);
-  const [, tick] = useState(0);
-  useEffect(() => { const i = setInterval(() => tick((n) => n + 1), 5000); return () => clearInterval(i); }, []);
-  if (!s || s.state === "idle") return null;
-  const toggle = (v: boolean) => { setCollapsed(v); writeCollapsed(v); };
-  return collapsed ? <Pill s={s} onOpen={() => toggle(false)} /> : <Panel s={s} onClose={() => toggle(true)} />;
+  const nav = useNavigate(), loc = useLocation();
+  useTick();
+  if (!s || s.state === "idle" || loc.pathname === "/work") return null;
+  return <Pill s={s} onOpen={() => nav("/work")} />;
+}
+
+// the full live view, as its own page
+export function WorkPage() {
+  const { data: s, isLoading } = useWorkStatus();
+  const nav = useNavigate();
+  useTick();
+  const back = () => (window.history.length > 1 ? nav(-1) : nav("/"));
+  return (
+    <div className="grid gap-4">
+      <button onClick={back} className="flex w-fit items-center gap-1.5 text-sm font-semibold text-ink-soft hover:text-ink dark:text-parchment/60"><ArrowLeft size={16} /> Back</button>
+      <h1 className="font-display text-2xl font-extrabold tracking-wide sm:text-3xl">What Claude is doing</h1>
+      {isLoading ? <div className="h-40 animate-pulse rounded-3xl bg-night-900/20" />
+        : !s || s.state === "idle" ? (
+          <div className="flex items-center gap-3 rounded-3xl bg-night-900 p-6 text-parchment"><Moon size={22} className="text-gold" />
+            <div><div className="font-semibold">Nothing running right now.</div><div className="text-sm opacity-75">When Claude starts on reels, the live progress shows up here.</div></div></div>
+        ) : <Panel s={s} />}
+    </div>
+  );
 }
 
 function useMeta(s: WorkStatus) {
@@ -50,26 +66,26 @@ function Pill({ s, onOpen }: { s: WorkStatus; onOpen: () => void }) {
     <>
       <button onClick={onOpen} aria-label="Show what Claude is doing"
         className={clsx("flex w-full items-center gap-2 border-b px-4 py-1 text-[12px] font-semibold lg:hidden", tone, waiting ? "border-amber-300 dark:border-amber-700" : "border-gold/30")}>
-        {icon(13)}{label}{nums}<ChevronDown size={14} className="ml-auto shrink-0 opacity-70" />
+        {icon(13)}{label}{nums}<ChevronRight size={14} className="ml-auto shrink-0 opacity-70" />
       </button>
       <button onClick={onOpen} aria-label="Show what Claude is doing"
         className={clsx("fixed bottom-4 right-4 z-50 hidden max-w-md items-center gap-2 rounded-full px-4 py-2 text-[13px] font-semibold shadow-lg ring-1 transition hover:scale-[1.02] lg:flex", tone, waiting ? "ring-amber-300 dark:ring-amber-700" : "ring-gold/40")}>
-        {icon(15)}{label}{nums}<ChevronUp size={15} className="shrink-0 opacity-70" />
+        {icon(15)}{label}{nums}<ChevronRight size={15} className="shrink-0 opacity-70" />
       </button>
     </>
   );
 }
 
-// expanded: the full panel under the header
-function Panel({ s, onClose }: { s: WorkStatus; onClose: () => void }) {
+// the full view (on /work)
+function Panel({ s }: { s: WorkStatus }) {
   const { waiting, stale, pct, left, queueLeft, since } = useMeta(s);
   const info = s.info ?? {};
   const elapsed = s.started_at ? mins((Date.now() - new Date(s.started_at).getTime()) / 60000) : null;
-  const phases = info.phases ?? [], queue = info.queue ?? [], events = (info.events ?? []).slice(-5).reverse();
+  const phases = info.phases ?? [], queue = info.queue ?? [], events = (info.events ?? []).slice(-12).reverse();
   return (
     <div role="status" aria-live="polite"
-      className={clsx("max-h-[55vh] overflow-y-auto overscroll-contain border-b px-4 py-3 text-[13px] sm:px-6 lg:max-h-[70vh] lg:px-10", waiting ? "border-amber-300 bg-amber-50 text-amber-950 dark:border-amber-800 dark:bg-amber-950 dark:text-amber-100" : "border-gold/40 bg-night-900 text-parchment")}>
-      <div className="mx-auto max-w-7xl">
+      className={clsx("rounded-3xl px-4 py-4 text-[13px] ring-1 sm:px-6", waiting ? "ring-amber-300 bg-amber-50 text-amber-950 dark:ring-amber-800 dark:bg-amber-950 dark:text-amber-100" : "ring-gold/40 bg-night-900 text-parchment")}>
+      <div>
         {/* headline */}
         <div className="flex items-start gap-2.5">
           {waiting ? <Hand size={18} className="mt-0.5 shrink-0" /> : <Loader2 size={18} className={clsx("mt-0.5 shrink-0 text-gold", !stale && "animate-spin")} />}
@@ -82,9 +98,6 @@ function Panel({ s, onClose }: { s: WorkStatus; onClose: () => void }) {
             <div className="mt-0.5 text-[15px] font-semibold">{s.task}</div>
             {s.detail && <div className="mt-0.5 text-xs opacity-75">{s.detail}</div>}
           </div>
-          <button onClick={onClose} className="flex shrink-0 items-center gap-1 rounded-full px-2.5 py-1 text-xs font-semibold opacity-80 ring-1 ring-current/30 hover:opacity-100" aria-label="Hide the work panel">
-            Hide <ChevronDown size={14} />
-          </button>
         </div>
 
         {/* batch: every reel of the current run, with its 8 steps */}
