@@ -1,0 +1,71 @@
+{
+ "title": "Bijli ka taapmaan suraj ki surface se 5 guna zyada!",
+ "series": "Kya Baat Facts",
+ "source": "NOAA National Weather Service · UCAR · NASA",
+ "length": "0:58",
+ "captions": {
+  "instagram": "Hey, want to hear something? Lightning or the Sun... which one is hotter?\n\nBijli vs Suraj: kaun zyada garam? ⚡☀️ Bijli apne aaspaas ki hawa ko ~28,000°C tak garam kar deti hai — Suraj ki surface (~5,500°C) se 5 guna zyada! Lekin Suraj ka core? 1.5 crore °C 😎\n\nSources: NOAA National Weather Service, NASA, UCAR.\n\nAapko ye pata tha? Comment karo 👇\n\nAapko ye pata tha? Haan ya naa — comment karo 👇\n\n📜 Source: NOAA National Weather Service · UCAR · NASA\n🎧 Hindi narration · English subtitles\n\nFollow @kyabaatfacts for a new 'kya baat!' fact every day.\n\n#KyaBaatFacts #ScienceWalaSach #HindiFacts #Lightning #Science #Facts",
+  "facebook": "Hey, want to hear something? Lightning or the Sun... which one is hotter?\n\nBijli vs Suraj: kaun zyada garam? ⚡☀️ Bijli apne aaspaas ki hawa ko ~28,000°C tak garam kar deti hai — Suraj ki surface (~5,500°C) se 5 guna zyada! Lekin Suraj ka core? 1.5 crore °C 😎\n\nSources: NOAA National Weather Service, NASA, UCAR.\n\nAapko ye pata tha? Comment karo 👇\n\nAapko ye pata tha? Haan ya naa — comment karo 👇\n\n📜 Source: NOAA National Weather Service · UCAR · NASA\n🎧 Hindi narration · English subtitles\n\nFollow Kya Baat Facts for a new 'kya baat!' fact every day.\n\n#KyaBaatFacts #ScienceWalaSach #HindiFacts #Lightning #Science #Facts",
+  "youtube_title": "Bijli Suraj Se 5 Guna Garam? ⚡ | Kya Baat Facts #Shorts",
+  "youtube_description": "Hey, want to hear something? Lightning or the Sun... which one is hotter?\n\nBijli vs Suraj: kaun zyada garam? ⚡☀️ Bijli apne aaspaas ki hawa ko ~28,000°C tak garam kar deti hai — Suraj ki surface (~5,500°C) se 5 guna zyada! Lekin Suraj ka core? 1.5 crore °C 😎\n\nSources: NOAA National Weather Service, NASA, UCAR.\n\nAapko ye pata tha? Comment karo 👇\n\nAapko ye pata tha? Haan ya naa — comment karo 👇\n\nSource: NOAA National Weather Service · UCAR · NASA\nVerses:\n• Lightning can heat the air around it to about 50,000 °F (≈ 28,000 °C) — NOAA NWS, Lightning temperature\n• That is about 5 times hotter than the surface of the Sun — NOAA NWS, Lightning temperature\n• The Sun's visible surface is about 5,500 °C — UCAR SciEd, The Surface of the Sun; Britannica\n• The heated air expands suddenly, then contracts: that makes the sound wave we hear as thunder — NOAA NWS, Lightning science: thunder\n• The Sun's core is about 15 million °C — NASA Science, Sun facts\n\nHindi narration · English subtitles.\nSubscribe to Kya Baat Facts for a new 'kya baat!' fact every day.\n\n#KyaBaatFacts #ScienceWalaSach #HindiFacts #Lightning #Science #Facts #Shorts",
+  "first_comment": "Aapko ye pata tha? Haan ya naa — comment karo 👇"
+ },
+ "claims": [
+  {
+   "claim": "Lightning can heat the air around it to about 50,000 °F (≈ 28,000 °C)",
+   "ref": "NOAA NWS, Lightning temperature"
+  },
+  {
+   "claim": "That is about 5 times hotter than the surface of the Sun",
+   "ref": "NOAA NWS, Lightning temperature"
+  },
+  {
+   "claim": "The Sun's visible surface is about 5,500 °C",
+   "ref": "UCAR SciEd, The Surface of the Sun; Britannica"
+  },
+  {
+   "claim": "The heated air expands suddenly, then contracts: that makes the sound wave we hear as thunder",
+   "ref": "NOAA NWS, Lightning science: thunder"
+  },
+  {
+   "claim": "The Sun's core is about 15 million °C",
+   "ref": "NASA Science, Sun facts"
+  }
+ ],
+ "verify_note": "Compare with the Sun's VISIBLE SURFACE only; the core twist keeps it honest. 50,000 °F ≈ 27,760 °C → 'लगभग 28 हज़ार'.",
+ "masters": {
+  "instagram": {
+   "file": "R001_INSTAGRAM_MASTER.mp4",
+   "spec": "1080×1920 · H.264 CRF 12 · AAC 320k"
+  },
+  "facebook": {
+   "file": "R001_INSTAGRAM_MASTER.mp4",
+   "spec": "1080×1920 · H.264 CRF 12 · AAC 320k"
+  },
+  "youtube": {
+   "file": "R001_YOUTUBE_MASTER.mp4",
+   "spec": "2160×3840 (4K) · H.264 CRF 14 · AAC 384k"
+  }
+ },
+ "platforms": {
+  "instagram": {
+   "state": "todo",
+   "url": "",
+   "at": ""
+  },
+  "youtube": {
+   "state": "todo",
+   "url": "",
+   "at": ""
+  },
+  "facebook": {
+   "state": "todo",
+   "url": "",
+   "at": ""
+  }
+ },
+ "review": {
+  "done": false,
+  "at": ""
+ }
+}

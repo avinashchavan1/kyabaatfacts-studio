@@ -130,5 +130,10 @@
   "॥ इति कथा ॥"
  ],
  "mascot": "Hairaan Aankhen: two googly eyes that react in intros (Kya baat! / Hmm... / Sach mein? / Wow!) - see brand/kit/eye_expressions.png",
- "narration_energy": "excited"
+ "narration_energy": "excited",
+ "cover": {
+  "title_font": "Montserrat.ttf",
+  "title_var": "Black",
+  "mark": "eyes"
+ }
 }
