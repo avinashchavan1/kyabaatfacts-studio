@@ -5,7 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useWorkStatus, type WorkStatus } from "../lib/api";
 
 // The live work panel: what Claude is doing, on which reel, how far along and how long is left, plus the render phases,
-// the queue of reels and recent events. Every page shows a small strip/pill; tapping it opens the full view on its own page (/work).
+// the queue of reels and recent events. Every page shows a small strip/pill; tapping it opens the full view on its own page (/live).
 const STEPS = ["Research", "Script", "Voices", "Music", "Art", "Preview", "Masters", "Cover & upload"];
 
 const mins = (m: number | null | undefined) => {
@@ -24,8 +24,8 @@ export default function WorkBar() {
   const { data: s } = useWorkStatus();
   const nav = useNavigate(), loc = useLocation();
   useTick();
-  if (!s || s.state === "idle" || loc.pathname === "/work") return null;
-  return <Pill s={s} onOpen={() => nav("/work")} />;
+  if (!s || s.state === "idle" || loc.pathname === "/live") return null;
+  return <Pill s={s} onOpen={() => nav("/live")} />;
 }
 
 // the full live view, as its own page
@@ -37,7 +37,8 @@ export function WorkPage() {
   return (
     <div className="grid gap-4">
       <button onClick={back} className="flex w-fit items-center gap-1.5 text-sm font-semibold text-ink-soft hover:text-ink dark:text-parchment/60"><ArrowLeft size={16} /> Back</button>
-      <h1 className="font-display text-2xl font-extrabold tracking-wide sm:text-3xl">What Claude is doing</h1>
+      <h1 className="font-display text-2xl font-extrabold tracking-wide sm:text-3xl">Live studio</h1>
+      <p className="-mt-2 text-sm text-ink-soft dark:text-parchment/60">What Claude is making right now, step by step.</p>
       {isLoading ? <div className="h-40 animate-pulse rounded-3xl bg-night-900/20" />
         : !s || s.state === "idle" ? (
           <div className="flex items-center gap-3 rounded-3xl bg-night-900 p-6 text-parchment"><Moon size={22} className="text-gold" />

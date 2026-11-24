@@ -1,7 +1,7 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { AuthGate } from "./components/Auth";
 import Layout from "./components/Layout";
 import "./index.css";
@@ -48,7 +48,8 @@ createRoot(document.getElementById("root")!).render(
               <Route path="docs" element={<Docs />} />
               <Route path="docs/:slug" element={<Docs />} />
               <Route path="settings" element={<SettingsPage />} />
-              <Route path="work" element={<WorkPage />} />
+              <Route path="live" element={<WorkPage />} />
+              <Route path="work" element={<Navigate to="/live" replace />} />
               <Route path="*" element={<div className="py-20 text-center">Page not found.</div>} />
             </Route>
           </Routes></AuthGate>} />
