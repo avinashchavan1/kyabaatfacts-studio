@@ -184,3 +184,12 @@ Full content plan: PLAN.md (same folder)
 - Each reel goes to YouTube Shorts, Instagram Reels and Facebook Reels the same day; max 1 Short a day; evenings ~6-9 PM IST (the app's Timeline suggests times and learns).
 - Keep a buffer of 7+ ready reels; below 5, slow down rather than rush. Review retention at 48 h.
 - Credits: ~25k/month (launch), ~30k (6 a week), ~50k (+ long video).
+
+## Pilot: lessons from instagram-agent-skill (MIT, github.com/Jakeschincariol/instagram-agent-skill) — 24 Nov 2026
+Applied to R007 + R009 as v2 (opt-in per reel with `KB_SAFE` in shots.js); roll out to all reels if the owner approves.
+- **Claim-first hook:** no "अरे, एक बात बताऊँ?" opener; the claim is the first line (their hook scorer: opener versions 15-28/100, claim-first 51-84).
+- **Safe zone:** nothing above y 230, below y 1440 or in the right 230 px (Instagram/YouTube UI). Logo + badge share one row at y 236,
+  text within x 220-860, subtitles end at y 1400 (`SUB_STYLE`).
+- **Loop ending:** the last story line echoes a word from the hook (R007 "ख़राब", R009 "birthday").
+- **Captions:** first line ≤125 chars, no em dashes, one clear comment ask.
+- Tools used read-only from a scratch copy (hookscore.py, beats.py, caption.py); English-only heuristics, used on the English lines.

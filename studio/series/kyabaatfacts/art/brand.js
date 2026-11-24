@@ -165,3 +165,65 @@ function kbProof(c, key, u, at, len, label = 'ASLI PHOTO', credit = '', rot = -0
   kbStamp(c, label + ' 📸', 540, 860 - h / 2 - 110, u, at + 0.15, KB.RED, 64, 0.05);
   return true;
 }
+
+// ---- Safe-zone layout (opt-in per reel: `const KB_SAFE = true;` at the top of its shots.js) ----
+// Instagram/YouTube cover y < 230 (header), y > 1440 (caption, buttons) and the right ~230 px (action rail).
+// With KB_SAFE: logo + category badge share one row at y 236, text blocks stay within x 220-860, subtitles end at y 1400.
+const KB_S = () => typeof KB_SAFE !== 'undefined' && KB_SAFE;
+const KB_SAFE_W = 640;
+const _kbLogo0 = logo, _kbBadge0 = kbBadge, _kbLabel0 = kbLabel, _kbStamp0 = kbStamp, _kbTextFit1 = textFit, _kbFact0 = kbFact, _kbProof0 = kbProof, _kbKyaBaat0 = kbKyaBaat, _kbEnd0 = endCard;
+let KB_LOGO_R = 0;   // right edge of the logo pill (the badge sits after it)
+logo = function (ctx, a = 1) {
+  if (!KB_S()) return _kbLogo0(ctx, a);
+  ctx.save(); ctx.font = '900 26px Montserrat'; ctx.letterSpacing = '2px'; const tw = ctx.measureText('KYA BAAT FACTS').width; ctx.restore();
+  const x = 40, y = 236, h = 58; KB_LOGO_R = x + 104 + tw + 24;
+  ctx.save(); ctx.globalAlpha = a; ctx.fillStyle = rgba(KB.INK, 0.6); ctx.beginPath(); ctx.roundRect(x, y, KB_LOGO_R - x, h, h / 2); ctx.fill(); ctx.restore();
+  ctx.save(); ctx.globalAlpha = a; kbEye(ctx, x + 32, y + h / 2, 14, [0.6, -0.6], { brows: false }); kbEye(ctx, x + 66, y + h / 2, 14, [0.6, -0.6], { brows: false }); ctx.restore();
+  text(ctx, 'KYA BAAT FACTS', x + 92, y + h / 2 + 9, { size: 26, weight: 900, color: KB.Y, align: 'left', ls: 2, alpha: a, shadow: 0 });
+};
+kbBadge = function (c, label, col, a = 1, y = 220) {
+  if (!KB_S()) return _kbBadge0(c, label, col, a, y);
+  c.save(); c.font = '900 26px Montserrat'; c.letterSpacing = '2px'; const w = c.measureText(label).width + 50; c.restore();
+  const x0 = Math.min(Math.max(KB_LOGO_R || 420, 420) + 14, 850 - w), yy = 236, h = 58;
+  c.save(); c.globalAlpha = a; c.fillStyle = KB.INK; c.beginPath(); c.roundRect(x0 + 5, yy + 5, w, h, h / 2); c.fill();
+  c.fillStyle = col; c.strokeStyle = KB.INK; c.lineWidth = 5; c.beginPath(); c.roundRect(x0, yy, w, h, h / 2); c.fill(); c.stroke(); c.restore();
+  text(c, label, x0 + w / 2, yy + h / 2 + 9, { size: 26, weight: 900, color: KB.W, ls: 2, alpha: a, shadow: 0 });
+};
+kbLabel = function (c, str, y, u, at = 0.2, o = {}) { return _kbLabel0(c, str, Math.max(y, 320), u, at, KB_S() ? Object.assign({}, o, { w: Math.min(o.w || 880, KB_SAFE_W + 40), size: Math.min(o.size || 56, 50) }) : o); };
+textFit = function (ctx, str, x, y, o = {}, maxW = 960) { return _kbTextFit1(ctx, str, x, y, o, KB_S() ? Math.min(maxW, KB_SAFE_W) : maxW); };
+kbStamp = function (c, str, x, y, u, at, col = KB.RED, size = 120, rot = -0.1) {
+  if (!KB_S()) return _kbStamp0(c, str, x, y, u, at, col, size, rot);
+  c.save(); c.font = `900 ${size}px Montserrat`; c.letterSpacing = '2px'; let s = size; while (s > 40 && c.measureText(str).width + 80 > KB_SAFE_W) { s -= 4; c.font = `900 ${s}px Montserrat`; } c.restore();
+  return _kbStamp0(c, str, x, Math.min(Math.max(y, 340), 1300), u, at, col, s, rot);
+};
+kbFact = function (c, u, F, y = 330, at = 0.2, col = KB.RED) {
+  if (!KB_S()) return _kbFact0(c, u, F, y, at, col);
+  c.save(); c.translate(540, Math.max(y, 330) + 130); c.scale(0.72, 0.72); c.translate(-540, -(Math.max(y, 330) + 130)); _kbFact0(c, u, F, Math.max(y, 330), at, col); c.restore();
+};
+kbProof = function (c, key, u, at, len, label, credit, rot) {
+  if (!KB_S()) return _kbProof0(c, key, u, at, len, label, credit, rot);
+  c.save(); c.translate(540, 860); c.scale(0.72, 0.72); c.translate(-540, -860); const r = _kbProof0(c, key, u, at, len, label, credit, rot); c.restore(); return r;
+};
+kbKyaBaat = function (c, u, t, at) {
+  if (!KB_S()) return _kbKyaBaat0(c, u, t, at);
+  if (u < at - 0.1) return; const q = backOut(map(u, at - 0.1, at + 0.3));
+  c.save(); c.fillStyle = rgba(KB.Y, 0.93 * Math.min(1, q)); c.fillRect(0, 0, W, H); c.restore();
+  c.save(); c.translate(540, 820); c.scale(q * 0.8, q * 0.8); kbEyes(c, 0, 0, 170, t, 'wow', 1); c.restore();
+  textFit(c, 'KYA BAAT HAI!', 540, 1180, { size: 104 * Math.min(1, q), weight: 900, color: KB.INK, shadow: 0 });
+};
+endCard = function (ctx, u, p, sh, t, post) {
+  if (!KB_S()) return _kbEnd0(ctx, u, p, sh, t, post);
+  kbYellow(ctx, t); post.noLogo = true;
+  post.ui = c => {
+    const a = ease(u, 0.05, 0.45), s = lerp(0.9, 1, backOut(map(u, 0.05, 0.6)));
+    kbLogo(c, 540, 560, 0.85 * s, t, a);
+    text(c, 'Aise aur facts ke liye', 540, 1000, { size: 54, weight: 900, color: KB.INK, alpha: ease(u, 0.5, 0.9), shadow: 0 });
+    const b = backOut(map(u, 0.8, 1.25));
+    if (b > 0) { const pu = 1 + Math.sin(u * 5) * 0.025; c.save(); c.translate(540, 1140); c.scale(b * pu, b * pu); const label = CTA.button; c.font = '900 64px Montserrat'; c.letterSpacing = '4px'; const tw = c.measureText(label).width, bw = Math.min(tw + 150, KB_SAFE_W);
+      c.fillStyle = KB.INK; c.beginPath(); c.roundRect(-bw / 2 + 10, -64 + 10, bw, 128, 64); c.fill();
+      c.fillStyle = KB.RED; c.strokeStyle = KB.INK; c.lineWidth = 9; c.beginPath(); c.roundRect(-bw / 2, -64, bw, 128, 64); c.fill(); c.stroke();
+      text(c, label, 0, 23, { size: 64, weight: 900, color: KB.W, ls: 4, shadow: 0 }); c.restore(); }
+    const handles = CTA.handles_line || SERIES.handles_line;
+    if (handles) [].concat(handles).forEach((l, i) => text(c, l, 540, 1290 + i * 52, { size: 34, weight: 800, color: KB.INK, ls: 2, alpha: ease(u, 1.1, 1.5), shadow: 0 }));
+  };
+};

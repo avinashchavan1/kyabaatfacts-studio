@@ -61,41 +61,45 @@
   {
    "id": 1,
    "voice": "narrator",
-   "hi": "अरे, एक बात बताऊँ? क्या शहद कभी ख़राब होता है?",
-   "en": "Hey, want to hear something? Does honey ever go bad?",
+   "hi": "मिस्र के मकबरों का शहद... हज़ारों साल पुराना... और आज तक ख़राब नहीं हुआ!",
+   "en": "Honey from Egyptian tombs, thousands of years old, still hadn't spoiled!",
    "units": [
-    "[excited] अरे, एक बात बताऊँ?",
-    "[curious] क्या शहद कभी ख़राब होता है?"
+    "[excited] मिस्र के मकबरों का शहद... हज़ारों साल पुराना...",
+    "[amazed] और आज तक ख़राब नहीं हुआ!"
    ],
-   "lead": 0.25,
+   "lead": 0.15,
    "tail": 0.3,
    "unit_gap": 0.3,
    "card": [
     [
-     "SHAHAD KABHI",
+     "HAZAARON SAAL",
      null
     ],
     [
-     "KHARAB HOTA HAI?",
+     "PURANA SHAHAD",
+     null
+    ],
+    [
+     "AB TAK THEEK!",
      "#FFC83D"
     ]
    ],
-   "min": 3.5
+   "min": 3.0
   },
   {
    "id": 2,
    "voice": "narrator",
-   "hi": "मिस्र के पुराने मकबरों में मिले... हज़ारों साल पुराने शहद के बर्तन! और वो शहद... अब भी सही-सलामत था!",
-   "en": "In ancient Egyptian tombs, pots of honey thousands of years old were found! And the honey was still preserved!",
+   "hi": "तो शहद ख़राब क्यों नहीं होता? इसके तीन राज़ हैं!",
+   "en": "So why doesn't honey go bad? There are three secrets!",
    "units": [
-    "[excited] मिस्र के पुराने मकबरों में मिले... हज़ारों साल पुराने शहद के बर्तन!",
-    "[amazed] और वो शहद... अब भी सही-सलामत था!"
+    "[curious] तो शहद ख़राब क्यों नहीं होता?",
+    "[excited] इसके तीन राज़ हैं!"
    ],
    "lead": 0.15,
    "tail": 0.3,
    "unit_gap": 0.3,
    "cite": "Smithsonian",
-   "reveal": true
+   "reveal": false
   },
   {
    "id": 3,
@@ -177,8 +181,8 @@
  ],
  "thumbnail": {
   "frame": "4.1s",
-  "hook": "SHAHAD KABHI KHARAB NAHI?",
-  "stamp": "HAZAARON SAAL!",
+  "hook": "HAZAARON SAAL PURANA SHAHAD",
+  "stamp": "AB TAK THEEK!",
   "line": "Found in ancient Egyptian tombs",
   "badge": "SCIENCE WALA SACH",
   "art_shift": 0
@@ -197,8 +201,8 @@
   "an exact '3,000 years' figure (say 'hazaaron saal')"
  ],
  "verify_note": "All from Smithsonian / Discover.",
- "caption": "Shahad kabhi kharab kyun nahi hota? 🍯 Misr ke maqbaron mein hazaaron saal purana shahad mila — aur woh ab bhi theek tha! Kam paani + acid + hydrogen peroxide = super shelf life. Par dhakkan khula chhoda to kharab ho sakta hai!\n\nSources: Smithsonian Magazine, Discover Magazine.\nPhoto: BotheredByBees / Flickr (CC BY 2.0).\n\nAapke ghar mein shahad kitna purana hai? 👇",
- "youtube_title": "Shahad Kabhi Kharab Kyun Nahi Hota? 🍯 | Kya Baat Facts #Shorts",
+ "caption": "Misr ke maqbaron ka shahad, hazaaron saal baad bhi kharab nahi hua 🍯\n\nKam paani + acid + hydrogen peroxide = super shelf life. Lekin dhakkan khula chhoda, to shahad kharab bhi ho sakta hai!\n\nSources: Smithsonian Magazine, Discover Magazine.\nPhoto: BotheredByBees / Flickr (CC BY 2.0).\n\nComment karo: aapke ghar ka shahad kitna purana hai? 👇",
+ "youtube_title": "Hazaaron Saal Purana Shahad, Ab Tak Kharab Nahi! 🍯 | Kya Baat Facts #Shorts",
  "comment_prompt": "Aapke ghar mein shahad kitna purana hai? 👇",
  "hashtags": [
   "#KyaBaatFacts",
@@ -217,5 +221,6 @@
    "credit": "BotheredByBees / Flickr",
    "shot": 5
   }
- ]
+ ],
+ "layout": "safe_v2 (instagram-agent-skill pilot: claim-first hook, safe zone, loop ending)"
 }

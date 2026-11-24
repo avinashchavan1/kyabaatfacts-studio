@@ -1,4 +1,6 @@
 // ===== R007 · Shahad kabhi kharab kyun nahi hota? (Science Wala Sach) — Kya Baat look =====
+const KB_SAFE = true;                                   // safe-zone layout pilot (Instagram/YouTube UI never covers text)
+const SUB_STYLE = { maxW: 640, bottom: 1400 };
 const R7_CAT = { label: 'SCIENCE WALA SACH', col: '#20B2A6' };
 function buildScenes() { return kbLoadImg('comb', 'proof_honeycomb.jpg'); }
 
@@ -23,20 +25,25 @@ function r7Bee(c, x, y, s, t) {
 function r7Germ(c, x, y, r, t, seed) { c.save(); c.translate(x, y); c.rotate(t + seed); c.fillStyle = '#58AA32'; c.strokeStyle = KB.INK; c.lineWidth = 5; c.beginPath(); for (let k = 0; k < 16; k++) { const a = k * Math.PI / 8, rr = r * (k % 2 ? 0.75 : 1.05); c.lineTo(Math.cos(a) * rr, Math.sin(a) * rr); } c.closePath(); c.fill(); c.stroke(); c.restore(); }
 
 const SHOTS = {
+  // 1 — claim-first hook: the tomb honey pot, card up at frame 1
   1(ctx, u, p, sh, t, post) {
-    const st = sentenceStarts(sh, 2); kbYellow(ctx, t); r7Jar(ctx, 540, 1100, 1.4 * backOut(map(u, 0.1, 0.5)), t, { mood: u < st[1] ? 'kya' : 'hmm' });
-    post.ui = c => { kbBadge(c, R7_CAT.label, R7_CAT.col, ease(u, 0, 0.3)); (sh.card || []).forEach(([s, col], i) => { const q = ease(u, (i ? st[1] : 0.05) - 0.05, (i ? st[1] : 0.05) + 0.3); if (q > 0) textFit(c, s, 540, 430 + i * 130 + (1 - q) * 22, { size: 104, weight: 900, color: col || KB.W, alpha: q, stroke: 14, shadow: 0 }); }); };
-  },
-  2(ctx, u, p, sh, t, post) {
     const st = sentenceStarts(sh, 2);
     const g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, '#FFB36B'); g.addColorStop(1, '#F5D59A'); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
-    ctx.fillStyle = '#E3B46A'; ctx.strokeStyle = KB.INK; ctx.lineWidth = 10; ctx.beginPath(); ctx.moveTo(120, 1250); ctx.lineTo(480, 700); ctx.lineTo(840, 1250); ctx.closePath(); ctx.fill(); ctx.stroke();
-    ctx.beginPath(); ctx.moveTo(620, 1250); ctx.lineTo(860, 900); ctx.lineTo(1100, 1250); ctx.closePath(); ctx.fill(); ctx.stroke();
+    ctx.fillStyle = '#E3B46A'; ctx.strokeStyle = KB.INK; ctx.lineWidth = 10; ctx.beginPath(); ctx.moveTo(120, 1250); ctx.lineTo(480, 760); ctx.lineTo(840, 1250); ctx.closePath(); ctx.fill(); ctx.stroke();
     ctx.fillStyle = '#D9A55A'; ctx.fillRect(0, 1250, W, H - 1250);
-    const b = backOut(map(u, 0.6, 1.0)); ctx.save(); ctx.translate(540, 1330); ctx.scale(b, b); ctx.fillStyle = '#B8642E'; ctx.strokeStyle = KB.INK; ctx.lineWidth = 10;
+    const b = backOut(map(u, 0.0, 0.35)); ctx.save(); ctx.translate(560, 1180); ctx.scale(b * 1.15, b * 1.15); ctx.fillStyle = '#B8642E'; ctx.strokeStyle = KB.INK; ctx.lineWidth = 10;
     ctx.beginPath(); ctx.moveTo(-60, -170); ctx.lineTo(60, -170); ctx.lineTo(50, -130); ctx.bezierCurveTo(170, -100, 170, 90, 0, 120); ctx.bezierCurveTo(-170, 90, -170, -100, -50, -130); ctx.closePath(); ctx.fill(); ctx.stroke();
     ctx.fillStyle = '#F5A623'; ctx.beginPath(); ctx.ellipse(0, -170, 60, 16, 0, 0, Math.PI * 2); ctx.fill(); ctx.stroke(); ctx.restore();
-    post.ui = c => { kbBadge(c, R7_CAT.label, R7_CAT.col); kbLabel(c, 'MISR KE PURAANE MAQBARE', 320, u, 0.2, { size: 50 }); kbStamp(c, 'HAZAARON SAAL!', 540, 560, u, Math.max(1.2, st[1] - 0.2), KB.RED, 96); if (u > st[1]) kbStamp(c, 'AB BHI SAHI!', 540, 720, u, st[1] + 0.6, '#289650', 80, 0.05); };
+    post.ui = c => {
+      kbBadge(c, R7_CAT.label, R7_CAT.col);
+      (sh.card || []).forEach(([s_, col], i) => { const at = i < 2 ? 0 : st[1], q = i < 2 ? 1 : ease(u, at - 0.05, at + 0.25); if (q > 0) textFit(c, s_, 540, 430 + i * 112 + (1 - q) * 18, { size: 100, weight: 900, color: col || KB.W, alpha: q, stroke: 14, shadow: 0 }); });
+      kbEyes(c, 560, 1080, 30, t, u < st[1] ? 'kya' : 'wow', 5);
+    };
+  },
+  // 2 — "so why doesn't it go bad? three secrets!"
+  2(ctx, u, p, sh, t, post) {
+    const st = sentenceStarts(sh, 2); kbYellow(ctx, t); r7Jar(ctx, 540, 1060, 1.3 * backOut(map(u, 0.05, 0.4)), t, { mood: u < st[1] ? 'hmm' : 'kya' });
+    post.ui = c => { kbBadge(c, R7_CAT.label, R7_CAT.col); kbLabel(c, 'KHARAB KYUN NAHI HOTA?', 330, u, 0.1, { size: 50 }); kbStamp(c, '3 RAAZ!', 540, 600, u, st[1] + 0.1, KB.RED, 120); };
   },
   3(ctx, u, p, sh, t, post) {
     const st = sentenceStarts(sh, 2); kbYellow(ctx, t); r7Jar(ctx, 540, 1080, 1.2, t, { mood: 'kya' });

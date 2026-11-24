@@ -46,45 +46,54 @@
    "sources": [
     "https://www.snopes.com/fact-check/one-day-on-venus-is-longer-than-a-year-on-venus/"
    ]
+  },
+  {
+   "claim": "So in one Venus year (225 days) the Sun rises only about twice (225 / ~117 ≈ 1.9)",
+   "ref": "Arithmetic from NASA Space Place (225 days) and Snopes (~117-day solar day)",
+   "verified": true,
+   "sources": [
+    "https://spaceplace.nasa.gov/all-about-venus/en/",
+    "https://www.snopes.com/fact-check/one-day-on-venus-is-longer-than-a-year-on-venus/"
+   ]
   }
  ],
  "shots": [
   {
    "id": 1,
    "voice": "narrator",
-   "hi": "अरे, एक बात बताऊँ? एक ऐसा ग्रह... जहाँ एक दिन, एक साल से भी लंबा है!",
-   "en": "Hey, want to hear something? A planet where one day is longer than one year!",
+   "hi": "Venus पर आपका birthday... उसके एक चक्कर पूरा करने से पहले ही आ जाता है!",
+   "en": "On Venus, your birthday comes before the planet finishes one spin!",
    "units": [
-    "[excited] अरे, एक बात बताऊँ?",
-    "[curious] एक ऐसा ग्रह... जहाँ एक दिन, एक साल से भी लंबा है!"
+    "[excited] Venus पर आपका birthday...",
+    "[amazed] उसके एक चक्कर पूरा करने से पहले ही आ जाता है!"
    ],
-   "lead": 0.25,
+   "lead": 0.15,
    "tail": 0.3,
    "unit_gap": 0.3,
    "card": [
     [
-     "EK DIN > EK SAAL?",
+     "VENUS PAR",
      null
     ],
     [
-     "KAHAN?",
+     "1 DIN > 1 SAAL!",
      "#FFC83D"
     ]
    ],
-   "min": 3.5
+   "min": 3.0
   },
   {
    "id": 2,
    "voice": "narrator",
-   "hi": "ये है शुक्र... यानी Venus!",
-   "en": "It's Venus!",
+   "hi": "यकीन नहीं होता? सुनो...",
+   "en": "Don't believe it? Listen...",
    "units": [
-    "[excited] ये है शुक्र... यानी Venus!"
+    "[curious] यकीन नहीं होता? सुनो..."
    ],
    "lead": 0.15,
    "tail": 0.3,
    "cite": "NASA",
-   "reveal": true
+   "reveal": false
   },
   {
    "id": 3,
@@ -139,11 +148,12 @@
   {
    "id": 6,
    "voice": "narrator",
-   "hi": "लेकिन twist ये है... एक सूर्योदय से अगले सूर्योदय तक... लगभग एक सौ सत्रह दिन लगते हैं।",
-   "en": "But here's the twist... from one sunrise to the next takes about 117 days.",
+   "hi": "लेकिन twist ये है... एक सूर्योदय से अगले सूर्योदय तक, लगभग एक सौ सत्रह दिन लगते हैं। यानी एक birthday से अगले तक... सूरज लगभग दो बार ही उगता है!",
+   "en": "But here's the twist... from one sunrise to the next takes about 117 days. So between two birthdays, the Sun rises only about twice!",
    "units": [
     "[curious] लेकिन twist ये है...",
-    "[excited] एक सूर्योदय से अगले सूर्योदय तक... लगभग एक सौ सत्रह दिन लगते हैं।"
+    "[excited] एक सूर्योदय से अगले सूर्योदय तक... लगभग एक सौ सत्रह दिन लगते हैं।",
+    "[amazed] यानी एक birthday से अगले तक... सूरज लगभग दो बार ही उगता है!"
    ],
    "lead": 0.15,
    "tail": 0.3,
@@ -166,7 +176,7 @@
  ],
  "thumbnail": {
   "frame": "9.2s",
-  "hook": "VENUS: DIN > SAAL!",
+  "hook": "VENUS: 1 DIN > 1 SAAL!",
   "stamp": "243 vs 225!",
   "line": "And the Sun rises in the west",
   "badge": "ANTRIKSH",
@@ -186,8 +196,8 @@
   "saying 'one day is 243 days' without 'ek chakkar' framing at the twist"
  ],
  "verify_note": "243-day = one spin (sidereal). Twist explains solar day ~117 days.",
- "caption": "Venus (Shukra) par ek din, ek saal se lamba hai! 🪐 Ek chakkar = 243 din, Suraj ka ek chakkar = 225 din. Aur wahan Suraj PASCHIM se ugta hai! Twist: sunrise se sunrise tak ~117 din.\n\nSources: NASA Space Place, Snopes, National Geographic Kids.\nPhoto: NASA Mariner 10 (Public domain).\n\nKaunse planet par rehna chahoge? 👇",
- "youtube_title": "Venus Ka 1 Din, 1 Saal Se Lamba! 🪐 | Kya Baat Facts #Shorts",
+ "caption": "Venus par aapka birthday, uske ek chakkar se pehle hi aa jaata hai 🪐\n\nEk chakkar = 243 din, Suraj ka chakkar = 225 din. Aur wahan Suraj PASCHIM se ugta hai! Twist: sunrise se sunrise tak ~117 din, yaani ek saal mein sirf ~2 sunrise.\n\nSources: NASA Space Place, Snopes, National Geographic Kids.\nPhoto: NASA Mariner 10 (Public domain).\n\nComment karo: kaunse planet par birthday manaoge? 👇",
+ "youtube_title": "Venus Par Birthday, Ek Din Se Pehle! 🪐 | Kya Baat Facts #Shorts",
  "comment_prompt": "Kaunse planet par rehna chahoge? 👇",
  "hashtags": [
   "#KyaBaatFacts",
@@ -206,5 +216,6 @@
    "credit": "NASA Mariner 10",
    "shot": 3
   }
- ]
+ ],
+ "layout": "safe_v2 (instagram-agent-skill pilot: claim-first hook, safe zone, loop ending)"
 }
