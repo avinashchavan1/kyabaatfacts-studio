@@ -1,4 +1,6 @@
 // ===== R009 · Venus ka ek din, ek saal se lamba! (Antriksh) — Kya Baat look =====
+const KB_SAFE = true;                                   // safe-zone layout pilot
+const SUB_STYLE = { maxW: 640, bottom: 1400 };
 const R9_CAT = { label: 'ANTRIKSH', col: '#6E50F0' };
 function buildScenes() { return kbLoadImg('venus', 'proof_venus.jpg'); }
 
@@ -20,11 +22,11 @@ function r9Dial(c, x, y, r, frac, col, label, val) {
 const SHOTS = {
   1(ctx, u, p, sh, t, post) {
     const st = sentenceStarts(sh, 2); kbNight(ctx, t, '#0C0A26', '#2B276A');
-    post.ui = c => { kbBadge(c, R9_CAT.label, R9_CAT.col, ease(u, 0, 0.3)); (sh.card || []).forEach(([s, col], i) => { const q = ease(u, (i ? st[1] : 0.05) - 0.05, (i ? st[1] : 0.05) + 0.3); if (q > 0) textFit(c, s, 540, 430 + i * 130 + (1 - q) * 22, { size: 104, weight: 900, color: col || KB.W, alpha: q, stroke: 14, shadow: 0 }); }); kbEyes(c, 540, 1050, 80, t, u < st[1] ? 'hmm' : 'sach', 1); };
+    post.ui = c => { kbBadge(c, R9_CAT.label, R9_CAT.col, ease(u, 0, 0.3)); (sh.card || []).forEach(([s, col], i) => { const q = i ? ease(u, st[1] - 0.05, st[1] + 0.25) : 1; if (q > 0) textFit(c, s, 540, 440 + i * 120 + (1 - q) * 18, { size: 104, weight: 900, color: col || KB.W, alpha: q, stroke: 14, shadow: 0 }); }); r9Venus(c, 540, 1000, 230 * backOut(map(u, 0.0, 0.35)), t, { mood: u < st[1] ? 'kya' : 'wow', spin: t * 0.05 }); };
   },
   2(ctx, u, p, sh, t, post) {
     kbNight(ctx, t, '#0C0A26', '#2B276A'); r9Venus(ctx, 540, 1060, 330 * backOut(map(u, 0.05, 0.5)), t, { mood: 'kya', spin: t * 0.05 });
-    post.ui = c => { kbBadge(c, R9_CAT.label, R9_CAT.col); kbStamp(c, 'SHUKRA · VENUS!', 540, 440, u, 0.4, KB.RED, 100); };
+    post.ui = c => { kbBadge(c, R9_CAT.label, R9_CAT.col); kbStamp(c, 'YAKEEN NAHI HOTA?', 540, 440, u, 0.2, KB.RED, 96); };
   },
   3(ctx, u, p, sh, t, post) {
     const st = sentenceStarts(sh, 2); kbNight(ctx, t, '#0C0A26', '#2B276A');
@@ -49,7 +51,7 @@ const SHOTS = {
   6(ctx, u, p, sh, t, post) {
     const st = sentenceStarts(sh, 2); kbNight(ctx, t, '#0C0A26', '#2B276A');
     r9Dial(ctx, 540, 1060, 260, u > st[1] ? Math.min(1, map(u, st[1], sh.dur - 0.4)) : 0, '#FFC83D', 'SUNRISE → SUNRISE', u > st[1] ? '~117' : '?');
-    post.ui = c => { kbBadge(c, R9_CAT.label, R9_CAT.col); kbLabel(c, u < st[1] ? 'LEKIN TWIST...' : 'EK SURYODAY SE AGLE TAK', 320, u, u < st[1] ? 0.1 : st[1], { size: 50, fill: u < st[1] ? KB.Y : KB.W }); };
+    post.ui = c => { kbBadge(c, R9_CAT.label, R9_CAT.col); const s3 = sentenceStarts(sh, 3)[2]; kbLabel(c, u < st[1] ? 'LEKIN TWIST...' : 'EK SURYODAY SE AGLE TAK', 320, u, u < st[1] ? 0.1 : st[1], { size: 50, fill: u < st[1] ? KB.Y : KB.W }); kbStamp(c, '1 SAAL = ~2 SUNRISE!', 540, 1250, u, s3 + 0.2, KB.RED, 80, 0.04); };
   },
   7(ctx, u, p, sh, t, post) { endCard(ctx, u, p, sh, t, post); },
 };

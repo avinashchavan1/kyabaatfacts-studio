@@ -1,0 +1,71 @@
+{
+ "title": "Shukra (Venus) ka ek din uske ek saal se lamba!",
+ "series": "Kya Baat Facts",
+ "source": "NASA Space Place · Snopes · National Geographic Kids",
+ "length": "0:45",
+ "captions": {
+  "instagram": "On Venus, your birthday comes before the planet finishes one spin!\n\nVenus par aapka birthday, uske ek chakkar se pehle hi aa jaata hai 🪐\n\nEk chakkar = 243 din, Suraj ka chakkar = 225 din. Aur wahan Suraj PASCHIM se ugta hai! Twist: sunrise se sunrise tak ~117 din, yaani ek saal mein sirf ~2 sunrise.\n\nSources: NASA Space Place, Snopes, National Geographic Kids.\nPhoto: NASA Mariner 10 (Public domain).\n\nComment karo: kaunse planet par birthday manaoge? 👇\n\nKaunse planet par rehna chahoge? 👇\n\n📜 Source: NASA Space Place · Snopes · National Geographic Kids\n🎧 Hindi narration · English subtitles\n\nFollow @kyabaatfacts for a new 'kya baat!' fact every day.\n\n#KyaBaatFacts #Antriksh #Venus #Space #HindiFacts #Facts",
+  "facebook": "On Venus, your birthday comes before the planet finishes one spin!\n\nVenus par aapka birthday, uske ek chakkar se pehle hi aa jaata hai 🪐\n\nEk chakkar = 243 din, Suraj ka chakkar = 225 din. Aur wahan Suraj PASCHIM se ugta hai! Twist: sunrise se sunrise tak ~117 din, yaani ek saal mein sirf ~2 sunrise.\n\nSources: NASA Space Place, Snopes, National Geographic Kids.\nPhoto: NASA Mariner 10 (Public domain).\n\nComment karo: kaunse planet par birthday manaoge? 👇\n\nKaunse planet par rehna chahoge? 👇\n\n📜 Source: NASA Space Place · Snopes · National Geographic Kids\n🎧 Hindi narration · English subtitles\n\nFollow Kya Baat Facts for a new 'kya baat!' fact every day.\n\n#KyaBaatFacts #Antriksh #Venus #Space #HindiFacts #Facts",
+  "youtube_title": "Venus Par Birthday, Ek Din Se Pehle! 🪐 | Kya Baat Facts #Shorts",
+  "youtube_description": "On Venus, your birthday comes before the planet finishes one spin!\n\nVenus par aapka birthday, uske ek chakkar se pehle hi aa jaata hai 🪐\n\nEk chakkar = 243 din, Suraj ka chakkar = 225 din. Aur wahan Suraj PASCHIM se ugta hai! Twist: sunrise se sunrise tak ~117 din, yaani ek saal mein sirf ~2 sunrise.\n\nSources: NASA Space Place, Snopes, National Geographic Kids.\nPhoto: NASA Mariner 10 (Public domain).\n\nComment karo: kaunse planet par birthday manaoge? 👇\n\nKaunse planet par rehna chahoge? 👇\n\nSource: NASA Space Place · Snopes · National Geographic Kids\nVerses:\n• Venus takes 243 Earth days to spin once — NASA Space Place\n• Venus takes 225 Earth days to orbit the Sun (one Venus year) — NASA Space Place\n• Venus spins the opposite way to Earth and most planets, so the Sun would rise in the west — NASA Space Place; National Geographic Kids\n• Sunrise to sunrise (the solar day) on Venus is about 117 Earth days — Snopes (fact check)\n• So in one Venus year (225 days) the Sun rises only about twice (225 / ~117 ≈ 1.9) — Arithmetic from NASA Space Place (225 days) and Snopes (~117-day solar day)\n\nHindi narration · English subtitles.\nSubscribe to Kya Baat Facts for a new 'kya baat!' fact every day.\n\n#KyaBaatFacts #Antriksh #Venus #Space #HindiFacts #Facts #Shorts",
+  "first_comment": "Kaunse planet par rehna chahoge? 👇"
+ },
+ "claims": [
+  {
+   "claim": "Venus takes 243 Earth days to spin once",
+   "ref": "NASA Space Place"
+  },
+  {
+   "claim": "Venus takes 225 Earth days to orbit the Sun (one Venus year)",
+   "ref": "NASA Space Place"
+  },
+  {
+   "claim": "Venus spins the opposite way to Earth and most planets, so the Sun would rise in the west",
+   "ref": "NASA Space Place; National Geographic Kids"
+  },
+  {
+   "claim": "Sunrise to sunrise (the solar day) on Venus is about 117 Earth days",
+   "ref": "Snopes (fact check)"
+  },
+  {
+   "claim": "So in one Venus year (225 days) the Sun rises only about twice (225 / ~117 ≈ 1.9)",
+   "ref": "Arithmetic from NASA Space Place (225 days) and Snopes (~117-day solar day)"
+  }
+ ],
+ "verify_note": "243-day = one spin (sidereal). Twist explains solar day ~117 days.",
+ "masters": {
+  "instagram": {
+   "file": "R009_INSTAGRAM_MASTER.mp4",
+   "spec": "1080×1920 · H.264 CRF 12 · AAC 320k"
+  },
+  "facebook": {
+   "file": "R009_INSTAGRAM_MASTER.mp4",
+   "spec": "1080×1920 · H.264 CRF 12 · AAC 320k"
+  },
+  "youtube": {
+   "file": "R009_YOUTUBE_MASTER.mp4",
+   "spec": "2160×3840 (4K) · H.264 CRF 14 · AAC 384k"
+  }
+ },
+ "platforms": {
+  "instagram": {
+   "state": "todo",
+   "url": "",
+   "at": ""
+  },
+  "youtube": {
+   "state": "todo",
+   "url": "",
+   "at": ""
+  },
+  "facebook": {
+   "state": "todo",
+   "url": "",
+   "at": ""
+  }
+ },
+ "review": {
+  "done": false,
+  "at": ""
+ }
+}

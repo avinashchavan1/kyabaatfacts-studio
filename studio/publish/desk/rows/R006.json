@@ -1,0 +1,67 @@
+{
+ "title": "Aloo, tamatar, mirch - Indian nahi hain! Portuguese laaye",
+ "series": "Kya Baat Facts",
+ "source": "Asia Times · Wikipedia (Origins of North Indian foods) · Heidelberg University (food history)",
+ "length": "0:43",
+ "captions": {
+  "instagram": "Hey, want to hear something? Potato, tomato and chilli... these are totally Indian, right?\n\nAloo, tamatar aur mirch — teeno Indian nahi hain! 🥔🍅🌶️ Teeno America ke hain aur Portuguese vyapari inhe Bharat laaye. Aur tamatar aam taur par 1800s mein jaake khaaya jaane laga!\n\nSources: Asia Times, Wikipedia, Heidelberg University Publishing.\nPhotos: JimReeves / Flickr (CC BY 2.0); 16:9clue / Flickr (CC BY 2.0).\n\nAapki favourite sabzi kaunsi hai? Comment karo 👇\n\nAloo ke bina kaunsi dish sochi bhi nahi ja sakti? 👇\n\n📜 Source: Asia Times · Wikipedia (Origins of North Indian foods) · Heidelberg University (food history)\n🎧 Hindi narration · English subtitles\n\nFollow @kyabaatfacts for a new 'kya baat!' fact every day.\n\n#KyaBaatFacts #KhaaneKaItihaas #IndianFood #HindiFacts #FoodHistory #Facts",
+  "facebook": "Hey, want to hear something? Potato, tomato and chilli... these are totally Indian, right?\n\nAloo, tamatar aur mirch — teeno Indian nahi hain! 🥔🍅🌶️ Teeno America ke hain aur Portuguese vyapari inhe Bharat laaye. Aur tamatar aam taur par 1800s mein jaake khaaya jaane laga!\n\nSources: Asia Times, Wikipedia, Heidelberg University Publishing.\nPhotos: JimReeves / Flickr (CC BY 2.0); 16:9clue / Flickr (CC BY 2.0).\n\nAapki favourite sabzi kaunsi hai? Comment karo 👇\n\nAloo ke bina kaunsi dish sochi bhi nahi ja sakti? 👇\n\n📜 Source: Asia Times · Wikipedia (Origins of North Indian foods) · Heidelberg University (food history)\n🎧 Hindi narration · English subtitles\n\nFollow Kya Baat Facts for a new 'kya baat!' fact every day.\n\n#KyaBaatFacts #KhaaneKaItihaas #IndianFood #HindiFacts #FoodHistory #Facts",
+  "youtube_title": "Aloo, Tamatar, Mirch Indian Nahi Hain! 🥔🍅🌶️ | Kya Baat Facts #Shorts",
+  "youtube_description": "Hey, want to hear something? Potato, tomato and chilli... these are totally Indian, right?\n\nAloo, tamatar aur mirch — teeno Indian nahi hain! 🥔🍅🌶️ Teeno America ke hain aur Portuguese vyapari inhe Bharat laaye. Aur tamatar aam taur par 1800s mein jaake khaaya jaane laga!\n\nSources: Asia Times, Wikipedia, Heidelberg University Publishing.\nPhotos: JimReeves / Flickr (CC BY 2.0); 16:9clue / Flickr (CC BY 2.0).\n\nAapki favourite sabzi kaunsi hai? Comment karo 👇\n\nAloo ke bina kaunsi dish sochi bhi nahi ja sakti? 👇\n\nSource: Asia Times · Wikipedia (Origins of North Indian foods) · Heidelberg University (food history)\nVerses:\n• Potato, tomato and chilli are native to the Americas — Asia Times; Wikipedia\n• Chillies were brought to India by the Portuguese (via Goa) — Asia Times\n• The potato was likely introduced by Portuguese traders around 1600 — Wikipedia (Origins of North Indian and Pakistani foods)\n• The tomato arrived earlier, but routine use in Indian cooking is recorded only from the first half of the 19th century — Heidelberg University Publishing (food history)\n\nHindi narration · English subtitles.\nSubscribe to Kya Baat Facts for a new 'kya baat!' fact every day.\n\n#KyaBaatFacts #KhaaneKaItihaas #IndianFood #HindiFacts #FoodHistory #Facts #Shorts",
+  "first_comment": "Aloo ke bina kaunsi dish sochi bhi nahi ja sakti? 👇"
+ },
+ "claims": [
+  {
+   "claim": "Potato, tomato and chilli are native to the Americas",
+   "ref": "Asia Times; Wikipedia"
+  },
+  {
+   "claim": "Chillies were brought to India by the Portuguese (via Goa)",
+   "ref": "Asia Times"
+  },
+  {
+   "claim": "The potato was likely introduced by Portuguese traders around 1600",
+   "ref": "Wikipedia (Origins of North Indian and Pakistani foods)"
+  },
+  {
+   "claim": "The tomato arrived earlier, but routine use in Indian cooking is recorded only from the first half of the 19th century",
+   "ref": "Heidelberg University Publishing (food history)"
+  }
+ ],
+ "verify_note": "Tomato: introduced earlier, but common only from the 1800s (Heidelberg). Potato ~1600 (Wikipedia).",
+ "masters": {
+  "instagram": {
+   "file": "R006_INSTAGRAM_MASTER.mp4",
+   "spec": "1080×1920 · H.264 CRF 12 · AAC 320k"
+  },
+  "facebook": {
+   "file": "R006_INSTAGRAM_MASTER.mp4",
+   "spec": "1080×1920 · H.264 CRF 12 · AAC 320k"
+  },
+  "youtube": {
+   "file": "R006_YOUTUBE_MASTER.mp4",
+   "spec": "2160×3840 (4K) · H.264 CRF 14 · AAC 384k"
+  }
+ },
+ "platforms": {
+  "instagram": {
+   "state": "todo",
+   "url": "",
+   "at": ""
+  },
+  "youtube": {
+   "state": "todo",
+   "url": "",
+   "at": ""
+  },
+  "facebook": {
+   "state": "todo",
+   "url": "",
+   "at": ""
+  }
+ },
+ "review": {
+  "done": false,
+  "at": ""
+ }
+}
