@@ -73,3 +73,4 @@ Each rule has a mechanism in the engine; keep both.
     `scripts/status.py`, and a render starts the frame watcher (phases, %, time left). For several reels, open a batch first:
     `python3 scripts/status.py batch R006 R007 --task "Next 2 reels"`; `scripts/upload_reel.sh` marks each reel done after upload.
     Research and script steps are set by hand (`status.py set --reel X --step 1|2`). Set `NO_STATUS=1` to silence it.
+30. **Upload each reel as soon as it renders.** In a batch, run `render` then `scripts/upload_reel.sh <ID>` per reel inside the loop, never render all first and upload at the end: finished reels must reach the app right away (owner's rule).
