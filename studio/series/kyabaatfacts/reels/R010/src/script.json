@@ -89,7 +89,7 @@
     ],
     [
      "ZANG? NAHI!",
-     "#FFC83D"
+     "#FF4B3E"
     ]
    ],
    "min": 3.0
@@ -200,7 +200,7 @@
   }
  ],
  "thumbnail": {
-  "frame": "3.0s",
+  "frame": "5.0s",
   "hook": "1,600 SAAL KA LOHA",
   "stamp": "ZANG NAHI!",
   "line": "Iron Pillar, Qutub complex, Delhi",
@@ -208,13 +208,13 @@
   "art_shift": 0
  },
  "score": {
-  "engine": "reused",
+  "engine": "elevenlabs music_v1",
   "file": "audio/score.mp3",
-  "duration_s": 55,
+  "duration_s": 70,
   "gain": 1.6,
   "duck": 0.6,
-  "take": "reused from R002",
-  "prompt": "reused (credit saving)"
+  "prompt": "Playful, curious, upbeat underscore for a fun facts short about an ancient iron pillar in Delhi. Indian classical flavour: sitar, santoor and soft tabla with light strings. Mysterious build for the first half, a bright happy hit at the secret reveal, then bouncy and warm. Instrumental only, sits under a spoken voice, no vocals.",
+  "take": "take1 (only take)"
  },
  "layout": "safe_v2",
  "category": "Desh Ke Ajoobe",
