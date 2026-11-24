@@ -1,7 +1,7 @@
 // ===== R003 · Octopus ke 3 dil aur neela khoon (Jaanwaron Ki Duniya) — Kya Baat look =====
 const R3_CAT = { label: 'JAANWARON KI DUNIYA', col: '#58AA32' };
 const R3_FACTS = { 2: { big: '3 DIL', label: 'OCTOPUS', src: 'LIVE SCIENCE · SMITHSONIAN' } };
-function buildScenes() {}
+function buildScenes() { return kbLoadImg('octo', 'proof_octopus.jpg'); }
 
 function r3Sea(ctx, t, top = '#1E7FB8', bot = '#0C2A5C') {
   const g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, top); g.addColorStop(1, bot); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
@@ -60,11 +60,12 @@ const SHOTS = {
   // 2 — "three whole hearts!": the octopus pops in, 3 hearts pop above
   2(ctx, u, p, sh, t, post) {
     r3Sea(ctx, t); r3Floor(ctx, t);
-    const b = backOut(map(u, 0.05, 0.5)); r3Octo(ctx, 540, 1200, 0.9 * b, t, { mood: 'wow' });
+    const b = backOut(map(u, 1.75, 2.1)); r3Octo(ctx, 540, 1200, 0.9 * b, t, { mood: 'wow' });
     post.ui = c => {
       kbBadge(c, R3_CAT.label, R3_CAT.col);
-      [[330, 0.7], [540, 1.0], [750, 1.3]].forEach(([x, at]) => { const q = backOut(map(u, at, at + 0.35)); if (q > 0) kbHeart(c, x, 560, 1.6 * q, KB.RED, 1 + Math.sin(t * 8 + x) * 0.06); });
-      kbStamp(c, '3 DIL!', 540, 360, u, 1.6, KB.RED, 120);
+      [[330, 2.05], [540, 2.3], [750, 2.55]].forEach(([x, at]) => { const q = backOut(map(u, at, at + 0.3)); if (q > 0) kbHeart(c, x, 560, 1.6 * q, KB.RED, 1 + Math.sin(t * 8 + x) * 0.06); });
+      kbStamp(c, '3 DIL!', 540, 360, u, 2.8, KB.RED, 120);
+      kbProof(c, 'octo', u, 0.0, 1.9, 'ASLI OCTOPUS', 'Photo: Wikimedia Commons · Public domain');
     };
   },
   // 3 — x-ray: 2 gill hearts + 1 big body heart

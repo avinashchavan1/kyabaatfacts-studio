@@ -186,7 +186,7 @@
   "claiming a single origin of the myth (unclear)"
  ],
  "verify_note": "All four claims from MIT McGovern / Britannica.",
- "caption": "Kya hum dimaag ka sirf 10% use karte hain? ❌ MYTH! Brain scans dikhate hain ki hum din bhar poora dimaag use karte hain. Dimaag body weight ka sirf 2% hai, par 20% energy khaata hai! 🧠\n\nSources: MIT McGovern Institute, Britannica, APS.\n\nAapne ye myth suna tha? Comment karo 👇",
+ "caption": "Kya hum dimaag ka sirf 10% use karte hain? ❌ MYTH! Brain scans dikhate hain ki hum din bhar poora dimaag use karte hain. Dimaag body weight ka sirf 2% hai, par 20% energy khaata hai! 🧠\n\nSources: MIT McGovern Institute, Britannica, APS.\nPhoto: NIH via Wikimedia Commons (Public domain).\n\nAapne ye myth suna tha? Comment karo 👇",
  "youtube_title": "Sirf 10% Dimaag? MYTH! 🧠 | Kya Baat Facts #Shorts",
  "comment_prompt": "Agla myth kaunsa bust karein? Comment karo 👇",
  "hashtags": [
@@ -196,5 +196,15 @@
   "#HindiFacts",
   "#Science",
   "#Myth"
+ ],
+ "media": [
+  {
+   "file": "src/proof_fmri.jpg",
+   "what": "fMRI scan during working memory tasks",
+   "source": "https://commons.wikimedia.org/wiki/File:FMRI_scan_during_working_memory_tasks.jpg",
+   "license": "Public domain (US federal government work, NIH)",
+   "credit": "NIH via Wikimedia Commons",
+   "shot": 4
+  }
  ]
 }

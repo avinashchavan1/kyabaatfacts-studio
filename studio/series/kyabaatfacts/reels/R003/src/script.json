@@ -188,7 +188,7 @@
   "stating the crawling reason as certain (say 'shayad')"
  ],
  "verify_note": "Heart-stops-while-swimming: Live Science says no one is certain why; framed with 'शायद'.",
- "caption": "Octopus ke 3 dil hote hain aur khoon neela! 🐙💙 Kyunki uske khoon mein lohe ki jagah TAANBA (copper) hota hai. Aur tairte waqt uska bada dil kuch pal ke liye ruk jaata hai!\n\nSources: Live Science, Smithsonian Magazine, Scientific American.\n\nAapko ye pata tha? Comment karo 👇",
+ "caption": "Octopus ke 3 dil hote hain aur khoon neela! 🐙💙 Kyunki uske khoon mein lohe ki jagah TAANBA (copper) hota hai. Aur tairte waqt uska bada dil kuch pal ke liye ruk jaata hai!\n\nSources: Live Science, Smithsonian Magazine, Scientific American.\nPhoto: Wikimedia Commons (Public domain).\n\nAapko ye pata tha? Comment karo 👇",
  "youtube_title": "Octopus Ke 3 Dil Aur Neela Khoon! 🐙 | Kya Baat Facts #Shorts",
  "comment_prompt": "Agla kaunsa jaanwar? Comment karo 👇",
  "hashtags": [
@@ -198,5 +198,15 @@
   "#HindiFacts",
   "#Animals",
   "#Facts"
+ ],
+ "media": [
+  {
+   "file": "src/proof_octopus.jpg",
+   "what": "Common octopus (Octopus vulgaris)",
+   "source": "https://commons.wikimedia.org/wiki/File:Octopus_vulgaris_2.jpg",
+   "license": "Public domain",
+   "credit": "Wikimedia Commons",
+   "shot": 2
+  }
  ]
 }

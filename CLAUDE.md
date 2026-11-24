@@ -5,7 +5,8 @@
 - **Sources instead of verses:** this is a mixed facts channel with no single base text. Wherever the rules below say
   "verse", "base text" or `source_verse.py`, read: every claim lists its own source (publisher, title, URL) and is verified by
   reading that source, never from memory. Disputed or legendary claims are framed honestly or dropped. The opening-verse and
-  quote-card rules become: show the source on screen when a claim is surprising. (Engine support for per-reel sources: still to do.)
+  quote-card rules become: show the source on screen when a claim is surprising (per-reel source links are enforced by `make_reel.py check`).
+- **Proof shots:** 1-2 real photos per reel (2-3 s, `kbProof` in `series/art/brand.js`), openly licensed (Wikimedia Commons / public domain preferred), no logos, text or identifiable people; record each in `script.json → media` + research notes and credit it on screen and in the caption.
 - **Narrator (overrides the calm-narrator rule below):** Bunty (ElevenLabs, eleven_v4, stability 0.5), excited, chatty Hinglish like
   telling a friend; every reveal ends on the fixed clip `cast/signature/kya_baat_hai.mp3` ("क्या बात है!"). See `cast/cast.json`.
 - Brand: "Hairaan Aankhen" logo (googly eyes over the AA of BAAT), yellow #FFC83D / ink #14123A / punch #FF4B3E, Montserrat + Mukta.

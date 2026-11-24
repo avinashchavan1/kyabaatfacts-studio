@@ -1,7 +1,7 @@
 // ===== R005 · Sirf 10% dimaag? MYTH! (Myth or Fact?) — Kya Baat look =====
 const R5_CAT = { label: 'MYTH OR FACT?', col: '#FF4B3E' };
 const R5_FACTS = { 5: { big: '2% → 20%', label: 'WAZAN → ENERGY', src: 'MIT McGOVERN INSTITUTE' } };
-function buildScenes() {}
+function buildScenes() { return kbLoadImg('fmri', 'proof_fmri.jpg'); }
 
 // the brain: two pink lobes with folds; glow = list of active regions [0..1], eyes optional, bandage optional
 const R5_REG = [[-150, -60, 'SOCHNA'], [120, -90, 'YAADEIN'], [-40, -150, 'CHALNA'], [170, 40, 'DEKHNA'], [-170, 70, 'BOLNA'], [20, 60, 'SUNNA']];
@@ -63,12 +63,13 @@ const SHOTS = {
   4(ctx, u, p, sh, t, post) {
     const st = sentenceStarts(sh, 2);
     kbNight(ctx, t, '#0C0A26', '#1F1C52');
-    const gl = R5_REG.map((_, i) => { const at = 0.5 + i * (Math.max(1.5, st[1] - 0.6) / R5_REG.length); return ease(u, at, at + 0.3) * (0.75 + 0.25 * Math.sin(t * 5 + i)); });
+    const gl = R5_REG.map((_, i) => { const at = 2.7 + i * (Math.max(1.2, st[1] - 2.9) / R5_REG.length); return ease(u, at, at + 0.3) * (0.75 + 0.25 * Math.sin(t * 5 + i)); });
     r5Brain(ctx, 540, 1060, 1.3, t, { glow: gl });
     post.ui = c => {
       kbBadge(c, R5_CAT.label, R5_CAT.col);
       R5_REG.forEach(([gx, gy, name], i) => { if (gl[i] > 0.3) text(c, name, 540 + gx * 1.3, 1060 + gy * 1.3 + 12, { size: 32, weight: 900, color: KB.INK, alpha: Math.min(1, gl[i]), shadow: 0 }); });
       kbLabel(c, u < st[1] ? 'BRAIN SCAN: POORA DIMAAG ON!' : 'AARAAM MEIN BHI! 😴', 320, u, u < st[1] ? 0.3 : st[1], { size: 48, fill: u < st[1] ? KB.W : KB.Y });
+      kbProof(c, 'fmri', u, 0.2, 2.5, 'ASLI BRAIN SCAN', 'Image: NIH via Wikimedia Commons · Public domain', 0.03);
     };
   },
   // 5 — 2% of body weight vs 20% of energy, then the catchphrase

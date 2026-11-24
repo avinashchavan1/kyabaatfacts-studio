@@ -145,3 +145,22 @@ function kbKyaBaat(c, u, t, at) {
   c.save(); c.translate(540, 900); c.scale(q, q); kbEyes(c, 0, 0, 170, t, 'wow', 1); c.restore();
   text(c, 'KYA BAAT HAI!', 540, 1310, { size: 118 * Math.min(1, q), weight: 900, color: KB.INK, shadow: 0 });
 }
+
+// ---- Proof shot: a real photo for 2-3 s, in a tilted sticker frame with "ASLI PHOTO" + credit (load with kbLoadImg in buildScenes) ----
+const KB_IMG = {};
+function kbLoadImg(key, src) { return new Promise(res => { const im = new Image(); im.onload = () => { KB_IMG[key] = im; res(); }; im.onerror = () => { console.log('PROOF IMAGE MISSING', src); res(); }; im.src = src; }); }
+function kbProof(c, key, u, at, len, label = 'ASLI PHOTO', credit = '', rot = -0.035) {
+  const im = KB_IMG[key]; if (!im || u < at || u > at + len) return false;
+  const inQ = backOut(map(u, at, at + 0.3)), outQ = 1 - easeOut(map(u, at + len - 0.25, at + len)), q = Math.min(inQ, 1) * outQ;
+  c.save(); c.fillStyle = rgba(KB.INK, 0.72 * Math.min(1, q * 1.5)); c.fillRect(0, 0, W, H); c.restore();
+  const maxW = 900, maxH = 900, sc = Math.min(maxW / im.width, maxH / im.height), w = im.width * sc, h = im.height * sc, pad = 26;
+  const zoom = 1 + 0.04 * map(u, at, at + len);   // slow push-in
+  c.save(); c.translate(540, 900); c.rotate(rot); c.scale(q * zoom, q * zoom);
+  c.fillStyle = KB.INK; c.beginPath(); c.roundRect(-w / 2 - pad + 16, -h / 2 - pad + 16, w + 2 * pad, h + 2 * pad + 70, 18); c.fill();
+  c.fillStyle = KB.W; c.strokeStyle = KB.INK; c.lineWidth = 8; c.beginPath(); c.roundRect(-w / 2 - pad, -h / 2 - pad, w + 2 * pad, h + 2 * pad + 70, 18); c.fill(); c.stroke();
+  c.drawImage(im, -w / 2, -h / 2, w, h); c.strokeRect(-w / 2, -h / 2, w, h);
+  if (credit) { c.font = '700 26px Montserrat'; c.fillStyle = KB.INK; c.textAlign = 'center'; c.fillText(credit, 0, h / 2 + pad + 30); }
+  c.restore();
+  kbStamp(c, label + ' 📸', 540, 900 - h / 2 - 110, u, at + 0.15, KB.RED, 64, 0.05);
+  return true;
+}
