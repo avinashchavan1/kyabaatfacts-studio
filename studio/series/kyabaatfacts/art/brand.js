@@ -171,6 +171,7 @@ function kbProof(c, key, u, at, len, label = 'ASLI PHOTO', credit = '', rot = -0
 // With KB_SAFE: logo + category badge share one row at y 236, text blocks stay within x 220-860, subtitles end at y 1400.
 const KB_S = () => typeof KB_SAFE !== 'undefined' && KB_SAFE;
 const KB_SAFE_W = 640;
+const KB_RAIL_Y = 900;   // the like/comment/share rail covers the right side only below about y 900; above it full width is safe
 const _kbLogo0 = logo, _kbBadge0 = kbBadge, _kbLabel0 = kbLabel, _kbStamp0 = kbStamp, _kbTextFit1 = textFit, _kbFact0 = kbFact, _kbProof0 = kbProof, _kbKyaBaat0 = kbKyaBaat, _kbEnd0 = endCard;
 let KB_LOGO_R = 0;   // right edge of the logo pill (the badge sits after it)
 logo = function (ctx, a = 1) {
@@ -189,11 +190,11 @@ kbBadge = function (c, label, col, a = 1, y = 220) {
   c.fillStyle = col; c.strokeStyle = KB.INK; c.lineWidth = 5; c.beginPath(); c.roundRect(x0, yy, w, h, h / 2); c.fill(); c.stroke(); c.restore();
   text(c, label, x0 + w / 2, yy + h / 2 + 9, { size: 26, weight: 900, color: KB.W, ls: 2, alpha: a, shadow: 0 });
 };
-kbLabel = function (c, str, y, u, at = 0.2, o = {}) { return _kbLabel0(c, str, Math.max(y, 320), u, at, KB_S() ? Object.assign({}, o, { w: Math.min(o.w || 880, KB_SAFE_W + 40), size: Math.min(o.size || 56, 50) }) : o); };
-textFit = function (ctx, str, x, y, o = {}, maxW = 960) { return _kbTextFit1(ctx, str, x, y, o, KB_S() ? Math.min(maxW, KB_SAFE_W) : maxW); };
+kbLabel = function (c, str, y, u, at = 0.2, o = {}) { return _kbLabel0(c, str, Math.max(y, 320), u, at, KB_S() && y > KB_RAIL_Y ? Object.assign({}, o, { w: Math.min(o.w || 880, KB_SAFE_W + 40), size: Math.min(o.size || 56, 50) }) : o); };
+textFit = function (ctx, str, x, y, o = {}, maxW = 960) { return _kbTextFit1(ctx, str, x, y, o, KB_S() ? Math.min(maxW, y > KB_RAIL_Y ? KB_SAFE_W : 940) : maxW); };
 kbStamp = function (c, str, x, y, u, at, col = KB.RED, size = 120, rot = -0.1) {
   if (!KB_S()) return _kbStamp0(c, str, x, y, u, at, col, size, rot);
-  c.save(); c.font = `900 ${size}px Montserrat`; c.letterSpacing = '2px'; let s = size; while (s > 40 && c.measureText(str).width + 80 > KB_SAFE_W) { s -= 4; c.font = `900 ${s}px Montserrat`; } c.restore();
+  const lim = y > KB_RAIL_Y ? KB_SAFE_W : 940; c.save(); c.font = `900 ${size}px Montserrat`; c.letterSpacing = '2px'; let s = size; while (s > 40 && c.measureText(str).width + 80 > lim) { s -= 4; c.font = `900 ${s}px Montserrat`; } c.restore();
   return _kbStamp0(c, str, x, Math.min(Math.max(y, 340), 1300), u, at, col, s, rot);
 };
 kbFact = function (c, u, F, y = 330, at = 0.2, col = KB.RED) {
@@ -229,4 +230,4 @@ endCard = function (ctx, u, p, sh, t, post) {
 };
 // safe zone: map pins keep their label clear of the action rail
 const _kbPin0 = kbPin;
-kbPin = function (c, x, y, label, u, at = 0.3, col = KB.RED) { return _kbPin0(c, KB_S() ? Math.min(Math.max(x, 220), 760) : x, KB_S() ? Math.min(y, 1300) : y, label, u, at, col); };
+kbPin = function (c, x, y, label, u, at = 0.3, col = KB.RED) { return _kbPin0(c, KB_S() ? Math.min(Math.max(x, 220), 760) : x, KB_S() ? Math.min(y, 1140) : y, label, u, at, col); };

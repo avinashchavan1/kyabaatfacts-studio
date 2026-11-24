@@ -30,7 +30,7 @@ const SHOTS = {
   },
   2(ctx, u, p, sh, t, post) {
     const st = sentenceStarts(sh, 2); r8Sky(ctx); r8Drain(ctx, t, 0, 1);
-    post.ui = c => { kbBadge(c, R8_CAT.label, R8_CAT.col); kbPin(c, 540, 900, 'MOHENJO-DARO', u, 0.2); if (u > st[1]) { kbArrow(c, 860, 880, 760, 1290, KB.INK, 12); text(c, 'PAKKI EENT KI NAALI', 760, 850, { size: 44, weight: 900, color: KB.INK, shadow: 0, alpha: ease(u, st[1], st[1] + 0.4) }); }
+    post.ui = c => { kbBadge(c, R8_CAT.label, R8_CAT.col); kbPin(c, 540, 900, 'MOHENJO-DARO', u, 0.2); if (u > st[1]) { kbArrow(c, 380, 1080, 300, 1280, KB.INK, 12); text(c, 'PAKKI EENT KI NAALI', 400, 1060, { size: 44, weight: 900, color: KB.INK, shadow: 0, alpha: ease(u, st[1], st[1] + 0.4) }); }
       kbStamp(c, 'DHAKI HUI NAALI!', 540, 430, u, st[1] + 0.3, KB.RED, 92); kbProof(c, 'lothal', u, Math.min(st[1] + 1.4, sh.dur - 2.4), 2.2, 'ISI SABHYATA KA LOTHAL', 'Lothal, Gujarat · Emmanuel Dyan / Flickr · CC BY 2.0'); };
   },
   3(ctx, u, p, sh, t, post) {
