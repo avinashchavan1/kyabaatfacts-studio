@@ -78,7 +78,8 @@ function kbLogo(c, x, y, s, t = 0, a = 1) {
 }
 // small corner logo on every shot: eyes + wordmark
 logo = function (ctx, a = 1) {
-  ctx.save(); ctx.globalAlpha = a; ctx.fillStyle = rgba(KB.INK, 0.55); ctx.beginPath(); ctx.roundRect(36, 108, 360, 70, 35); ctx.fill(); ctx.restore();
+  ctx.save(); ctx.font = '900 30px Montserrat'; ctx.letterSpacing = '2px'; const tw = ctx.measureText('KYA BAAT FACTS').width; ctx.restore();
+  ctx.save(); ctx.globalAlpha = a; ctx.fillStyle = rgba(KB.INK, 0.6); ctx.beginPath(); ctx.roundRect(36, 108, 152 + tw + 30 - 36, 70, 35); ctx.fill(); ctx.restore();   // pill sized to the text
   ctx.save(); ctx.globalAlpha = a; kbEye(ctx, 82, 143, 17, [0.6, -0.6], { brows: false }); kbEye(ctx, 122, 143, 17, [0.6, -0.6], { brows: false }); ctx.restore();
   text(ctx, 'KYA BAAT FACTS', 152, 155, { size: 30, weight: 900, color: KB.Y, align: 'left', ls: 2, alpha: a, shadow: 0 });
 };
