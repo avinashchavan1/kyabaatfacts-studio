@@ -98,7 +98,7 @@ const SHOTS = {
     ctx.fillStyle = KB.W; ctx.strokeStyle = KB.INK; ctx.lineWidth = 10; ctx.beginPath(); ctx.roundRect(tx - 34, ty0, 68, ty1 - ty0, 34); ctx.fill(); ctx.stroke();
     ctx.beginPath(); ctx.arc(tx, ty1 + 30, 62, 0, Math.PI * 2); ctx.fillStyle = KB.RED; ctx.fill(); ctx.stroke();
     ctx.fillStyle = KB.RED; ctx.fillRect(tx - 18, lerp(ty1, ty0 + 20, lvl), 36, ty1 - lerp(ty1, ty0 + 20, lvl) + 20);
-    post.ui = c => { kbBadge(c, R1_CAT.label, R1_CAT.col); kbFact(c, u, R1_FACTS[3], 330, 2.4, '#FF8A1F'); kbProof(c, 'sun', u, 0.2, 2.1, 'ASLI SURAJ', 'Image: NASA SDO · Public domain'); };
+    post.ui = c => { kbBadge(c, R1_CAT.label, R1_CAT.col); kbFact(c, u, R1_FACTS[3], 330, 2.4, '#FF8A1F'); kbProof(c, 'sun', u, 0.2, 2.1, 'ASLI SURAJ', 'Photo: James Niland / Flickr · CC BY 2.0'); };
   },
   // 4 — lightning strikes: flash, glowing hot air around the bolt, fact card 28,000°C
   4(ctx, u, p, sh, t, post) {

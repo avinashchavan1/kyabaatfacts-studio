@@ -223,7 +223,7 @@
   "exact bolt width or duration (weak sources)"
  ],
  "verify_note": "Compare with the Sun's VISIBLE SURFACE only; the core twist keeps it honest. 50,000 °F ≈ 27,760 °C → 'लगभग 28 हज़ार'.",
- "caption": "Bijli vs Suraj: kaun zyada garam? ⚡☀️ Bijli apne aaspaas ki hawa ko ~28,000°C tak garam kar deti hai — Suraj ki surface (~5,500°C) se 5 guna zyada! Lekin Suraj ka core? 1.5 crore °C 😎\n\nSources: NOAA National Weather Service, NASA, UCAR.\nPhotos: NASA SDO (Public domain); NASA (from the ISS) (Public domain).\n\nAapko ye pata tha? Comment karo 👇",
+ "caption": "Bijli vs Suraj: kaun zyada garam? ⚡☀️ Bijli apne aaspaas ki hawa ko ~28,000°C tak garam kar deti hai — Suraj ki surface (~5,500°C) se 5 guna zyada! Lekin Suraj ka core? 1.5 crore °C 😎\n\nSources: NOAA National Weather Service, NASA, UCAR.\nPhotos: James Niland / Flickr (CC BY 2.0); NASA, from the ISS (Public domain).\n\nAapko ye pata tha? Comment karo 👇",
  "youtube_title": "Bijli Suraj Se 5 Guna Garam? ⚡ | Kya Baat Facts #Shorts",
  "comment_prompt": "Aapko ye pata tha? Haan ya naa — comment karo 👇",
  "hashtags": [
@@ -237,10 +237,10 @@
  "media": [
   {
    "file": "src/proof_sun.jpg",
-   "what": "The Sun in visible light (SDO HMI, 'Spotless February', date stamp cropped)",
-   "source": "https://images.nasa.gov/details/PIA21218",
-   "license": "Public domain (NASA)",
-   "credit": "NASA SDO",
+   "what": "The Sun photographed through a solar filter (25 Mar 2012)",
+   "source": "https://www.flickr.com/photos/jamesniland/6866801894",
+   "license": "CC BY 2.0",
+   "credit": "James Niland / Flickr",
    "shot": 3
   },
   {
