@@ -228,9 +228,11 @@ Deno.serve(async (req) => {
         }
         return json({ ok: true, updated: out });
       }
-      case "youtube_set_covers": {   // after channel verification: put our designed cover on every posted YouTube video
+      case "youtube_set_covers": {   // put our designed cover on ONE posted YouTube video (reel_id); the app calls it per reel
+        if (!body.reel_id) return json({ error: "reel_id required: covers are set one video at a time" }, 400);
         const tok = await youtubeAccessToken();
-        const { data: pubs } = await admin.from("publications").select("reel_id,external_id").eq("platform", "youtube").eq("state", "posted").not("external_id", "is", null);
+        const { data: pubs } = await admin.from("publications").select("reel_id,external_id").eq("platform", "youtube").eq("state", "posted").eq("reel_id", body.reel_id).not("external_id", "is", null);
+        if (!pubs?.length) return json({ error: "This reel has no posted YouTube video yet" }, 400);
         const out: Record<string, unknown>[] = [];
         for (const p of pubs ?? []) {
           const { data: f } = await admin.from("files").select("path").eq("reel_id", p.reel_id).eq("kind", "thumbnail").eq("store", "supabase").order("created_at", { ascending: false }).limit(1).maybeSingle();
@@ -240,7 +242,7 @@ Deno.serve(async (req) => {
           const r = await fetch(`${YT_UP}/thumbnails/set?videoId=${p.external_id}&uploadType=media`, { method: "POST", headers: { Authorization: `Bearer ${tok}`, "Content-Type": "image/jpeg" }, body: img });
           out.push({ video: p.external_id, ok: r.ok, detail: r.ok ? "cover set" : ((await r.json().catch(() => ({}))).error?.message ?? r.status) });
         }
-        await admin.from("activity").insert({ actor: email, action: "youtube: covers applied", detail: { results: out } });
+        await admin.from("activity").insert({ actor: email, action: "youtube: cover applied", detail: { reel_id: body.reel_id, results: out } });
         return json({ ok: out.every((o) => o.ok), results: out });
       }
       case "youtube_brand": {

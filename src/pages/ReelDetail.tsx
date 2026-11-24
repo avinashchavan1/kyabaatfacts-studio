@@ -75,6 +75,21 @@ function Preview({ preview, poster }: { preview?: FileRow; poster?: FileRow }) {
   return <video controls playsInline preload="metadata" poster={p.data ?? undefined} src={v.data ?? undefined} className="aspect-[9/16] w-full rounded-2xl bg-black" />;
 }
 
+function YouTubeCover({ r }: { r: Reel }) {
+  const [st, setSt] = useState<{ busy?: boolean; ok?: string; err?: string }>({});
+  return (
+    <div className="grid gap-1">
+      <Button size="sm" disabled={st.busy} onClick={async () => {
+        setSt({ busy: true });
+        try { const res = await studio<{ ok: boolean; results: { ok: boolean; detail: string }[] }>("youtube_set_covers", { reel_id: r.id }); res.ok ? setSt({ ok: "Cover set on YouTube." }) : setSt({ err: res.results.map((x) => x.detail).join("; ") }); }
+        catch (e) { setSt({ err: (e as Error).message }); }
+      }}>{st.busy ? <Loader2 size={14} className="animate-spin" /> : null} Set this cover on YouTube</Button>
+      {st.ok && <p className="text-xs text-emerald-700 dark:text-emerald-300">{st.ok}</p>}
+      {st.err && <p className="text-xs text-vermilion">{st.err}</p>}
+    </div>
+  );
+}
+
 function YouTubeEdit({ r }: { r: Reel }) {
   const save = useSaveCaptions();
   const [open, setOpen] = useState(false);
@@ -184,6 +199,8 @@ function Lane({ r, platform, pub, master, auto, job, providers }: { r: Reel; pla
           <div className="flex items-center gap-1.5 text-emerald-700 dark:text-emerald-300"><CheckCircle2 size={16} /> Posted {fmtDate(pub?.posted_at)}</div>
           {pub?.post_url && <a href={pub.post_url} target="_blank" rel="noreferrer" className="break-all text-gold-deep underline dark:text-gold">{pub.post_url}</a>}
           {platform.key === "youtube" && pub?.external_id && <YouTubeEdit r={r} />}
+          {platform.key === "youtube" && pub?.external_id && <YouTubeCover r={r} />}
+          {platform.key === "instagram" && <p className="rounded-lg bg-black/[.04] p-2 text-xs text-ink-soft dark:bg-white/5">Cover: sent with this post. Instagram does not let apps change a cover after posting; to change it, open the reel in the Instagram app → Edit → Edit cover.</p>}
           <Button size="sm" variant="ghost" onClick={() => upsert.mutate({ reel: r, platform: platform.key, patch: { state: "todo", posted_at: null } })}>Mark as not posted</Button>
         </div>
       ) : editing ? (
