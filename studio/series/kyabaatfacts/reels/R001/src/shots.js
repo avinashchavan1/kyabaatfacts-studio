@@ -1,7 +1,7 @@
 // ===== R001 · Bijli vs Suraj (Science Wala Sach) — Kya Baat look (series/art/brand.js) =====
 // Every shot: (ctx, u = seconds into shot, p = 0..1, sh = timeline entry, t = global seconds, post = {ui, sat, flash, noLogo})
 const R1_CAT = { label: 'SCIENCE WALA SACH', col: '#20B2A6' };
-function buildScenes() {}
+function buildScenes() { return Promise.all([kbLoadImg('sun', 'proof_sun.jpg'), kbLoadImg('ltn', 'proof_lightning.jpg')]); }
 const R1_FACTS = { 3: { big: '5,500°C', label: 'SURAJ KI SURFACE', src: 'UCAR · BRITANNICA' }, 4: { big: '28,000°C', label: 'BIJLI KE AASPAAS KI HAWA', src: 'NOAA · NATIONAL WEATHER SERVICE' }, 7: { big: '1.5 CRORE °C', label: 'SURAJ KA CORE', src: 'NASA' } };
 
 // ---- reel-local drawing helpers (prefixed: never redeclare library names) ----
@@ -98,7 +98,7 @@ const SHOTS = {
     ctx.fillStyle = KB.W; ctx.strokeStyle = KB.INK; ctx.lineWidth = 10; ctx.beginPath(); ctx.roundRect(tx - 34, ty0, 68, ty1 - ty0, 34); ctx.fill(); ctx.stroke();
     ctx.beginPath(); ctx.arc(tx, ty1 + 30, 62, 0, Math.PI * 2); ctx.fillStyle = KB.RED; ctx.fill(); ctx.stroke();
     ctx.fillStyle = KB.RED; ctx.fillRect(tx - 18, lerp(ty1, ty0 + 20, lvl), 36, ty1 - lerp(ty1, ty0 + 20, lvl) + 20);
-    post.ui = c => { kbBadge(c, R1_CAT.label, R1_CAT.col); kbFact(c, u, R1_FACTS[3], 330, 2.2, '#FF8A1F'); };
+    post.ui = c => { kbBadge(c, R1_CAT.label, R1_CAT.col); kbFact(c, u, R1_FACTS[3], 330, 2.4, '#FF8A1F'); kbProof(c, 'sun', u, 0.2, 2.1, 'ASLI SURAJ', 'Image: NASA SDO · Public domain'); };
   },
   // 4 — lightning strikes: flash, glowing hot air around the bolt, fact card 28,000°C
   4(ctx, u, p, sh, t, post) {
@@ -114,7 +114,7 @@ const SHOTS = {
       // heat shimmer rings
       for (let i = 0; i < 3; i++) { const q = ((after * 0.7 + i / 3) % 1); ctx.strokeStyle = rgba('#FFC83D', 0.5 * (1 - q)); ctx.lineWidth = 8; ctx.beginPath(); ctx.ellipse(560, 1100, 80 + q * 300, 120 + q * 420, 0, 0, Math.PI * 2); ctx.stroke(); }
     }
-    post.ui = c => { kbBadge(c, R1_CAT.label, R1_CAT.col); kbFact(c, u, R1_FACTS[4], 300, Math.max(hit + 1.2, sh.dur * 0.55), KB.RED); };
+    post.ui = c => { kbBadge(c, R1_CAT.label, R1_CAT.col); kbFact(c, u, R1_FACTS[4], 300, Math.max(4.6, sh.dur * 0.6), KB.RED); kbProof(c, 'ltn', u, 2.2, 2.2, 'ASLI BIJLI', 'Photo: NASA (from the ISS) · Public domain', 0.03); };
   },
   // 5 — 5x bars, then the catchphrase: giant eyes go WOW + "KYA BAAT HAI!"
   5(ctx, u, p, sh, t, post) {

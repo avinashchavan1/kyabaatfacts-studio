@@ -13,3 +13,7 @@ Researched 24 Nov 2026 by web search (results read, not memory). Framing: compar
 
 Arithmetic: 50,000 °F = (50,000 − 32) × 5/9 ≈ 27,760 °C → "लगभग 28 हज़ार डिग्री सेल्सियस". 27,760 / 5,500 ≈ 5.
 Avoid: "lightning is hotter than the Sun" without "surface"; exact bolt width/duration (sources weak/indirect).
+
+## Proof shots (real photos)
+- The Sun in visible light (SDO HMI, 'Spotless February', date stamp cropped): https://images.nasa.gov/details/PIA21218 — Public domain (NASA). Shot 3, credited on screen. Checked: no logos, no watermark, no identifiable people.
+- Lightning illuminating clouds, photographed from the ISS: https://images.nasa.gov/details/iss073e0080280 — Public domain (NASA). Shot 4, credited on screen. Checked: no logos, no watermark, no identifiable people.

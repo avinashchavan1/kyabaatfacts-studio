@@ -223,7 +223,7 @@
   "exact bolt width or duration (weak sources)"
  ],
  "verify_note": "Compare with the Sun's VISIBLE SURFACE only; the core twist keeps it honest. 50,000 °F ≈ 27,760 °C → 'लगभग 28 हज़ार'.",
- "caption": "Bijli vs Suraj: kaun zyada garam? ⚡☀️ Bijli apne aaspaas ki hawa ko ~28,000°C tak garam kar deti hai — Suraj ki surface (~5,500°C) se 5 guna zyada! Lekin Suraj ka core? 1.5 crore °C 😎\n\nSources: NOAA National Weather Service, NASA, UCAR.\n\nAapko ye pata tha? Comment karo 👇",
+ "caption": "Bijli vs Suraj: kaun zyada garam? ⚡☀️ Bijli apne aaspaas ki hawa ko ~28,000°C tak garam kar deti hai — Suraj ki surface (~5,500°C) se 5 guna zyada! Lekin Suraj ka core? 1.5 crore °C 😎\n\nSources: NOAA National Weather Service, NASA, UCAR.\nPhotos: NASA SDO (Public domain); NASA (from the ISS) (Public domain).\n\nAapko ye pata tha? Comment karo 👇",
  "youtube_title": "Bijli Suraj Se 5 Guna Garam? ⚡ | Kya Baat Facts #Shorts",
  "comment_prompt": "Aapko ye pata tha? Haan ya naa — comment karo 👇",
  "hashtags": [
@@ -233,5 +233,23 @@
   "#Lightning",
   "#Science",
   "#Facts"
+ ],
+ "media": [
+  {
+   "file": "src/proof_sun.jpg",
+   "what": "The Sun in visible light (SDO HMI, 'Spotless February', date stamp cropped)",
+   "source": "https://images.nasa.gov/details/PIA21218",
+   "license": "Public domain (NASA)",
+   "credit": "NASA SDO",
+   "shot": 3
+  },
+  {
+   "file": "src/proof_lightning.jpg",
+   "what": "Lightning illuminating clouds, photographed from the ISS",
+   "source": "https://images.nasa.gov/details/iss073e0080280",
+   "license": "Public domain (NASA)",
+   "credit": "NASA (from the ISS)",
+   "shot": 4
+  }
  ]
 }

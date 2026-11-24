@@ -199,7 +199,7 @@
   "a single king built it (debated)"
  ],
  "verify_note": "Dating: Rashtrakuta, 8th century; said 'राष्ट्रकूट राजाओं के समय' (not one king).",
- "caption": "Ek poora mandir — EK HI CHATTAN se kaata gaya! 🛕 Ellora ka Kailasa Mandir upar se neeche ki taraf tarasha gaya, ~300 ft lamba aur ~175 ft chauda, 1,200 saal se bhi pehle!\n\nSources: Indian Culture portal (Govt. of India), Britannica, Live History India.\n\nAap Ellora gaye ho? Comment karo 👇",
+ "caption": "Ek poora mandir — EK HI CHATTAN se kaata gaya! 🛕 Ellora ka Kailasa Mandir upar se neeche ki taraf tarasha gaya, ~300 ft lamba aur ~175 ft chauda, 1,200 saal se bhi pehle!\n\nSources: Indian Culture portal (Govt. of India), Britannica, Live History India.\nPhotos: Arian Zwegers / Flickr (CC BY 2.0); Arian Zwegers / Flickr (CC BY 2.0).\n\nAap Ellora gaye ho? Comment karo 👇",
  "youtube_title": "Ek Hi Pathar Se Poora Mandir! 🛕 Kailasa Ellora | Kya Baat Facts #Shorts",
  "comment_prompt": "Aap Ellora gaye ho? Comment karo 👇",
  "hashtags": [
@@ -209,5 +209,23 @@
   "#KailasaTemple",
   "#HindiFacts",
   "#India"
+ ],
+ "media": [
+  {
+   "file": "src/proof_kailasa_top.jpg",
+   "what": "Kailasa temple (Ellora cave 16) seen from the top of the rock",
+   "source": "https://www.flickr.com/photos/arianzwegers/6360162391",
+   "license": "CC BY 2.0",
+   "credit": "Arian Zwegers / Flickr",
+   "shot": 2
+  },
+  {
+   "file": "src/proof_kailasa_scarp.jpg",
+   "what": "Kailasa temple inside the cut rock face",
+   "source": "https://www.flickr.com/photos/arianzwegers/6359643987",
+   "license": "CC BY 2.0",
+   "credit": "Arian Zwegers / Flickr",
+   "shot": 5
+  }
  ]
 }

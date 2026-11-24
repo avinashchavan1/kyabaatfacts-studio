@@ -1,6 +1,6 @@
 // ===== R004 · Kailasa Mandir: ek hi chattan, upar se neeche (Desh Ke Ajoobe) — Kya Baat look =====
 const R4_CAT = { label: 'DESH KE AJOOBE', col: '#F06E28' };
-function buildScenes() {}
+function buildScenes() { return Promise.all([kbLoadImg('top', 'proof_kailasa_top.jpg'), kbLoadImg('scarp', 'proof_kailasa_scarp.jpg')]); }
 
 const R4_ROCK = '#8C6A4F', R4_ROCK2 = '#6E513C', R4_STONE = '#B98E6B';
 function r4Sky(ctx, top = '#FFB36B', bot = '#FFE3A8') { const g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, top); g.addColorStop(1, bot); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H); }
@@ -56,7 +56,7 @@ const SHOTS = {
     r4Sky(ctx, '#FF9B5C', '#FFE0A8'); r4Rock(ctx, 40, 760, 1040, 1560);
     r4Temple(ctx, 470, 1500, 0.95, easeOut(map(u, st[1], st[1] + 1.6)));
     ctx.fillStyle = '#C9A06A'; ctx.fillRect(0, 1560, W, H - 1560);
-    post.ui = c => { kbBadge(c, R4_CAT.label, R4_CAT.col); kbPin(c, 640, 650, 'ELLORA, MAHARASHTRA', u, 0.3); kbStamp(c, 'EK HI CHATTAN!', 540, 420, u, st[1] + 1.0, KB.RED, 104); };
+    post.ui = c => { kbBadge(c, R4_CAT.label, R4_CAT.col); kbPin(c, 640, 650, 'ELLORA, MAHARASHTRA', u, 0.3); kbStamp(c, 'EK HI CHATTAN!', 540, 420, u, st[1] + 1.0, KB.RED, 104); kbProof(c, 'top', u, Math.min(st[1] + 1.6, sh.dur - 2.3), 2.1, 'ASLI KAILASA', 'Photo: Arian Zwegers / Flickr · CC BY 2.0'); };
   },
   // 3 — not bottom-up… TOP-DOWN: the carving line moves down, chisel at work
   3(ctx, u, p, sh, t, post) {
@@ -86,8 +86,9 @@ const SHOTS = {
     ctx.fillStyle = KB.INK; ctx.beginPath(); ctx.arc(1000, 1478, 9, 0, Math.PI * 2); ctx.fill(); ctx.fillRect(994, 1488, 12, 30);   // tiny person
     post.ui = c => {
       kbBadge(c, R4_CAT.label, R4_CAT.col);
-      const a1 = ease(u, 0.3, 0.7), a2 = ease(u, st[1], st[1] + 0.4);
-      if (a1 > 0) { c.save(); c.globalAlpha = a1; kbArrow(c, 120, 1640, 960, 1640, KB.INK, 10); kbArrow(c, 960, 1640, 120, 1640, KB.INK, 10); c.restore(); kbStamp(c, '~300 FT LAMBA', 540, 380, u, 0.3, KB.RED, 84, -0.04); }
+      const pe = Math.min(2.2, st[1] - 0.2), a1 = ease(u, pe + 0.1, pe + 0.5), a2 = ease(u, st[1], st[1] + 0.4);
+      if (a1 > 0) { c.save(); c.globalAlpha = a1; kbArrow(c, 120, 1640, 960, 1640, KB.INK, 10); kbArrow(c, 960, 1640, 120, 1640, KB.INK, 10); c.restore(); kbStamp(c, '~300 FT LAMBA', 540, 380, u, pe + 0.1, KB.RED, 84, -0.04); }
+      kbProof(c, 'scarp', u, 0.1, pe - 0.1, 'POORI CHATTAN', 'Photo: Arian Zwegers / Flickr · CC BY 2.0', 0.03);
       if (a2 > 0) kbStamp(c, '~175 FT CHAUDA', 540, 560, u, st[1], '#F06E28', 84, 0.04);
     };
   },

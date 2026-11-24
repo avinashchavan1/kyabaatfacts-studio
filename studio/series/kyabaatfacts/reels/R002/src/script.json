@@ -208,7 +208,7 @@
   "the hands-cut-off legend (no evidence)"
  ],
  "verify_note": "22 years = the whole complex (1631-1653, official site). Main tomb 1648.",
- "caption": "Taj Mahal banane mein kitna time laga? 🕌 Pure 22 saal (1631–1653) aur lagbhag 20,000 kaarigar! Main maqbara 1648 mein ban gaya tha — baag aur baaki imaaratein 5 saal baad.\n\nSources: Taj Mahal official site (tajmahal.gov.in), National Geographic, Britannica.\n\nAapko ye pata tha? Comment karo 👇",
+ "caption": "Taj Mahal banane mein kitna time laga? 🕌 Pure 22 saal (1631–1653) aur lagbhag 20,000 kaarigar! Main maqbara 1648 mein ban gaya tha — baag aur baaki imaaratein 5 saal baad.\n\nSources: Taj Mahal official site (tajmahal.gov.in), National Geographic, Britannica.\nPhotos: Paul and Jill / Flickr (CC BY 2.0); gregor_y / Flickr (CC BY-SA 2.0).\n\nAapko ye pata tha? Comment karo 👇",
  "youtube_title": "Taj Mahal Banane Mein 22 Saal? 🕌 | Kya Baat Facts #Shorts",
  "comment_prompt": "Aap Taj Mahal gaye ho? Comment karo 👇",
  "hashtags": [
@@ -218,5 +218,23 @@
   "#HindiFacts",
   "#History",
   "#Facts"
+ ],
+ "media": [
+  {
+   "file": "src/proof_taj.jpg",
+   "what": "Taj Mahal, front view",
+   "source": "https://www.flickr.com/photos/39136124@N00/2154749801",
+   "license": "CC BY 2.0",
+   "credit": "Paul and Jill / Flickr",
+   "shot": 4
+  },
+  {
+   "file": "src/proof_inlay.jpg",
+   "what": "Inlay detail on the Taj Mahal's white marble",
+   "source": "https://www.flickr.com/photos/96552722@N00/31361185",
+   "license": "CC BY-SA 2.0",
+   "credit": "gregor_y / Flickr",
+   "shot": 5
+  }
  ]
 }

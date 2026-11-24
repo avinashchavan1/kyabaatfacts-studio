@@ -1,7 +1,7 @@
 // ===== R002 · Taj Mahal: 22 saal, 20,000 kaarigar (Itihaas Ke Raaz) — Kya Baat look =====
 const R2_CAT = { label: 'ITIHAAS KE RAAZ', col: '#C47832' };
 const R2_FACTS = { 2: { big: '22 SAAL', label: '1631 – 1653', src: 'TAJMAHAL.GOV.IN' }, 3: { big: '~20,000', label: 'MAZDOOR AUR KAARIGAR', src: 'TAJMAHAL.GOV.IN' }, 5: { big: 'MAKRANA', label: 'SAFED SANGMARMAR · RAJASTHAN', src: 'MAKRANA MARBLE' } };
-function buildScenes() {}
+function buildScenes() { return Promise.all([kbLoadImg('taj', 'proof_taj.jpg'), kbLoadImg('inlay', 'proof_inlay.jpg')]); }
 
 // the Taj Mahal, sticker style: platform, main hall with arch, onion dome, chhatris, 4 minarets. grow 0..1 builds it bottom-up
 function r2Taj(c, x, y, s, grow = 1, col = '#FFFFFF', sky = null) {
@@ -75,7 +75,7 @@ const SHOTS = {
     r2Taj(ctx, 540, 1320, 0.8, g, '#FFFFFF');
     if (g < 1) { ctx.strokeStyle = rgba('#8A5A2A', 0.8); ctx.lineWidth = 8; for (let k = 0; k < 6; k++) { const yy = 1320 - g * 650 + k * 40; ctx.beginPath(); ctx.moveTo(60, yy); ctx.lineTo(1020, yy); ctx.stroke(); } }
     ctx.fillStyle = '#9BC9E8'; ctx.fillRect(0, 1375, W, H - 1375);
-    post.ui = c => { kbBadge(c, R2_CAT.label, R2_CAT.col); kbLabel(c, '22 SAAL · 20,000 LOG', 320, u, 0.2); kbKyaBaat(c, u, t, st[1]); };
+    post.ui = c => { kbBadge(c, R2_CAT.label, R2_CAT.col); kbLabel(c, '22 SAAL · 20,000 LOG', 320, u, 0.2); kbProof(c, 'taj', u, 0.3, Math.min(2.4, st[1] - 0.5), 'ASLI TAJ MAHAL', 'Photo: Paul and Jill / Flickr · CC BY 2.0'); kbKyaBaat(c, u, t, st[1]); };
   },
   // 5 — Makrana marble: a gleaming block + map pin
   5(ctx, u, p, sh, t, post) {
@@ -86,7 +86,7 @@ const SHOTS = {
     ctx.save(); ctx.beginPath(); ctx.roundRect(bx, by, 520, 360, 30); ctx.clip(); const gx = bx - 300 + ((u * 260) % 1100); const g = ctx.createLinearGradient(gx, 0, gx + 200, 0); g.addColorStop(0, 'rgba(255,255,255,0)'); g.addColorStop(0.5, 'rgba(255,255,255,0.95)'); g.addColorStop(1, 'rgba(255,255,255,0)'); ctx.fillStyle = g; ctx.fillRect(bx, by, 520, 360);
     ctx.strokeStyle = 'rgba(160,160,170,0.5)'; ctx.lineWidth = 3; for (let k = 0; k < 5; k++) { ctx.beginPath(); ctx.moveTo(bx, by + 60 + k * 70); ctx.bezierCurveTo(bx + 200, by + 20 + k * 70, bx + 300, by + 110 + k * 70, bx + 520, by + 50 + k * 70); ctx.stroke(); } ctx.restore();
     for (let k = 0; k < 4; k++) { const a = u * 3 + k * 1.6, sx = bx + 80 + (k * 137) % 400, sy = by + 60 + (k * 89) % 240, s = (Math.sin(a) * 0.5 + 0.5) * 26; ctx.fillStyle = KB.W; ctx.beginPath(); ctx.moveTo(sx, sy - s); ctx.lineTo(sx + s * 0.3, sy - s * 0.3); ctx.lineTo(sx + s, sy); ctx.lineTo(sx + s * 0.3, sy + s * 0.3); ctx.lineTo(sx, sy + s); ctx.lineTo(sx - s * 0.3, sy + s * 0.3); ctx.lineTo(sx - s, sy); ctx.lineTo(sx - s * 0.3, sy - s * 0.3); ctx.fill(); }
-    post.ui = c => { kbBadge(c, R2_CAT.label, R2_CAT.col); kbFact(c, u, R2_FACTS[5], 300, 0.3, '#C47832'); kbPin(c, 830, 880, 'RAJASTHAN', u, 0.9); if (u > st[1]) kbStamp(c, 'AAJ BHI CHAMAKTA!', 540, 1380, u, st[1] + 0.2, KB.RED, 72, 0.04); };
+    post.ui = c => { kbBadge(c, R2_CAT.label, R2_CAT.col); kbFact(c, u, R2_FACTS[5], 300, 0.3, '#C47832'); kbPin(c, 830, 880, 'RAJASTHAN', u, 0.9); if (u > st[1]) kbStamp(c, 'AAJ BHI CHAMAKTA!', 540, 1380, u, st[1] + 0.2, KB.RED, 72, 0.04); kbProof(c, 'inlay', u, 2.0, Math.min(2.3, st[1] - 2.2), 'ASLI SANGMARMAR', 'Photo: gregor_y / Flickr · CC BY-SA 2.0', 0.03); };
   },
   // 6 — the twist: tomb 1648, gardens + buildings 1653
   6(ctx, u, p, sh, t, post) {
