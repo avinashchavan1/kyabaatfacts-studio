@@ -3,5 +3,9 @@
  "R002": "review",
  "R003": "review",
  "R004": "review",
- "R005": "review"
+ "R005": "review",
+ "R009": "voiced",
+ "R008": "voiced",
+ "R007": "rendered",
+ "R006": "rendered"
 }

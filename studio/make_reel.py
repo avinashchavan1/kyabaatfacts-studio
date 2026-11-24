@@ -309,6 +309,15 @@ def master(reel, short=False):
 if __name__ == "__main__":
     if len(sys.argv) < 3: sys.exit(__doc__)
     cmd, reel, rest = sys.argv[1], sys.argv[2], sys.argv[3:]
+    # live status in the app (scripts/status.py): every step reports itself; a render also starts the frame watcher
+    AUTO = {"narration": (3, "Recording the voice"), "pick": (3, "Picking the best takes"), "audio": (4, "Mixing voice and music"),
+            "draft-timeline": (5, "Drawing the art"), "stills": (5, "Checking the art (stills)"), "render": (6, "Rendering the preview"),
+            "thumb": (8, "Making the cover"), "sheet": (8, "Final checks"), "desk": (8, "Final checks")}
+    code = os.path.basename(os.path.normpath(reel)); ST = os.path.join(os.path.dirname(HERE), "scripts", "status.py")
+    if cmd in AUTO and os.path.exists(ST) and not os.environ.get("NO_STATUS") and "/example/" not in os.path.abspath(reel) and not (cmd == "narration" and rest[:1] in (["list"], ["chars"], [])):
+        step, task = AUTO[cmd]
+        subprocess.run(["python3", ST, "auto", code, str(step), task], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=60)
+        if cmd == "render": subprocess.Popen(["python3", ST, "watch-render", code], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)
     if cmd == "new": new(reel, rest[0], rest[1])
     elif cmd == "check": sys.exit(0 if check(reel) else 1)
     elif cmd == "voices": run([CBPY, os.path.join(PY, "cb_generate.py")] + rest, reel)

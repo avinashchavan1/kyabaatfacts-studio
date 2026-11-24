@@ -67,3 +67,9 @@ Each rule has a mechanism in the engine; keep both.
     the normal reel pipeline (stages, covers, masters, owner review).
 28. **Budget:** ~10–12 min of narration is ~15–20k TTS characters for two takes; plan the month around it (about one full-length video
     per month on a 40k-character plan, plus a few reels). The channel's plan and current pilot live in its series folder (`LONGFORM.md`).
+
+## Live status (baked into the pipeline)
+29. **The app's work panel updates itself.** `make_reel.py` reports every step (narration, pick, audio, stills, render, thumb) to
+    `scripts/status.py`, and a render starts the frame watcher (phases, %, time left). For several reels, open a batch first:
+    `python3 scripts/status.py batch R006 R007 --task "Next 2 reels"`; `scripts/upload_reel.sh` marks each reel done after upload.
+    Research and script steps are set by hand (`status.py set --reel X --step 1|2`). Set `NO_STATUS=1` to silence it.

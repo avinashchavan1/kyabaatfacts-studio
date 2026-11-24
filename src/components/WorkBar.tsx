@@ -42,7 +42,8 @@ function useMeta(s: WorkStatus) {
 function Pill({ s, onOpen }: { s: WorkStatus; onOpen: () => void }) {
   const { waiting, stale, pct, left } = useMeta(s);
   const icon = (size: number) => waiting ? <Hand size={size} className="shrink-0" /> : <Loader2 size={size} className={clsx("shrink-0 text-gold", !stale && "animate-spin")} />;
-  const label = <span className="min-w-0 truncate">{waiting ? "Needs you" : s.reel_code ?? "Working"}{!waiting && s.task ? ` · ${s.task}` : ""}</span>;
+  const b = batchOf(s);
+  const label = <span className="min-w-0 truncate">{waiting ? "Needs you" : s.reel_code ?? "Working"}{!waiting && s.task ? ` · ${s.task}` : ""}{!waiting && b ? ` · reel ${b.doneN + (b.doneN < b.total ? 1 : 0)}/${b.total}` : ""}</span>;
   const nums = !waiting && <>{pct !== null && <span className="tabular shrink-0 opacity-80">{pct}%</span>}{left && <span className="shrink-0 opacity-70">· ~{left}</span>}</>;
   const tone = waiting ? "bg-amber-100 text-amber-950 dark:bg-amber-900 dark:text-amber-50" : "bg-night-900 text-parchment";
   return (
@@ -86,13 +87,14 @@ function Panel({ s, onClose }: { s: WorkStatus; onClose: () => void }) {
           </button>
         </div>
 
+        {/* batch: every reel of the current run, with its 8 steps */}
+        {info.batch && info.reels && <Batch info={info} current={s.reel_code} />}
+
         {/* progress */}
         {!waiting && (
           <div className="mt-2.5">
             <div className="flex items-center gap-2">
-              <div className="h-2 min-w-[80px] flex-1 overflow-hidden rounded-full bg-white/15">
-                <div className="h-full rounded-full bg-gold transition-[width] duration-700" style={{ width: `${Math.max(2, pct ?? 2)}%` }} />
-              </div>
+              <Bar pct={pct} />
               {pct !== null && <span className="tabular w-11 shrink-0 text-right text-xs font-semibold">{pct}%</span>}
             </div>
             <div className="mt-1 flex flex-wrap gap-x-3 gap-y-0.5 text-[11px] opacity-75">
@@ -160,6 +162,57 @@ function Panel({ s, onClose }: { s: WorkStatus; onClose: () => void }) {
             )}
           </div>
         )}
+      </div>
+    </div>
+  );
+}
+
+// overall batch numbers
+function batchOf(s: WorkStatus) {
+  const r = s.info?.reels, b = s.info?.batch; if (!r || !b) return null;
+  const codes = b.codes.filter((c) => r[c]); const doneN = codes.filter((c) => r[c].state === "done").length;
+  return { codes, doneN, total: codes.length, pct: Math.round(Number(s.info?.batch_pct ?? 0)), title: b.title };
+}
+
+// progress bar: animated stripes while working; a shimmer when there is no exact percentage yet
+function Bar({ pct, big = false }: { pct: number | null; big?: boolean }) {
+  return (
+    <div className={clsx("relative min-w-[80px] flex-1 overflow-hidden rounded-full bg-white/15 ring-1 ring-black/20", big ? "h-4" : "h-2.5")}>
+      {pct === null ? <div className="progress-shimmer absolute inset-0" />
+        : <div className="progress-stripes h-full rounded-full bg-gold transition-[width] duration-700" style={{ width: `${Math.max(3, pct)}%` }} />}
+    </div>
+  );
+}
+
+function Batch({ info, current }: { info: NonNullable<WorkStatus["info"]>; current: string | null }) {
+  const reels = info.reels ?? {}, codes = (info.batch?.codes ?? []).filter((c) => reels[c]);
+  const doneN = codes.filter((c) => reels[c].state === "done").length, pct = Math.round(Number(info.batch_pct ?? 0));
+  return (
+    <div className="mt-3 rounded-2xl bg-white/5 p-3 ring-1 ring-white/10">
+      <div className="flex flex-wrap items-baseline justify-between gap-2">
+        <div className="text-xs font-black uppercase tracking-wider text-gold">{info.batch?.title}</div>
+        <div className="text-xs font-semibold opacity-80"><span className="tabular">{doneN}</span> of <span className="tabular">{codes.length}</span> reels ready · <span className="tabular">{pct}%</span></div>
+      </div>
+      <div className="mt-2 flex items-center gap-2"><Bar pct={pct} big /></div>
+      <div className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+        {codes.map((c) => {
+          const r = reels[c], st = r.state ?? "queued", step = r.step ?? 0, live = c === current && st === "running";
+          return (
+            <Link key={c} to={`/reels/${c}`} className={clsx("block rounded-xl p-2.5 ring-1 transition hover:ring-gold/60",
+              st === "done" ? "bg-gold/15 ring-gold/40" : live ? "bg-white/10 ring-gold" : "bg-white/5 ring-white/10")}>
+              <div className="flex items-center gap-1.5">
+                {st === "done" ? <Check size={14} className="text-gold" /> : live ? <Loader2 size={14} className="animate-spin text-gold" /> : <Circle size={11} className="opacity-60" />}
+                <span className="font-mono text-xs font-bold text-gold">{c}</span>
+                <span className="ml-auto text-[10px] font-semibold uppercase tracking-wider opacity-70">{st === "done" ? "Ready" : st === "queued" ? "Queued" : `Step ${step}/8`}</span>
+              </div>
+              <div className="mt-1 truncate text-[12px] font-semibold">{st === "done" ? "Ready for your review" : r.task ?? "Queued"}</div>
+              <div className="mt-2 flex gap-1" aria-label={`step ${step} of 8`}>
+                {STEPS.map((name, i) => { const n = i + 1, on = st === "done" || n < step, now = st !== "done" && n === step;
+                  return <span key={name} title={name} className={clsx("h-1.5 flex-1 rounded-full", on ? "bg-gold" : now ? (live ? "progress-stripes bg-gold/80" : "bg-gold/50") : "bg-white/15")} />; })}
+              </div>
+            </Link>
+          );
+        })}
       </div>
     </div>
   );
