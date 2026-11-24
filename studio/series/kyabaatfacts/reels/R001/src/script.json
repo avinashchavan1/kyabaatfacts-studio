@@ -214,7 +214,8 @@
   "duration_s": 55,
   "gain": 1.6,
   "duck": 0.6,
-  "prompt": "Playful, curious, upbeat underscore for a fun science-facts short. Light electronic pulse with tabla and plucked strings, a building tension before a big reveal, a bright happy hit, then bouncy and light. Instrumental only, sits under a spoken voice, no vocals."
+  "prompt": "Playful, curious, upbeat underscore for a fun science-facts short. Light electronic pulse with tabla and plucked strings, a building tension before a big reveal, a bright happy hit, then bouncy and light. Instrumental only, sits under a spoken voice, no vocals.",
+  "take": "take1 (only take; credits)"
  },
  "category": "Science Wala Sach",
  "avoid": [

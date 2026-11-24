@@ -19,8 +19,10 @@
    "processing": "light polish only: highpass 45Hz, gentle 2:1 compression, tiny room",
    "fx": "highpass=f=45,acompressor=threshold=-20dB:ratio=2:attack=15:release=200:makeup=1,aecho=0.9:0.12:35|60:0.05|0.03",
    "mix_gain": 1.0,
-   "energy_rule": "Excited delivery is the channel's style; the shouting guard still drops takes that tip into shouting (re-measure f0 on the first reel and set f0_hz/f0_max_rise).",
-   "chosen": "Owner picked after 3 rounds (Nov 24 2026): round 1 calm voices rejected (too formal/flat), round 2 picked Bunty (podcast), hype take A (excited tags, stability 0.5), ending 2 'क्या बात है!' (cast/audition/, not in git)."
+   "energy_rule": "Excited delivery is the channel's style; the shouting guard drops takes whose pitch goes above f0_hz + f0_max_rise (240 Hz). R001 takes measured 138-223 Hz.",
+   "chosen": "Owner picked after 3 rounds (Nov 24 2026): round 1 calm voices rejected (too formal/flat), round 2 picked Bunty (podcast), hype take A (excited tags, stability 0.5), ending 2 'क्या बात है!' (cast/audition/, not in git).",
+   "f0_hz": 185,
+   "f0_max_rise": 55
   }
  },
  "fx": {}
