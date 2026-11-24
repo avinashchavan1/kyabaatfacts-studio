@@ -61,37 +61,37 @@
   {
    "id": 1,
    "voice": "narrator",
-   "hi": "अरे, एक बात बताऊँ? बिजली और सूरज... इनमें से ज़्यादा गरम कौन है?",
-   "en": "Hey, want to hear something? Lightning or the Sun... which one is hotter?",
+   "hi": "जो बिजली तुम देखते हो... वो सूरज की सतह से पाँच गुना ज़्यादा गरम होती है!",
+   "en": "The lightning you see is five times hotter than the surface of the Sun!",
    "units": [
-    "[excited] अरे, एक बात बताऊँ?",
-    "[curious] बिजली और सूरज... इनमें से ज़्यादा गरम कौन है?"
+    "[excited] जो बिजली तुम देखते हो...",
+    "[amazed] वो सूरज की सतह से पाँच गुना ज़्यादा गरम होती है!"
    ],
    "unit_gap": 0.3,
    "card": [
     [
-     "BIJLI vs SURAJ",
+     "BIJLI = 5X GARAM",
      null
     ],
     [
-     "KAUN ZYADA GARAM?",
+     "SURAJ KI SURFACE SE!",
      "#FFC83D"
     ]
    ],
-   "lead": 0.25,
+   "lead": 0.15,
    "tail": 0.3,
-   "min": 3.5
+   "min": 3.0
   },
   {
    "id": 2,
    "voice": "narrator",
-   "hi": "ज़्यादातर लोग कहेंगे... सूरज! लेकिन रुको!",
-   "en": "Most people would say... the Sun! But wait!",
+   "hi": "यकीन नहीं होता? चलो, नंबर देखते हैं!",
+   "en": "Don't believe it? Let's look at the numbers!",
    "units": [
-    "[playfully] ज़्यादातर लोग कहेंगे... सूरज!",
-    "[excited] लेकिन रुको!"
+    "[curious] यकीन नहीं होता?",
+    "[excited] चलो, नंबर देखते हैं!"
    ],
-   "unit_gap": 0.25,
+   "unit_gap": 0.3,
    "lead": 0.15,
    "tail": 0.25
   },
@@ -223,7 +223,7 @@
   "exact bolt width or duration (weak sources)"
  ],
  "verify_note": "Compare with the Sun's VISIBLE SURFACE only; the core twist keeps it honest. 50,000 °F ≈ 27,760 °C → 'लगभग 28 हज़ार'.",
- "caption": "Bijli vs Suraj: kaun zyada garam? ⚡☀️ Bijli apne aaspaas ki hawa ko ~28,000°C tak garam kar deti hai — Suraj ki surface (~5,500°C) se 5 guna zyada! Lekin Suraj ka core? 1.5 crore °C 😎\n\nSources: NOAA National Weather Service, NASA, UCAR.\nPhotos: James Niland / Flickr (CC BY 2.0); NASA, from the ISS (Public domain).\n\nAapko ye pata tha? Comment karo 👇",
+ "caption": "Jo bijli tum dekhte ho, woh Suraj ki surface se 5 guna garam hai ⚡\n\n⚡☀️ Bijli apne aaspaas ki hawa ko ~28,000°C tak garam kar deti hai, Suraj ki surface (~5,500°C) se 5 guna zyada! Lekin Suraj ka core? 1.5 crore °C 😎\n\nSources: NOAA National Weather Service, NASA, UCAR.\nPhotos: James Niland / Flickr (CC BY 2.0); NASA, from the ISS (Public domain).\n\nComment karo: aapko ye pata tha? 👇",
  "youtube_title": "Bijli Suraj Se 5 Guna Garam? ⚡ | Kya Baat Facts #Shorts",
  "comment_prompt": "Aapko ye pata tha? Haan ya naa — comment karo 👇",
  "hashtags": [
@@ -251,5 +251,6 @@
    "credit": "NASA (from the ISS)",
    "shot": 4
   }
- ]
+ ],
+ "layout": "safe_v2"
 }

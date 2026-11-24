@@ -55,12 +55,13 @@
   {
    "id": 1,
    "voice": "narrator",
-   "hi": "क्या हम अपने दिमाग़ का... सिर्फ़ दस प्रतिशत use करते हैं?",
-   "en": "Do we use only ten percent of our brain?",
+   "hi": "अपने दिमाग़ का... सिर्फ़ 10 percent use करते हो? ये बात बिल्कुल ग़लत है!",
+   "en": "You only use 10 percent of your brain? That's completely wrong!",
    "units": [
-    "[curious] क्या हम अपने दिमाग़ का... सिर्फ़ दस प्रतिशत use करते हैं?"
+    "[curious] अपने दिमाग़ का... सिर्फ़ 10 percent use करते हो?",
+    "[excited] ये बात बिल्कुल ग़लत है!"
    ],
-   "lead": 0.25,
+   "lead": 0.15,
    "tail": 0.3,
    "card": [
     [
@@ -68,20 +69,21 @@
      null
     ],
     [
-     "MYTH YA FACT?",
+     "BILKUL GALAT!",
      "#FFC83D"
     ]
    ],
-   "min": 3.5
+   "min": 3.0,
+   "unit_gap": 0.3
   },
   {
    "id": 2,
    "voice": "narrator",
-   "hi": "ये बात तुमने कई बार सुनी होगी... लेकिन सच क्या है?",
-   "en": "You've heard this many times... but what's the truth?",
+   "hi": "ये बात फ़िल्मों और WhatsApp पर खूब चलती है... तो सच क्या है?",
+   "en": "This one's all over films and WhatsApp... so what's the truth?",
    "units": [
-    "[excited] ये बात तुमने कई बार सुनी होगी...",
-    "[playfully] लेकिन सच क्या है?"
+    "[playfully] ये बात फ़िल्मों और WhatsApp पर खूब चलती है...",
+    "[curious] तो सच क्या है?"
    ],
    "lead": 0.15,
    "tail": 0.3,
@@ -186,7 +188,7 @@
   "claiming a single origin of the myth (unclear)"
  ],
  "verify_note": "All four claims from MIT McGovern / Britannica.",
- "caption": "Kya hum dimaag ka sirf 10% use karte hain? ❌ MYTH! Brain scans dikhate hain ki hum din bhar poora dimaag use karte hain. Dimaag body weight ka sirf 2% hai, par 20% energy khaata hai! 🧠\n\nSources: MIT McGovern Institute, Britannica, APS.\nPhoto: NIH via Wikimedia Commons (Public domain).\n\nAapne ye myth suna tha? Comment karo 👇",
+ "caption": "Sirf 10% dimaag use karte ho? Ye baat bilkul galat hai 🧠\n\n❌ MYTH! Brain scans dikhate hain ki hum din bhar poora dimaag use karte hain. Dimaag body weight ka sirf 2% hai, par 20% energy khaata hai! 🧠\n\nSources: MIT McGovern Institute, Britannica, APS.\nPhoto: NIH via Wikimedia Commons (Public domain).\n\nComment karo: agla kaunsa myth todein? 👇",
  "youtube_title": "Sirf 10% Dimaag? MYTH! 🧠 | Kya Baat Facts #Shorts",
  "comment_prompt": "Agla myth kaunsa bust karein? Comment karo 👇",
  "hashtags": [
@@ -206,5 +208,6 @@
    "credit": "NIH via Wikimedia Commons",
    "shot": 4
   }
- ]
+ ],
+ "layout": "safe_v2"
 }

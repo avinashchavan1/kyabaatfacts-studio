@@ -55,39 +55,40 @@
   {
    "id": 1,
    "voice": "narrator",
-   "hi": "अरे, एक बात बताऊँ? तुम्हारे पास कितने दिल हैं? एक ना?",
-   "en": "Hey, want to hear something? How many hearts do you have? One, right?",
+   "hi": "ऑक्टोपस के तीन दिल होते हैं... और खून... नीला!",
+   "en": "An octopus has three hearts... and blue blood!",
    "units": [
-    "[excited] अरे, एक बात बताऊँ?",
-    "[curious] तुम्हारे पास कितने दिल हैं? एक ना?"
+    "[excited] ऑक्टोपस के तीन दिल होते हैं...",
+    "[amazed] और खून... नीला!"
    ],
-   "lead": 0.25,
+   "lead": 0.15,
    "tail": 0.3,
    "unit_gap": 0.3,
    "card": [
     [
-     "TUMHARA 1 DIL",
+     "OCTOPUS: 3 DIL",
      null
     ],
     [
-     "OCTOPUS KE...?",
+     "NEELA KHOON!",
      "#FFC83D"
     ]
    ],
-   "min": 3.5
+   "min": 3.0
   },
   {
    "id": 2,
    "voice": "narrator",
-   "hi": "ऑक्टोपस के होते हैं... पूरे तीन दिल!",
-   "en": "An octopus has... three whole hearts!",
+   "hi": "यकीन नहीं होता? ये देखो!",
+   "en": "Don't believe it? Look!",
    "units": [
-    "[excited] ऑक्टोपस के होते हैं... पूरे तीन दिल!"
+    "[excited] यकीन नहीं होता? ये देखो!"
    ],
    "lead": 0.15,
    "tail": 0.3,
    "cite": "Live Science",
-   "reveal": true
+   "reveal": true,
+   "unit_gap": 0.3
   },
   {
    "id": 3,
@@ -188,7 +189,7 @@
   "stating the crawling reason as certain (say 'shayad')"
  ],
  "verify_note": "Heart-stops-while-swimming: Live Science says no one is certain why; framed with 'शायद'.",
- "caption": "Octopus ke 3 dil hote hain aur khoon neela! 🐙💙 Kyunki uske khoon mein lohe ki jagah TAANBA (copper) hota hai. Aur tairte waqt uska bada dil kuch pal ke liye ruk jaata hai!\n\nSources: Live Science, Smithsonian Magazine, Scientific American.\nPhoto: Wikimedia Commons (Public domain).\n\nAapko ye pata tha? Comment karo 👇",
+ "caption": "Octopus ke 3 dil hote hain, aur khoon neela 🐙💙\n\n🐙💙 Kyunki uske khoon mein lohe ki jagah TAANBA (copper) hota hai. Aur tairte waqt uska bada dil kuch pal ke liye ruk jaata hai!\n\nSources: Live Science, Smithsonian Magazine, Scientific American.\nPhoto: Wikimedia Commons (Public domain).\n\nComment karo: agla kaunsa jaanwar? 👇",
  "youtube_title": "Octopus Ke 3 Dil Aur Neela Khoon! 🐙 | Kya Baat Facts #Shorts",
  "comment_prompt": "Agla kaunsa jaanwar? Comment karo 👇",
  "hashtags": [
@@ -208,5 +209,6 @@
    "credit": "Wikimedia Commons",
    "shot": 2
   }
- ]
+ ],
+ "layout": "safe_v2"
 }

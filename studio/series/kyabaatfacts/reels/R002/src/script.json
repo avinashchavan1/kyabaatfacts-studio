@@ -62,13 +62,13 @@
   {
    "id": 1,
    "voice": "narrator",
-   "hi": "अरे, एक बात बताऊँ? ताज महल बनाने में... कितना time लगा होगा?",
-   "en": "Hey, want to hear something? How long do you think the Taj Mahal took to build?",
+   "hi": "ताज महल बनाने में लगे... पूरे बाईस साल! और लगभग बीस हज़ार लोग!",
+   "en": "The Taj Mahal took twenty-two whole years... and about twenty thousand people!",
    "units": [
-    "[excited] अरे, एक बात बताऊँ?",
-    "[curious] ताज महल बनाने में... कितना time लगा होगा?"
+    "[excited] ताज महल बनाने में लगे... पूरे बाईस साल!",
+    "[amazed] और लगभग बीस हज़ार लोग!"
    ],
-   "lead": 0.25,
+   "lead": 0.15,
    "tail": 0.3,
    "unit_gap": 0.3,
    "card": [
@@ -77,20 +77,20 @@
      null
     ],
     [
-     "KITNE SAAL?",
+     "22 SAAL · 20,000 LOG",
      "#FFC83D"
     ]
    ],
-   "min": 3.5
+   "min": 3.0
   },
   {
    "id": 2,
    "voice": "narrator",
-   "hi": "एक साल? पाँच साल? नहीं यार... पूरे बाईस साल!",
-   "en": "One year? Five years? No way... a full twenty-two years!",
+   "hi": "काम शुरू हुआ सोलह सौ इकतीस में... और पूरा हुआ सोलह सौ तिरपन में!",
+   "en": "Work began in 1631... and finished in 1653!",
    "units": [
-    "[playfully] एक साल? पाँच साल?",
-    "[excited] नहीं यार... पूरे बाईस साल!"
+    "[curious] काम शुरू हुआ सोलह सौ इकतीस में...",
+    "[excited] और पूरा हुआ सोलह सौ तिरपन में!"
    ],
    "lead": 0.15,
    "tail": 0.3,
@@ -208,7 +208,7 @@
   "the hands-cut-off legend (no evidence)"
  ],
  "verify_note": "22 years = the whole complex (1631-1653, official site). Main tomb 1648.",
- "caption": "Taj Mahal banane mein kitna time laga? 🕌 Pure 22 saal (1631–1653) aur lagbhag 20,000 kaarigar! Main maqbara 1648 mein ban gaya tha — baag aur baaki imaaratein 5 saal baad.\n\nSources: Taj Mahal official site (tajmahal.gov.in), National Geographic, Britannica.\nPhotos: Paul and Jill / Flickr (CC BY 2.0); gregor_y / Flickr (CC BY-SA 2.0).\n\nAapko ye pata tha? Comment karo 👇",
+ "caption": "Taj Mahal banane mein lage pure 22 saal aur lagbhag 20,000 log 🕌\n\n🕌 Pure 22 saal (1631–1653) aur lagbhag 20,000 kaarigar! Main maqbara 1648 mein ban gaya tha, baag aur baaki imaaratein 5 saal baad.\n\nSources: Taj Mahal official site (tajmahal.gov.in), National Geographic, Britannica.\nPhotos: Paul and Jill / Flickr (CC BY 2.0); gregor_y / Flickr (CC BY-SA 2.0).\n\nComment karo: aap Taj Mahal gaye ho? 👇",
  "youtube_title": "Taj Mahal Banane Mein 22 Saal? 🕌 | Kya Baat Facts #Shorts",
  "comment_prompt": "Aap Taj Mahal gaye ho? Comment karo 👇",
  "hashtags": [
@@ -236,5 +236,6 @@
    "credit": "gregor_y / Flickr",
    "shot": 5
   }
- ]
+ ],
+ "layout": "safe_v2"
 }

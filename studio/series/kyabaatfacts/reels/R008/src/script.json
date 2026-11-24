@@ -69,13 +69,13 @@
   {
    "id": 1,
    "voice": "narrator",
-   "hi": "अरे, एक बात बताऊँ? चार हज़ार पाँच सौ साल पहले... ढकी हुई नालियाँ?",
-   "en": "Hey, want to hear something? Covered drains... four and a half thousand years ago?",
+   "hi": "चार हज़ार पाँच सौ साल पहले... इस शहर में ढकी हुई नालियाँ थीं!",
+   "en": "Four and a half thousand years ago... this city had covered drains!",
    "units": [
-    "[excited] अरे, एक बात बताऊँ?",
-    "[curious] चार हज़ार पाँच सौ साल पहले... ढकी हुई नालियाँ?"
+    "[excited] चार हज़ार पाँच सौ साल पहले...",
+    "[amazed] इस शहर में ढकी हुई नालियाँ थीं!"
    ],
-   "lead": 0.25,
+   "lead": 0.15,
    "tail": 0.3,
    "unit_gap": 0.3,
    "card": [
@@ -84,19 +84,19 @@
      null
     ],
     [
-     "DHAKI HUI NAALIYAAN?",
+     "DHAKI HUI NAALIYAAN!",
      "#FFC83D"
     ]
    ],
-   "min": 3.5
+   "min": 3.0
   },
   {
    "id": 2,
    "voice": "narrator",
-   "hi": "मोहनजोदड़ो में... बिल्कुल थीं! पक्की ईंटों की नालियाँ, ऊपर से ढकी हुई!",
-   "en": "In Mohenjo-daro... absolutely! Baked-brick drains, covered on top!",
+   "hi": "इस शहर का नाम... मोहनजोदड़ो! पक्की ईंटों की नालियाँ, ऊपर से ढकी हुई!",
+   "en": "This city is Mohenjo-daro! Baked-brick drains, covered on top!",
    "units": [
-    "[excited] मोहनजोदड़ो में... बिल्कुल थीं!",
+    "[curious] इस शहर का नाम... मोहनजोदड़ो!",
     "[amazed] पक्की ईंटों की नालियाँ, ऊपर से ढकी हुई!"
    ],
    "lead": 0.15,
@@ -206,7 +206,7 @@
   "UNESCO year (not checked)"
  ],
  "verify_note": "Covered brick drains, lift-off covers, house drains, sediment traps, walk-in Great Bath drain.",
- "caption": "4,500 saal pehle Mohenjo-daro mein dhaki hui naaliyaan thi! 🧱 Safai ke liye uthne waale dhakkan, gharon ke bathroom seedhe sadak ki naali se jude — aur ek naali itni badi ki usme chal sakte ho!\n\nSources: Harappa.com, Wikipedia.\nPhoto: Emmanuel Dyan / Flickr (CC BY 2.0).\n\nAapke sheher ki naaliyaan kaisi hain? 😅👇",
+ "caption": "4,500 saal pehle is sheher mein dhaki hui naaliyaan thi 🧱\n\n🧱 Safai ke liye uthne waale dhakkan, gharon ke bathroom seedhe sadak ki naali se jude, aur ek naali itni badi ki usme chal sakte ho!\n\nSources: Harappa.com, Wikipedia.\nPhoto: Emmanuel Dyan / Flickr (CC BY 2.0).\n\nComment karo: aapke sheher ki naaliyaan kaisi hain? 😅👇",
  "youtube_title": "4,500 Saal Pehle Drainage System! 🧱 Mohenjo-daro | Kya Baat Facts #Shorts",
  "comment_prompt": "Aapke sheher ki naaliyaan kaisi hain? 😅👇",
  "hashtags": [
@@ -226,5 +226,6 @@
    "credit": "Emmanuel Dyan / Flickr",
    "shot": 2
   }
- ]
+ ],
+ "layout": "safe_v2"
 }

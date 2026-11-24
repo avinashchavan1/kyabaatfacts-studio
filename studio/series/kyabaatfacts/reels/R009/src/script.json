@@ -98,10 +98,10 @@
   {
    "id": 3,
    "voice": "narrator",
-   "hi": "Venus को अपनी धुरी पर एक चक्कर लगाने में लगते हैं... दो सौ तैंतालीस दिन! लेकिन सूरज का एक चक्कर? सिर्फ़ दो सौ पच्चीस दिन!",
+   "hi": "Venus को खुद एक चक्कर घूमने में लगते हैं... दो सौ तैंतालीस दिन! लेकिन सूरज का एक चक्कर? सिर्फ़ दो सौ पच्चीस दिन!",
    "en": "Venus takes 243 days to spin once... but only 225 days to go around the Sun!",
    "units": [
-    "[curious] Venus को अपनी धुरी पर एक चक्कर लगाने में लगते हैं... दो सौ तैंतालीस दिन!",
+    "[curious] Venus को खुद एक चक्कर घूमने में लगते हैं... दो सौ तैंतालीस दिन!",
     "[excited] लेकिन सूरज का एक चक्कर? सिर्फ़ दो सौ पच्चीस दिन!"
    ],
    "lead": 0.15,
@@ -148,11 +148,11 @@
   {
    "id": 6,
    "voice": "narrator",
-   "hi": "लेकिन twist ये है... एक सूर्योदय से अगले सूर्योदय तक, लगभग एक सौ सत्रह दिन लगते हैं। यानी एक birthday से अगले तक... सूरज लगभग दो बार ही उगता है!",
+   "hi": "लेकिन twist ये है... एक sunrise से अगले sunrise तक... लगभग एक सौ सत्रह दिन लगते हैं। यानी एक birthday से अगले तक... सूरज लगभग दो बार ही उगता है!",
    "en": "But here's the twist... from one sunrise to the next takes about 117 days. So between two birthdays, the Sun rises only about twice!",
    "units": [
     "[curious] लेकिन twist ये है...",
-    "[excited] एक सूर्योदय से अगले सूर्योदय तक... लगभग एक सौ सत्रह दिन लगते हैं।",
+    "[excited] एक sunrise से अगले sunrise तक... लगभग एक सौ सत्रह दिन लगते हैं।",
     "[amazed] यानी एक birthday से अगले तक... सूरज लगभग दो बार ही उगता है!"
    ],
    "lead": 0.15,
@@ -217,5 +217,5 @@
    "shot": 3
   }
  ],
- "layout": "safe_v2 (instagram-agent-skill pilot: claim-first hook, safe zone, loop ending)"
+ "layout": "safe_v2"
 }

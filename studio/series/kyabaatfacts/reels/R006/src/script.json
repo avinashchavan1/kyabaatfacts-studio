@@ -52,13 +52,13 @@
   {
    "id": 1,
    "voice": "narrator",
-   "hi": "अरे, एक बात बताऊँ? आलू, टमाटर और मिर्च... ये तो पक्के Indian हैं ना?",
-   "en": "Hey, want to hear something? Potato, tomato and chilli... these are totally Indian, right?",
+   "hi": "आलू, टमाटर, मिर्च... इनमें से एक भी Indian नहीं है!",
+   "en": "Potato, tomato, chilli... not one of them is Indian!",
    "units": [
-    "[excited] अरे, एक बात बताऊँ?",
-    "[curious] आलू, टमाटर और मिर्च... ये तो पक्के Indian हैं ना?"
+    "[excited] आलू, टमाटर, मिर्च...",
+    "[amazed] इनमें से एक भी Indian नहीं है!"
    ],
-   "lead": 0.25,
+   "lead": 0.15,
    "tail": 0.3,
    "unit_gap": 0.3,
    "card": [
@@ -67,24 +67,25 @@
      null
     ],
     [
-     "PAKKE INDIAN?",
+     "EK BHI INDIAN NAHI!",
      "#FFC83D"
     ]
    ],
-   "min": 3.5
+   "min": 3.0
   },
   {
    "id": 2,
    "voice": "narrator",
-   "hi": "नहीं यार! ये तीनों... अमेरिका महाद्वीप से आए हैं!",
-   "en": "No way! All three came from the Americas!",
+   "hi": "ये तीनों आए थे... दूर America से!",
+   "en": "All three came... from far-off America!",
    "units": [
-    "[excited] नहीं यार! ये तीनों... अमेरिका महाद्वीप से आए हैं!"
+    "[excited] ये तीनों आए थे... दूर America से!"
    ],
    "lead": 0.15,
    "tail": 0.3,
    "cite": "Asia Times",
-   "reveal": true
+   "reveal": true,
+   "unit_gap": 0.3
   },
   {
    "id": 3,
@@ -137,11 +138,11 @@
   {
    "id": 6,
    "voice": "narrator",
-   "hi": "और टमाटर का twist सुनो... वो आया तो पहले था... लेकिन आम तौर पर खाया जाने लगा अठारह सौ के दशक में!",
-   "en": "And here's the tomato twist... it arrived earlier, but people commonly started eating it only in the 1800s!",
+   "hi": "और टमाटर का twist सुनो... वो आया तो पहले था... लेकिन आम तौर पर खाया जाने लगा, लगभग दो सौ साल पहले!",
+   "en": "And here's the tomato twist... it arrived earlier, but people commonly started eating it only about two hundred years ago!",
    "units": [
     "[playfully] और टमाटर का twist सुनो...",
-    "[excited] वो आया तो पहले था... लेकिन आम तौर पर खाया जाने लगा अठारह सौ के दशक में!"
+    "[excited] वो आया तो पहले था... लेकिन आम तौर पर खाया जाने लगा, लगभग दो सौ साल पहले!"
    ],
    "lead": 0.15,
    "tail": 0.3,
@@ -185,7 +186,7 @@
   "claiming Vasco da Gama personally brought them"
  ],
  "verify_note": "Tomato: introduced earlier, but common only from the 1800s (Heidelberg). Potato ~1600 (Wikipedia).",
- "caption": "Aloo, tamatar aur mirch — teeno Indian nahi hain! 🥔🍅🌶️ Teeno America ke hain aur Portuguese vyapari inhe Bharat laaye. Aur tamatar aam taur par 1800s mein jaake khaaya jaane laga!\n\nSources: Asia Times, Wikipedia, Heidelberg University Publishing.\nPhotos: JimReeves / Flickr (CC BY 2.0); 16:9clue / Flickr (CC BY 2.0).\n\nAapki favourite sabzi kaunsi hai? Comment karo 👇",
+ "caption": "Aloo, tamatar, mirch: inme se ek bhi Indian nahi hai 🥔🍅🌶️\n\n🥔🍅🌶️ Teeno America ke hain aur Portuguese vyapari inhe Bharat laaye. Aur tamatar aam taur par 1800s mein jaake khaaya jaane laga!\n\nSources: Asia Times, Wikipedia, Heidelberg University Publishing.\nPhotos: JimReeves / Flickr (CC BY 2.0); 16:9clue / Flickr (CC BY 2.0).\n\nComment karo: aapki favourite sabzi kaunsi hai? 👇",
  "youtube_title": "Aloo, Tamatar, Mirch Indian Nahi Hain! 🥔🍅🌶️ | Kya Baat Facts #Shorts",
  "comment_prompt": "Aloo ke bina kaunsi dish sochi bhi nahi ja sakti? 👇",
  "hashtags": [
@@ -213,5 +214,6 @@
    "credit": "16:9clue / Flickr",
    "shot": 5
   }
- ]
+ ],
+ "layout": "safe_v2"
 }

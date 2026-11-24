@@ -61,11 +61,11 @@
   {
    "id": 1,
    "voice": "narrator",
-   "hi": "मिस्र के मकबरों का शहद... हज़ारों साल पुराना... और आज तक ख़राब नहीं हुआ!",
-   "en": "Honey from Egyptian tombs, thousands of years old, still hadn't spoiled!",
+   "hi": "Egypt की हज़ारों साल पुरानी कब्रों में मिला शहद... आज तक ख़राब नहीं हुआ!",
+   "en": "Honey found in Egypt's thousands-of-years-old tombs still hadn't spoiled!",
    "units": [
-    "[excited] मिस्र के मकबरों का शहद... हज़ारों साल पुराना...",
-    "[amazed] और आज तक ख़राब नहीं हुआ!"
+    "[excited] Egypt की हज़ारों साल पुरानी कब्रों में मिला शहद...",
+    "[amazed] आज तक ख़राब नहीं हुआ!"
    ],
    "lead": 0.15,
    "tail": 0.3,
@@ -201,7 +201,7 @@
   "an exact '3,000 years' figure (say 'hazaaron saal')"
  ],
  "verify_note": "All from Smithsonian / Discover.",
- "caption": "Misr ke maqbaron ka shahad, hazaaron saal baad bhi kharab nahi hua 🍯\n\nKam paani + acid + hydrogen peroxide = super shelf life. Lekin dhakkan khula chhoda, to shahad kharab bhi ho sakta hai!\n\nSources: Smithsonian Magazine, Discover Magazine.\nPhoto: BotheredByBees / Flickr (CC BY 2.0).\n\nComment karo: aapke ghar ka shahad kitna purana hai? 👇",
+ "caption": "Egypt ki purani kabron mein mila shahad, hazaaron saal baad bhi kharab nahi hua 🍯\n\nKam paani + acid + hydrogen peroxide = super shelf life. Lekin dhakkan khula chhoda, to shahad kharab bhi ho sakta hai!\n\nSources: Smithsonian Magazine, Discover Magazine.\nPhoto: BotheredByBees / Flickr (CC BY 2.0).\n\nComment karo: aapke ghar ka shahad kitna purana hai? 👇",
  "youtube_title": "Hazaaron Saal Purana Shahad, Ab Tak Kharab Nahi! 🍯 | Kya Baat Facts #Shorts",
  "comment_prompt": "Aapke ghar mein shahad kitna purana hai? 👇",
  "hashtags": [
@@ -222,5 +222,5 @@
    "shot": 5
   }
  ],
- "layout": "safe_v2 (instagram-agent-skill pilot: claim-first hook, safe zone, loop ending)"
+ "layout": "safe_v2"
 }

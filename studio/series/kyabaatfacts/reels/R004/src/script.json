@@ -62,35 +62,35 @@
   {
    "id": 1,
    "voice": "narrator",
-   "hi": "अरे, एक बात बताऊँ? एक पूरा मंदिर... बिना एक भी ईंट जोड़े?",
-   "en": "Hey, want to hear something? A whole temple... without joining a single brick?",
+   "hi": "ये पूरा मंदिर... एक ही पत्थर को काटकर बनाया गया है!",
+   "en": "This whole temple was carved out of a single rock!",
    "units": [
-    "[excited] अरे, एक बात बताऊँ?",
-    "[curious] एक पूरा मंदिर... बिना एक भी ईंट जोड़े?"
+    "[excited] ये पूरा मंदिर...",
+    "[amazed] एक ही पत्थर को काटकर बनाया गया है!"
    ],
-   "lead": 0.25,
+   "lead": 0.15,
    "tail": 0.3,
    "unit_gap": 0.3,
    "card": [
     [
-     "EK POORA MANDIR",
+     "EK HI PATTHAR SE",
      null
     ],
     [
-     "BINA EK BHI EENT?",
+     "POORA MANDIR!",
      "#FFC83D"
     ]
    ],
-   "min": 3.5
+   "min": 3.0
   },
   {
    "id": 2,
    "voice": "narrator",
-   "hi": "महाराष्ट्र के एलोरा में है कैलाश मंदिर... और ये पूरा का पूरा... एक ही चट्टान को काटकर बनाया गया है!",
-   "en": "In Ellora, Maharashtra, there's the Kailasa temple... and the whole thing was carved out of a single rock!",
+   "hi": "महाराष्ट्र के एलोरा में है कैलाश मंदिर... और इसमें एक भी ईंट नहीं जोड़ी गई!",
+   "en": "It's the Kailasa temple in Ellora, Maharashtra... and not a single brick was added!",
    "units": [
-    "[excited] महाराष्ट्र के एलोरा में है कैलाश मंदिर...",
-    "[amazed] और ये पूरा का पूरा... एक ही चट्टान को काटकर बनाया गया है!"
+    "[curious] महाराष्ट्र के एलोरा में है कैलाश मंदिर...",
+    "[amazed] और इसमें एक भी ईंट नहीं जोड़ी गई!"
    ],
    "lead": 0.15,
    "tail": 0.3,
@@ -151,11 +151,11 @@
   {
    "id": 6,
    "voice": "narrator",
-   "hi": "ये बना था बारह सौ साल से भी पहले... राष्ट्रकूट राजाओं के समय में। और आज एलोरा की गुफ़ाएँ... यूनेस्को विश्व धरोहर हैं!",
-   "en": "It was made over twelve hundred years ago, in the time of the Rashtrakuta kings. And today the Ellora caves are a UNESCO World Heritage Site!",
+   "hi": "ये बना था बारह सौ साल से भी पहले... राष्ट्रकूट राजाओं के समय में। और आज, ये एक पत्थर वाला मंदिर... UNESCO World Heritage का हिस्सा है!",
+   "en": "It was made over twelve hundred years ago, in the time of the Rashtrakuta kings. And today this one-rock temple is part of a UNESCO World Heritage Site!",
    "units": [
     "[curious] ये बना था बारह सौ साल से भी पहले... राष्ट्रकूट राजाओं के समय में।",
-    "[playfully] और आज एलोरा की गुफ़ाएँ... यूनेस्को विश्व धरोहर हैं!"
+    "[playfully] और आज, ये एक पत्थर वाला मंदिर... UNESCO World Heritage का हिस्सा है!"
    ],
    "lead": 0.15,
    "tail": 0.3,
@@ -199,7 +199,7 @@
   "a single king built it (debated)"
  ],
  "verify_note": "Dating: Rashtrakuta, 8th century; said 'राष्ट्रकूट राजाओं के समय' (not one king).",
- "caption": "Ek poora mandir — EK HI CHATTAN se kaata gaya! 🛕 Ellora ka Kailasa Mandir upar se neeche ki taraf tarasha gaya, ~300 ft lamba aur ~175 ft chauda, 1,200 saal se bhi pehle!\n\nSources: Indian Culture portal (Govt. of India), Britannica, Live History India.\nPhotos: Arian Zwegers / Flickr (CC BY 2.0); Arian Zwegers / Flickr (CC BY 2.0).\n\nAap Ellora gaye ho? Comment karo 👇",
+ "caption": "Ye poora mandir ek hi patthar ko kaat kar bana hai 🛕\n\n🛕 Ellora ka Kailasa Mandir upar se neeche ki taraf tarasha gaya, ~300 ft lamba aur ~175 ft chauda, 1,200 saal se bhi pehle!\n\nSources: Indian Culture portal (Govt. of India), Britannica, Live History India.\nPhotos: Arian Zwegers / Flickr (CC BY 2.0); Arian Zwegers / Flickr (CC BY 2.0).\n\nComment karo: aap Ellora gaye ho? 👇",
  "youtube_title": "Ek Hi Pathar Se Poora Mandir! 🛕 Kailasa Ellora | Kya Baat Facts #Shorts",
  "comment_prompt": "Aap Ellora gaye ho? Comment karo 👇",
  "hashtags": [
@@ -227,5 +227,6 @@
    "credit": "Arian Zwegers / Flickr",
    "shot": 5
   }
- ]
+ ],
+ "layout": "safe_v2"
 }
