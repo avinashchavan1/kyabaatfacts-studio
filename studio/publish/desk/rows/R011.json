@@ -1,0 +1,75 @@
+{
+ "title": "Great Wall space se dikhti hai? MYTH!",
+ "series": "Kya Baat Facts",
+ "source": "NASA · Scientific American · Britannica · Al Jazeera",
+ "length": "0:57",
+ "captions": {
+  "instagram": "NASA ne saaf bol diya: Great Wall space se aapko nahi dikhegi 🧱🚀\n\n🚀 China ke pehle astronaut Yang Liwei ko 2003 mein Great Wall dikhi hi nahi. NASA bhi kehta hai: sirf aankhon se, space se aam taur par nahi dikhti, aur chaand se bilkul nahi. Jo photo hai, woh 400mm zoom lens se li gayi thi!\n\nSources: NASA, Scientific American, Britannica, Al Jazeera.\nPhoto: NASA, ISS010-E-08497 (Public domain).\n\nComment karo: aapne school mein ye padha tha? 👇\n\n📜 Source: NASA · Scientific American · Britannica · Al Jazeera\n🎧 Hindi narration · English subtitles\n\nFollow @kyabaatfacts for a new 'kya baat!' fact every day.\n\n#KyaBaatFacts #MythOrFact #GreatWallOfChina #Space #NASA #HindiFacts",
+  "facebook": "NASA ne saaf bol diya: Great Wall space se aapko nahi dikhegi 🧱🚀\n\n🚀 China ke pehle astronaut Yang Liwei ko 2003 mein Great Wall dikhi hi nahi. NASA bhi kehta hai: sirf aankhon se, space se aam taur par nahi dikhti, aur chaand se bilkul nahi. Jo photo hai, woh 400mm zoom lens se li gayi thi!\n\nSources: NASA, Scientific American, Britannica, Al Jazeera.\nPhoto: NASA, ISS010-E-08497 (Public domain).\n\nComment karo: aapne school mein ye padha tha? 👇\n\n📜 Source: NASA · Scientific American · Britannica · Al Jazeera\n🎧 Hindi narration · English subtitles\n\nFollow Kya Baat Facts for a new 'kya baat!' fact every day.\n\n#KyaBaatFacts #MythOrFact #GreatWallOfChina #Space #NASA #HindiFacts",
+  "youtube_title": "Great Wall Space Se Dikhti Hai? MYTH! 🚀 | Kya Baat Facts #Shorts",
+  "youtube_description": "NASA ne saaf bol diya: Great Wall space se aapko nahi dikhegi 🧱🚀\n\n🚀 China ke pehle astronaut Yang Liwei ko 2003 mein Great Wall dikhi hi nahi. NASA bhi kehta hai: sirf aankhon se, space se aam taur par nahi dikhti, aur chaand se bilkul nahi. Jo photo hai, woh 400mm zoom lens se li gayi thi!\n\nSources: NASA, Scientific American, Britannica, Al Jazeera.\nPhoto: NASA, ISS010-E-08497 (Public domain).\n\nComment karo: aapne school mein ye padha tha? 👇\n\nSource: NASA · Scientific American · Britannica · Al Jazeera\nFacts checked:\n• The popular claim: the Great Wall is visible from space; it was even in textbooks — Scientific American; Al Jazeera\n• NASA: generally not visible to the unaided eye from low Earth orbit, and not from the Moon — NASA\n• The wall is only about 6 m wide and blends with the land's colours — Al Jazeera; Britannica\n• Yang Liwei (Shenzhou 5, 2003), China's first astronaut, said he did not see the Great Wall — Al Jazeera; Wikipedia (Shenzhou 5)\n• ISS photo ISS010-E-08497 (2004) was taken with a 400 mm lens; only a small section of wall is visible — NASA Image Library\n• Cities and roads are visible from low Earth orbit — NASA; Live Science\n\nHindi narration · English subtitles.\nSubscribe to Kya Baat Facts for a new 'kya baat!' fact every day.\n\n#KyaBaatFacts #MythOrFact #GreatWallOfChina #Space #NASA #HindiFacts #Shorts",
+  "first_comment": "Aapne school mein ye padha tha? 👇"
+ },
+ "claims": [
+  {
+   "claim": "The popular claim: the Great Wall is visible from space; it was even in textbooks",
+   "ref": "Scientific American; Al Jazeera"
+  },
+  {
+   "claim": "NASA: generally not visible to the unaided eye from low Earth orbit, and not from the Moon",
+   "ref": "NASA"
+  },
+  {
+   "claim": "The wall is only about 6 m wide and blends with the land's colours",
+   "ref": "Al Jazeera; Britannica"
+  },
+  {
+   "claim": "Yang Liwei (Shenzhou 5, 2003), China's first astronaut, said he did not see the Great Wall",
+   "ref": "Al Jazeera; Wikipedia (Shenzhou 5)"
+  },
+  {
+   "claim": "ISS photo ISS010-E-08497 (2004) was taken with a 400 mm lens; only a small section of wall is visible",
+   "ref": "NASA Image Library"
+  },
+  {
+   "claim": "Cities and roads are visible from low Earth orbit",
+   "ref": "NASA; Live Science"
+  }
+ ],
+ "verify_note": "6 m wide, Yang Liwei 2003 CCTV quote, NASA: not visible to the eye from low orbit / not from the Moon, ISS photo with a 400 mm lens, cities and roads visible.",
+ "masters": {
+  "instagram": {
+   "file": "R011_INSTAGRAM_MASTER.mp4",
+   "spec": "1080×1920 · H.264 CRF 12 · AAC 320k"
+  },
+  "facebook": {
+   "file": "R011_INSTAGRAM_MASTER.mp4",
+   "spec": "1080×1920 · H.264 CRF 12 · AAC 320k"
+  },
+  "youtube": {
+   "file": "R011_YOUTUBE_MASTER.mp4",
+   "spec": "2160×3840 (4K) · H.264 CRF 14 · AAC 384k"
+  }
+ },
+ "platforms": {
+  "instagram": {
+   "state": "todo",
+   "url": "",
+   "at": ""
+  },
+  "youtube": {
+   "state": "todo",
+   "url": "",
+   "at": ""
+  },
+  "facebook": {
+   "state": "todo",
+   "url": "",
+   "at": ""
+  }
+ },
+ "review": {
+  "done": false,
+  "at": ""
+ }
+}
