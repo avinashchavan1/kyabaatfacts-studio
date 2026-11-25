@@ -153,7 +153,7 @@ function kbLoadImg(key, src) { return new Promise(res => { const im = new Image(
 function kbProof(c, key, u, at, len, label = 'ASLI PHOTO', credit = '', rot = -0.035) {
   const im = KB_IMG[key]; if (!im || u < at || u > at + len) return false;
   const inQ = backOut(map(u, at, at + 0.3)), outQ = 1 - easeOut(map(u, at + len - 0.25, at + len)), q = Math.min(inQ, 1) * outQ;
-  c.save(); c.fillStyle = rgba(KB.INK, 0.72 * Math.min(1, q * 1.5)); c.fillRect(0, 0, W, H); c.restore();
+  if (!c._kbNoDim) { c.save(); c.fillStyle = rgba(KB.INK, 0.72 * Math.min(1, q * 1.5)); c.fillRect(0, 0, W, H); c.restore(); }   // the safe-zone wrapper dims the full frame itself
   const maxW = 900, maxH = 720, sc = Math.min(maxW / im.width, maxH / im.height), w = im.width * sc, h = im.height * sc, pad = 26;
   const zoom = 1 + 0.04 * map(u, at, at + len);   // slow push-in
   c.save(); c.translate(540, 860); c.rotate(rot); c.scale(q * zoom, q * zoom);
@@ -203,7 +203,14 @@ kbFact = function (c, u, F, y = 330, at = 0.2, col = KB.RED) {
 };
 kbProof = function (c, key, u, at, len, label, credit, rot) {
   if (!KB_S()) return _kbProof0(c, key, u, at, len, label, credit, rot);
-  c.save(); c.translate(540, 860); c.scale(0.72, 0.72); c.translate(-540, -860); const r = _kbProof0(c, key, u, at, len, label, credit, rot); c.restore(); return r;
+  // dim the WHOLE frame here, outside the 0.72 scale (inside it the dimming shrank into a grey box around the photo)
+  if (KB_IMG[key] && u >= at && u <= at + len) {
+    const q = Math.min(backOut(map(u, at, at + 0.3)), 1) * (1 - easeOut(map(u, at + len - 0.25, at + len)));
+    c.save(); c.fillStyle = rgba(KB.INK, 0.72 * Math.min(1, q * 1.5)); c.fillRect(0, 0, W, H); c.restore();
+  }
+  c.save(); c.translate(540, 860); c.scale(0.72, 0.72); c.translate(-540, -860); c._kbNoDim = true;
+  let r; try { r = _kbProof0(c, key, u, at, len, label, credit, rot); } finally { c._kbNoDim = false; c.restore(); }
+  return r;
 };
 kbKyaBaat = function (c, u, t, at) {
   if (!KB_S()) return _kbKyaBaat0(c, u, t, at);
