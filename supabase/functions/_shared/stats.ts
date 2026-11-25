@@ -102,7 +102,7 @@ export async function healthCheck() {
       else if (d.expires_at && d.expires_at * 1000 < Date.now() + 7 * 864e5) issues.push({ level: "warn", where: "instagram", text: `The Meta login expires on ${new Date(d.expires_at * 1000).toDateString()}. Reconnect before then.`, fix: conn });
       const granted = new Set((d.scopes ?? []) as string[]);
       for (const [perm, why] of [["pages_manage_posts", "posting to the Facebook Page"], ["instagram_manage_insights", "Instagram reach/saves/shares on the Stats page"], ["read_insights", "Facebook views on the Stats page"], ["pages_manage_metadata", "Apply brand to Facebook"]])
-        if (d.scopes && !granted.has(perm)) issues.push({ level: "warn", where: "meta", text: `Meta permission ${perm} is missing (needed for ${why}).`, fix: "/settings#connections" });
+        if (d.scopes && !granted.has(perm)) issues.push({ level: "warn", where: "meta", text: `Meta permission ${perm} is missing (needed for ${why}). Add it to the login configuration, then press Connect Instagram again.`, fix: `https://developers.facebook.com/apps/${app.app_id}/business-login/configurations/` });
     } catch { /* Meta unreachable: skip */ }
   }
   if (await getIntegration("instagram") && !(await getIntegration("facebook"))) issues.push({ level: "warn", where: "facebook", text: "The Facebook Page isn't linked yet (Settings → Connections → step 5).", fix: conn });

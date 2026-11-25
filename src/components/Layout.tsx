@@ -5,6 +5,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import { supabase } from "../lib/supabase";
 import { useSession } from "./Auth";
 import WorkBar from "./WorkBar";
+import HealthBanner from "./HealthBanner";
 import { useWorkStatus } from "../lib/api";
 import { CHANNEL } from "../lib/channel";
 
@@ -63,6 +64,7 @@ export default function Layout() {
         </header>
         <WorkBar />
         </div>
+        <HealthBanner />
         {open && (
           <div className="fixed inset-0 z-30 bg-black/50 lg:hidden" onClick={() => setOpen(false)}>
             <div className="h-full w-72 bg-night-950 p-5 text-parchment" onClick={(e) => e.stopPropagation()}>

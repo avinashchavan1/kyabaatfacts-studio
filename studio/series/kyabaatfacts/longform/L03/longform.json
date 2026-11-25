@@ -1,0 +1,54 @@
+{
+ "code": "L03",
+ "title": "Mohenjo-daro: 4,500 Saal Pehle Ka Smart City",
+ "subtitle": "Itihaas Ke Raaz · month 3 · 10-12 min, 16:9",
+ "stage": "idea",
+ "category": "Itihaas Ke Raaz",
+ "month": 3,
+ "frame": "16:9",
+ "target_min": "10-12",
+ "beats_plan": [
+  "Planned streets",
+  "drains",
+  "Great Bath",
+  "Lothal dockyard",
+  "trade",
+  "the script nobody can read yet",
+  "why it ended (theories)"
+ ],
+ "derived_target": 5,
+ "related_reels": [
+  "R008"
+ ],
+ "progress": [
+  {
+   "step": "Research + sources",
+   "done": false
+  },
+  {
+   "step": "Script (acts and beats)",
+   "done": false
+  },
+  {
+   "step": "Narration",
+   "done": false
+  },
+  {
+   "step": "Art and sets",
+   "done": false
+  },
+  {
+   "step": "Render 16:9 master",
+   "done": false
+  },
+  {
+   "step": "Cut the derived reels",
+   "done": false
+  },
+  {
+   "step": "Cover + upload",
+   "done": false
+  }
+ ],
+ "derived_reels": []
+}
