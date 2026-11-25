@@ -1,0 +1,257 @@
+{
+ "reel": "R012",
+ "title": "ATM PIN sirf 4 digit ka kyun?",
+ "series": "kyabaatfacts",
+ "fps": 24,
+ "status": "DRAFT — not verified",
+ "source": "Guinness World Records · Barclays · Wikipedia (BBC 2007) · Londonist · Irish Times",
+ "source_card": {
+  "title": [
+   "KYA BAAT",
+   "FACTS"
+  ],
+  "sub": "Guinness · Barclays · BBC · Londonist",
+  "edition": "SOURCES CHECKED"
+ },
+ "claims": [
+  {
+   "claim": "The world's first cash dispenser was installed at Barclays, Enfield, on 27 June 1967",
+   "ref": "Guinness World Records; Barclays",
+   "verified": true,
+   "sources": [
+    "https://www.guinnessworldrecords.com/world-records/first-cash-dispenser",
+    "https://home.barclays/news/2017/06/from-the-archives-the-atm-is-50"
+   ]
+  },
+  {
+   "claim": "Its inventor was John Shepherd-Barron",
+   "ref": "Wikipedia; Barclays",
+   "verified": true,
+   "sources": [
+    "https://en.wikipedia.org/wiki/John_Shepherd-Barron",
+    "https://home.barclays/news/2017/06/from-the-archives-the-atm-is-50"
+   ]
+  },
+  {
+   "claim": "He wanted a 6-digit PIN; his wife Caroline could only remember 4, so it became 4 (his own account, BBC 2007)",
+   "ref": "Wikipedia (BBC 2007); Al Jazeera",
+   "verified": true,
+   "sources": [
+    "https://en.wikipedia.org/wiki/John_Shepherd-Barron",
+    "https://www.aljazeera.com/news/2010/5/20/cash-machine-inventor-dies-at-84"
+   ]
+  },
+  {
+   "claim": "The first machine used special paper cheques marked with mildly radioactive carbon-14 instead of cards",
+   "ref": "Londonist; Irish Times",
+   "verified": true,
+   "sources": [
+    "https://londonist.com/2016/01/why-was-london-s-first-cash-machine-in-enfield-1",
+    "https://www.irishtimes.com/business/personal-finance/the-atm-is-50-years-old-happy-birthday-friend-1.3135275"
+   ]
+  },
+  {
+   "claim": "The withdrawal limit was £10 at a time",
+   "ref": "Londonist; Guinness",
+   "verified": true,
+   "sources": [
+    "https://londonist.com/2016/01/why-was-london-s-first-cash-machine-in-enfield-1",
+    "https://www.guinnessworldrecords.com/news/2015/8/60/1967-first-cash-dispenser-392981"
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "id": 1,
+   "voice": "narrator",
+   "hi": "तुम्हारा ATM PIN 4 digit का है ना? इसकी वजह है... एक पत्नी की याददाश्त!",
+   "en": "Your ATM PIN has 4 digits, right? The reason is... one wife's memory!",
+   "units": [
+    "[excited] तुम्हारा ATM PIN 4 digit का है ना?",
+    "[amazed] इसकी वजह है... एक पत्नी की याददाश्त!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "card": [
+    [
+     "ATM PIN: 4 DIGIT",
+     null
+    ],
+    [
+     "WAJAH: EK PATNI!",
+     "#FF4B3E"
+    ]
+   ],
+   "min": 3.0
+  },
+  {
+   "id": 2,
+   "voice": "narrator",
+   "hi": "दुनिया की पहली cash machine... उन्नीस सौ सड़सठ में, लंदन के पास एनफ़ील्ड में लगी!",
+   "en": "The world's first cash machine... was installed in 1967 in Enfield, near London!",
+   "units": [
+    "[curious] दुनिया की पहली cash machine...",
+    "[excited] उन्नीस सौ सड़सठ में, लंदन के पास एनफ़ील्ड में लगी!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "Guinness World Records · Barclays"
+  },
+  {
+   "id": 3,
+   "voice": "narrator",
+   "hi": "इसे बनाया था जॉन शेफर्ड-बैरन ने... और वो चाहते थे कि PIN छह digit का हो!",
+   "en": "It was made by John Shepherd-Barron... and he wanted the PIN to have six digits!",
+   "units": [
+    "[curious] इसे बनाया था जॉन शेफर्ड-बैरन ने...",
+    "[playfully] और वो चाहते थे कि PIN छह digit का हो!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "Wikipedia (BBC 2007)"
+  },
+  {
+   "id": 4,
+   "voice": "narrator",
+   "hi": "लेकिन उनकी पत्नी कैरोलिन बोलीं: छह नंबर? मुझे तो बस चार ही याद रहते हैं! और बस... PIN बन गया 4 digit का! ये किस्सा जॉन ने खुद सुनाया था। क्या बात है!",
+   "en": "But his wife Caroline said: six numbers? I can only remember four! And just like that, the PIN became 4 digits. John told this story himself. Kya baat hai!",
+   "units": [
+    "[playfully] लेकिन उनकी पत्नी कैरोलिन बोलीं: छह नंबर? मुझे तो बस चार ही याद रहते हैं!",
+    "[excited] और बस... PIN बन गया 4 digit का! ये किस्सा जॉन ने खुद सुनाया था।",
+    "क्या बात है!"
+   ],
+   "lead": 0.15,
+   "tail": 0.45,
+   "unit_gap": 0.3,
+   "cite": "Wikipedia (BBC 2007) · Al Jazeera",
+   "signature_unit": 2,
+   "force_take": {
+    "2": 1
+   },
+   "no_cut": [
+    2
+   ],
+   "reveal": true
+  },
+  {
+   "id": 5,
+   "voice": "narrator",
+   "hi": "और पहली machine में card नहीं था... एक ख़ास चेक डालते थे, जिसमें हल्का सा रेडियोएक्टिव कार्बन-चौदह लगा होता था! और एक बार में सिर्फ़ दस पाउंड निकलते थे!",
+   "en": "And the first machine had no card... you put in a special cheque marked with a little radioactive carbon-14! And you could take out only ten pounds at a time!",
+   "units": [
+    "[curious] और पहली machine में card नहीं था...",
+    "[amazed] एक ख़ास चेक डालते थे, जिसमें हल्का सा रेडियोएक्टिव कार्बन-चौदह लगा होता था! और एक बार में सिर्फ़ दस पाउंड निकलते थे!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "Londonist · Irish Times · Guinness"
+  },
+  {
+   "id": 6,
+   "voice": "narrator",
+   "hi": "तो अगली बार 4 digit का PIN डालो... तो कैरोलिन को दिल से thank you बोलना!",
+   "en": "So next time you type your 4-digit PIN... say a big thank you to Caroline!",
+   "units": [
+    "[excited] तो अगली बार 4 digit का PIN डालो...",
+    "[playfully] तो कैरोलिन को दिल से thank you बोलना!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3
+  },
+  {
+   "id": 7,
+   "voice": "narrator",
+   "hi": "ऐसे और मज़ेदार facts के लिए... फ़ॉलो करो!",
+   "en": "",
+   "units": [
+    "[excited] ऐसे और मज़ेदार facts के लिए... फ़ॉलो करो!"
+   ],
+   "cta": true,
+   "lead": 0.3,
+   "tail": 0.7,
+   "min": 3.7
+  }
+ ],
+ "thumbnail": {
+  "frame": "5.0s",
+  "hook": "ATM PIN: 4 DIGIT KYUN?",
+  "stamp": "EK PATNI!",
+  "line": "The world's first cash machine, 1967",
+  "badge": "PAISE KI KAHANI",
+  "art_shift": 0
+ },
+ "score": {
+  "engine": "elevenlabs music_v1",
+  "file": "audio/score.mp3",
+  "duration_s": 65,
+  "gain": 1.6,
+  "duck": 0.6,
+  "prompt": "Playful, cheeky underscore for a fun money-history short: 1960s London swing feel with bouncy upright bass, brushed drums, plucky guitar and a light organ, like a retro comedy caper. Curious build at the start, a sneaky tiptoe in the middle, a bright happy brass sting at the funny reveal around 25 seconds, then bouncy and warm to the end. Instrumental only, sits under a spoken voice, no vocals."
+ },
+ "layout": "safe_v2",
+ "category": "Paise Ki Kahani",
+ "avoid": [
+  "'every PIN today is 4 digits'",
+  "'136,000 cheques' radiation claim",
+  "who 'really' invented the ATM"
+ ],
+ "verify_note": "First cash machine Enfield 27 Jun 1967, inventor John Shepherd-Barron, 6→4 digits because of his wife Caroline (his own account), carbon-14 cheques, £10 limit.",
+ "hook_options": [
+  {
+   "hi": "[excited] तुम्हारा ATM PIN 4 digit का है ना? / [amazed] इसकी वजह है... एक पत्नी की याददाश्त!",
+   "en": "Your ATM PIN has 4 digits because of one wife's memory!",
+   "card": [
+    "ATM PIN: 4 DIGIT",
+    "WAJAH: EK PATNI!"
+   ],
+   "score": 48,
+   "why": "weak · weakest: stakes (0 tension marker(s) - nothing is at stake in this line)"
+  },
+  {
+   "hi": "ATM PIN छह digit का होने वाला था... लेकिन एक पत्नी ने उसे चार कर दिया!",
+   "en": "Your ATM PIN was meant to have 6 digits, but one wife made it 4!",
+   "card": [
+    "PIN: 6 DIGIT HONA THA",
+    "EK PATNI NE 4 KIYA!"
+   ],
+   "score": 44,
+   "why": "weak · weakest: frontload (payload at word 8, too late; weak opener \"yo\")"
+  },
+  {
+   "hi": "ATM PIN में सिर्फ़ 4 digit क्यों होते हैं? जवाब सुनकर हँसोगे!",
+   "en": "Why do ATM PINs have only 4 digits? The answer will make you laugh!",
+   "card": [
+    "ATM PIN: SIRF 4?",
+    "JAWAB SUNO!"
+   ],
+   "score": 75,
+   "why": "strong · weakest: length (14 words, 67 chars, ~5.1s spoken (want 5-12 words))"
+  }
+ ],
+ "caption": "Aapka ATM PIN 4 digit ka hai? Iski wajah hai ek patni ki yaaddasht 😄🏧\n\n🏧 Duniya ki pehli cash machine 1967 mein London ke paas Enfield mein lagi. Inventor John Shepherd-Barron 6 digit ka PIN chahte the, lekin unki patni Caroline ko sirf 4 number yaad rehte the. Ye kissa John ne khud sunaya tha! Aur pehli machine card nahi, carbon-14 wale cheque leti thi.\n\nSources: Guinness World Records, Barclays, BBC (via Wikipedia), Londonist, Irish Times.\nPhoto: rawpixel (CC0).\n\nComment karo: aapko apna PIN yaad rehta hai? 😅👇",
+ "youtube_title": "ATM PIN Sirf 4 Digit Ka Kyun? 🏧 Ek Patni Ki Wajah Se! | Kya Baat Facts #Shorts",
+ "comment_prompt": "Aapko apna PIN yaad rehta hai? 😅👇",
+ "hashtags": [
+  "#KyaBaatFacts",
+  "#PaiseKiKahani",
+  "#ATM",
+  "#Money",
+  "#History",
+  "#HindiFacts"
+ ],
+ "media": [
+  {
+   "file": "src/proof_keypad.jpg",
+   "what": "ATM keypad close-up (keys only)",
+   "source": "https://www.rawpixel.com/image/5912776/free-atm-keypad-public-domain-cc0-photo",
+   "license": "CC0 1.0",
+   "credit": "rawpixel",
+   "shot": 4
+  }
+ ]
+}
