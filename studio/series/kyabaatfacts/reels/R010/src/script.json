@@ -246,5 +246,37 @@
    "credit": "03Ani03 / Wikimedia Commons",
    "shot": 2
   }
+ ],
+ "hook_options": [
+  {
+   "hi": "ये लोहे का खंभा... सोलह सौ साल से धूप और बारिश में खड़ा है... और आज तक ज़ंग से ख़राब नहीं हुआ!",
+   "en": "This iron pillar has stood in sun and rain for 1,600 years... and rust still hasn't ruined it!",
+   "card": [
+    "1,600 SAAL KA LOHA",
+    "ZANG? NAHI!"
+   ],
+   "score": 38,
+   "why": "weak · weakest: length (18 words, 94 chars, ~6.5s spoken (want 5-12 words))"
+  },
+  {
+   "hi": "तुम्हारा लोहे का gate दो साल में ज़ंग खा जाता है... ये खंभा सोलह सौ साल से नहीं खाया!",
+   "en": "Your iron gate rusts in two years... this pillar hasn't in 1,600!",
+   "card": [
+    "TUMHARA GATE: 2 SAAL",
+    "YE KHAMBA: 1,600!"
+   ],
+   "score": 50,
+   "why": "weak · weakest: stakes (0 tension marker(s) - nothing is at stake in this line)"
+  },
+  {
+   "hi": "दिल्ली में एक लोहे का खंभा है... जिसे सोलह सौ साल में ज़ंग नहीं लगी!",
+   "en": "Delhi has an iron pillar that rust hasn't beaten in 1,600 years!",
+   "card": [
+    "DILLI KA KHAMBA",
+    "1,600 SAAL, ZANG NAHI"
+   ],
+   "score": 39,
+   "why": "weak · weakest: stakes (0 tension marker(s) - nothing is at stake in this line)"
+  }
  ]
 }

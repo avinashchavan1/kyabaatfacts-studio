@@ -3,9 +3,10 @@ import { ArrowLeft, CheckCircle2, Download, ExternalLink, FileText, Loader2, Pen
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Button, Card, Code, CopyButton, Empty, ErrorNote, LinkButton, PubBadge, SectionTitle, Spinner, StageBadge, fmtBytes, fmtDate, fmtLen } from "../components/ui";
-import { mediaUrl, studio, type ProviderStatus, useClaims, useConnections, useFiles, useJobs, useMediaUrl, usePublications, usePublishNow, useReel, useSaveCaptions, useSetStage, useUpdateReel, useUpsertPublication, type PublishJob } from "../lib/api";
+import { mediaUrl, studio, type ProviderStatus, useConnections, useFiles, useJobs, useMediaUrl, usePublications, usePublishNow, useReel, useSaveCaptions, useSetStage, useUpdateReel, useUpsertPublication, type PublishJob } from "../lib/api";
 import { Target } from "../components/Target";
 import { fmtIST, PostEverywhere } from "../components/PostEverywhere";
+import { FactCheck, HookOptions, StoryKit, useClaimProgress } from "../components/ReelExtras";
 import { KIND_LABEL, PLATFORMS, STAGES, type FileRow, type Publication, type Reel, type Stage } from "../lib/types";
 import { CHANNEL, IG, W } from "../lib/channel";
 
@@ -59,7 +60,7 @@ export default function ReelDetail() {
           </div>
           {tab === "Publish" && (produced ? <PublishTab r={r} files={files.data ?? []} /> : <Empty>This reel is still in the plan. Publishing opens once it's rendered.</Empty>)}
           {tab === "Script" && (r.script ? <ScriptTab r={r} /> : <Empty>No script yet. Plan note: {r.plan_note || "—"}</Empty>)}
-          {tab === "Citations" && <ClaimsTab r={r} />}
+          {tab === "Citations" && <FactCheck r={r} />}
           {tab === "Files" && <FilesTab files={files.data ?? []} loading={files.isLoading} />}
           {tab === "Notes" && <NotesTab r={r} />}
         </div>
@@ -138,6 +139,7 @@ function Cover({ cover }: { cover?: FileRow }) {
 
 function PublishTab({ r, files }: { r: Reel; files: FileRow[] }) {
   const pubs = usePublications(r.id);
+  const cp = useClaimProgress(r);
   const update = useUpdateReel();
   const jobs = useJobs(r.id);
   const conn = useConnections();
@@ -151,17 +153,18 @@ function PublishTab({ r, files }: { r: Reel; files: FileRow[] }) {
   return (
     <div className="grid gap-4">
       <label className={clsx("flex items-start gap-3 rounded-2xl border p-4", r.reviewed ? "border-emerald-300 bg-emerald-50 dark:border-emerald-900 dark:bg-emerald-950/40" : "border-amber-300 bg-amber-50 dark:border-amber-900 dark:bg-amber-950/40")}>
-        <input id="reviewed" type="checkbox" className="mt-1 h-5 w-5 accent-gold-deep" checked={r.reviewed}
+        <input id="reviewed" type="checkbox" className="mt-1 h-5 w-5 accent-gold-deep" checked={r.reviewed} disabled={!r.reviewed && cp.total > 0 && !cp.all}
           onChange={(e) => update.mutate({ reel: r, patch: { reviewed: e.target.checked, reviewed_at: e.target.checked ? new Date().toISOString() : null, stage: e.target.checked && r.stage === "review" ? "approved" : r.stage }, action: e.target.checked ? "citations reviewed" : "review cleared" })} />
         <span className="text-sm">
           <b className="flex items-center gap-1.5"><ShieldCheck size={16} /> I checked the citations against {W.text}</b>
-          {r.reviewed ? <span className="text-emerald-800 dark:text-emerald-300">Reviewed {fmtDate(r.reviewed_at)}. Posting is unlocked.</span> : <span>Open the Citations tab, read each claim {W.against}, then tick this. Posting stays locked until then.</span>}
+          {r.reviewed ? <span className="text-emerald-800 dark:text-emerald-300">Reviewed {fmtDate(r.reviewed_at)}. Posting is unlocked.</span> : <span>Open the Citations tab and tick each claim {W.against} ({cp.done} of {cp.total} done); then tick this. Posting stays locked until then.</span>}
         </span>
       </label>
       {!canAuto.youtube && !canAuto.instagram && !conn.isLoading && (
         <div className="rounded-2xl border border-parchment-deep p-3 text-sm dark:border-night-700">Want one-tap posting? Finish <Link to="/settings#connections" className="font-semibold text-gold-deep underline dark:text-gold">Settings → Connections</Link> once; then <b>Post now</b> appears here.</div>
       )}
       <PostEverywhere r={r} pubs={pubs.data ?? []} files={files} auto={canAuto} />
+      {(pubs.data ?? []).some((p) => p.state === "posted") && <StoryKit r={r} cover={files.find((f) => f.kind === "thumbnail")} />}
       <div className="grid gap-4 xl:grid-cols-3">
         {PLATFORMS.map((pl) => <Lane key={pl.key} r={r} platform={pl} pub={pubs.data?.find((x) => x.platform === pl.key)} master={masters[pl.master]}
           auto={!!canAuto[pl.key]} job={jobs.data?.find((j) => j.platform === pl.key)} providers={p} />)}
@@ -289,6 +292,7 @@ function ScriptTab({ r }: { r: Reel }) {
   const shots = r.script?.shots ?? [];
   return (
     <div className="grid gap-2">
+      <HookOptions r={r} />
       {r.script?.source && <p className="text-sm text-ink-soft dark:text-parchment/60">Source: {r.script.source}</p>}
       <div className="overflow-x-auto rounded-2xl border border-parchment-deep dark:border-night-700">
         <table className="w-full min-w-[640px] text-sm">
@@ -305,28 +309,6 @@ function ScriptTab({ r }: { r: Reel }) {
           </tbody>
         </table>
       </div>
-    </div>
-  );
-}
-
-function ClaimsTab({ r }: { r: Reel }) {
-  const claims = useClaims(r.id);
-  if (claims.isLoading) return <Spinner />;
-  if (!claims.data?.length) return <Empty>No claims recorded yet. {W.needRef}</Empty>;
-  return (
-    <div className="grid gap-3">
-      {claims.data.map((c) => (
-        <Card key={c.id} className="!p-4">
-          <div className="flex flex-wrap items-start justify-between gap-2">
-            <p className="font-semibold">{c.claim}</p>
-            <span className={clsx("shrink-0 rounded-full px-2.5 py-0.5 text-xs font-semibold", c.verified ? "bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300" : "bg-amber-100 text-amber-900")}>{c.verified ? "Verified" : "Unverified"}</span>
-          </div>
-          <div className="mt-1 font-mono text-xs text-gold-deep dark:text-gold">{c.ref}</div>
-          {c.quote_sa && <p className="mt-2 rounded-lg bg-black/[.04] p-3 text-[15px] leading-relaxed dark:bg-white/5">{c.quote_sa}</p>}
-          {c.sources.length > 0 && <p className="mt-2 text-xs text-ink-soft dark:text-parchment/60">Checked against: {c.sources.join(" · ")}</p>}
-        </Card>
-      ))}
-      {r.verify_note && <p className="text-sm text-ink-soft dark:text-parchment/60">{r.verify_note}</p>}
     </div>
   );
 }
