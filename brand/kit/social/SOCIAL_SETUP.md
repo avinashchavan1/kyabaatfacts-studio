@@ -28,7 +28,7 @@ Instagram & YouTube: @kyabaatfacts
 | Profile picture | `brand/kit/avatar_1080.png` |
 | Name | Kya Baat Facts \| Hindi Facts |
 | Category | Digital creator (turn on "Display category label") |
-| Links | YouTube https://www.youtube.com/@kyabaatfacts · Facebook (your Page link) |
+| Links | YouTube https://www.youtube.com/@kyabaatfacts · Facebook https://www.facebook.com/1412443071960541 |
 | First post (pin it) | `brand/kit/social/intro_post_1080x1350.png` |
 
 Bio:

@@ -16,7 +16,7 @@
    },
    {
     "title": "Facebook",
-    "url": "https://www.facebook.com/kyabaatfacts"
+    "url": "https://www.facebook.com/1412443071960541"
    }
   ],
   "highlights": [
@@ -45,6 +45,18 @@
    "indian history",
    "myth or fact",
    "kya baat facts"
+  ],
+  "playlist": {
+   "title": "Kya Baat Facts · All Shorts",
+   "description": "Every Kya Baat Facts short in one place: science, history, animals, space, India's wonders, food, money and words. Every fact sourced."
+  },
+  "default_language": "hi",
+  "manual": [
+   "Profile picture: upload youtube_profile_800.png (YouTube Studio → Customization → Branding)",
+   "Verify the channel with your phone at youtube.com/verify (unlocks custom thumbnails)",
+   "Customization → Layout: set the intro_post-style trailer later, and add a 'Shorts' shelf",
+   "Settings → Channel → Advanced: audience 'No, not made for kids'",
+   "Add links: Instagram https://www.instagram.com/kyabaatfacts/ and the Facebook Page"
   ]
  },
  "facebook": {
@@ -56,6 +68,8 @@
   "website": "https://www.youtube.com/@kyabaatfacts",
   "button": "Follow",
   "cover": "social/facebook_cover_1640x924.jpg",
-  "profile_picture": "avatar_1080.png"
+  "profile_picture": "avatar_1080.png",
+  "url": "https://www.facebook.com/1412443071960541",
+  "handle": "Kya Baat Facts"
  }
 }

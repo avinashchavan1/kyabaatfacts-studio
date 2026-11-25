@@ -5,7 +5,7 @@ export type PubState = "todo" | "scheduled" | "posting" | "posted" | "failed" | 
 
 export const STAGES: { key: Stage; label: string; hint: string }[] = [
   { key: "idea", label: "Idea", hint: "In the plan, not started" },
-  { key: "researching", label: "Researching", hint: "Reading the verses, filling claims" },
+  { key: "researching", label: "Researching", hint: "Reading the sources, filling claims" },
   { key: "scripted", label: "Scripted", hint: "Script written and checked" },
   { key: "voiced", label: "Voiced", hint: "Narrator and character takes picked" },
   { key: "rendered", label: "Rendered", hint: "Video and masters built" },
