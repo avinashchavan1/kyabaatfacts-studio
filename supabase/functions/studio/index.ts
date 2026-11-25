@@ -43,7 +43,7 @@ async function applyYouTubeBrand(email: string): Promise<Step[]> {
     await yt("PUT", `${YT}/channels?part=brandingSettings`, JSON.stringify({ id: ch.id, brandingSettings: { ...b, channel, ...(image ? { image } : {}) } }));
     return `${p.description.length} chars, ${p.keywords.length} keywords`;
   });
-  await run("Video watermark (diya, top-right corner)", async () => {
+  await run("Video watermark (logo, top-right corner)", async () => {
     const img = new Uint8Array(await (await file("youtube_watermark_300.png")).arrayBuffer());
     const meta = JSON.stringify({ timing: { type: "offsetFromStart", offsetMs: 0 }, position: { type: "corner", cornerPosition: "topRight" } });
     const boundary = "ugb" + randomToken(8);
@@ -65,6 +65,42 @@ async function applyYouTubeBrand(email: string): Promise<Step[]> {
   });
   await admin.from("channels").update({ applied: { at: new Date().toISOString(), by: email, steps } }).eq("platform", "youtube");
   await admin.from("activity").insert({ actor: email, action: "youtube: brand applied", detail: { ok: steps.filter((s) => s.ok).length, of: steps.length } });
+  return steps;
+}
+
+/** Facebook Page branding through the Page API: intro (about), description, website, cover photo, profile picture.
+ *  Each step reports on its own (Meta can refuse one field and accept the others). Needs pages_manage_metadata
+ *  (settings) and pages_manage_posts (photo uploads) on the Meta login. */
+async function applyFacebookBrand(email: string) {
+  const steps: { step: string; ok: boolean; detail?: string }[] = [];
+  const pg = await facebookPage(true);
+  const { data: row } = await admin.from("channels").select("profile").eq("platform", "facebook").single();
+  const p = (row?.profile ?? {}) as Record<string, any>;
+  if (!p.intro) throw new Error("No Facebook profile saved yet: run scripts/brand.py");
+  const fb = async (method: string, path: string, params: Record<string, string>) => {
+    const r = await fetch(`${FB_GRAPH}/${path}`, { method, headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: new URLSearchParams({ ...params, access_token: pg.token }) });
+    const j = await r.json().catch(() => ({}));
+    if (!r.ok || j.error) {
+      const m = j.error?.message ?? `${r.status}`;
+      throw new Error(/permission|\(#(200|10|3)\)/i.test(m) ? `${m}. Add pages_manage_metadata (and pages_manage_posts) to the Meta login, then press Connect Instagram again.` : m);
+    }
+    return j;
+  };
+  const signed = async (name: string) => { const { data } = await admin.storage.from("reel-media").createSignedUrl(`brand/${name}`, 3600); if (!data?.signedUrl) throw new Error(`brand/${name} missing: run scripts/brand.py`); return data.signedUrl; };
+  const run = async (step: string, fn: () => Promise<string | undefined>) => {
+    try { steps.push({ step, ok: true, detail: await fn() }); } catch (e) { steps.push({ step, ok: false, detail: e instanceof Error ? e.message : String(e) }); }
+  };
+  await run("Intro (bio)", async () => { await fb("POST", pg.page_id, { about: p.intro }); return `${[...p.intro].length}/101 chars`; });
+  await run("About / description", async () => { await fb("POST", pg.page_id, { description: p.about }); return `${p.about.length} chars`; });
+  await run("Website", async () => { await fb("POST", pg.page_id, { website: p.website }); return p.website; });
+  await run("Cover photo (1640×924)", async () => {
+    const ph = await fb("POST", `${pg.page_id}/photos`, { url: await signed("facebook_cover_1640x924.jpg"), published: "false" });
+    await fb("POST", pg.page_id, { cover: ph.id, no_feed_story: "true" });
+    return "set";
+  });
+  await run("Profile picture", async () => { await fb("POST", `${pg.page_id}/picture`, { picture: await signed("avatar_1080.png") }); return "set"; });
+  await admin.from("channels").update({ applied: { at: new Date().toISOString(), by: email, steps, page: pg.page_name } }).eq("platform", "facebook");
+  await admin.from("activity").insert({ actor: email, action: "facebook: brand applied", detail: { ok: steps.filter((s) => s.ok).length, of: steps.length } });
   return steps;
 }
 
@@ -249,6 +285,10 @@ Deno.serve(async (req) => {
         }
         await admin.from("activity").insert({ actor: email, action: "youtube: cover applied", detail: { reel_id: body.reel_id, results: out } });
         return json({ ok: out.every((o) => o.ok), results: out });
+      }
+      case "facebook_brand": {
+        const steps = await applyFacebookBrand(email);
+        return json({ ok: steps.every((s) => s.ok), steps });
       }
       case "youtube_brand": {
         const steps = await applyYouTubeBrand(email);

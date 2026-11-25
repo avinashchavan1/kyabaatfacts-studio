@@ -47,7 +47,7 @@ export default function Profiles() {
           <SectionTitle right={<a href={IG.url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-sm font-semibold text-gold-deep dark:text-gold">Open <ExternalLink size={13} /></a>}>
             <span className="inline-flex items-center gap-2"><Instagram size={18} /> Instagram · @{ig.username}</span>
           </SectionTitle>
-          <p className="mb-3 text-sm text-ink-soft dark:text-parchment/60">Instagram app → Profile → <b>Edit profile</b>. Copy each field:</p>
+          <p className="mb-3 rounded-xl bg-black/[.04] p-3 text-sm dark:bg-white/5">No auto-apply for Instagram: Meta doesn't let any app change an Instagram profile picture, name, bio or links. Do it once in the app: Instagram → Profile → <b>Edit profile</b>, copying each field:</p>
           <div className="grid gap-3">
             <Field label="Profile picture" note="Edit picture → choose avatar_1080.png from the brand kit above" />
             <Field label="Name (searchable)" text={ig.name} limit={64} />
@@ -65,13 +65,9 @@ export default function Profiles() {
           <SectionTitle right={<a href="https://studio.youtube.com/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-sm font-semibold text-gold-deep dark:text-gold">YouTube Studio <ExternalLink size={13} /></a>}>
             <span className="inline-flex items-center gap-2"><Youtube size={18} /> YouTube · {yt.handle}</span>
           </SectionTitle>
-          <ApplyYouTube connected={!!conn.data?.providers.youtube?.connected} />
-          {applied.steps && (
-            <div className="mt-3 rounded-xl border border-parchment-deep p-3 text-sm dark:border-night-700">
-              <p className="mb-2 text-xs text-ink-soft dark:text-parchment/60">Last applied {fmtDate(applied.at)} by {applied.by}</p>
-              <Steps steps={applied.steps} />
-            </div>
-          )}
+          <ApplyBrand connected={!!conn.data?.providers.youtube?.connected} needs="YouTube" action="youtube_brand" label="Apply brand to YouTube"
+            what="Uploads the banner and watermark, sets the description, keywords, country and language, and creates the series playlist (new posts go into it automatically)." />
+          <Applied applied={applied} />
           <div className="mt-4 grid gap-3">
             <Field label="Description" text={yt.description} limit={1000} />
             <Field label="Keywords" text={(yt.keywords ?? []).join(", ")} />
@@ -85,7 +81,10 @@ export default function Profiles() {
         <SectionTitle right={fb.url && <a href={fb.url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-sm font-semibold text-gold-deep dark:text-gold">Open Page <ExternalLink size={13} /></a>}>
           <span className="inline-flex items-center gap-2"><Facebook size={18} /> Facebook Page · {fb.page_name}</span>
         </SectionTitle>
-        <p className="mb-3 text-sm text-ink-soft dark:text-parchment/60">Your Page → <b>Edit</b> (or Settings → Page setup). Copy each field:</p>
+        <ApplyBrand connected={!!conn.data?.providers.facebook?.connected} needs="the Facebook Page (step 5)" action="facebook_brand" label="Apply brand to Facebook"
+          what="Sets the Page's intro, description, website, cover photo and profile picture. Needs pages_manage_metadata on the Meta login; any step Meta refuses can be done by hand with the fields below." />
+        <Applied applied={(by.facebook?.applied ?? {}) as { at?: string; by?: string; steps?: Step[] }} />
+        <p className="mb-3 mt-4 text-sm text-ink-soft dark:text-parchment/60">By hand: your Page → <b>Edit</b> (or Settings → Page setup). Copy each field:</p>
         <div className="grid gap-3 lg:grid-cols-2">
           <Field label="Profile picture" note="avatar_1080.png from the brand kit above" />
           <Field label="Cover photo" note="facebook_cover_1640x924.jpg from the brand kit above" />
@@ -142,20 +141,30 @@ const Steps = ({ steps }: { steps: Step[] }) => (
   ))}</ul>
 );
 
-function ApplyYouTube({ connected }: { connected: boolean }) {
+function ApplyBrand({ connected, action, label, what, needs }: { connected: boolean; action: string; label: string; what: string; needs: string }) {
   const qc = useQueryClient();
-  const [st, setSt] = useState<{ busy?: boolean; err?: string; steps?: Step[] }>({});
-  if (!connected) return <p className="text-sm">Connect YouTube first in <Link className="font-semibold text-gold-deep underline dark:text-gold" to="/settings#connections">Settings → Connections</Link>.</p>;
+  const [st, setSt] = useState<{ busy?: boolean; err?: string }>({});
+  if (!connected) return <p className="text-sm">Connect {needs} first in <Link className="font-semibold text-gold-deep underline dark:text-gold" to="/settings#connections">Settings → Connections</Link>.</p>;
   return (
     <div className="grid gap-2">
-      <p className="text-sm">Uploads the banner and watermark, sets the description, keywords, country and language, and creates the series playlist (new posts go into it automatically).</p>
+      <p className="text-sm">{what}</p>
       <div><Button variant="primary" disabled={st.busy} onClick={async () => {
         setSt({ busy: true });
-        try { const r = await studio<{ ok: boolean; steps: Step[] }>("youtube_brand"); setSt({ steps: r.steps }); }
+        try { await studio<{ ok: boolean; steps: Step[] }>(action); setSt({}); }
         catch (e) { setSt({ err: (e as Error).message }); }
         qc.invalidateQueries({ queryKey: ["channels"] });
-      }}><Sparkles size={15} /> {st.busy ? "Applying…" : "Apply brand to YouTube"}</Button></div>
-      {st.err && <p className="text-sm text-vermilion">{st.err}{/Reconnect/.test(st.err) && <> <Link className="font-semibold underline" to="/settings#connections">Go to Connections</Link></>}</p>}
+      }}><Sparkles size={15} /> {st.busy ? "Applying…" : label}</Button></div>
+      {st.err && <p className="text-sm text-vermilion">{st.err}{/Reconnect|Connect Instagram/.test(st.err) && <> <Link className="font-semibold underline" to="/settings#connections">Go to Connections</Link></>}</p>}
+    </div>
+  );
+}
+
+function Applied({ applied }: { applied: { at?: string; by?: string; steps?: Step[] } }) {
+  if (!applied.steps) return null;
+  return (
+    <div className="mt-3 rounded-xl border border-parchment-deep p-3 text-sm dark:border-night-700">
+      <p className="mb-2 text-xs text-ink-soft dark:text-parchment/60">Last applied {fmtDate(applied.at)} by {applied.by} · {applied.steps.filter((x) => x.ok).length} of {applied.steps.length} done</p>
+      <Steps steps={applied.steps} />
     </div>
   );
 }
