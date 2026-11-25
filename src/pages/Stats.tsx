@@ -6,7 +6,7 @@ import { Button, Card, Empty, ErrorNote, SectionTitle, Spinner, fmtDate } from "
 import { studio, useFollowers, usePublications, useReels, useStatsDaily, type FollowerDay, type StatDay } from "../lib/api";
 import type { Publication, Reel } from "../lib/types";
 
-// Stats: what's working. Numbers come from the daily timer (7:17 am IST) or "Refresh now".
+// Stats: what's working. Numbers come from the daily timer (6:47 am IST) or "Refresh now".
 // Every chart is a single series (one platform or one measure), so no colour legend is needed: the title names it.
 const PLATS = [{ key: "instagram", label: "Instagram" }, { key: "youtube", label: "YouTube" }, { key: "facebook", label: "Facebook" }] as const;
 const n = (v: unknown) => (typeof v === "number" && isFinite(v) ? v : 0);
@@ -34,7 +34,7 @@ export default function Stats() {
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
           <h1 className="font-display text-3xl font-extrabold tracking-wide">Stats</h1>
-          <p className="mt-1 text-sm text-ink-soft dark:text-parchment/60">Updated every morning at 7:17 IST{last ? ` · last ${fmtDate(last)}` : ""}.</p>
+          <p className="mt-1 text-sm text-ink-soft dark:text-parchment/60">Updated every morning at 6:47 am IST{last ? ` · last ${fmtDate(last)}` : ""}.</p>
         </div>
         <Button size="sm" disabled={st.busy} onClick={refresh}><RefreshCw size={14} className={st.busy ? "animate-spin" : ""} /> {st.busy ? "Updating…" : "Refresh now"}</Button>
       </div>

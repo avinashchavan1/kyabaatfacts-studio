@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button, Card, Empty, Spinner } from "./ui";
 import { useClaims, useMediaUrl, useUpdateReel } from "../lib/api";
 import type { FileRow, Reel } from "../lib/types";
-import { W } from "../lib/channel";
+import { CHANNEL, IG, W } from "../lib/channel";
 
 // ---------------------------------------------------------------------------------------------
 // #3 Hook options: 2–3 claim-first hooks written with the script (script.json → hook_options),
@@ -103,8 +103,7 @@ export function FactCheck({ r }: { r: Reel }) {
 // ---------------------------------------------------------------------------------------------
 // #7 Story share kit: a 1080×1920 story image drawn in the browser from the reel's cover,
 // plus which highlight it belongs in.
-const HIGHLIGHT: Record<string, string> = { "Science Wala Sach": "SCIENCE", "Itihaas Ke Raaz": "ITIHAAS", "Jaanwaron Ki Duniya": "JAANWAR", "Antriksh": "ANTRIKSH",
-  "Desh Ke Ajoobe": "AJOOBE", "Myth or Fact?": "MYTH?", "Khaane Ka Itihaas": "KHAANA", "Paise Ki Kahani": "PAISA", "Shabdon Ki Kahani": "SHABD" };
+const HIGHLIGHT: Record<string, string> = Object.fromEntries(((CHANNEL as { categories?: { name: string; highlight?: string }[] }).categories ?? []).map((c) => [c.name, c.highlight ?? c.name.toUpperCase()]));
 export function StoryKit({ r, cover }: { r: Reel; cover?: FileRow }) {
   const img = useMediaUrl(cover);
   const [st, setSt] = useState<{ busy?: boolean; err?: string }>({});
@@ -127,7 +126,7 @@ export function StoryKit({ r, cover }: { r: Reel; cover?: FileRow }) {
       };
       pill("NEW REEL 👀", 540, 190, "#FF4B3E", "#FFFFFF", 78, -0.05);
       pill("TAP TO WATCH", 540, 1700, "#14123A", "#FFC83D", 56, 0.03);
-      x.font = "800 40px Montserrat, sans-serif"; x.fillStyle = "#14123A"; x.textAlign = "center"; x.fillText("@kyabaatfacts", 540, 1820);
+      x.font = "800 40px Montserrat, sans-serif"; x.fillStyle = "#14123A"; x.textAlign = "center"; x.fillText(IG.handle, 540, 1820);
       const a = document.createElement("a"); a.download = `${r.code}_story.png`; a.href = c.toDataURL("image/png"); a.click(); setSt({});
     } catch (e) { setSt({ err: `Couldn't draw the story image (${(e as Error).message}). Download the cover instead.` }); }
   };

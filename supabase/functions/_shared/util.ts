@@ -95,7 +95,7 @@ export async function facebookPage(refresh = false): Promise<{ page_id: string; 
   const pages = (r.data ?? []) as any[];
   const want = Deno.env.get("FB_PAGE_ID");
   const page = pages.find((p) => want && p.id === want) ?? pages.find((p) => p.instagram_business_account?.id === ig.user_id) ?? (pages.length === 1 ? pages[0] : null);
-  if (!page?.access_token) throw new Error(pages.length ? `Found Pages ${pages.map((p) => p.name).join(", ")} but none is linked to @${ig.username ?? "your Instagram"}` : "This Meta login shares no Facebook Page. Reconnect Instagram and pick the Kya Baat Facts Page (with pages_manage_posts allowed).");
+  if (!page?.access_token) throw new Error(pages.length ? `Found Pages ${pages.map((p) => p.name).join(", ")} but none is linked to @${ig.username ?? "your Instagram"}` : "This Meta login shares no Facebook Page. Reconnect Instagram and pick your channel's Facebook Page (with pages_manage_posts allowed).");
   if (Array.isArray(page.tasks) && !page.tasks.some((t: string) => t === "CREATE_CONTENT" || t === "MANAGE")) throw new Error(`You can't post on ${page.name}: ask for a content role on the Page`);
   await setIntegration("facebook", { page_id: page.id, page_name: page.name, page_token: page.access_token, username: page.name, user_id: page.id });
   return { page_id: page.id, page_name: page.name, token: page.access_token };

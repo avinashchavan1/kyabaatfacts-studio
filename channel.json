@@ -189,63 +189,72 @@
    "name": "Science Wala Sach",
    "day": "Mon",
    "color": "#20B2A6",
-   "hashtag": "#ScienceWalaSach"
+   "hashtag": "#ScienceWalaSach",
+   "highlight": "SCIENCE"
   },
   {
    "id": "HIS",
    "name": "Itihaas Ke Raaz",
    "day": "Tue",
    "color": "#C47832",
-   "hashtag": "#ItihaasKeRaaz"
+   "hashtag": "#ItihaasKeRaaz",
+   "highlight": "ITIHAAS"
   },
   {
    "id": "ANI",
    "name": "Jaanwaron Ki Duniya",
    "day": "Wed (alternate)",
    "color": "#58AA32",
-   "hashtag": "#JaanwaronKiDuniya"
+   "hashtag": "#JaanwaronKiDuniya",
+   "highlight": "JAANWAR"
   },
   {
    "id": "SPC",
    "name": "Antriksh",
    "day": "Wed (alternate)",
    "color": "#6E50F0",
-   "hashtag": "#Antriksh"
+   "hashtag": "#Antriksh",
+   "highlight": "ANTRIKSH"
   },
   {
    "id": "WON",
    "name": "Desh Ke Ajoobe",
    "day": "Thu",
    "color": "#F06E28",
-   "hashtag": "#DeshKeAjoobe"
+   "hashtag": "#DeshKeAjoobe",
+   "highlight": "AJOOBE"
   },
   {
    "id": "MYT",
    "name": "Myth or Fact?",
    "day": "Fri",
    "color": "#FF4B3E",
-   "hashtag": "#MythOrFact"
+   "hashtag": "#MythOrFact",
+   "highlight": "MYTH?"
   },
   {
    "id": "FOOD",
    "name": "Khaane Ka Itihaas",
    "day": "Sat (rotate)",
    "color": "#E24682",
-   "hashtag": "#KhaaneKaItihaas"
+   "hashtag": "#KhaaneKaItihaas",
+   "highlight": "KHAANA"
   },
   {
    "id": "MON",
    "name": "Paise Ki Kahani",
    "day": "Sat (rotate)",
    "color": "#289650",
-   "hashtag": "#PaiseKiKahani"
+   "hashtag": "#PaiseKiKahani",
+   "highlight": "PAISA"
   },
   {
    "id": "WRD",
    "name": "Shabdon Ki Kahani",
    "day": "Sat (rotate)",
    "color": "#3282DC",
-   "hashtag": "#ShabdonKiKahani"
+   "hashtag": "#ShabdonKiKahani",
+   "highlight": "SHABD"
   }
  ]
 }
