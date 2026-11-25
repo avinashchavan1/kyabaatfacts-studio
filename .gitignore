@@ -22,3 +22,5 @@ studio/**/audio/pick.out
 studio/**/audio/*.log
 studio/series/*/cast/audition/
 supabase/.temp/
+# replaced voice takes kept aside locally (audio lives in the Hugging Face audio packs, not git)
+studio/**/audio/*old_takes*/
