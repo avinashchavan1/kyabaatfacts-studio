@@ -146,6 +146,10 @@ export async function studio<T = Record<string, unknown>>(action: string, body: 
 
 export interface ProviderStatus { connected: boolean; at: string | null; name: string | null; account_id: string | null; expires_at: number | null; has_values: boolean; }
 export interface Connections { providers: Record<string, ProviderStatus | undefined>; redirect_uris: { youtube: string; instagram: string }; }
+export interface StatDay { reel_id: string; platform: string; day: string; stats: Record<string, number | null> }
+export interface FollowerDay { platform: string; day: string; followers: number | null; extra: Record<string, number | null> }
+export const useStatsDaily = () => useQuery({ queryKey: ["stats_daily"], queryFn: () => must<StatDay[]>(supabase.from("stats_daily").select("*").order("day")) });
+export const useFollowers = () => useQuery({ queryKey: ["follower_daily"], queryFn: () => must<FollowerDay[]>(supabase.from("follower_daily").select("*").order("day")) });
 export const useConnections = () => useQuery({ queryKey: ["connections"], queryFn: () => studio<Connections>("status") });
 
 export interface PublishJob { id: string; reel_id: string; platform: string; status: "queued" | "running" | "done" | "failed"; step: string | null; log: string; result_url: string | null; created_at: string; finished_at: string | null; }

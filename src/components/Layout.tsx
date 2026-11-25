@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { Activity, BadgeCheck, CalendarRange, BookOpen, Clapperboard, Lightbulb, LayoutDashboard, ListOrdered, LogOut, Menu, MonitorPlay, MoreHorizontal, Settings, Users, X } from "lucide-react";
+import { Activity, BadgeCheck, BarChart3, CalendarRange, BookOpen, Clapperboard, Lightbulb, LayoutDashboard, ListOrdered, LogOut, Menu, MonitorPlay, MoreHorizontal, Settings, Users, X } from "lucide-react";
 import { useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import { supabase } from "../lib/supabase";
@@ -11,6 +11,7 @@ import { CHANNEL } from "../lib/channel";
 const NAV = [
   { to: "/", label: "Dashboard", icon: LayoutDashboard, end: true },
   { to: "/live", label: "Live studio", icon: Activity },
+  { to: "/stats", label: "Stats", icon: BarChart3 },
   { to: "/timeline", label: "Timeline", icon: CalendarRange },
   { to: "/reels", label: "Reels", icon: Clapperboard },
   { to: "/ideas", label: "Ideas", icon: Lightbulb },
