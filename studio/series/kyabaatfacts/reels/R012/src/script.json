@@ -191,7 +191,8 @@
   "duration_s": 65,
   "gain": 1.6,
   "duck": 0.6,
-  "prompt": "Playful, cheeky underscore for a fun money-history short: 1960s London swing feel with bouncy upright bass, brushed drums, plucky guitar and a light organ, like a retro comedy caper. Curious build at the start, a sneaky tiptoe in the middle, a bright happy brass sting at the funny reveal around 25 seconds, then bouncy and warm to the end. Instrumental only, sits under a spoken voice, no vocals."
+  "prompt": "Playful, cheeky underscore for a fun money-history short: 1960s London swing feel with bouncy upright bass, brushed drums, plucky guitar and a light organ, like a retro comedy caper. Curious build at the start, a sneaky tiptoe in the middle, a bright happy brass sting at the funny reveal around 25 seconds, then bouncy and warm to the end. Instrumental only, sits under a spoken voice, no vocals.",
+  "take": "take2 (steady energy, peak at the reveal; take1 went silent at 35-40 s)"
  },
  "layout": "safe_v2",
  "category": "Paise Ki Kahani",
