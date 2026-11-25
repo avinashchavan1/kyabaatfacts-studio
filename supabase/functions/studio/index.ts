@@ -152,7 +152,7 @@ Deno.serve(async (req) => {
       }
       case "publish": {
         const { reel_id, platform } = body;
-        if (!["youtube", "instagram"].includes(platform)) return json({ error: "Auto-posting is available for Instagram and YouTube" }, 400);
+        if (!["youtube", "instagram", "facebook"].includes(platform)) return json({ error: "Auto-posting is available for Instagram, YouTube and Facebook" }, 400);
         const { data: reel } = await admin.from("reels").select("id,code,reviewed").eq("id", reel_id).single();
         if (!reel) return json({ error: "reel not found" }, 404);
         if (!reel.reviewed) return json({ error: "Tick the citation check before posting" }, 400);
