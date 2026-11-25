@@ -53,3 +53,9 @@ Mon Science · Tue History · Wed Animals/Space · Thu Desh Ke Ajoobe · Fri Myt
 - On screen for about **4 seconds** (never a quick 2-second flash); the backdrop is solid while it shows.
 - Make it interesting: slow zoom toward the detail (`focus: [x, y]`, `zoomTo` ~1.4-1.7) and **draw on it**: a hand-drawn circle or box around the
   detail, an arrow and a short label (`notes: [{ x, y, r, text: 'YE HAI DEEWAR!', tx, ty, at }]`, photo units 0..1). One or two marks per photo.
+
+## Music (owner, 25 Nov 2026)
+- A fresh score for every reel, written for its topic and story: e.g. space reels get airy synths and a wonder swell, history gets the period's
+  instruments, myth-busters get a playful build and a "busted!" hit. Match the beats: quiet under the hook claim, rising through the evidence,
+  a bright lift on the reveal (the "Kya baat hai!" moment), bouncy for the loop ending. 2 takes, pick the one whose energy follows the script.
+- Length: at least the reel's length + 5 s (no looping). Reuse old scores only when credits are low.
