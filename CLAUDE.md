@@ -11,6 +11,7 @@
   telling a friend; every reveal ends on the fixed clip `cast/signature/kya_baat_hai.mp3` ("क्या बात है!"). See `cast/cast.json`.
 - **v2 reel rules (owner-approved):** claim-first hook (no "अरे, एक बात बताऊँ?"), easy everyday Hinglish words, loop ending that echoes the hook,
   safe-zone layout (`KB_SAFE`, `SUB_STYLE` in shots.js), caption first line ≤125 chars. Details: `studio/series/kyabaatfacts/STYLE_GUIDE.md`.
+- **Template PRs:** the owner allows Claude to open AND merge PRs on the `storyreel-studio` template (sync with `scripts/template_sync.py`, check it builds, merge, report the PR link).
 - Brand: "Hairaan Aankhen" logo (googly eyes over the AA of BAAT), yellow #FFC83D / ink #14123A / punch #FF4B3E, Montserrat + Mukta.
   Kit in `brand/kit/`, regenerate with `python3 brand/make_kyabaat_brand.py brand brand/kit`; upload with `python3 scripts/brand.py --no-render`.
 
