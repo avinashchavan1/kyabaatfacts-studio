@@ -8,6 +8,29 @@
   "link_title": "YouTube",
   "settings": [
    "Account type: Professional → Creator; turn on “Display category label”."
+  ],
+  "links": [
+   {
+    "title": "YouTube",
+    "url": "https://www.youtube.com/@kyabaatfacts"
+   },
+   {
+    "title": "Facebook",
+    "url": "https://www.facebook.com/kyabaatfacts"
+   }
+  ],
+  "highlights": [
+   "START",
+   "SCIENCE",
+   "ITIHAAS",
+   "JAANWAR",
+   "ANTRIKSH",
+   "AJOOBE",
+   "MYTH?",
+   "KHAANA",
+   "PAISA",
+   "SHABD",
+   "SOURCES"
   ]
  },
  "youtube": {
@@ -23,5 +46,16 @@
    "myth or fact",
    "kya baat facts"
   ]
+ },
+ "facebook": {
+  "page_name": "Kya Baat Facts",
+  "username": "kyabaatfacts",
+  "category": "Education website · Digital creator",
+  "intro": "Har fact pe bologe: kya baat! 🤯 Hindi facts on science, history, animals, space and India. Every fact sourced.",
+  "about": "Kya Baat Facts brings short, surprising facts in simple Hinglish: science, history, animals, space, India's wonders, food, money and words. Every fact is checked against real sources (NASA, NOAA, UNESCO, Britannica and more), with the sources in every caption.\n\nNew reels Mon–Sat · Myth or Fact? every Friday\nInstagram & YouTube: @kyabaatfacts",
+  "website": "https://www.youtube.com/@kyabaatfacts",
+  "button": "Follow",
+  "cover": "social/facebook_cover_1640x924.jpg",
+  "profile_picture": "avatar_1080.png"
  }
 }
