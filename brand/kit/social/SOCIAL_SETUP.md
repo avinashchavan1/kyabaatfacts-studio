@@ -10,7 +10,7 @@ Regenerate the images with `python3 brand/make_social_kit.py brand brand/kit/soc
 | Page name | Kya Baat Facts |
 | Username | @kyabaatfacts |
 | Category | Education website (add: Digital creator) |
-| Intro (bio, ≤101 chars) | Har fact pe bologe: kya baat! 🤯 Hindi facts on science, history, animals, space and India. Every fact sourced. |
+| Intro (bio, ≤101 chars) | Har fact pe bologe: kya baat! 🤯 Hindi facts: science, history, animals, space. Every fact sourced. |
 | Website | https://www.youtube.com/@kyabaatfacts |
 | Action button | Follow |
 | First post (pin it) | `brand/kit/social/intro_post_1080x1350.png` |
