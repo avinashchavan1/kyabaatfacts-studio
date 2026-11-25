@@ -1,0 +1,265 @@
+{
+ "reel": "R011",
+ "title": "Great Wall space se dikhti hai? MYTH!",
+ "series": "kyabaatfacts",
+ "fps": 24,
+ "status": "DRAFT — not verified",
+ "source": "NASA · Scientific American · Britannica · Al Jazeera",
+ "source_card": {
+  "title": [
+   "KYA BAAT",
+   "FACTS"
+  ],
+  "sub": "NASA · Scientific American · Britannica · Al Jazeera",
+  "edition": "SOURCES CHECKED"
+ },
+ "claims": [
+  {
+   "claim": "The popular claim: the Great Wall is visible from space; it was even in textbooks",
+   "ref": "Scientific American; Al Jazeera",
+   "verified": true,
+   "sources": [
+    "https://www.scientificamerican.com/article/is-chinas-great-wall-visible-from-space/",
+    "https://www.aljazeera.com/news/2003/10/17/chinas-spaceman-shatters-a-myth"
+   ]
+  },
+  {
+   "claim": "NASA: generally not visible to the unaided eye from low Earth orbit, and not from the Moon",
+   "ref": "NASA",
+   "verified": true,
+   "sources": [
+    "https://www.nasa.gov/wp-content/uploads/static/history/PDFs/great_wall_less_great_from_space.pdf"
+   ]
+  },
+  {
+   "claim": "The wall is only about 6 m wide and blends with the land's colours",
+   "ref": "Al Jazeera; Britannica",
+   "verified": true,
+   "sources": [
+    "https://www.aljazeera.com/news/2003/10/17/chinas-spaceman-shatters-a-myth",
+    "https://www.britannica.com/question/Can-you-see-the-Great-Wall-of-China-from-space"
+   ]
+  },
+  {
+   "claim": "Yang Liwei (Shenzhou 5, 2003), China's first astronaut, said he did not see the Great Wall",
+   "ref": "Al Jazeera; Wikipedia (Shenzhou 5)",
+   "verified": true,
+   "sources": [
+    "https://www.aljazeera.com/news/2003/10/17/chinas-spaceman-shatters-a-myth",
+    "https://en.wikipedia.org/wiki/Shenzhou_5"
+   ]
+  },
+  {
+   "claim": "ISS photo ISS010-E-08497 (2004) was taken with a 400 mm lens; only a small section of wall is visible",
+   "ref": "NASA Image Library",
+   "verified": true,
+   "sources": [
+    "https://images.nasa.gov/details/iss010e08497"
+   ]
+  },
+  {
+   "claim": "Cities and roads are visible from low Earth orbit",
+   "ref": "NASA; Live Science",
+   "verified": true,
+   "sources": [
+    "https://www.nasa.gov/wp-content/uploads/static/history/PDFs/great_wall_less_great_from_space.pdf",
+    "https://www.livescience.com/human-made-structures-seen-from-space"
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "id": 1,
+   "voice": "narrator",
+   "hi": "NASA ने साफ़ बोल दिया... Great Wall space से तुम्हें नहीं दिखेगी!",
+   "en": "NASA has said it clearly... you can't see the Great Wall from space!",
+   "units": [
+    "[excited] NASA ने साफ़ बोल दिया...",
+    "[amazed] Great Wall space से तुम्हें नहीं दिखेगी!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "card": [
+    [
+     "NASA: SPACE SE",
+     null
+    ],
+    [
+     "GREAT WALL NAHI DIKHTI!",
+     "#FF4B3E"
+    ]
+   ],
+   "min": 3.0
+  },
+  {
+   "id": 2,
+   "voice": "narrator",
+   "hi": "ये दीवार लंबी तो बहुत है... लेकिन चौड़ी? बस लगभग छह मीटर... एक सड़क जितनी!",
+   "en": "The wall is very long... but wide? Only about six metres, about as wide as a road!",
+   "units": [
+    "[curious] ये दीवार लंबी तो बहुत है...",
+    "[playfully] लेकिन चौड़ी? बस लगभग छह मीटर... एक सड़क जितनी!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "Al Jazeera · Britannica"
+  },
+  {
+   "id": 3,
+   "voice": "narrator",
+   "hi": "दो हज़ार तीन में China के पहले astronaut... यांग ली-वेई, space गए। लौटकर बोले: मुझे Great Wall दिखी ही नहीं!",
+   "en": "In 2003, China's first astronaut, Yang Liwei, went to space. Back home he said: I didn't see the Great Wall!",
+   "units": [
+    "[curious] दो हज़ार तीन में China के पहले astronaut... यांग ली-वेई, space गए।",
+    "[excited] लौटकर बोले: मुझे Great Wall दिखी ही नहीं!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "Al Jazeera (CCTV interview)"
+  },
+  {
+   "id": 4,
+   "voice": "narrator",
+   "hi": "NASA के हिसाब से... space से, सिर्फ़ आँखों से, ये आम तौर पर नहीं दिखती... और चाँद से? बिल्कुल नहीं!",
+   "en": "According to NASA: from space, with just your eyes, it usually can't be seen... and from the Moon? Not at all!",
+   "units": [
+    "[curious] NASA के हिसाब से...",
+    "[excited] space से, सिर्फ़ आँखों से, ये आम तौर पर नहीं दिखती... और चाँद से? बिल्कुल नहीं!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "NASA"
+  },
+  {
+   "id": 5,
+   "voice": "narrator",
+   "hi": "तो फिर ये photo? Space station से ली गई... लेकिन चार सौ millimeter के zoom lens से, और दीवार बस एक छोटा सा टुकड़ा! क्या बात है!",
+   "en": "Then what about this photo? Taken from the space station... but with a 400 mm zoom lens, and the wall is just a tiny piece! Kya baat hai!",
+   "units": [
+    "[curious] तो फिर ये photo? Space station से ली गई...",
+    "[amazed] लेकिन चार सौ millimeter के zoom lens से, और दीवार बस एक छोटा सा टुकड़ा!",
+    "क्या बात है!"
+   ],
+   "lead": 0.15,
+   "tail": 0.45,
+   "unit_gap": 0.3,
+   "cite": "NASA (ISS010-E-08497)",
+   "signature_unit": 2,
+   "force_take": {
+    "2": 1
+   },
+   "no_cut": [
+    2
+   ],
+   "reveal": true
+  },
+  {
+   "id": 6,
+   "voice": "narrator",
+   "hi": "उल्टा, space से शहर और सड़कें आराम से दिख जाती हैं! तो अगली बार कोई बोले, Great Wall space से दिखती है... ये reel भेज देना!",
+   "en": "Funny thing: cities and roads are easy to spot from space! So next time someone says the Great Wall is visible from space... send them this reel!",
+   "units": [
+    "[playfully] उल्टा, space से शहर और सड़कें आराम से दिख जाती हैं!",
+    "[excited] तो अगली बार कोई बोले, Great Wall space से दिखती है... ये reel भेज देना!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "NASA · Live Science"
+  },
+  {
+   "id": 7,
+   "voice": "narrator",
+   "hi": "ऐसे और मज़ेदार facts के लिए... फ़ॉलो करो!",
+   "en": "",
+   "units": [
+    "[excited] ऐसे और मज़ेदार facts के लिए... फ़ॉलो करो!"
+   ],
+   "cta": true,
+   "lead": 0.3,
+   "tail": 0.7,
+   "min": 3.7
+  }
+ ],
+ "thumbnail": {
+  "frame": "5.5s",
+  "hook": "GREAT WALL SPACE SE?",
+  "stamp": "MYTH!",
+  "line": "NASA ne bhi bola: nahi dikhti",
+  "badge": "MYTH OR FACT?",
+  "art_shift": 0
+ },
+ "score": {
+  "engine": "reused",
+  "file": "audio/score.mp3",
+  "duration_s": 70,
+  "gain": 1.6,
+  "duck": 0.6,
+  "take": "reused from R010",
+  "prompt": "reused (credit saving)"
+ },
+ "layout": "safe_v2",
+ "category": "Myth or Fact?",
+ "avoid": [
+  "'never visible under any condition' (Britannica: sometimes, in the right light)",
+  "the wall's total length (figures differ)"
+ ],
+ "verify_note": "6 m wide, Yang Liwei 2003 CCTV quote, NASA: not visible to the eye from low orbit / not from the Moon, ISS photo with a 400 mm lens, cities and roads visible.",
+ "hook_options": [
+  {
+   "hi": "[excited] NASA ने साफ़ बोल दिया... / [amazed] Great Wall space से तुम्हें नहीं दिखेगी!",
+   "en": "NASA says you can't see the Great Wall from space!",
+   "card": [
+    "NASA: SPACE SE",
+    "GREAT WALL NAHI DIKHTI"
+   ],
+   "score": 84,
+   "why": "strong · weakest: stakes (1 tension marker(s): can't)"
+  },
+  {
+   "hi": "China के पहले astronaut space गए... और उन्हें Great Wall दिखी ही नहीं!",
+   "en": "China's first astronaut went to space and couldn't see the Great Wall!",
+   "card": [
+    "CHINA KA ASTRONAUT",
+    "GREAT WALL? NAHI DIKHI!"
+   ],
+   "score": 61,
+   "why": "ok · weakest: address (third person, nobody in the room)"
+  },
+  {
+   "hi": "[curious] तुमने भी सुना है ना... Great Wall of China space से दिखती है? / ये बात बिल्कुल ग़लत है!",
+   "en": "You've heard the Great Wall of China is visible from space? That's totally wrong!",
+   "card": [
+    "GREAT WALL SPACE SE?",
+    "BILKUL GALAT!"
+   ],
+   "score": 46,
+   "why": "weak · weakest: frontload (payload at word 14, too late; weak opener \"yo\")"
+  }
+ ],
+ "caption": "NASA ne saaf bol diya: Great Wall space se aapko nahi dikhegi 🧱🚀\n\n🚀 China ke pehle astronaut Yang Liwei ko 2003 mein Great Wall dikhi hi nahi. NASA bhi kehta hai: sirf aankhon se, space se aam taur par nahi dikhti, aur chaand se bilkul nahi. Jo photo hai, woh 400mm zoom lens se li gayi thi!\n\nSources: NASA, Scientific American, Britannica, Al Jazeera.\nPhoto: NASA, ISS010-E-08497 (Public domain).\n\nComment karo: aapne school mein ye padha tha? 👇",
+ "youtube_title": "Great Wall Space Se Dikhti Hai? MYTH! 🚀 | Kya Baat Facts #Shorts",
+ "comment_prompt": "Aapne school mein ye padha tha? 👇",
+ "hashtags": [
+  "#KyaBaatFacts",
+  "#MythOrFact",
+  "#GreatWallOfChina",
+  "#Space",
+  "#NASA",
+  "#HindiFacts"
+ ],
+ "media": [
+  {
+   "file": "src/proof_iss.jpg",
+   "what": "Great Wall section photographed from the ISS with a 400 mm lens (ISS010-E-08497)",
+   "source": "https://images.nasa.gov/details/iss010e08497",
+   "license": "Public domain (NASA)",
+   "credit": "NASA / Leroy Chiao",
+   "shot": 5
+  }
+ ]
+}
