@@ -145,6 +145,7 @@ function PublishTab({ r, files }: { r: Reel; files: FileRow[] }) {
   const canAuto: Record<string, boolean> = {
     youtube: ["github", "huggingface", "google_app", "youtube"].every((k) => p[k]?.connected),
     instagram: ["github", "huggingface", "instagram"].every((k) => p[k]?.connected),
+    facebook: ["github", "huggingface", "instagram", "facebook"].every((k) => p[k]?.connected),
   };
   return (
     <div className="grid gap-4">
@@ -222,9 +223,10 @@ function Lane({ r, platform, pub, master, auto, job, providers }: { r: Reel; pla
             <CopyButton text={caption} label={platform.titleField ? "Copy description" : "Copy caption"} />
           </div>
 
-          {auto && platform.key !== "facebook" ? (
+          {auto ? (
             <div className="grid gap-2 rounded-xl border border-gold-deep/40 bg-gold-soft/40 p-3 dark:border-gold/30 dark:bg-gold/5">
               {(platform.key === "instagram" || platform.key === "youtube") && <Target platform={platform.key} providers={providers} />}
+              {platform.key === "facebook" && providers.facebook?.name && <p className="text-xs font-semibold">Posts to the Page: {providers.facebook.name}</p>}
               {platform.key === "youtube" && (
                 <label className="flex items-center gap-2 text-xs font-semibold">Visibility
                   <select id="yt-privacy" value={privacy} onChange={(e) => setPrivacy(e.target.value)} className="rounded-md border border-parchment-deep bg-white/80 px-2 py-1 text-xs dark:border-night-700 dark:bg-night-950">

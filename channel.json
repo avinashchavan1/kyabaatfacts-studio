@@ -40,7 +40,8 @@
  "captions": {
   "instagram_follow": "Follow {instagram} for a new 'kya baat!' fact every day.",
   "youtube_subscribe": "Subscribe to {name} for a new 'kya baat!' fact every day.",
-  "youtube_title_suffix": "#Shorts #KyaBaatFacts"
+  "youtube_title_suffix": "#Shorts #KyaBaatFacts",
+  "refs_label": "Facts checked"
  },
  "infra": {
   "supabase_ref": "vrhcofbhrcqthbacixpb",

@@ -123,9 +123,12 @@ def desk_row(reel, preview_id="", poster_id=""):
     tl = json.load(open(os.path.join(reel, "src", "timeline.json"))); secs = round(tl["total"])
     ask = s.get("comment_prompt", "")                                                            # ends the caption with a question to drive comments
     # English is the main language for every written word (captions, titles, covers); the narration stays Hindi
-    ig = f"{hook_en}\n\n{cap}\n\n{ask + chr(10) + chr(10) if ask else ''}📜 Source: {src}\n🎧 {LANG} narration · English subtitles\n\n{CHN['captions']['instagram_follow'].format(instagram=CHN['handles']['instagram']['handle'], name=CHN['name'])}\n\n{tags}"
+    # the caption's own first line is the hook (<=125 chars, v2); the comment question appears once, at the end of the story part
+    body = cap if cap else hook_en
+    if ask and ask.split("?")[0].lower().strip(" 👇") not in body.lower(): body += f"\n\n{ask}"
+    ig = f"{body}\n\n📜 Source: {src}\n🎧 {LANG} narration · English subtitles\n\n{CHN['captions']['instagram_follow'].format(instagram=CHN['handles']['instagram']['handle'], name=CHN['name'])}\n\n{tags}"
     yt_title = (s.get("youtube_title") or f"{s['title']} | " + CHN["captions"]["youtube_title_suffix"].format(book=CHN["series"]["book"]))[:100]   # a question title beats a statement
-    yt = f"{hook_en}\n\n{cap}\n\n{ask + chr(10) + chr(10) if ask else ''}Source: {src}\nVerses:\n{refs}\n\n{LANG} narration · English subtitles.\n{CHN['captions']['youtube_subscribe'].format(name=CHN['name'])}\n\n{tags} #Shorts"
+    yt = f"{body}\n\nSource: {src}\n{CHN['captions'].get('refs_label', 'Verses')}:\n{refs}\n\n{LANG} narration · English subtitles.\n{CHN['captions']['youtube_subscribe'].format(name=CHN['name'])}\n\n{tags} #Shorts"
     row = {"title": s["title"], "series": ser.get("series_name", "").title(), "source": src, "length": f"{secs // 60}:{secs % 60:02d}",
            "captions": {"instagram": ig, "facebook": ig.replace(CHN["handles"]["instagram"]["handle"], CHN["name"]), "youtube_title": yt_title, "youtube_description": yt, **({"first_comment": ask} if ask else {})},
            "claims": [{"claim": c["claim"], "ref": c["ref"]} for c in s.get("claims", [])], "verify_note": s.get("verify_note", ""),

@@ -1,5 +1,5 @@
 // Admin actions from the app: connections, OAuth start, "Post now", and "Apply brand to YouTube".
-import { admin, cors, FB_GRAPH, FN_URL, getIntegration, instagramToken, json, randomToken, REPO, requireAdmin, resolveInstagramFromToken, setIntegration, sha256, youtubeAccessToken } from "../_shared/util.ts";
+import { admin, cors, facebookPage, FB_GRAPH, FN_URL, getIntegration, instagramToken, json, randomToken, REPO, requireAdmin, resolveInstagramFromToken, setIntegration, sha256, youtubeAccessToken } from "../_shared/util.ts";
 
 const YT = "https://www.googleapis.com/youtube/v3";
 const YT_UP = "https://www.googleapis.com/upload/youtube/v3";
@@ -119,6 +119,10 @@ Deno.serve(async (req) => {
           return json({ ok: true, username: ig.username });
         } catch (e) { return json({ error: e instanceof Error ? e.message : String(e) }, 400); }
       }
+      case "facebook_page": {      // find (or re-find) the Facebook Page from the Instagram/Meta login
+        try { const pg = await facebookPage(true); await admin.from("activity").insert({ actor: email, action: "connected facebook page", detail: { page: pg.page_name } }); return json({ ok: true, page: pg.page_name }); }
+        catch (e) { return json({ error: e instanceof Error ? e.message : String(e) }, 400); }
+      }
       case "disconnect": {
         await admin.from("integrations").delete().eq("provider", body.provider);
         await admin.from("activity").insert({ actor: email, action: `disconnected ${body.provider}` });
@@ -157,6 +161,7 @@ Deno.serve(async (req) => {
         if (!master) return json({ error: `No ${platform} master attached to ${reel.code}` }, 400);
         const need = platform === "youtube" ? ["github", "huggingface", "google_app", "youtube"] : ["github", "huggingface", "instagram"];
         for (const p of need) if (!(await getIntegration(p))) return json({ error: `Connect ${p.replace("_app", "")} first (Settings → Connections)` }, 400);
+        if (platform === "facebook") { try { await facebookPage(); } catch (e) { return json({ error: e instanceof Error ? e.message : String(e) }, 400); } }
         const { data: running } = await admin.from("publish_jobs").select("id").eq("reel_id", reel_id).eq("platform", platform).in("status", ["queued", "running"]).maybeSingle();
         if (running) return json({ error: "Already posting this reel to " + platform }, 409);
 
