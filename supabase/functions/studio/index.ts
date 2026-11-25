@@ -1,4 +1,5 @@
 // Admin actions from the app: connections, OAuth start, "Post now", and "Apply brand to YouTube".
+import { healthCheck, refreshStats } from "../_shared/stats.ts";
 import { checkPublish, PLATFORMS, PublishError, startPublish } from "../_shared/publish.ts";
 import { admin, cors, facebookPage, FB_GRAPH, FN_URL, getIntegration, instagramToken, json, randomToken, REPO, requireAdmin, resolveInstagramFromToken, setIntegration, sha256, youtubeAccessToken } from "../_shared/util.ts";
 
@@ -242,34 +243,11 @@ Deno.serve(async (req) => {
         await admin.from("activity").insert({ actor: email, reel_id: reel.id, action: "youtube: title/description updated", detail: { code: reel.code } });
         return json({ ok: true });
       }
-      case "refresh_stats": {       // views / likes / comments for every posted reel (trial comparison on the Dashboard)
-        const { data: pubs } = await admin.from("publications").select("id,platform,external_id").eq("state", "posted").not("external_id", "is", null);
-        const out: Record<string, unknown>[] = [];
-        let ytTok: string | null = null, ig: { token: string; api_base: string } | null = null;
-        for (const p of pubs ?? []) {
-          try {
-            let stats: Record<string, number | null> = {};
-            if (p.platform === "youtube") {
-              ytTok ??= await youtubeAccessToken();
-              const it = (await (await fetch(`${YT}/videos?part=statistics,status,contentDetails&id=${p.external_id}`, { headers: { Authorization: `Bearer ${ytTok}` } })).json()).items?.[0] ?? {};
-              const v = it.statistics ?? {}, st = it.status ?? {};
-              stats = { views: +v.viewCount || 0, likes: +v.likeCount || 0, comments: +v.commentCount || 0 };
-              (stats as Record<string, unknown>).status = { privacy: st.privacyStatus, upload: st.uploadStatus, made_for_kids: st.madeForKids, self_declared_kids: st.selfDeclaredMadeForKids,
-                age_restricted: it.contentDetails?.contentRating?.ytRating === "ytAgeRestricted", rejection: st.rejectionReason ?? null, license: st.license };
-            } else if (p.platform === "instagram") {
-              if (!ig) { const t = await instagramToken(); ig = { token: t.token, api_base: t.api_base }; }
-              const q = (path: string) => fetch(`${ig!.api_base}/${path}${path.includes("?") ? "&" : "?"}access_token=${encodeURIComponent(ig!.token)}`).then((r) => r.json());
-              const m = await q(`${p.external_id}?fields=like_count,comments_count`);
-              stats = { likes: m.like_count ?? null, comments: m.comments_count ?? null };
-              const ins = await q(`${p.external_id}/insights?metric=views,reach,saved,shares`);
-              for (const d of ins.data ?? []) stats[d.name] = d.values?.[0]?.value ?? d.total_value?.value ?? null;
-              if (ins.error) (stats as Record<string, unknown>).insights_error = String(ins.error.message ?? ins.error).slice(0, 200);
-            } else continue;
-            await admin.from("publications").update({ stats, stats_at: new Date().toISOString() }).eq("id", p.id);
-            out.push({ id: p.id, ...stats });
-          } catch (e) { out.push({ id: p.id, error: e instanceof Error ? e.message : String(e) }); }
-        }
-        return json({ ok: true, updated: out });
+      case "refresh_stats": {       // views / likes / comments for every posted reel + follower counts (also runs daily on the timer)
+        return json({ ok: true, ...(await refreshStats()) });
+      }
+      case "health": {              // connection / token / failed-post checks for the banner (also runs daily)
+        return json({ ok: true, ...(await healthCheck()) });
       }
       case "youtube_set_covers": {   // put our designed cover on ONE posted YouTube video (reel_id); the app calls it per reel
         if (!body.reel_id) return json({ error: "reel_id required: covers are set one video at a time" }, 400);
