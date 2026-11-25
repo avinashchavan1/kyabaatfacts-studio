@@ -12,7 +12,7 @@ const PLATS = [{ key: "instagram", label: "Instagram" }, { key: "youtube", label
 const n = (v: unknown) => (typeof v === "number" && isFinite(v) ? v : 0);
 const fmt = (v: number) => (v >= 1e6 ? `${(v / 1e6).toFixed(1)}M` : v >= 1e4 ? `${Math.round(v / 1e3)}k` : v >= 1e3 ? `${(v / 1e3).toFixed(1)}k` : String(v));
 const dayISO = (d: Date) => d.toISOString().slice(0, 10);
-const category = (r?: Reel) => ((r?.script as { category?: string } | null)?.category ?? "Other");
+const category = (r?: Reel) => r?.category ?? (r?.script as { category?: string } | null)?.category ?? "Other";
 
 export default function Stats() {
   const reels = useReels(), pubs = usePublications(), daily = useStatsDaily(), fol = useFollowers();

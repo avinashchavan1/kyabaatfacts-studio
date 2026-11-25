@@ -108,7 +108,7 @@ const HIGHLIGHT: Record<string, string> = { "Science Wala Sach": "SCIENCE", "Iti
 export function StoryKit({ r, cover }: { r: Reel; cover?: FileRow }) {
   const img = useMediaUrl(cover);
   const [st, setSt] = useState<{ busy?: boolean; err?: string }>({});
-  const cat = (r.script as { category?: string } | null)?.category ?? "";
+  const cat = r.category ?? (r.script as { category?: string } | null)?.category ?? "";
   const make = async () => {
     if (!img.data) return; setSt({ busy: true });
     try {
