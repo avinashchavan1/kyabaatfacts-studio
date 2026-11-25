@@ -86,6 +86,8 @@ export async function resolveInstagramFromToken(token: string, givenId?: string)
   const candidates: string[] = [];
   const notes: string[] = [];
   if (givenId) candidates.push(givenId.trim());
+  const known = Deno.env.get("IG_USER_ID");   // the channel's own Instagram account ID, tried directly
+  if (known) candidates.push(known.trim());
   const app = await getIntegration("meta_app");
   if (app?.app_id && app?.app_secret) {
     const dbg = await (await fetch(`${FB_GRAPH}/debug_token?input_token=${encodeURIComponent(token)}&access_token=${encodeURIComponent(`${app.app_id}|${app.app_secret}`)}`)).json();
@@ -93,9 +95,11 @@ export async function resolveInstagramFromToken(token: string, givenId?: string)
     notes.push(`granted: ${scopes.map((x) => `${x.scope}(${(x.target_ids ?? []).length})`).join(", ") || dbg.error?.message || "none"}`);
     for (const sc of scopes) if (/^instagram/.test(sc.scope)) for (const id of sc.target_ids ?? []) candidates.push(id);
   }
-  const pages = await g("me/accounts?fields=instagram_business_account{id,username}&limit=50");
+  const pages = await g("me/accounts?fields=name,instagram_business_account{id,username}&limit=50");
+  notes.push(`pages: ${pages.error ? pages.error.message : (pages.data ?? []).map((p: any) => `${p.name}${p.instagram_business_account ? "+IG" : ""}`).join("/") || "none"}`);
   for (const p of pages.data ?? []) if (p.instagram_business_account?.id) candidates.push(p.instagram_business_account.id);
   const biz = await g("me/businesses?fields=id&limit=10");
+  notes.push(`businesses: ${biz.error ? biz.error.message : (biz.data ?? []).length}`);
   for (const b of biz.data ?? []) {
     for (const edge of ["owned_instagram_accounts", "instagram_business_accounts", "instagram_accounts"]) {
       const r = await g(`${b.id}/${edge}?fields=id,username&limit=25`);
@@ -107,5 +111,5 @@ export async function resolveInstagramFromToken(token: string, givenId?: string)
     if (a.id && !a.error) return { user_id: String(a.id), username: a.username ?? null };
     notes.push(`${id}: ${a.error?.message ?? "no access"}`);
   }
-  throw new Error(`No Instagram account is attached to this login. When Meta asks which assets to share, pick ${IG_HANDLE} under "Instagram account". (${notes.join("; ").slice(0, 300)})`);
+  throw new Error(`No Instagram account is attached to this login. When Meta asks which assets to share, pick ${IG_HANDLE} under "Instagram account". (${notes.join("; ").slice(0, 600)})`);
 }
