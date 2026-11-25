@@ -1,0 +1,257 @@
+{
+ "reel": "R013",
+ "title": "Bachche 300 haddiyon ke saath, bade hokar 206 kyun?",
+ "series": "kyabaatfacts",
+ "fps": 24,
+ "status": "DRAFT — not verified",
+ "source": "Cleveland Clinic · Britannica · UPMC · LibreTexts",
+ "source_card": {
+  "title": [
+   "KYA BAAT",
+   "FACTS"
+  ],
+  "sub": "Cleveland Clinic · Britannica · UPMC",
+  "edition": "SOURCES CHECKED"
+ },
+ "claims": [
+  {
+   "claim": "A newborn has about 270-300 bones; an adult has 206",
+   "ref": "Cleveland Clinic; Britannica; Mental Floss",
+   "verified": true,
+   "sources": [
+    "https://health.clevelandclinic.org/how-many-bones-does-a-baby-have",
+    "https://www.britannica.com/one-good-fact/what-do-babies-have-more-of-than-adults",
+    "https://www.mentalfloss.com/posts/how-many-bones-in-human-body"
+   ]
+  },
+  {
+   "claim": "The number drops because small bones fuse into bigger ones as we grow",
+   "ref": "Cleveland Clinic; Britannica",
+   "verified": true,
+   "sources": [
+    "https://health.clevelandclinic.org/how-many-bones-does-a-baby-have",
+    "https://www.britannica.com/one-good-fact/what-do-babies-have-more-of-than-adults"
+   ]
+  },
+  {
+   "claim": "A baby's skull plates have soft spots between them that close within about 1-2 years",
+   "ref": "Cleveland Clinic; UPMC",
+   "verified": true,
+   "sources": [
+    "https://health.clevelandclinic.org/fontanelle-baby-soft-spot",
+    "https://www.upmc.com/healthbeat/pediatrics/baby-fontanelles"
+   ]
+  },
+  {
+   "claim": "The sacrum starts as 5 separate vertebrae that fuse into one by the late teens to mid-20s",
+   "ref": "Britannica; LibreTexts",
+   "verified": true,
+   "sources": [
+    "https://www.britannica.com/science/sacrum",
+    "https://bio.libretexts.org/Courses/Lemoore_College/Human_Anatomy_Laboratory_Manual_(Hartline)/08%3A_Axial_Skeleton/8.05%3A_Vertebral_Column/8.5.06%3A_Sacrum_and_Coccyx"
+   ]
+  },
+  {
+   "claim": "The tailbone is 3-5 small vertebrae fused together",
+   "ref": "LibreTexts; Elsevier",
+   "verified": true,
+   "sources": [
+    "https://bio.libretexts.org/Courses/Lemoore_College/Human_Anatomy_Laboratory_Manual_(Hartline)/08%3A_Axial_Skeleton/8.05%3A_Vertebral_Column/8.5.06%3A_Sacrum_and_Coccyx",
+    "https://www.elsevier.com/resources/anatomy/skeletal-system/axial-skeleton/coccyx/21141"
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "id": 1,
+   "voice": "narrator",
+   "hi": "जब तुम पैदा हुए थे... तुम्हारे शरीर में लगभग तीन सौ हड्डियाँ थीं! और आज? सिर्फ़ दो सौ छह!",
+   "en": "When you were born... your body had about 300 bones! And today? Only 206!",
+   "units": [
+    "[excited] जब तुम पैदा हुए थे... तुम्हारे शरीर में लगभग तीन सौ हड्डियाँ थीं!",
+    "[amazed] और आज? सिर्फ़ दो सौ छह!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "card": [
+    [
+     "PAIDA HUE: ~300 HADDIYAN",
+     null
+    ],
+    [
+     "AAJ: SIRF 206!",
+     "#FF4B3E"
+    ]
+   ],
+   "min": 3.0
+  },
+  {
+   "id": 2,
+   "voice": "narrator",
+   "hi": "तो बाकी हड्डियाँ गईं कहाँ? कहीं नहीं गईं... वो आपस में जुड़ गईं!",
+   "en": "So where did the rest go? Nowhere... they joined together!",
+   "units": [
+    "[curious] तो बाकी हड्डियाँ गईं कहाँ?",
+    "[excited] कहीं नहीं गईं... वो आपस में जुड़ गईं!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "Cleveland Clinic · Britannica"
+  },
+  {
+   "id": 3,
+   "voice": "narrator",
+   "hi": "बच्चे के सिर में कई अलग-अलग प्लेट्स होती हैं... बीच में नरम जगह! ये नरम जगह एक-दो साल में बंद हो जाती है, और प्लेट्स जुड़ जाती हैं।",
+   "en": "A baby's skull has several separate plates... with soft spots in between! The soft spots close within a year or two, and the plates join up.",
+   "units": [
+    "[curious] बच्चे के सिर में कई अलग-अलग प्लेट्स होती हैं... बीच में नरम जगह!",
+    "[playfully] ये नरम जगह एक-दो साल में बंद हो जाती है, और प्लेट्स जुड़ जाती हैं।"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "Cleveland Clinic · UPMC"
+  },
+  {
+   "id": 4,
+   "voice": "narrator",
+   "hi": "ये देखो, एक बच्चे के हाथ का असली एक्स-रे... कलाई के पास हड्डियों के बीच gap दिख रहा है? ये अभी जुड़ी ही नहीं हैं! क्या बात है!",
+   "en": "Look, a real X-ray of a child's hand... see the gaps between the bones near the wrist? They haven't joined yet! Kya baat hai!",
+   "units": [
+    "[curious] ये देखो, एक बच्चे के हाथ का असली एक्स-रे...",
+    "[amazed] कलाई के पास हड्डियों के बीच gap दिख रहा है? ये अभी जुड़ी ही नहीं हैं!",
+    "क्या बात है!"
+   ],
+   "lead": 0.15,
+   "tail": 0.45,
+   "unit_gap": 0.3,
+   "cite": "X-ray: Wikimedia Commons",
+   "signature_unit": 2,
+   "force_take": {
+    "2": 1
+   },
+   "no_cut": [
+    2
+   ],
+   "reveal": true
+  },
+  {
+   "id": 5,
+   "voice": "narrator",
+   "hi": "और तुम्हारी रीढ़ के नीचे की हड्डी... पहले पाँच अलग हड्डियाँ होती हैं! जो बीस-पच्चीस साल की उम्र तक जुड़कर एक बन जाती हैं!",
+   "en": "And the bone at the bottom of your spine starts as five separate bones... which fuse into one by about 20 to 25!",
+   "units": [
+    "[curious] और तुम्हारी रीढ़ के नीचे की हड्डी... पहले पाँच अलग हड्डियाँ होती हैं!",
+    "[excited] जो बीस-पच्चीस साल की उम्र तक जुड़कर एक बन जाती हैं!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "Britannica · LibreTexts"
+  },
+  {
+   "id": 6,
+   "voice": "narrator",
+   "hi": "यानी तुम बड़े हुए... और हड्डियाँ कम हो गईं! तो अगली बार कोई बोले तीन सौ हड्डियाँ... बोलना: वो तो बचपन में थीं!",
+   "en": "So you grew up... and your bones got fewer! Next time someone says 300 bones... say: that was when I was a baby!",
+   "units": [
+    "[playfully] यानी तुम बड़े हुए... और हड्डियाँ कम हो गईं!",
+    "[excited] तो अगली बार कोई बोले तीन सौ हड्डियाँ... बोलना: वो तो बचपन में थीं!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3
+  },
+  {
+   "id": 7,
+   "voice": "narrator",
+   "hi": "ऐसे और मज़ेदार facts के लिए... फ़ॉलो करो!",
+   "en": "",
+   "units": [
+    "[excited] ऐसे और मज़ेदार facts के लिए... फ़ॉलो करो!"
+   ],
+   "cta": true,
+   "lead": 0.3,
+   "tail": 0.7,
+   "min": 3.7
+  }
+ ],
+ "thumbnail": {
+  "frame": "5.0s",
+  "hook": "~300 HADDIYAN → 206?",
+  "stamp": "KAHAN GAYIN?",
+  "line": "Your bones join up as you grow",
+  "badge": "SCIENCE WALA SACH",
+  "art_shift": 0
+ },
+ "score": {
+  "engine": "elevenlabs music_v1",
+  "file": "audio/score.mp3",
+  "duration_s": 65,
+  "gain": 1.6,
+  "duck": 0.6,
+  "prompt": "Light, curious and warm science underscore for a fun body-facts short: soft marimba and pizzicato strings with playful glockenspiel and a gentle beat, a little wonder and mischief. Quiet curious build for the first 20 seconds, a sparkling uplifting swell at the X-ray reveal around 30 seconds, then bouncy and happy to the end. Instrumental only, sits under a spoken voice, no vocals."
+ },
+ "layout": "safe_v2",
+ "category": "Science Wala Sach",
+ "avoid": [
+  "an exact '300' (estimates 270-300)",
+  "'everyone has exactly 206'"
+ ],
+ "verify_note": "~270-300 bones at birth → 206 in adults, by fusion; skull plates + soft spots close in 1-2 years; sacrum 5→1 by ~mid-20s.",
+ "hook_options": [
+  {
+   "hi": "[excited] जब तुम पैदा हुए थे... तुम्हारे शरीर में लगभग तीन सौ हड्डियाँ थीं! / [amazed] और आज? सिर्फ़ दो सौ छह!",
+   "en": "You were born with about 300 bones, and today you have only 206!",
+   "card": [
+    "PAIDA HUE: ~300 HADDIYAN",
+    "AAJ: SIRF 206!"
+   ],
+   "score": 62,
+   "why": "ok · weakest: frontload (payload at word 6, could move forward; weak opener \"yo\")"
+  },
+  {
+   "hi": "तुम्हारी लगभग सौ हड्डियाँ... गायब हो गईं!",
+   "en": "About 100 of your bones have disappeared!",
+   "card": [
+    "~100 HADDIYAN",
+    "GAYAB!"
+   ],
+   "score": 55,
+   "why": "ok · weakest: stakes (0 tension marker(s) - nothing is at stake in this line)"
+  },
+  {
+   "hi": "एक बच्चे में तुमसे ज़्यादा हड्डियाँ होती हैं!",
+   "en": "A baby has more bones than you!",
+   "card": [
+    "BACHCHE MEIN",
+    "TUMSE ZYADA HADDIYAN!"
+   ],
+   "score": 38,
+   "why": "weak · weakest: specificity (0 concrete marker(s) - no number, no name, nothing checkable)"
+  }
+ ],
+ "caption": "Paida hue the to lagbhag 300 haddiyan thi, aaj sirf 206! Baaki kahan gayi? 🦴\n\n🦴 Kahin nahi gayi, aapas mein jud gayi! Bachche ke sir ki plates ke beech naram jagah 1-2 saal mein band hoti hai, aur reedh ke neeche ki 5 haddiyan 20-25 saal tak judkar ek ban jaati hain.\n\nSources: Cleveland Clinic, Britannica, UPMC, LibreTexts.\nX-ray: Jason Hickey / Wikimedia Commons (CC BY 3.0).\n\nComment karo: ye aapko pata tha? 👇",
+ "youtube_title": "300 Haddiyan Se 206 Kaise? 🦴 Bachche vs Bade | Kya Baat Facts #Shorts",
+ "comment_prompt": "Ye aapko pata tha? 👇",
+ "hashtags": [
+  "#KyaBaatFacts",
+  "#ScienceWalaSach",
+  "#HumanBody",
+  "#Bones",
+  "#Science",
+  "#HindiFacts"
+ ],
+ "media": [
+  {
+   "file": "src/proof_xray.jpg",
+   "what": "Real X-ray of a child's hand (cropped, side markers removed)",
+   "source": "https://commons.wikimedia.org/w/index.php?curid=12841466",
+   "license": "CC BY 3.0",
+   "credit": "Jason Hickey / Wikimedia Commons",
+   "shot": 4
+  }
+ ]
+}
