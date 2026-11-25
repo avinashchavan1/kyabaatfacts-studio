@@ -1,6 +1,6 @@
 # Kya Baat Facts: content plan
 
-Instagram: @kyabaatfacts (registered) · YouTube: @kyabaatfacts (pending) · Tagline: "Har fact pe: kya baat!"
+Instagram: @kyabaatfacts (registered) · YouTube: @kyabaatfacts (registered) · Tagline: "Har fact pe: kya baat!"
 Hindi/Hinglish narration, English on screen. Reels 60-120 s (9:16). Long videos 10-12 min (16:9).
 
 ## How this plan works

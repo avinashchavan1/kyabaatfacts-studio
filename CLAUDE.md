@@ -1,5 +1,5 @@
 # This channel: Kya Baat Facts (mixed facts, Hindi/Hinglish narration, English on screen)
-- Instagram @kyabaatfacts · YouTube @kyabaatfacts (handle pending). Series folder: `studio/series/kyabaatfacts/`
+- Instagram @kyabaatfacts · YouTube @kyabaatfacts (both registered). Series folder: `studio/series/kyabaatfacts/`
   (CHANNEL.md = decisions, PLAN.md = 100 reels + 10 long videos + 400-reel roadmap, LONGFORM.md).
 - 9 categories with a weekly rhythm (`channel.json → categories`, `calendar.json → weekly`).
 - **Sources instead of verses:** this is a mixed facts channel with no single base text. Wherever the rules below say

@@ -101,7 +101,7 @@ Studio: built on storyreel-studio (painted animated reels 60-120 s + 10-12 min l
 3. Plan split by category; posting calendar follows the weekly schedule.
 
 ## Setup checklist (not done yet)
-- [x] Channel name: Kya Baat Facts · [x] Instagram @kyabaatfacts · [ ] YouTube @kyabaatfacts (pending)
+- [x] Channel name: Kya Baat Facts · [x] Instagram @kyabaatfacts · [x] YouTube @kyabaatfacts
 - [ ] Own copy of the studio repo for this channel
 - [ ] ElevenLabs (Hindi narrator voice), Supabase, Netlify, Hugging Face accounts
 - [ ] Audition narrator voices
@@ -151,7 +151,7 @@ Backup handle patterns if taken: add "hindi", "facts", "official" or "tv" (e.g. 
 Availability: not checked yet (owner to check on YouTube + Instagram).
 Chosen name: Kya Baat Facts (FINAL; replaces Did You Know Desi, whose YouTube handle was taken)
 - Instagram: @kyabaatfacts REGISTERED
-- YouTube: @kyabaatfacts - owner will try after 24 h
+- YouTube: @kyabaatfacts - registered 25 Nov 2026
 - Tagline: "Har fact pe: kya baat!"
 
 Earlier pick (dropped): Did You Know Desi
