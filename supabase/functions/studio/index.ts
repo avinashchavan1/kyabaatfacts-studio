@@ -1,4 +1,5 @@
 // Admin actions from the app: connections, OAuth start, "Post now", and "Apply brand to YouTube".
+import { checkPublish, PLATFORMS, PublishError, startPublish } from "../_shared/publish.ts";
 import { admin, cors, facebookPage, FB_GRAPH, FN_URL, getIntegration, instagramToken, json, randomToken, REPO, requireAdmin, resolveInstagramFromToken, setIntegration, sha256, youtubeAccessToken } from "../_shared/util.ts";
 
 const YT = "https://www.googleapis.com/youtube/v3";
@@ -186,42 +187,43 @@ Deno.serve(async (req) => {
         }
         return json({ error: "unknown provider" }, 400);
       }
-      case "publish": {
-        const { reel_id, platform } = body;
-        if (!["youtube", "instagram", "facebook"].includes(platform)) return json({ error: "Auto-posting is available for Instagram, YouTube and Facebook" }, 400);
-        const { data: reel } = await admin.from("reels").select("id,code,reviewed").eq("id", reel_id).single();
-        if (!reel) return json({ error: "reel not found" }, 404);
-        if (!reel.reviewed) return json({ error: "Tick the citation check before posting" }, 400);
-        const kind = platform === "youtube" ? "master_youtube" : "master_instagram";
-        const { data: master } = await admin.from("files").select("id").eq("reel_id", reel_id).eq("kind", kind).maybeSingle();
-        if (!master) return json({ error: `No ${platform} master attached to ${reel.code}` }, 400);
-        const need = platform === "youtube" ? ["github", "huggingface", "google_app", "youtube"] : ["github", "huggingface", "instagram"];
-        for (const p of need) if (!(await getIntegration(p))) return json({ error: `Connect ${p.replace("_app", "")} first (Settings → Connections)` }, 400);
-        if (platform === "facebook") { try { await facebookPage(); } catch (e) { return json({ error: e instanceof Error ? e.message : String(e) }, 400); } }
-        const { data: running } = await admin.from("publish_jobs").select("id").eq("reel_id", reel_id).eq("platform", platform).in("status", ["queued", "running"]).maybeSingle();
-        if (running) return json({ error: "Already posting this reel to " + platform }, 409);
-
-        const token = randomToken();
-        const { data: job, error } = await admin.from("publish_jobs").insert({
-          reel_id, platform, requested_by: email, token_hash: await sha256(token), token_expires_at: new Date(Date.now() + 3 * 3600e3).toISOString(),
-          options: { privacy: body.options?.privacy ?? "public" }, step: "queued", log: `Queued by ${email}\n`,
-        }).select("id").single();
-        if (error || !job) return json({ error: error?.message ?? "could not create job" }, 500);
-        await admin.from("publications").upsert({ reel_id, platform, state: "posting" }, { onConflict: "reel_id,platform" });
-        const gh = await getIntegration("github");
-        const r = await fetch(`https://api.github.com/repos/${REPO}/actions/workflows/publish.yml/dispatches`, {
-          method: "POST",
-          headers: { Authorization: `Bearer ${gh!.token}`, Accept: "application/vnd.github+json", "User-Agent": "storyreel-studio", "Content-Type": "application/json" },
-          body: JSON.stringify({ ref: "main", inputs: { job_id: job.id, job_token: token, api: `${FN_URL}/job` } }),
-        });
-        if (!r.ok) {
-          const msg = `GitHub did not start the publisher (${r.status}): ${(await r.text()).slice(0, 200)}`;
-          await admin.from("publish_jobs").update({ status: "failed", step: "dispatch", log: msg, finished_at: new Date().toISOString(), token_hash: null }).eq("id", job.id);
-          await admin.from("publications").upsert({ reel_id, platform, state: "failed" }, { onConflict: "reel_id,platform" });
-          return json({ error: msg }, 502);
+      case "publish": {              // one platform, now
+        try { return json({ ok: true, job_id: await startPublish(body.reel_id, body.platform, body.options ?? {}, email) }); }
+        catch (e) { return json({ error: e instanceof Error ? e.message : String(e) }, e instanceof PublishError ? e.status : 500); }
+      }
+      case "publish_all": {          // several platforms, now; each one succeeds or fails on its own
+        const results: Record<string, { ok: boolean; job_id?: string; error?: string }> = {};
+        for (const pl of (body.platforms ?? []) as string[]) {
+          try { results[pl] = { ok: true, job_id: await startPublish(body.reel_id, pl, body.options ?? {}, email) }; }
+          catch (e) { results[pl] = { ok: false, error: e instanceof Error ? e.message : String(e) }; }
         }
-        await admin.from("activity").insert({ actor: email, reel_id, action: `${platform}: posting started`, detail: { code: reel.code, job: job.id } });
-        return json({ ok: true, job_id: job.id });
+        return json({ ok: Object.values(results).every((r) => r.ok), results });
+      }
+      case "schedule": {             // several platforms, at one time (the timer starts them; see runDue)
+        const at = new Date(String(body.at ?? ""));
+        if (isNaN(at.getTime())) return json({ error: "Pick a date and time" }, 400);
+        if (at.getTime() < Date.now() + 60_000) return json({ error: "Pick a time at least a minute from now (or use Post now)" }, 400);
+        const results: Record<string, { ok: boolean; error?: string }> = {};
+        for (const pl of (body.platforms ?? []) as string[]) {
+          try {
+            await checkPublish(body.reel_id, pl);
+            const { data: cur } = await admin.from("publications").select("state").eq("reel_id", body.reel_id).eq("platform", pl).maybeSingle();
+            if (cur?.state === "posted" || cur?.state === "posting") throw new Error(cur.state === "posted" ? "Already posted" : "Posting right now");
+            const { error } = await admin.from("publications").upsert({ reel_id: body.reel_id, platform: pl, state: "scheduled", scheduled_for: at.toISOString(),
+              schedule_options: body.options ?? {}, scheduled_by: email, last_error: null }, { onConflict: "reel_id,platform" });
+            if (error) throw new Error(error.message);
+            results[pl] = { ok: true };
+          } catch (e) { results[pl] = { ok: false, error: e instanceof Error ? e.message : String(e) }; }
+        }
+        const okN = Object.values(results).filter((r) => r.ok).length;
+        if (okN) await admin.from("activity").insert({ actor: email, reel_id: body.reel_id, action: `scheduled for ${at.toISOString()}`, detail: { platforms: Object.keys(results).filter((k) => results[k].ok) } });
+        return json({ ok: okN === Object.keys(results).length, results, at: at.toISOString() });
+      }
+      case "unschedule": {
+        const pls = (body.platforms ?? [...PLATFORMS]) as string[];
+        await admin.from("publications").update({ state: "todo", scheduled_for: null, scheduled_by: null }).eq("reel_id", body.reel_id).eq("state", "scheduled").in("platform", pls);
+        await admin.from("activity").insert({ actor: email, reel_id: body.reel_id, action: "schedule cancelled", detail: { platforms: pls } });
+        return json({ ok: true });
       }
       case "youtube_update": {      // push the app's title/description/tags to an already-posted YouTube video
         const { data: reel } = await admin.from("reels").select("id,code,title,captions,hashtags").eq("id", body.reel_id).single();

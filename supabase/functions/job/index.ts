@@ -1,6 +1,7 @@
 // Job API for the GitHub Actions publisher. Auth: header x-job-token (one-time, expires in 3 h).
 //   GET  ?job_id=…   → everything the runner needs (captions, master URL, short-lived platform tokens)
 //   POST {job_id, status?, step?, log?, result_url?, external_id?} → progress / result
+import { runDue } from "../_shared/publish.ts";
 import { admin, cors, facebookPage, FB_GRAPH, getIntegration, instagramToken, json, sha256, youtubeAccessToken } from "../_shared/util.ts";
 
 async function loadJob(req: Request, jobId: string) {
@@ -13,6 +14,12 @@ async function loadJob(req: Request, jobId: string) {
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: cors });
   try {
+    // the timer (pg_cron, every 5 minutes): start every scheduled post that is due
+    if (new URL(req.url).searchParams.has("cron")) {
+      const secret = Deno.env.get("CRON_SECRET");
+      if (!secret || req.headers.get("x-cron-secret") !== secret) return json({ error: "not allowed" }, 403);
+      return json({ ok: true, started: await runDue() });
+    }
     if (req.method === "GET") {
       const jobId = new URL(req.url).searchParams.get("job_id") ?? "";
       const job = await loadJob(req, jobId);

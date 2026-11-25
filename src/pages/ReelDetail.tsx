@@ -5,6 +5,7 @@ import { Link, useParams } from "react-router-dom";
 import { Button, Card, Code, CopyButton, Empty, ErrorNote, LinkButton, PubBadge, SectionTitle, Spinner, StageBadge, fmtBytes, fmtDate, fmtLen } from "../components/ui";
 import { mediaUrl, studio, type ProviderStatus, useClaims, useConnections, useFiles, useJobs, useMediaUrl, usePublications, usePublishNow, useReel, useSaveCaptions, useSetStage, useUpdateReel, useUpsertPublication, type PublishJob } from "../lib/api";
 import { Target } from "../components/Target";
+import { fmtIST, PostEverywhere } from "../components/PostEverywhere";
 import { KIND_LABEL, PLATFORMS, STAGES, type FileRow, type Publication, type Reel, type Stage } from "../lib/types";
 import { CHANNEL, IG, W } from "../lib/channel";
 
@@ -160,6 +161,7 @@ function PublishTab({ r, files }: { r: Reel; files: FileRow[] }) {
       {!canAuto.youtube && !canAuto.instagram && !conn.isLoading && (
         <div className="rounded-2xl border border-parchment-deep p-3 text-sm dark:border-night-700">Want one-tap posting? Finish <Link to="/settings#connections" className="font-semibold text-gold-deep underline dark:text-gold">Settings → Connections</Link> once; then <b>Post now</b> appears here.</div>
       )}
+      <PostEverywhere r={r} pubs={pubs.data ?? []} files={files} auto={canAuto} />
       <div className="grid gap-4 xl:grid-cols-3">
         {PLATFORMS.map((pl) => <Lane key={pl.key} r={r} platform={pl} pub={pubs.data?.find((x) => x.platform === pl.key)} master={masters[pl.master]}
           auto={!!canAuto[pl.key]} job={jobs.data?.find((j) => j.platform === pl.key)} providers={p} />)}
@@ -193,6 +195,8 @@ function Lane({ r, platform, pub, master, auto, job, providers }: { r: Reel; pla
       <div className="flex items-center justify-between gap-2"><h3 className="font-bold">{platform.label}</h3><PubBadge state={active ? "posting" : state} /></div>
       {master ? <MasterLink f={master} /> : <div className="rounded-lg bg-black/[.04] p-2 text-xs text-ink-soft dark:bg-white/5">Master file: not attached yet</div>}
 
+      {state === "scheduled" && pub?.scheduled_for && <div className="rounded-lg bg-sky-50 p-2 text-xs font-semibold text-sky-900 dark:bg-sky-950/50 dark:text-sky-200">Scheduled for {fmtIST(pub.scheduled_for)}</div>}
+      {state === "failed" && pub?.last_error && <div className="rounded-lg bg-vermilion/10 p-2 text-xs text-vermilion">{pub.last_error}</div>}
       {job && (job.status !== "done" || state !== "posted") && <JobCard job={job} />}
 
       {state === "posted" && !active ? (
