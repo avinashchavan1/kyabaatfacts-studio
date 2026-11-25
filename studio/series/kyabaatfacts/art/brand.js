@@ -184,11 +184,16 @@ logo = function (ctx, a = 1) {
 };
 kbBadge = function (c, label, col, a = 1, y = 220) {
   if (!KB_S()) return _kbBadge0(c, label, col, a, y);
-  c.save(); c.font = '900 26px Montserrat'; c.letterSpacing = '2px'; const w = c.measureText(label).width + 50; c.restore();
-  const x0 = Math.min(Math.max(KB_LOGO_R || 420, 420) + 14, 850 - w), yy = 236, h = 58;
+  // never overlap the logo pill: sit right after it; if the label is too long for the space before the safe edge (850),
+  // shrink its text (down to 20 px), and if it still doesn't fit, put it on a second row under the logo
+  const left = Math.max(KB_LOGO_R || 420, 300) + 14, avail = 850 - left;
+  const widthAt = (sz) => { c.save(); c.font = `900 ${sz}px Montserrat`; c.letterSpacing = '2px'; const m = c.measureText(label).width + sz * 1.9; c.restore(); return m; };
+  let size = 26, w = widthAt(size);
+  if (w > avail) { size = Math.max(20, Math.floor(26 * avail / w)); w = widthAt(size); }
+  const row2 = w > avail, x0 = row2 ? 40 : left, yy = row2 ? 236 + 70 : 236, h = 58;
   c.save(); c.globalAlpha = a; c.fillStyle = KB.INK; c.beginPath(); c.roundRect(x0 + 5, yy + 5, w, h, h / 2); c.fill();
   c.fillStyle = col; c.strokeStyle = KB.INK; c.lineWidth = 5; c.beginPath(); c.roundRect(x0, yy, w, h, h / 2); c.fill(); c.stroke(); c.restore();
-  text(c, label, x0 + w / 2, yy + h / 2 + 9, { size: 26, weight: 900, color: KB.W, ls: 2, alpha: a, shadow: 0 });
+  text(c, label, x0 + w / 2, yy + h / 2 + size * 0.35, { size, weight: 900, color: KB.W, ls: 2, alpha: a, shadow: 0 });
 };
 kbLabel = function (c, str, y, u, at = 0.2, o = {}) { return _kbLabel0(c, str, Math.max(y, 320), u, at, KB_S() && y > KB_RAIL_Y ? Object.assign({}, o, { w: Math.min(o.w || 880, KB_SAFE_W + 40), size: Math.min(o.size || 56, 50) }) : o); };
 textFit = function (ctx, str, x, y, o = {}, maxW = 960) { return _kbTextFit1(ctx, str, x, y, o, KB_S() ? Math.min(maxW, y > KB_RAIL_Y ? KB_SAFE_W : 940) : maxW); };
