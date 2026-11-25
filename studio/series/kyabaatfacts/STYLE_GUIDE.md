@@ -48,3 +48,8 @@ Trust is the brand. One wrong fact costs more than ten good ones earn.
 
 ## 6. Weekly rhythm
 Mon Science · Tue History · Wed Animals/Space · Thu Desh Ke Ajoobe · Fri Myth or Fact? · Sat Food/Money/Words · long video monthly.
+
+## Proof photos (owner, 25 Nov 2026)
+- On screen for about **4 seconds** (never a quick 2-second flash); the backdrop is solid while it shows.
+- Make it interesting: slow zoom toward the detail (`focus: [x, y]`, `zoomTo` ~1.4-1.7) and **draw on it**: a hand-drawn circle or box around the
+  detail, an arrow and a short label (`notes: [{ x, y, r, text: 'YE HAI DEEWAR!', tx, ty, at }]`, photo units 0..1). One or two marks per photo.

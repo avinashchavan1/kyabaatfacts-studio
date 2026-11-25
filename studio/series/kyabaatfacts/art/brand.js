@@ -150,7 +150,12 @@ function kbKyaBaat(c, u, t, at) {
 // ---- Proof shot: a real photo for 2-3 s, in a tilted sticker frame with "ASLI PHOTO" + credit (load with kbLoadImg in buildScenes) ----
 const KB_IMG = {};
 function kbLoadImg(key, src) { return new Promise(res => { const im = new Image(); im.onload = () => { KB_IMG[key] = im; res(); }; im.onerror = () => { console.log('PROOF IMAGE MISSING', src); res(); }; im.src = src; }); }
-function kbProof(c, key, u, at, len, label = 'ASLI PHOTO', credit = '', rot = -0.035) {
+// o (optional, owner's rule for new reels: let the photo breathe, ~4 s, and point at what matters):
+//   focus: [fx, fy] point in the photo (0..1) the camera slowly zooms toward; zoomTo: how far (default 1.35 with a focus)
+//   notes: [{ x, y, r, text, at, tx, ty, shape }] hand-drawn marks that stay pinned to the photo while it zooms:
+//          x, y, r = circle centre/radius in photo units (0..1 of the photo width/height; r of the width);
+//          text at tx, ty (photo units, may be outside 0..1) with an arrow to the mark; at = seconds after the photo appears; shape 'circle' | 'box'
+function kbProof(c, key, u, at, len, label = 'ASLI PHOTO', credit = '', rot = -0.035, o = {}) {
   const im = KB_IMG[key]; if (!im || u < at || u > at + len) return false;
   const inQ = backOut(map(u, at, at + 0.3)), outQ = 1 - easeOut(map(u, at + len - 0.25, at + len)), q = Math.min(inQ, 1) * outQ;
   if (!c._kbNoDim) { c.save(); c.fillStyle = rgba(KB.INK, Math.min(1, q * 1.4)); c.fillRect(0, 0, W, H); c.restore(); }   // the safe-zone wrapper dims the full frame itself
@@ -159,7 +164,45 @@ function kbProof(c, key, u, at, len, label = 'ASLI PHOTO', credit = '', rot = -0
   c.save(); c.translate(540, 860); c.rotate(rot); c.scale(q * zoom, q * zoom);
   c.fillStyle = KB.INK; c.beginPath(); c.roundRect(-w / 2 - pad + 16, -h / 2 - pad + 16, w + 2 * pad, h + 2 * pad + 70, 18); c.fill();
   c.fillStyle = KB.W; c.strokeStyle = KB.INK; c.lineWidth = 8; c.beginPath(); c.roundRect(-w / 2 - pad, -h / 2 - pad, w + 2 * pad, h + 2 * pad + 70, 18); c.fill(); c.stroke();
-  c.drawImage(im, -w / 2, -h / 2, w, h); c.strokeRect(-w / 2, -h / 2, w, h);
+  // the photo itself: clipped to its frame; with a focus it slowly zooms toward that point (marks zoom with it)
+  c.save(); c.beginPath(); c.rect(-w / 2, -h / 2, w, h); c.clip();
+  const zm = map(u, at + 0.4, at + len - 0.3), zk = o.focus ? zm * zm * (3 - 2 * zm) : 0, z = 1 + ((o.zoomTo ?? 1.35) - 1) * zk;
+  const [fx, fy] = o.focus ?? [0.5, 0.5];
+  c.translate(-(fx - 0.5) * w * (z - 1), -(fy - 0.5) * h * (z - 1)); c.scale(z, z);
+  c.drawImage(im, -w / 2, -h / 2, w, h);
+  for (const n of o.notes ?? []) {
+    const p0 = map(u, at + (n.at ?? 0.8), at + (n.at ?? 0.8) + 0.6); if (p0 <= 0) continue;
+    const cx = (n.x - 0.5) * w, cy = (n.y - 0.5) * h, rr = (n.r ?? 0.12) * w, lw = 9 / z;
+    c.save(); c.lineCap = 'round'; c.lineJoin = 'round';
+    c.strokeStyle = KB.INK; c.lineWidth = lw + 6 / z;
+    const mark = (col, wdt) => { c.strokeStyle = col; c.lineWidth = wdt; c.beginPath();
+      if (n.shape === 'box') { const k = Math.min(1, p0 * 1.2), x0 = cx - rr, y0 = cy - rr * 0.7, bw = rr * 2, bh = rr * 1.4, per = 2 * (bw + bh), L = per * k;
+        const pts = [[x0, y0], [x0 + bw, y0], [x0 + bw, y0 + bh], [x0, y0 + bh], [x0, y0]]; let left = L; c.moveTo(x0, y0);
+        for (let i = 1; i < pts.length && left > 0; i++) { const [ax, ay] = pts[i - 1], [bx, by] = pts[i], seg = Math.hypot(bx - ax, by - ay), f = Math.min(1, left / seg); c.lineTo(ax + (bx - ax) * f, ay + (by - ay) * f); left -= seg; } }
+      else { const a0 = -2.2, a1 = a0 + Math.PI * 2.15 * Math.min(1, p0 * 1.15); for (let a = a0; a <= a1; a += 0.08) { const wob = 1 + 0.06 * Math.sin(a * 3); c.lineTo(cx + Math.cos(a) * rr * 1.15 * wob, cy + Math.sin(a) * rr * 0.9 * wob); } }
+      c.stroke(); };
+    mark(KB.INK, lw + 6 / z); mark(KB.Y, lw);
+    c.restore();
+  }
+  c.restore();
+  c.strokeStyle = KB.INK; c.lineWidth = 8; c.strokeRect(-w / 2, -h / 2, w, h);
+  // labels + arrows for the marks: drawn on top, outside the clip, following the zoom
+  for (const n of o.notes ?? []) {
+    if (!n.text) continue;
+    const p1 = map(u, at + (n.at ?? 0.8) + 0.4, at + (n.at ?? 0.8) + 0.8); if (p1 <= 0) continue;
+    const P = (px, py) => [((px - 0.5) * w - (fx - 0.5) * w * (z - 1)) + (px - 0.5) * w * (z - 1), ((py - 0.5) * h - (fy - 0.5) * h * (z - 1)) + (py - 0.5) * h * (z - 1)];
+    const [mx, my] = P(n.x, n.y), [lx, ly] = [((n.tx ?? n.x) - 0.5) * w, ((n.ty ?? -0.12) - 0.5) * h];
+    const rr = (n.r ?? 0.12) * w * z, ang = Math.atan2(my - ly, mx - lx), ex = mx - Math.cos(ang) * rr * 1.2, ey = my - Math.sin(ang) * rr * 1.0;
+    const k = easeOut(p1), sx = lx + (ex - lx) * 0.18, sy = ly + (ey - ly) * 0.18, tx2 = sx + (ex - sx) * k, ty2 = sy + (ey - sy) * k;
+    c.save(); c.lineCap = 'round'; c.strokeStyle = KB.INK; c.lineWidth = 16; c.beginPath(); c.moveTo(sx, sy); c.lineTo(tx2, ty2); c.stroke();
+    c.strokeStyle = KB.Y; c.lineWidth = 9; c.beginPath(); c.moveTo(sx, sy); c.lineTo(tx2, ty2); c.stroke();
+    if (k > 0.95) { c.fillStyle = KB.Y; c.strokeStyle = KB.INK; c.lineWidth = 6; c.beginPath(); c.moveTo(tx2, ty2); c.lineTo(tx2 - Math.cos(ang - 0.5) * 34, ty2 - Math.sin(ang - 0.5) * 34); c.lineTo(tx2 - Math.cos(ang + 0.5) * 34, ty2 - Math.sin(ang + 0.5) * 34); c.closePath(); c.fill(); c.stroke(); }
+    c.font = '900 40px Montserrat'; const tw = c.measureText(n.text).width + 40, s2 = backOut(p1);
+    c.translate(lx, ly); c.scale(s2, s2); c.fillStyle = KB.INK; c.beginPath(); c.roundRect(-tw / 2 + 6, -30 + 6, tw, 60, 30); c.fill();
+    c.fillStyle = KB.Y; c.strokeStyle = KB.INK; c.lineWidth = 6; c.beginPath(); c.roundRect(-tw / 2, -30, tw, 60, 30); c.fill(); c.stroke();
+    c.fillStyle = KB.INK; c.textAlign = 'center'; c.fillText(n.text, 0, 14);
+    c.restore();
+  }
   if (credit) { c.font = '700 26px Montserrat'; c.fillStyle = KB.INK; c.textAlign = 'center'; c.fillText(credit, 0, h / 2 + pad + 30); }
   c.restore();
   kbStamp(c, label + ' 📸', 540, 860 - h / 2 - 110, u, at + 0.15, KB.RED, 64, 0.05);
@@ -206,15 +249,15 @@ kbFact = function (c, u, F, y = 330, at = 0.2, col = KB.RED) {
   if (!KB_S()) return _kbFact0(c, u, F, y, at, col);
   c.save(); c.translate(540, Math.max(y, 330) + 130); c.scale(0.72, 0.72); c.translate(-540, -(Math.max(y, 330) + 130)); _kbFact0(c, u, F, Math.max(y, 330), at, col); c.restore();
 };
-kbProof = function (c, key, u, at, len, label, credit, rot) {
-  if (!KB_S()) return _kbProof0(c, key, u, at, len, label, credit, rot);
+kbProof = function (c, key, u, at, len, label, credit, rot, o) {
+  if (!KB_S()) return _kbProof0(c, key, u, at, len, label, credit, rot, o);
   // dim the WHOLE frame here, outside the 0.72 scale (inside it the dimming shrank into a grey box around the photo)
   if (KB_IMG[key] && u >= at && u <= at + len) {
     const q = Math.min(backOut(map(u, at, at + 0.3)), 1) * (1 - easeOut(map(u, at + len - 0.25, at + len)));
     c.save(); c.fillStyle = rgba(KB.INK, Math.min(1, q * 1.4)); c.fillRect(0, 0, W, H); c.restore();
   }
   c.save(); c.translate(540, 860); c.scale(0.72, 0.72); c.translate(-540, -860); c._kbNoDim = true;
-  let r; try { r = _kbProof0(c, key, u, at, len, label, credit, rot); } finally { c._kbNoDim = false; c.restore(); }
+  let r; try { r = _kbProof0(c, key, u, at, len, label, credit, rot, o); } finally { c._kbNoDim = false; c.restore(); }
   return r;
 };
 kbKyaBaat = function (c, u, t, at) {

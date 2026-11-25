@@ -6,7 +6,7 @@
   "verse", "base text" or `source_verse.py`, read: every claim lists its own source (publisher, title, URL) and is verified by
   reading that source, never from memory. Disputed or legendary claims are framed honestly or dropped. The opening-verse and
   quote-card rules become: show the source on screen when a claim is surprising (per-reel source links are enforced by `make_reel.py check`).
-- **Proof shots:** 1-2 real photos per reel (2-3 s, `kbProof` in `series/art/brand.js`), openly licensed (Wikimedia Commons / public domain preferred), no logos, text or identifiable people; record each in `script.json → media` + research notes and credit it on screen and in the caption.
+- **Proof shots:** 1-2 real photos per reel (2-3 s, `kbProof` in `series/art/brand.js`), openly licensed (Wikimedia Commons / public domain preferred), no logos, text or identifiable people; record each in `script.json → media` + research notes and credit it on screen and in the caption. Let each photo breathe (~4 s, never a quick flash) and point at what matters: `kbProof(..., { focus, zoomTo, notes: [{x, y, r, text, tx, ty, at}] })` zooms toward the detail and draws a circle/box + arrow + label on it.
 - **Narrator (overrides the calm-narrator rule below):** Bunty (ElevenLabs, eleven_v4, stability 0.5), excited, chatty Hinglish like
   telling a friend; every reveal ends on the fixed clip `cast/signature/kya_baat_hai.mp3` ("क्या बात है!"). See `cast/cast.json`.
 - **v2 reel rules (owner-approved):** claim-first hook (no "अरे, एक बात बताऊँ?"), easy everyday Hinglish words, loop ending that echoes the hook,
