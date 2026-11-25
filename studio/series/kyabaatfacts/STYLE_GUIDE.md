@@ -59,3 +59,8 @@ Mon Science · Tue History · Wed Animals/Space · Thu Desh Ke Ajoobe · Fri Myt
   instruments, myth-busters get a playful build and a "busted!" hit. Match the beats: quiet under the hook claim, rising through the evidence,
   a bright lift on the reveal (the "Kya baat hai!" moment), bouncy for the loop ending. 2 takes, pick the one whose energy follows the script.
 - Length: at least the reel's length + 5 s (no looping). Reuse old scores only when credits are low.
+
+## Pronunciation of English names (owner, 25 Nov 2026)
+- In a Hindi line, prefer the name people actually say in Hindi ("चीन की दीवार", "चाँद"); otherwise write the English name in Devanagari ("ग्रेट वॉल").
+- Latin-script names mid-sentence ("Great Wall") can come out with an odd pause or accent: after recording, check the word timings of names
+  (a gap over ~0.2 s inside a name = re-record or rephrase).
