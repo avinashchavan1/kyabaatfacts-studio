@@ -2,7 +2,7 @@
 const KB_SAFE = true;                                   // safe-zone layout (v2)
 const SUB_STYLE = { maxW: 640, bottom: 1400 };
 const R11_CAT = { label: 'MYTH OR FACT?', col: '#FF4B3E' };
-function buildScenes() { return kbLoadImg('iss', 'proof_iss.jpg'); }
+function buildScenes() { return Promise.all([kbLoadImg('iss', 'proof_iss.jpg'), kbLoadImg('wall', 'proof_wall.jpg')]); }
 
 // Earth seen from orbit: a big curved horizon at the bottom with a thin atmosphere glow
 function r11Earth(c, t, y0 = 1250, lights = 0) {
@@ -77,7 +77,10 @@ const SHOTS = {
     }
     post.ui = c => { kbBadge(c, R11_CAT.label, R11_CAT.col);
       if (u < st[1]) kbLabel(c, 'LAMBI? BAHUT!', 430, u, 0.3, { size: 60 });
-      else { kbStamp(c, 'CHAUDI: SIRF ~6 M', 540, 430, u, st[1] + 0.2, KB.RED, 88); text(c, 'DEEWAR', 360, 1260, { size: 44, weight: 900, color: KB.INK, shadow: 0 }); text(c, 'SADAK', 720, 1260, { size: 44, weight: 900, color: KB.INK, shadow: 0 }); } };
+      else { kbStamp(c, 'CHAUDI: SIRF ~6 M', 540, 430, u, st[1] + 0.2, KB.RED, 88); text(c, 'DEEWAR', 360, 1260, { size: 44, weight: 900, color: KB.INK, shadow: 0 }); text(c, 'SADAK', 720, 1260, { size: 44, weight: 900, color: KB.INK, shadow: 0 }); }
+      // the real wall: long, but the walkway on top is narrow (box + label when the width is said)
+      kbProof(c, 'wall', u, 0.4, Math.min(sh.dur - 1.2, st[1] + 2.6), 'ASLI GREAT WALL', 'Photo: Ray in Manila / Flickr · CC BY 2.0', -0.03,
+        { focus: [0.7, 0.5], zoomTo: 1.45, notes: [{ x: 0.7, y: 0.5, r: 0.1, shape: 'box', at: Math.max(0.8, st[1] - 0.4), text: 'SIRF ~6 M CHAUDI!', tx: 0.32, ty: 0.16 }] }); };
   },
   // 3 — 2003: China's first astronaut came back and said he didn't see it
   3(ctx, u, p, sh, t, post) {
@@ -104,7 +107,7 @@ const SHOTS = {
     const st = sentenceStarts(sh, 3);
     kbNight(ctx, t, '#05051A', '#14123A'); r11Stars(ctx, t); r11Earth(ctx, t, 1250); r11ISS(ctx, 540, 900, 1.7, t);
     post.ui = c => { kbBadge(c, R11_CAT.label, R11_CAT.col); kbStamp(c, 'ZOOM LENS: 400 MM!', 540, 430, u, st[1] + 0.2, KB.RED, 88);
-      kbProof(c, 'iss', u, 0.5, Math.min(2.6, Math.max(2.0, st[2] - 0.9)), 'ISS SE PHOTO · DEEWAR BEECH MEIN', 'Photo: NASA · ISS010-E-08497 · Public domain', 0.03);
+      kbProof(c, 'iss', u, 0.4, Math.max(4.0, st[2] - 0.5), 'NASA: SPACE STATION SE', 'Photo: NASA · ISS010-E-08497 (400 mm lens) · Public domain', 0.03, { focus: [0.5, 0.56], zoomTo: 1.6, notes: [{ x: 0.5, y: 0.56, r: 0.09, at: 1.2, text: 'YE HAI DEEWAR!', tx: 0.3, ty: 0.18 }] });
       kbKyaBaat(c, u, t, st[2]); };
   },
   // 6 — cities and roads ARE visible; send this reel next time (loop back to the hook)

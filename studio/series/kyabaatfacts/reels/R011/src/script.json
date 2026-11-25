@@ -71,11 +71,11 @@
   {
    "id": 1,
    "voice": "narrator",
-   "hi": "NASA ने साफ़ बोल दिया... Great Wall space से तुम्हें नहीं दिखेगी!",
+   "hi": "NASA ने साफ़ बोल दिया... चीन की दीवार space से तुम्हें नहीं दिखेगी!",
    "en": "NASA has said it clearly... you can't see the Great Wall from space!",
    "units": [
     "[excited] NASA ने साफ़ बोल दिया...",
-    "[amazed] Great Wall space से तुम्हें नहीं दिखेगी!"
+    "[excited] चीन की दीवार space से तुम्हें नहीं दिखेगी!"
    ],
    "lead": 0.15,
    "tail": 0.3,
@@ -109,11 +109,11 @@
   {
    "id": 3,
    "voice": "narrator",
-   "hi": "दो हज़ार तीन में China के पहले astronaut... यांग ली-वेई, space गए। लौटकर बोले: मुझे Great Wall दिखी ही नहीं!",
+   "hi": "दो हज़ार तीन में चीन के पहले astronaut... यांग ली-वेई, space गए। लौटकर बोले: मुझे ग्रेट वॉल दिखी ही नहीं!",
    "en": "In 2003, China's first astronaut, Yang Liwei, went to space. Back home he said: I didn't see the Great Wall!",
    "units": [
-    "[curious] दो हज़ार तीन में China के पहले astronaut... यांग ली-वेई, space गए।",
-    "[excited] लौटकर बोले: मुझे Great Wall दिखी ही नहीं!"
+    "[curious] दो हज़ार तीन में चीन के पहले astronaut... यांग ली-वेई, space गए।",
+    "[excited] लौटकर बोले: मुझे ग्रेट वॉल दिखी ही नहीं!"
    ],
    "lead": 0.15,
    "tail": 0.3,
@@ -160,11 +160,11 @@
   {
    "id": 6,
    "voice": "narrator",
-   "hi": "उल्टा, space से शहर और सड़कें आराम से दिख जाती हैं! तो अगली बार कोई बोले, Great Wall space से दिखती है... ये reel भेज देना!",
+   "hi": "उल्टा, space से शहर और सड़कें आराम से दिख जाती हैं! तो अगली बार कोई बोले, ग्रेट वॉल space से दिखती है... ये reel भेज देना!",
    "en": "Funny thing: cities and roads are easy to spot from space! So next time someone says the Great Wall is visible from space... send them this reel!",
    "units": [
     "[playfully] उल्टा, space से शहर और सड़कें आराम से दिख जाती हैं!",
-    "[excited] तो अगली बार कोई बोले, Great Wall space से दिखती है... ये reel भेज देना!"
+    "[excited] तो अगली बार कोई बोले, ग्रेट वॉल space से दिखती है... ये reel भेज देना!"
    ],
    "lead": 0.15,
    "tail": 0.3,
@@ -211,7 +211,7 @@
  "verify_note": "6 m wide, Yang Liwei 2003 CCTV quote, NASA: not visible to the eye from low orbit / not from the Moon, ISS photo with a 400 mm lens, cities and roads visible.",
  "hook_options": [
   {
-   "hi": "[excited] NASA ने साफ़ बोल दिया... / [amazed] Great Wall space से तुम्हें नहीं दिखेगी!",
+   "hi": "[excited] NASA ने साफ़ बोल दिया... / [excited] चीन की दीवार space से तुम्हें नहीं दिखेगी!",
    "en": "NASA says you can't see the Great Wall from space!",
    "card": [
     "NASA: SPACE SE",
@@ -241,7 +241,7 @@
    "why": "weak · weakest: frontload (payload at word 14, too late; weak opener \"yo\")"
   }
  ],
- "caption": "NASA ne saaf bol diya: Great Wall space se aapko nahi dikhegi 🧱🚀\n\n🚀 China ke pehle astronaut Yang Liwei ko 2003 mein Great Wall dikhi hi nahi. NASA bhi kehta hai: sirf aankhon se, space se aam taur par nahi dikhti, aur chaand se bilkul nahi. Jo photo hai, woh 400mm zoom lens se li gayi thi!\n\nSources: NASA, Scientific American, Britannica, Al Jazeera.\nPhoto: NASA, ISS010-E-08497 (Public domain).\n\nComment karo: aapne school mein ye padha tha? 👇",
+ "caption": "NASA ne saaf bol diya: Great Wall space se aapko nahi dikhegi 🧱🚀\n\n🚀 China ke pehle astronaut Yang Liwei ko 2003 mein Great Wall dikhi hi nahi. NASA bhi kehta hai: sirf aankhon se, space se aam taur par nahi dikhti, aur chaand se bilkul nahi. Jo photo hai, woh 400mm zoom lens se li gayi thi!\n\nSources: NASA, Scientific American, Britannica, Al Jazeera.\nPhotos: NASA, ISS010-E-08497 (Public domain); Ray in Manila / Flickr (CC BY 2.0).\n\nComment karo: aapne school mein ye padha tha? 👇",
  "youtube_title": "Great Wall Space Se Dikhti Hai? MYTH! 🚀 | Kya Baat Facts #Shorts",
  "comment_prompt": "Aapne school mein ye padha tha? 👇",
  "hashtags": [
@@ -260,6 +260,14 @@
    "license": "Public domain (NASA)",
    "credit": "NASA / Leroy Chiao",
    "shot": 5
+  },
+  {
+   "file": "src/proof_wall.jpg",
+   "what": "The Great Wall on the ground (walkway on top, a few tiny unidentifiable visitors)",
+   "source": "https://www.flickr.com/photos/21186555@N07/17049109746",
+   "license": "CC BY 2.0",
+   "credit": "Ray in Manila / Flickr",
+   "shot": 2
   }
  ]
 }
