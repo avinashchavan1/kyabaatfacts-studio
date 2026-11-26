@@ -1,0 +1,292 @@
+{
+ "reel": "R014",
+ "title": "Akbar padh-likh nahi sakte the, phir bhi empire kaise chalaya?",
+ "series": "kyabaatfacts",
+ "fps": 24,
+ "status": "DRAFT — not verified",
+ "source": "Ain-i-Akbari (Abul Fazl) · Britannica · Met Museum · Scroll.in",
+ "source_card": {
+  "title": [
+   "KYA BAAT",
+   "FACTS"
+  ],
+  "sub": "Ain-i-Akbari · Britannica · Met Museum",
+  "edition": "SOURCES CHECKED"
+ },
+ "claims": [
+  {
+   "claim": "Akbar reigned 1556-1605 (about 50 years) and became emperor at 13",
+   "ref": "Britannica; EBSCO",
+   "verified": true,
+   "sources": [
+    "https://www.britannica.com/biography/Akbar",
+    "https://ebsco.com/research-starters/history/akbar"
+   ]
+  },
+  {
+   "claim": "He spent his youth learning to hunt and fight and never learned to read or write",
+   "ref": "Wikipedia; Scroll.in",
+   "verified": true,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Akbar",
+    "https://scroll.in/article/767632/how-akbar-came-to-love-books-though-he-never-learnt-to-read"
+   ]
+  },
+  {
+   "claim": "Books were read aloud to him every evening by readers chosen for pleasant voices, and he remembered what he heard",
+   "ref": "Ain-i-Akbari, via Scroll.in",
+   "verified": true,
+   "sources": [
+    "https://scroll.in/article/767632/how-akbar-came-to-love-books-though-he-never-learnt-to-read",
+    "https://dailytimes.com.pk/377146/how-akbar-came-to-love-books-despite-never-learning-to-read/"
+   ]
+  },
+  {
+   "claim": "Where the daily reading stopped he marked the page with a pen, and paid readers by the number of leaves read",
+   "ref": "Ain-i-Akbari (Blochmann tr.)",
+   "verified": true,
+   "sources": [
+    "http://www.lkouniv.ac.in/site/writereaddata/siteContent/202004131505182519shama_mih_Moghuls.pdf",
+    "https://scroll.in/article/767632/how-akbar-came-to-love-books-though-he-never-learnt-to-read"
+   ]
+  },
+  {
+   "claim": "His library held thousands of books",
+   "ref": "Scroll.in; The Heritage Lab",
+   "verified": true,
+   "sources": [
+    "https://scroll.in/article/767632/how-akbar-came-to-love-books-though-he-never-learnt-to-read",
+    "https://www.theheritagelab.in/akbar-favourite-books/"
+   ]
+  },
+  {
+   "claim": "In 1582 his translation bureau began putting the Mahabharata into Persian: the Razmnama",
+   "ref": "Met Museum; Philadelphia Museum of Art; Quartz",
+   "verified": true,
+   "sources": [
+    "https://www.metmuseum.org/art/collection/search/451314",
+    "https://www.philamuseum.org/exhibitions/the-book-of-war-the-free-library-of-philadelphias-mughal-razmnama-folios",
+    "https://qz.com/india/1617512/the-razmnama-akbars-persian-translation-of-the-mahabharata-is-locked-away-in-jaipur"
+   ]
+  },
+  {
+   "claim": "Raja Todar Mal measured farmland and fixed tax on the average crop of the previous ten years",
+   "ref": "Wikipedia (Todar Mal, Dahsala); GKToday",
+   "verified": true,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Todar_Mal",
+    "https://en.wikipedia.org/wiki/Dahsala_system",
+    "https://www.gktoday.in/gk/dahasala-system"
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "id": 1,
+   "voice": "narrator",
+   "hi": "अकबर ने लगभग पचास साल राज किया... बिना एक भी शब्द पढ़े! फिर इतना बड़ा empire चलाया कैसे?",
+   "en": "Akbar ruled for almost 50 years... without reading a single word! So how did he run such a huge empire?",
+   "units": [
+    "[excited] अकबर ने लगभग पचास साल राज किया... बिना एक भी शब्द पढ़े!",
+    "[amazed] फिर इतना बड़ा empire चलाया कैसे?"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "card": [
+    [
+     "AKBAR: ~50 SAAL RAAJ",
+     null
+    ],
+    [
+     "BINA EK SHABD PADHE!",
+     "#FF4B3E"
+    ]
+   ],
+   "min": 3.0
+  },
+  {
+   "id": 2,
+   "voice": "narrator",
+   "hi": "तेरह साल की उम्र में बादशाह बन गए... बचपन शिकार और लड़ाई सीखने में गया, पढ़ाई में नहीं। तो उन्होंने आँखों की जगह... कानों से पढ़ाई की!",
+   "en": "He became emperor at 13... his childhood went into hunting and fighting, not books. So instead of his eyes... he studied with his ears!",
+   "units": [
+    "[curious] तेरह साल की उम्र में बादशाह बन गए... बचपन शिकार और लड़ाई सीखने में गया, पढ़ाई में नहीं।",
+    "[excited] तो उन्होंने आँखों की जगह... कानों से पढ़ाई की!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "Britannica · Scroll.in"
+  },
+  {
+   "id": 3,
+   "voice": "narrator",
+   "hi": "हर शाम कोई उन्हें किताबें पढ़कर सुनाता था... और पढ़ने वाले चुने जाते थे अपनी मीठी आवाज़ के लिए! और जो एक बार सुना, वो याद रहता था।",
+   "en": "Every evening someone read books aloud to him... and the readers were picked for their sweet voices! And what he heard once, he remembered.",
+   "units": [
+    "[excited] हर शाम कोई उन्हें किताबें पढ़कर सुनाता था... और पढ़ने वाले चुने जाते थे अपनी मीठी आवाज़ के लिए!",
+    "[playfully] और जो एक बार सुना, वो याद रहता था।"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "Ain-i-Akbari (Abul Fazl)"
+  },
+  {
+   "id": 4,
+   "voice": "narrator",
+   "hi": "और सुनो... जहाँ पढ़ाई रुकती, वहाँ अकबर ख़ुद pen से निशान लगाते थे! और पढ़ने वाले को उतने पन्नों के हिसाब से पैसे मिलते थे! क्या बात है!",
+   "en": "And listen... wherever the reading stopped, Akbar marked the page himself with a pen! And the reader was paid by the number of pages read! Kya baat hai!",
+   "units": [
+    "[curious] और सुनो... जहाँ पढ़ाई रुकती, वहाँ अकबर ख़ुद pen से निशान लगाते थे!",
+    "[amazed] और पढ़ने वाले को उतने पन्नों के हिसाब से पैसे मिलते थे!",
+    "क्या बात है!"
+   ],
+   "lead": 0.15,
+   "tail": 0.45,
+   "unit_gap": 0.3,
+   "cite": "Ain-i-Akbari (Blochmann tr.)",
+   "signature_unit": 2,
+   "no_cut": [
+    2
+   ],
+   "reveal": true,
+   "force_take": {
+    "2": 1
+   }
+  },
+  {
+   "id": 5,
+   "voice": "narrator",
+   "hi": "फिर हज़ारों किताबों वाली library में एक translation टीम लगी... और पंद्रह सौ बयासी में महाभारत Persian में लिखी जाने लगी! ये देखो, उस 'रज़्मनामा' का एक पन्ना... ऊपर Persian, नीचे अर्जुन का निशाना!",
+   "en": "Then a translation team got to work for a library of thousands of books... and in 1582 the Mahabharata began to be written in Persian! Look, a page of that 'Razmnama'... Persian on top, Arjuna's aim below!",
+   "units": [
+    "[excited] फिर हज़ारों किताबों वाली library में एक translation टीम लगी... और पंद्रह सौ बयासी में महाभारत Persian में लिखी जाने लगी!",
+    "[curious] ये देखो, उस 'रज़्मनामा' का एक पन्ना... ऊपर Persian, नीचे अर्जुन का निशाना!"
+   ],
+   "lead": 0.15,
+   "tail": 0.4,
+   "unit_gap": 0.3,
+   "cite": "Met Museum · Philadelphia Museum"
+  },
+  {
+   "id": 6,
+   "voice": "narrator",
+   "hi": "और काम के लिए सबसे अच्छे लोग रखे... जैसे राजा टोडरमल! खेतों की ज़मीन नापी गई, और टैक्स पिछले दस साल की average फसल पर तय हुआ।",
+   "en": "And he hired the best people for each job... like Raja Todar Mal! Farmland was measured, and tax was set on the average crop of the last ten years.",
+   "units": [
+    "[excited] और काम के लिए सबसे अच्छे लोग रखे... जैसे राजा टोडरमल!",
+    "[curious] खेतों की ज़मीन नापी गई, और टैक्स पिछले दस साल की average फसल पर तय हुआ।"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3,
+   "cite": "Todar Mal · Dahsala (Wikipedia · GKToday)"
+  },
+  {
+   "id": 7,
+   "voice": "narrator",
+   "hi": "यानी अकबर पढ़-लिख नहीं सकते थे... पर सुनना और सही लोग चुनना, ये वो सबसे अच्छा जानते थे!",
+   "en": "So Akbar couldn't read or write... but listening, and picking the right people, that he knew best!",
+   "units": [
+    "[playfully] यानी अकबर पढ़-लिख नहीं सकते थे...",
+    "[excited] पर सुनना और सही लोग चुनना, ये वो सबसे अच्छा जानते थे!"
+   ],
+   "lead": 0.15,
+   "tail": 0.3,
+   "unit_gap": 0.3
+  },
+  {
+   "id": 8,
+   "voice": "narrator",
+   "hi": "ऐसे और मज़ेदार facts के लिए... फ़ॉलो करो!",
+   "en": "",
+   "units": [
+    "[excited] ऐसे और मज़ेदार facts के लिए... फ़ॉलो करो!"
+   ],
+   "cta": true,
+   "lead": 0.3,
+   "tail": 0.7,
+   "min": 3.7
+  }
+ ],
+ "thumbnail": {
+  "frame": "3.0s",
+  "hook": "AKBAR PADH NAHI SAKTE THE?",
+  "stamp": "PHIR BHI 50 SAAL RAAJ!",
+  "line": "He studied with his ears",
+  "badge": "ITIHAAS KE RAAZ",
+  "art_shift": 0
+ },
+ "score": {
+  "engine": "elevenlabs music_v1",
+  "file": "audio/score.mp3",
+  "duration_s": 85,
+  "gain": 1.6,
+  "duck": 0.6,
+  "prompt": "Warm, curious Mughal-court underscore for a fun history short about Emperor Akbar: santoor and soft sarangi over light tabla and gentle strings, a regal but playful feel. Quiet curious build for the first 20 seconds, a bright uplifting lift with a small flourish at the reveal around 30 seconds, a sense of wonder around 40 seconds, then bouncy and confident to the end. Instrumental only, sits under a spoken voice, no vocals."
+ },
+ "layout": "safe_v2",
+ "category": "Itihaas Ke Raaz",
+ "avoid": [
+  "an exact library size (figures range 4,300 to 24,000)",
+  "dyslexia (speculation)",
+  "Navratna legend",
+  "a drawn face for Akbar"
+ ],
+ "verify_note": "Reign 1556-1605, emperor at 13; never learned to read/write; books read aloud every evening, readers chosen for voice; pen mark where reading stopped + readers paid per leaf (Ain-i-Akbari); Mahabharata into Persian from 1582 (Razmnama); Todar Mal's measured land + 10-year average tax.",
+ "hook_options": [
+  {
+   "hi": "[excited] अकबर ने लगभग पचास साल राज किया... बिना एक भी शब्द पढ़े!",
+   "en": "Akbar ruled almost 50 years without reading a single word!",
+   "card": [
+    "AKBAR: ~50 SAAL RAAJ",
+    "BINA EK SHABD PADHE!"
+   ],
+   "score": 60,
+   "why": "ok · weakest: address (third person, nobody in the room)"
+  },
+  {
+   "hi": "[excited] अकबर पढ़ नहीं सकते थे... फिर भी हर पन्ने के पैसे देते थे!",
+   "en": "Akbar couldn't read, yet he paid his readers for every page!",
+   "card": [
+    "PADH NAHI SAKTE THE...",
+    "PHIR BHI HAR PANNE KE PAISE!"
+   ],
+   "score": 56,
+   "why": "ok · weakest: address (third person, nobody in the room)"
+  },
+  {
+   "hi": "[excited] हज़ारों किताबें... और अकबर एक भी पढ़ नहीं सकते थे!",
+   "en": "Thousands of books, and Akbar couldn't read even one!",
+   "card": [
+    "HAZAARON KITAABEIN",
+    "AKBAR PADH NAHI SAKTE THE!"
+   ],
+   "score": 39,
+   "why": "weak · weakest: stakes (0 tension marker(s) - nothing is at stake in this line)"
+  }
+ ],
+ "caption": "Akbar ne lagbhag 50 saal raaj kiya, par wo padh-likh nahi sakte the! Phir itna bada empire kaise chalaya? 📜\n\n👂 Aankhon ki jagah kaanon se padhai: har shaam kitaabein padhkar sunayi jaati thi, aur jahan padhna rukta, Akbar khud pen se nishaan lagate the. Padhne wale ko panno ke hisaab se paise milte the! 1582 mein Mahabharat Persian mein likhi jaane lagi (Razmnama), aur Raja Todar Mal ne zameen naapkar tax tay kiya.\n\nSources: Ain-i-Akbari (Abul Fazl, Blochmann tr.), Britannica, Met Museum, Philadelphia Museum of Art, Scroll.in.\nPainting: Razmnama folio, Daswant and Kesho, 16th c. / Wikimedia Commons (public domain).\n\nComment karo: tum sunke yaad rakhte ho ya padhke? 👇",
+ "youtube_title": "Akbar Padh-Likh Nahi Sakte The! 📜 Phir Empire Kaise Chalaya? | Kya Baat Facts #Shorts",
+ "comment_prompt": "Tum sunke yaad rakhte ho ya padhke? 👇",
+ "hashtags": [
+  "#KyaBaatFacts",
+  "#ItihaasKeRaaz",
+  "#Akbar",
+  "#Mughal",
+  "#History",
+  "#HindiFacts"
+ ],
+ "media": [
+  {
+   "file": "src/proof_razmnama.jpg",
+   "what": "Razmnama folio (Persian Mahabharata made for Akbar): Persian text above, Arjuna's archery test (cropped to the top)",
+   "source": "https://commons.wikimedia.org/wiki/File:Arjun_hits_the_target.jpg",
+   "license": "Public domain (PD-India)",
+   "credit": "Daswant and Kesho, Razmnama, 16th c. / Wikimedia Commons",
+   "shot": 5
+  }
+ ]
+}
