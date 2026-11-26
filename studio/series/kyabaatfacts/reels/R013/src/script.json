@@ -192,7 +192,8 @@
   "duration_s": 65,
   "gain": 1.6,
   "duck": 0.6,
-  "prompt": "Light, curious and warm science underscore for a fun body-facts short: soft marimba and pizzicato strings with playful glockenspiel and a gentle beat, a little wonder and mischief. Quiet curious build for the first 20 seconds, a sparkling uplifting swell at the X-ray reveal around 30 seconds, then bouncy and happy to the end. Instrumental only, sits under a spoken voice, no vocals."
+  "prompt": "Light, curious and warm science underscore for a fun body-facts short: soft marimba and pizzicato strings with playful glockenspiel and a gentle beat, a little wonder and mischief. Quiet curious build for the first 20 seconds, a sparkling uplifting swell at the X-ray reveal around 30 seconds, then bouncy and happy to the end. Instrumental only, sits under a spoken voice, no vocals.",
+  "take": "take2 (steady energy; take1 went near-silent at 30-40 s)"
  },
  "layout": "safe_v2",
  "category": "Science Wala Sach",
