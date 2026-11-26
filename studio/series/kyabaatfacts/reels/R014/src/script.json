@@ -217,7 +217,7 @@
   "stamp": "PHIR BHI 50 SAAL RAAJ!",
   "line": "He studied with his ears",
   "badge": "ITIHAAS KE RAAZ",
-  "art_shift": 0
+  "art_shift": 150
  },
  "score": {
   "engine": "elevenlabs music_v1",
