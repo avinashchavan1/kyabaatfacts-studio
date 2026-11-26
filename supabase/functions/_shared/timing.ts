@@ -112,19 +112,7 @@ export async function scanPeers() {
   return out;
 }
 
-// ---------- 3. our audience (Instagram online_followers, needs 100+ followers) ----------
-export async function scanAudience() {
-  try {
-    const ig = await instagramToken();
-    const r = await (await fetch(`${ig.api_base}/${ig.user_id}/insights?metric=online_followers&period=lifetime&access_token=${encodeURIComponent(ig.token)}`)).json();
-    const vals = (r.data?.[0]?.values ?? []).map((v: any) => v.value).filter((v: any) => v && typeof v === "object");
-    if (!vals.length) return r.error?.message ?? "not available yet (needs 100+ followers)";
-    const sum = new Array(24).fill(0);                         // keys are hours in Pacific time (Meta's convention): shift to IST
-    for (const v of vals) for (const [k, n] of Object.entries(v)) { const pt = +k, ist = Math.round((pt + 8 + IST) % 24) % 24; sum[ist] += Number(n) || 0; }
-    await admin.from("audience_hourly").upsert(sum.map((value, hour_ist) => ({ platform: "instagram", hour_ist, value, updated_at: new Date().toISOString() })), { onConflict: "platform,hour_ist" });
-    return `ok (${vals.length} days)`;
-  } catch (e) { return e instanceof Error ? e.message : String(e); }
-}
+// ---------- 3. our audience: saved by the stats timer (stats.ts → follower_daily.extra.online), read in buildModel ----------
 
 // ---------- 4. the model ----------
 type Grid = number[][];
@@ -140,7 +128,14 @@ function fromObs(obs: { dow: number; hour: number; r: number }[]): { grid: Grid;
 const median = (a: number[]) => { const s = [...a].sort((x, y) => x - y); return s.length ? s[Math.floor(s.length / 2)] : 0; };
 export async function buildModel() {
   const { data: posts } = await admin.from("peer_posts").select("platform,peer_id,published_at,views,likes").lt("published_at", new Date(Date.now() - 3 * 864e5).toISOString()).limit(5000);
-  const { data: aud } = await admin.from("audience_hourly").select("hour_ist,value").eq("platform", "instagram");
+  // our audience: Instagram online_followers saved daily by the stats timer (follower_daily.extra.online, hours in Pacific time)
+  const { data: fol } = await admin.from("follower_daily").select("extra").eq("platform", "instagram");
+  const audHours = new Array(24).fill(0);
+  for (const r of fol ?? []) { const on = (r.extra as any)?.online; if (!on || typeof on !== "object") continue;
+    for (const [date, hours] of Object.entries(on as Record<string, Record<string, number>>)) {
+      const off = new Date(`${date}T12:00:00Z`).toLocaleString("en-US", { timeZone: "America/Los_Angeles", timeZoneName: "short" }).includes("PDT") ? -7 : -8;
+      for (const [k, v] of Object.entries(hours ?? {})) { const ist = ((Number(k) - off + IST) % 24 + 24) % 24; audHours[Math.floor(ist)] += Number(v) || 0; } } }
+  const aud = audHours.map((value, hour_ist) => ({ hour_ist, value }));
   const { data: own } = await admin.from("publications").select("platform,posted_at,stats").eq("state", "posted").not("posted_at", "is", null);
   const result: Record<string, unknown> = {};
   for (const p of ["instagram", "youtube", "facebook"] as P[]) {
@@ -217,8 +212,7 @@ export async function dailyTiming() {
   const { count } = await admin.from("peers").select("id", { count: "exact", head: true });
   const discovered = count ? [] : await discoverPeers().catch((e) => [`discover failed: ${e instanceof Error ? e.message : e}`]);
   const scanned = await scanPeers();
-  const audience = await scanAudience();
   const model = await buildModel();
   const autopilot = await runAutopilot();
-  return { discovered, scanned, audience, model, autopilot };
+  return { discovered, scanned, model, autopilot };
 }

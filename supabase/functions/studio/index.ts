@@ -1,6 +1,6 @@
 // Admin actions from the app: connections, OAuth start, "Post now", and "Apply brand to YouTube".
 import { healthCheck, refreshStats } from "../_shared/stats.ts";
-import { addPeer, buildModel, discoverPeers, runAutopilot, scanAudience, scanPeers } from "../_shared/timing.ts";
+import { addPeer, buildModel, discoverPeers, runAutopilot, scanPeers } from "../_shared/timing.ts";
 import { checkPublish, PLATFORMS, PublishError, startPublish } from "../_shared/publish.ts";
 import { admin, cors, facebookPage, FB_GRAPH, FN_URL, getIntegration, instagramToken, json, randomToken, REPO, requireAdmin, resolveInstagramFromToken, setIntegration, sha256, youtubeAccessToken } from "../_shared/util.ts";
 
@@ -255,7 +255,7 @@ Deno.serve(async (req) => {
         const { data: last } = await admin.from("timing_model").select("updated_at").order("updated_at", { ascending: false }).limit(1).maybeSingle();
         if (last?.updated_at && Date.now() - new Date(last.updated_at).getTime() < 10 * 60e3 && !body.force_discover) return json({ ok: true, cooldown: true });
         if (body.force_discover) await discoverPeers();
-        return json({ ok: true, scanned: await scanPeers(), audience: await scanAudience(), model: await buildModel() });
+        return json({ ok: true, scanned: await scanPeers(), model: await buildModel() });
       }
       case "peer_add": {
         try { const name = await addPeer(body.platform, String(body.handle ?? "")); return json({ ok: true, name }); }

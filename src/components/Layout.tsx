@@ -1,6 +1,8 @@
 import clsx from "clsx";
 import { Activity, BadgeCheck, BarChart3, Radar, CalendarRange, BookOpen, Clapperboard, Lightbulb, LayoutDashboard, ListOrdered, LogOut, Menu, MonitorPlay, MoreHorizontal, Settings, Users, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+import { setPeerLayer } from "../lib/bestTime";
 import { NavLink, Outlet } from "react-router-dom";
 import { supabase } from "../lib/supabase";
 import { useSession } from "./Auth";
@@ -36,6 +38,9 @@ export default function Layout() {
   const session = useSession();
   const [open, setOpen] = useState(false);
   const ws = useWorkStatus().data;
+  // similar-channels layer for every best-time decision in the app (Timeline auto-fill, Post everywhere, Stats panel)
+  const tm = useQuery({ queryKey: ["timing_model"], staleTime: 30 * 60e3, queryFn: async () => { const { data } = await supabase.from("timing_model").select("platform,grid,parts"); return data ?? []; } });
+  useEffect(() => { if (tm.data) setPeerLayer(tm.data as never); }, [tm.data]);
   const live = !!ws && ws.state !== "idle";
   const nav = (
     <nav className="grid gap-1">
