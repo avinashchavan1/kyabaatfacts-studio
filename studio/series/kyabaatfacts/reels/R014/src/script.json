@@ -225,7 +225,8 @@
   "duration_s": 85,
   "gain": 1.6,
   "duck": 0.6,
-  "prompt": "Warm, curious Mughal-court underscore for a fun history short about Emperor Akbar: santoor and soft sarangi over light tabla and gentle strings, a regal but playful feel. Quiet curious build for the first 20 seconds, a bright uplifting lift with a small flourish at the reveal around 30 seconds, a sense of wonder around 40 seconds, then bouncy and confident to the end. Instrumental only, sits under a spoken voice, no vocals."
+  "prompt": "Warm, curious Mughal-court underscore for a fun history short about Emperor Akbar: santoor and soft sarangi over light tabla and gentle strings, a regal but playful feel. Quiet curious build for the first 20 seconds, a bright uplifting lift with a small flourish at the reveal around 30 seconds, a sense of wonder around 40 seconds, then bouncy and confident to the end. Instrumental only, sits under a spoken voice, no vocals.",
+  "take": "take1 (quiet first 25 s, lift at the pen-mark reveal; take2 loud and flat from the start)"
  },
  "layout": "safe_v2",
  "category": "Itihaas Ke Raaz",
