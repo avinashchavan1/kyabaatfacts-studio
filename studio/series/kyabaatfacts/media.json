@@ -1,0 +1,580 @@
+{
+ "series": "kyabaatfacts",
+ "hf_repo": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters",
+ "storage_bucket": "reel-media (private)",
+ "reels": [
+  {
+   "code": "R001",
+   "title": "Bijli ka taapmaan suraj ki surface se 5 guna zyada!",
+   "stage": "published",
+   "app": "https://kyabaatfacts-studio.netlify.app/reels/R001",
+   "masters": {
+    "instagram_facebook": {
+     "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R001/R001_INSTAGRAM_MASTER.mp4?download=true",
+     "path": "kyabaatfacts/R001/R001_INSTAGRAM_MASTER.mp4",
+     "mb": 159,
+     "spec": "1080×1920 · H.264 High CRF 12 · AAC 320k · Instagram & Facebook"
+    },
+    "youtube": {
+     "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R001/R001_YOUTUBE_MASTER.mp4?download=true",
+     "path": "kyabaatfacts/R001/R001_YOUTUBE_MASTER.mp4",
+     "mb": 306,
+     "spec": "2160×3840 (4K) · H.264 High CRF 14 · AAC 384k · YouTube"
+    }
+   },
+   "audio_pack": {
+    "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R001/R001_audio.tar.gz?download=true",
+    "path": "kyabaatfacts/R001/R001_audio.tar.gz"
+   },
+   "storage": {
+    "preview": "kyabaatfacts/R001/R001_final.mp4",
+    "thumbnail": "kyabaatfacts/R001/R001_cover.jpg",
+    "citations": "kyabaatfacts/R001/R001_citations.md",
+    "caption": "kyabaatfacts/R001/R001_caption.txt"
+   },
+   "posts": {
+    "youtube": {
+     "state": "posted",
+     "post_url": "https://youtube.com/shorts/IxO7tzEc9Xw",
+     "posted_at": "2026-11-25T06:54:50.425+00:00"
+    },
+    "facebook": {
+     "state": "posted",
+     "post_url": "https://www.facebook.com/reel/3515323065337363",
+     "posted_at": "2026-11-25T07:12:58.016+00:00"
+    },
+    "instagram": {
+     "state": "posted",
+     "post_url": "https://www.instagram.com/reel/DgJ8E8SAd7y/",
+     "posted_at": "2026-11-25T06:58:41.426+00:00"
+    }
+   }
+  },
+  {
+   "code": "R002",
+   "title": "Taj Mahal: 22 saal, 20,000 mazdoor - the real cost",
+   "stage": "published",
+   "app": "https://kyabaatfacts-studio.netlify.app/reels/R002",
+   "masters": {
+    "instagram_facebook": {
+     "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R002/R002_INSTAGRAM_MASTER.mp4?download=true",
+     "path": "kyabaatfacts/R002/R002_INSTAGRAM_MASTER.mp4",
+     "mb": 137,
+     "spec": "1080×1920 · H.264 High CRF 12 · AAC 320k · Instagram & Facebook"
+    },
+    "youtube": {
+     "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R002/R002_YOUTUBE_MASTER.mp4?download=true",
+     "path": "kyabaatfacts/R002/R002_YOUTUBE_MASTER.mp4",
+     "mb": 277,
+     "spec": "2160×3840 (4K) · H.264 High CRF 14 · AAC 384k · YouTube"
+    }
+   },
+   "audio_pack": {
+    "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R002/R002_audio.tar.gz?download=true",
+    "path": "kyabaatfacts/R002/R002_audio.tar.gz"
+   },
+   "storage": {
+    "preview": "kyabaatfacts/R002/R002_final.mp4",
+    "thumbnail": "kyabaatfacts/R002/R002_cover.jpg",
+    "citations": "kyabaatfacts/R002/R002_citations.md",
+    "caption": "kyabaatfacts/R002/R002_caption.txt"
+   },
+   "posts": {
+    "youtube": {
+     "state": "posted",
+     "post_url": "https://youtube.com/shorts/dbEVbOLJHD8",
+     "posted_at": "2026-11-26T04:09:32.287+00:00"
+    },
+    "facebook": {
+     "state": "posted",
+     "post_url": "https://www.facebook.com/reel/1180314198271519",
+     "posted_at": "2026-11-26T04:12:42.437+00:00"
+    },
+    "instagram": {
+     "state": "posted",
+     "post_url": "https://www.instagram.com/reel/DgMN3JTBQMj/",
+     "posted_at": "2026-11-26T04:13:36.17+00:00"
+    }
+   }
+  },
+  {
+   "code": "R003",
+   "title": "Octopus ke 3 dil aur neela khoon!",
+   "stage": "published",
+   "app": "https://kyabaatfacts-studio.netlify.app/reels/R003",
+   "masters": {
+    "instagram_facebook": {
+     "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R003/R003_INSTAGRAM_MASTER.mp4?download=true",
+     "path": "kyabaatfacts/R003/R003_INSTAGRAM_MASTER.mp4",
+     "mb": 145,
+     "spec": "1080×1920 · H.264 High CRF 12 · AAC 320k · Instagram & Facebook"
+    },
+    "youtube": {
+     "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R003/R003_YOUTUBE_MASTER.mp4?download=true",
+     "path": "kyabaatfacts/R003/R003_YOUTUBE_MASTER.mp4",
+     "mb": 261,
+     "spec": "2160×3840 (4K) · H.264 High CRF 14 · AAC 384k · YouTube"
+    }
+   },
+   "audio_pack": {
+    "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R003/R003_audio.tar.gz?download=true",
+    "path": "kyabaatfacts/R003/R003_audio.tar.gz"
+   },
+   "storage": {
+    "preview": "kyabaatfacts/R003/R003_final.mp4",
+    "thumbnail": "kyabaatfacts/R003/R003_cover.jpg",
+    "citations": "kyabaatfacts/R003/R003_citations.md",
+    "caption": "kyabaatfacts/R003/R003_caption.txt"
+   },
+   "posts": {
+    "youtube": {
+     "state": "posted",
+     "post_url": "https://youtube.com/shorts/dm36wYkNgiY",
+     "posted_at": "2026-11-26T14:32:29.549+00:00"
+    },
+    "instagram": {
+     "state": "posted",
+     "post_url": "https://www.instagram.com/reel/DgNYfxaybSs/",
+     "posted_at": "2026-11-26T15:05:42.709+00:00"
+    },
+    "facebook": {
+     "state": "posted",
+     "post_url": "https://www.facebook.com/reel/1462881301957123",
+     "posted_at": "2026-11-26T14:35:23.385+00:00"
+    }
+   }
+  },
+  {
+   "code": "R004",
+   "title": "Kailasa Mandir: ek hi pathar, upar se neeche kaata gaya",
+   "stage": "approved",
+   "app": "https://kyabaatfacts-studio.netlify.app/reels/R004",
+   "masters": {
+    "instagram_facebook": {
+     "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R004/R004_INSTAGRAM_MASTER.mp4?download=true",
+     "path": "kyabaatfacts/R004/R004_INSTAGRAM_MASTER.mp4",
+     "mb": 131,
+     "spec": "1080×1920 · H.264 High CRF 12 · AAC 320k · Instagram & Facebook"
+    },
+    "youtube": {
+     "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R004/R004_YOUTUBE_MASTER.mp4?download=true",
+     "path": "kyabaatfacts/R004/R004_YOUTUBE_MASTER.mp4",
+     "mb": 239,
+     "spec": "2160×3840 (4K) · H.264 High CRF 14 · AAC 384k · YouTube"
+    }
+   },
+   "audio_pack": {
+    "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R004/R004_audio.tar.gz?download=true",
+    "path": "kyabaatfacts/R004/R004_audio.tar.gz"
+   },
+   "storage": {
+    "preview": "kyabaatfacts/R004/R004_final.mp4",
+    "thumbnail": "kyabaatfacts/R004/R004_cover.jpg",
+    "citations": "kyabaatfacts/R004/R004_citations.md",
+    "caption": "kyabaatfacts/R004/R004_caption.txt"
+   },
+   "posts": {
+    "instagram": {
+     "state": "scheduled",
+     "scheduled_for": "2026-11-27T14:30:00+00:00"
+    },
+    "youtube": {
+     "state": "scheduled",
+     "scheduled_for": "2026-11-27T13:30:00+00:00"
+    },
+    "facebook": {
+     "state": "scheduled",
+     "scheduled_for": "2026-11-27T14:30:00+00:00"
+    }
+   }
+  },
+  {
+   "code": "R005",
+   "title": "Hum dimaag ka sirf 10% use karte hain?",
+   "stage": "approved",
+   "app": "https://kyabaatfacts-studio.netlify.app/reels/R005",
+   "masters": {
+    "instagram_facebook": {
+     "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R005/R005_INSTAGRAM_MASTER.mp4?download=true",
+     "path": "kyabaatfacts/R005/R005_INSTAGRAM_MASTER.mp4",
+     "mb": 114,
+     "spec": "1080×1920 · H.264 High CRF 12 · AAC 320k · Instagram & Facebook"
+    },
+    "youtube": {
+     "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R005/R005_YOUTUBE_MASTER.mp4?download=true",
+     "path": "kyabaatfacts/R005/R005_YOUTUBE_MASTER.mp4",
+     "mb": 221,
+     "spec": "2160×3840 (4K) · H.264 High CRF 14 · AAC 384k · YouTube"
+    }
+   },
+   "audio_pack": {
+    "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R005/R005_audio.tar.gz?download=true",
+    "path": "kyabaatfacts/R005/R005_audio.tar.gz"
+   },
+   "storage": {
+    "preview": "kyabaatfacts/R005/R005_final.mp4",
+    "thumbnail": "kyabaatfacts/R005/R005_cover.jpg",
+    "citations": "kyabaatfacts/R005/R005_citations.md",
+    "caption": "kyabaatfacts/R005/R005_caption.txt"
+   },
+   "posts": {
+    "instagram": {
+     "state": "scheduled",
+     "scheduled_for": "2026-11-28T14:30:00+00:00"
+    },
+    "youtube": {
+     "state": "scheduled",
+     "scheduled_for": "2026-11-28T13:30:00+00:00"
+    },
+    "facebook": {
+     "state": "scheduled",
+     "scheduled_for": "2026-11-28T14:30:00+00:00"
+    }
+   }
+  },
+  {
+   "code": "R006",
+   "title": "Aloo, tamatar, mirch - Indian nahi hain! Portuguese laaye",
+   "stage": "approved",
+   "app": "https://kyabaatfacts-studio.netlify.app/reels/R006",
+   "masters": {
+    "instagram_facebook": {
+     "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R006/R006_INSTAGRAM_MASTER.mp4?download=true",
+     "path": "kyabaatfacts/R006/R006_INSTAGRAM_MASTER.mp4",
+     "mb": 110,
+     "spec": "1080×1920 · H.264 High CRF 12 · AAC 320k · Instagram & Facebook"
+    },
+    "youtube": {
+     "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R006/R006_YOUTUBE_MASTER.mp4?download=true",
+     "path": "kyabaatfacts/R006/R006_YOUTUBE_MASTER.mp4",
+     "mb": 210,
+     "spec": "2160×3840 (4K) · H.264 High CRF 14 · AAC 384k · YouTube"
+    }
+   },
+   "audio_pack": {
+    "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R006/R006_audio.tar.gz?download=true",
+    "path": "kyabaatfacts/R006/R006_audio.tar.gz"
+   },
+   "storage": {
+    "preview": "kyabaatfacts/R006/R006_final.mp4",
+    "thumbnail": "kyabaatfacts/R006/R006_cover.jpg",
+    "citations": "kyabaatfacts/R006/R006_citations.md",
+    "caption": "kyabaatfacts/R006/R006_caption.txt"
+   },
+   "posts": {
+    "instagram": {
+     "state": "scheduled",
+     "scheduled_for": "2026-11-29T14:30:00+00:00"
+    },
+    "youtube": {
+     "state": "scheduled",
+     "scheduled_for": "2026-11-29T13:30:00+00:00"
+    },
+    "facebook": {
+     "state": "scheduled",
+     "scheduled_for": "2026-11-29T14:30:00+00:00"
+    }
+   }
+  },
+  {
+   "code": "R007",
+   "title": "Shahad kabhi kharab kyun nahi hota?",
+   "stage": "approved",
+   "app": "https://kyabaatfacts-studio.netlify.app/reels/R007",
+   "masters": {
+    "instagram_facebook": {
+     "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R007/R007_INSTAGRAM_MASTER.mp4?download=true",
+     "path": "kyabaatfacts/R007/R007_INSTAGRAM_MASTER.mp4",
+     "mb": 130,
+     "spec": "1080×1920 · H.264 High CRF 12 · AAC 320k · Instagram & Facebook"
+    },
+    "youtube": {
+     "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R007/R007_YOUTUBE_MASTER.mp4?download=true",
+     "path": "kyabaatfacts/R007/R007_YOUTUBE_MASTER.mp4",
+     "mb": 264,
+     "spec": "2160×3840 (4K) · H.264 High CRF 14 · AAC 384k · YouTube"
+    }
+   },
+   "audio_pack": {
+    "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R007/R007_audio.tar.gz?download=true",
+    "path": "kyabaatfacts/R007/R007_audio.tar.gz"
+   },
+   "storage": {
+    "preview": "kyabaatfacts/R007/R007_final.mp4",
+    "thumbnail": "kyabaatfacts/R007/R007_cover.jpg",
+    "citations": "kyabaatfacts/R007/R007_citations.md",
+    "caption": "kyabaatfacts/R007/R007_caption.txt"
+   },
+   "posts": {
+    "youtube": {
+     "state": "scheduled",
+     "scheduled_for": "2026-11-30T13:30:00+00:00"
+    },
+    "instagram": {
+     "state": "scheduled",
+     "scheduled_for": "2026-11-30T14:30:00+00:00"
+    },
+    "facebook": {
+     "state": "scheduled",
+     "scheduled_for": "2026-11-30T14:30:00+00:00"
+    }
+   }
+  },
+  {
+   "code": "R008",
+   "title": "Mohenjo-daro mein 4,500 saal pehle drainage system tha!",
+   "stage": "approved",
+   "app": "https://kyabaatfacts-studio.netlify.app/reels/R008",
+   "masters": {
+    "instagram_facebook": {
+     "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R008/R008_INSTAGRAM_MASTER.mp4?download=true",
+     "path": "kyabaatfacts/R008/R008_INSTAGRAM_MASTER.mp4",
+     "mb": 129,
+     "spec": "1080×1920 · H.264 High CRF 12 · AAC 320k · Instagram & Facebook"
+    },
+    "youtube": {
+     "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R008/R008_YOUTUBE_MASTER.mp4?download=true",
+     "path": "kyabaatfacts/R008/R008_YOUTUBE_MASTER.mp4",
+     "mb": 257,
+     "spec": "2160×3840 (4K) · H.264 High CRF 14 · AAC 384k · YouTube"
+    }
+   },
+   "audio_pack": {
+    "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R008/R008_audio.tar.gz?download=true",
+    "path": "kyabaatfacts/R008/R008_audio.tar.gz"
+   },
+   "storage": {
+    "preview": "kyabaatfacts/R008/R008_final.mp4",
+    "thumbnail": "kyabaatfacts/R008/R008_cover.jpg",
+    "citations": "kyabaatfacts/R008/R008_citations.md",
+    "caption": "kyabaatfacts/R008/R008_caption.txt"
+   },
+   "posts": {
+    "instagram": {
+     "state": "scheduled",
+     "scheduled_for": "2026-12-01T14:30:00+00:00"
+    },
+    "youtube": {
+     "state": "scheduled",
+     "scheduled_for": "2026-12-01T13:30:00+00:00"
+    },
+    "facebook": {
+     "state": "scheduled",
+     "scheduled_for": "2026-12-01T14:30:00+00:00"
+    }
+   }
+  },
+  {
+   "code": "R009",
+   "title": "Shukra (Venus) ka ek din uske ek saal se lamba!",
+   "stage": "approved",
+   "app": "https://kyabaatfacts-studio.netlify.app/reels/R009",
+   "masters": {
+    "instagram_facebook": {
+     "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R009/R009_INSTAGRAM_MASTER.mp4?download=true",
+     "path": "kyabaatfacts/R009/R009_INSTAGRAM_MASTER.mp4",
+     "mb": 106,
+     "spec": "1080×1920 · H.264 High CRF 12 · AAC 320k · Instagram & Facebook"
+    },
+    "youtube": {
+     "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R009/R009_YOUTUBE_MASTER.mp4?download=true",
+     "path": "kyabaatfacts/R009/R009_YOUTUBE_MASTER.mp4",
+     "mb": 203,
+     "spec": "2160×3840 (4K) · H.264 High CRF 14 · AAC 384k · YouTube"
+    }
+   },
+   "audio_pack": {
+    "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R009/R009_audio.tar.gz?download=true",
+    "path": "kyabaatfacts/R009/R009_audio.tar.gz"
+   },
+   "storage": {
+    "preview": "kyabaatfacts/R009/R009_final.mp4",
+    "thumbnail": "kyabaatfacts/R009/R009_cover.jpg",
+    "citations": "kyabaatfacts/R009/R009_citations.md",
+    "caption": "kyabaatfacts/R009/R009_caption.txt"
+   },
+   "posts": {
+    "instagram": {
+     "state": "scheduled",
+     "scheduled_for": "2026-12-02T14:30:00+00:00"
+    },
+    "youtube": {
+     "state": "scheduled",
+     "scheduled_for": "2026-12-02T13:30:00+00:00"
+    },
+    "facebook": {
+     "state": "scheduled",
+     "scheduled_for": "2026-12-02T14:30:00+00:00"
+    }
+   }
+  },
+  {
+   "code": "R010",
+   "title": "Delhi ka loha stambh: 1,600 saal, phir bhi zang nahi!",
+   "stage": "approved",
+   "app": "https://kyabaatfacts-studio.netlify.app/reels/R010",
+   "masters": {
+    "instagram_facebook": {
+     "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R010/R010_INSTAGRAM_MASTER.mp4?download=true",
+     "path": "kyabaatfacts/R010/R010_INSTAGRAM_MASTER.mp4",
+     "mb": 182,
+     "spec": "1080×1920 · H.264 High CRF 12 · AAC 320k · Instagram & Facebook"
+    },
+    "youtube": {
+     "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R010/R010_YOUTUBE_MASTER.mp4?download=true",
+     "path": "kyabaatfacts/R010/R010_YOUTUBE_MASTER.mp4",
+     "mb": 347,
+     "spec": "2160×3840 (4K) · H.264 High CRF 14 · AAC 384k · YouTube"
+    }
+   },
+   "audio_pack": {
+    "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R010/R010_audio.tar.gz?download=true",
+    "path": "kyabaatfacts/R010/R010_audio.tar.gz"
+   },
+   "storage": {
+    "preview": "kyabaatfacts/R010/R010_final.mp4",
+    "thumbnail": "kyabaatfacts/R010/R010_cover.jpg",
+    "citations": "kyabaatfacts/R010/R010_citations.md",
+    "caption": "kyabaatfacts/R010/R010_caption.txt"
+   },
+   "posts": {
+    "instagram": {
+     "state": "scheduled",
+     "scheduled_for": "2026-12-03T14:30:00+00:00"
+    },
+    "youtube": {
+     "state": "scheduled",
+     "scheduled_for": "2026-12-03T13:30:00+00:00"
+    },
+    "facebook": {
+     "state": "scheduled",
+     "scheduled_for": "2026-12-03T14:30:00+00:00"
+    }
+   }
+  },
+  {
+   "code": "R011",
+   "title": "Great Wall space se dikhti hai? MYTH!",
+   "stage": "approved",
+   "app": "https://kyabaatfacts-studio.netlify.app/reels/R011",
+   "masters": {
+    "instagram_facebook": {
+     "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R011/R011_INSTAGRAM_MASTER.mp4?download=true",
+     "path": "kyabaatfacts/R011/R011_INSTAGRAM_MASTER.mp4",
+     "mb": 120,
+     "spec": "1080×1920 · H.264 High CRF 12 · AAC 320k · Instagram & Facebook"
+    },
+    "youtube": {
+     "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R011/R011_YOUTUBE_MASTER.mp4?download=true",
+     "path": "kyabaatfacts/R011/R011_YOUTUBE_MASTER.mp4",
+     "mb": 239,
+     "spec": "2160×3840 (4K) · H.264 High CRF 14 · AAC 384k · YouTube"
+    }
+   },
+   "audio_pack": {
+    "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R011/R011_audio.tar.gz?download=true",
+    "path": "kyabaatfacts/R011/R011_audio.tar.gz"
+   },
+   "storage": {
+    "preview": "kyabaatfacts/R011/R011_final.mp4",
+    "thumbnail": "kyabaatfacts/R011/R011_cover.jpg",
+    "citations": "kyabaatfacts/R011/R011_citations.md",
+    "caption": "kyabaatfacts/R011/R011_caption.txt"
+   },
+   "posts": {}
+  },
+  {
+   "code": "R012",
+   "title": "ATM PIN sirf 4 digit ka kyun?",
+   "stage": "approved",
+   "app": "https://kyabaatfacts-studio.netlify.app/reels/R012",
+   "masters": {
+    "instagram_facebook": {
+     "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R012/R012_INSTAGRAM_MASTER.mp4?download=true",
+     "path": "kyabaatfacts/R012/R012_INSTAGRAM_MASTER.mp4",
+     "mb": 141,
+     "spec": "1080×1920 · H.264 High CRF 12 · AAC 320k · Instagram & Facebook"
+    },
+    "youtube": {
+     "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R012/R012_YOUTUBE_MASTER.mp4?download=true",
+     "path": "kyabaatfacts/R012/R012_YOUTUBE_MASTER.mp4",
+     "mb": 275,
+     "spec": "2160×3840 (4K) · H.264 High CRF 14 · AAC 384k · YouTube"
+    }
+   },
+   "audio_pack": {
+    "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R012/R012_audio.tar.gz?download=true",
+    "path": "kyabaatfacts/R012/R012_audio.tar.gz"
+   },
+   "storage": {
+    "preview": "kyabaatfacts/R012/R012_final.mp4",
+    "thumbnail": "kyabaatfacts/R012/R012_cover.jpg",
+    "citations": "kyabaatfacts/R012/R012_citations.md",
+    "caption": "kyabaatfacts/R012/R012_caption.txt"
+   },
+   "posts": {}
+  },
+  {
+   "code": "R013",
+   "title": "Bachche 300 haddiyon ke saath, bade hokar 206 kyun?",
+   "stage": "review",
+   "app": "https://kyabaatfacts-studio.netlify.app/reels/R013",
+   "masters": {
+    "instagram_facebook": {
+     "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R013/R013_INSTAGRAM_MASTER.mp4?download=true",
+     "path": "kyabaatfacts/R013/R013_INSTAGRAM_MASTER.mp4",
+     "mb": 142,
+     "spec": "1080×1920 · H.264 High CRF 12 · AAC 320k · Instagram & Facebook"
+    },
+    "youtube": {
+     "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R013/R013_YOUTUBE_MASTER.mp4?download=true",
+     "path": "kyabaatfacts/R013/R013_YOUTUBE_MASTER.mp4",
+     "mb": 287,
+     "spec": "2160×3840 (4K) · H.264 High CRF 14 · AAC 384k · YouTube"
+    }
+   },
+   "audio_pack": {
+    "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R013/R013_audio.tar.gz?download=true",
+    "path": "kyabaatfacts/R013/R013_audio.tar.gz"
+   },
+   "storage": {
+    "preview": "kyabaatfacts/R013/R013_final.mp4",
+    "thumbnail": "kyabaatfacts/R013/R013_cover.jpg",
+    "citations": "kyabaatfacts/R013/R013_citations.md",
+    "caption": "kyabaatfacts/R013/R013_caption.txt"
+   },
+   "posts": {}
+  },
+  {
+   "code": "R014",
+   "title": "Akbar padh-likh nahi sakte the, phir bhi empire kaise chalaya?",
+   "stage": "review",
+   "app": "https://kyabaatfacts-studio.netlify.app/reels/R014",
+   "masters": {
+    "instagram_facebook": {
+     "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R014/R014_INSTAGRAM_MASTER.mp4?download=true",
+     "path": "kyabaatfacts/R014/R014_INSTAGRAM_MASTER.mp4",
+     "mb": 217,
+     "spec": "1080×1920 · H.264 High CRF 12 · AAC 320k · Instagram & Facebook"
+    },
+    "youtube": {
+     "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R014/R014_YOUTUBE_MASTER.mp4?download=true",
+     "path": "kyabaatfacts/R014/R014_YOUTUBE_MASTER.mp4",
+     "mb": 440,
+     "spec": "2160×3840 (4K) · H.264 High CRF 14 · AAC 384k · YouTube"
+    }
+   },
+   "audio_pack": {
+    "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R014/R014_audio.tar.gz?download=true",
+    "path": "kyabaatfacts/R014/R014_audio.tar.gz"
+   },
+   "storage": {
+    "preview": "kyabaatfacts/R014/R014_final.mp4",
+    "thumbnail": "kyabaatfacts/R014/R014_cover.jpg",
+    "citations": "kyabaatfacts/R014/R014_citations.md",
+    "caption": "kyabaatfacts/R014/R014_caption.txt"
+   },
+   "posts": {}
+  }
+ ]
+}
