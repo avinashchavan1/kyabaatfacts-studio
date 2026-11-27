@@ -234,7 +234,7 @@
    "why": "weak · weakest: specificity (0 concrete marker(s) - no number, no name, nothing checkable)"
   }
  ],
- "caption": "Paida hue the to lagbhag 300 haddiyan thi, aaj sirf 206! Baaki kahan gayi? 🦴\n\n🦴 Kahin nahi gayi, aapas mein jud gayi! Bachche ke sir ki plates ke beech naram jagah 1-2 saal mein band hoti hai, aur reedh ke neeche ki 5 haddiyan 20-25 saal tak judkar ek ban jaati hain.\n\nSources: Cleveland Clinic, Britannica, UPMC, LibreTexts.\nX-ray: Jason Hickey / Wikimedia Commons (CC BY 3.0).\n\nComment karo: ye aapko pata tha? 👇",
+ "caption": "Paida hue the to lagbhag 300 haddiyan thi, aaj sirf 206! Baaki kahan gayi? 🦴\n\n🦴 Kahin nahi gayi, aapas mein jud gayi! Bachche ke sir ki plates ke beech naram jagah 1-2 saal mein band hoti hai, aur reedh ke neeche ki 5 haddiyan 20-25 saal tak judkar ek ban jaati hain.\n\nSources: Cleveland Clinic, Britannica, UPMC, LibreTexts.\nPhotos: Jason Hickey / Wikimedia Commons (CC BY 3.0); S. Rowland 1896 / Wellcome Collection (CC0); Sklmsta / Wikimedia Commons (CC0); Ryan Somma / Flickr (CC BY-SA 2.0).\n\nComment karo: ye aapko pata tha? 👇",
  "youtube_title": "300 Haddiyan Se 206 Kaise? 🦴 Bachche vs Bade | Kya Baat Facts #Shorts",
  "comment_prompt": "Ye aapko pata tha? 👇",
  "hashtags": [
@@ -253,6 +253,30 @@
    "license": "CC BY 3.0",
    "credit": "Jason Hickey / Wikimedia Commons",
    "shot": 4
+  },
+  {
+   "file": "src/proof_baby_xray.jpg",
+   "what": "Real 1896 X-ray (skiagraph) of a 3-month-old infant, journal header and caption cropped off",
+   "source": "https://www.rawpixel.com/image/13951990/rowland-skiagraph-months-old-infant",
+   "license": "CC0 (public domain; Wellcome Collection scan)",
+   "credit": "S. Rowland (1896) / Wellcome Collection",
+   "shot": 2
+  },
+  {
+   "file": "src/proof_skeleton.jpg",
+   "what": "Real articulated adult human skeleton, cropped below the skull top; zoom to the sacrum",
+   "source": "https://commons.wikimedia.org/w/index.php?curid=9896470",
+   "license": "CC0",
+   "credit": "Sklmsta / Wikimedia Commons",
+   "shot": 5
+  },
+  {
+   "file": "src/proof_ages.jpg",
+   "what": "Museum case of real human skeletons of different ages (small child to adult)",
+   "source": "https://www.flickr.com/photos/14405058@N08/4059546069",
+   "license": "CC BY-SA 2.0",
+   "credit": "Ryan Somma / Flickr",
+   "shot": 6
   }
  ]
 }
