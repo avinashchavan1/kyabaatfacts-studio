@@ -60,6 +60,8 @@ def advance_stage(reel, step, info):
     if not reel or not want or info.setdefault("stage_sent", {}).get(reel) == want: return
     try:
         from channel import SER
+        if want == "voiced" and not glob.glob(os.path.join(SER, "reels", reel, "audio", "*.wav")) and not glob.glob(os.path.join(SER, "reels", reel, "audio", "takes", "*")):
+            return                                        # art can be drawn before any voice exists: don't call the reel "voiced" yet
         sp = os.path.join(SER, "reels", "stages.json"); st = json.load(open(sp)) if os.path.exists(sp) else {}
         if os.path.isdir(os.path.join(SER, "reels", reel)) and (st.get(reel) not in ORDER or ORDER.index(st[reel]) < ORDER.index(want)):
             st[reel] = want; json.dump(st, open(sp, "w"), indent=1); open(sp, "a").write("\n")     # git copy, read by sync.py
@@ -139,7 +141,10 @@ def plan_progress(folder, key, mix):
         total += fr.get(n, 0)
         if os.path.exists(os.path.join(folder, n + ".done")): done += fr.get(n, 0); nd += 1; continue
         log = os.path.join(folder, (n[:-4] + ".log") if key == "lossless" else ("r" + n[3:-4] + ".log"))
-        if os.path.exists(log) and os.path.getmtime(log) >= os.path.getmtime(pf) - 5: done += min(fr.get(n, 0), frames([log])[0])   # ignore logs left by an older run
+        if os.path.exists(log) and os.path.getmtime(log) >= os.path.getmtime(pf) - 5:   # ignore logs left by an older run
+            # the renderer logs ABSOLUTE frame numbers ("2256 / 2520" = frame 2256, chunk ends at 2520): count from the chunk's start
+            d, t = frames([log]); start = max(0, t - fr.get(n, 0))
+            done += max(0, min(fr.get(n, 0), d - start))
     return done, total, nd, len(names)
 
 def phase_of(studio, code):
@@ -218,7 +223,7 @@ if __name__ == "__main__":
     ap.add_argument("--step", type=int); ap.add_argument("--pct", type=float); ap.add_argument("--eta", type=float)
     a = ap.parse_args()
     if a.cmd == "idle":
-        info = load_info(); info.update({"queue": [], "phases": [], "title": None, "phase": None, "overall_eta_min": None}); event(info, "Idle")
+        info = load_info(); info.update({"queue": [], "phases": [], "title": None, "phase": None, "overall_eta_min": None, "batch": None, "reels": {}, "batch_pct": None}); event(info, "Idle")
         patch({"state": "idle", "reel_code": None, "task": None, "detail": None, "step": None, "steps": None, "pct": None, "eta_min": None}, info)
     elif a.cmd == "set": set_status(a.state or "working", a.reel, a.step, a.task, a.detail, a.pct, a.eta, now())
     elif a.cmd == "batch":

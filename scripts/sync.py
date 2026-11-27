@@ -16,6 +16,8 @@ def api(method, path, body=None, prefer=None):
 def upsert(table, rows, on): return api("POST", f"{table}?on_conflict={on}", rows, "resolution=merge-duplicates,return=representation")
 
 sj = json.load(open(os.path.join(SER, "series.json")))
+_cal = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "calendar.json")   # Autopilot reads the same calendar as the Timeline page
+if os.path.exists(_cal): sj = {**sj, "calendar": json.load(open(_cal))}
 upsert("series", [{"id": SID, "name": C["series"]["name"], "book": C["series"]["book"], "edition": sj["source"]["edition"], "config": sj}], "id")
 upsert("channels", [{"platform": p, "handle": h["handle"], "url": h["url"]} for p, h in HANDLES.items()], "platform")
 META = sj.get("cast_meta", {})          # series.json: { names: {key: display name}, first_reel: {key: code}, rig_keys: {key: CH key}, major_extra: [keys] }
@@ -68,12 +70,13 @@ for code, stage in STAGE.items():
     edited = cur[0].get("id") and api("GET", f"activity?select=id&reel_id=eq.{cur[0]['id']}&action=eq.captions%20edited&limit=1")
     if cur[0].get("captions") and (edited or not caps): caps = cur[0]["captions"]   # captions edited in the app win; otherwise the studio's latest
     if cur[0].get("stage") in ORDER and stage in ORDER and ORDER.index(cur[0]["stage"]) > ORDER.index(stage): stage = cur[0]["stage"]   # never move a reel backwards
-    rec = upsert("reels", [{"series_id": SID, "code": code, "title": s["title"], "stage": stage, "hook_hi": s["shots"][0]["hi"], "hook_en": s["shots"][0]["en"],
+    extra = {"kind": "longform"} if s.get("kind") == "longform" else {}   # full-length videos: posted from the app like reels, YouTube only
+    rec = upsert("reels", [{**extra, "series_id": SID, "code": code, "title": s["title"], "stage": stage, "hook_hi": s["shots"][0]["hi"], "hook_en": s["shots"][0]["en"],
                             "length_s": round(tl.get("total", 0), 2) if rendered else None, "script": s, "captions": caps, "hashtags": s.get("hashtags", []), "verify_note": s.get("verify_note")}], "series_id,code")[0]
     api("DELETE", f"claims?reel_id=eq.{rec['id']}", prefer="return=minimal")
     if s.get("claims"): api("POST", "claims", [{"reel_id": rec["id"], "position": i, "claim": c["claim"], "ref": c["ref"], "quote_sa": c.get("quote_sa"), "verified": bool(c.get("verified")), "sources": c.get("sources", [])} for i, c in enumerate(s["claims"])], "return=minimal")
     if rendered:
-        api("POST", "publications?on_conflict=reel_id,platform", [{"reel_id": rec["id"], "platform": p, "state": "todo"} for p in ("instagram", "youtube", "facebook")], "resolution=ignore-duplicates,return=minimal")
+        api("POST", "publications?on_conflict=reel_id,platform", [{"reel_id": rec["id"], "platform": p, "state": "todo"} for p in (("youtube",) if extra else ("instagram", "youtube", "facebook"))], "resolution=ignore-duplicates,return=minimal")
     print("synced", code, stage, len(s.get("claims", [])), "claims")
 api("POST", "activity", [{"actor": "claude", "action": "sync", "detail": {"reels": list(STAGE)}}], "return=minimal")
 print("SYNC OK")

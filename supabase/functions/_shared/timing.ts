@@ -179,42 +179,137 @@ async function bestHourOn(p: P, dateIst: Date, minLeadH = 2) {
 }
 
 // ---------- Autopilot ----------
-/** Fill the next N days: on each posting day without a post, schedule a CHECKED reel at that day's best time per platform.
- *  Fair rotation (owner's rule: every category gets a fair chance): the day goes to the category that has waited longest
- *  since its last post or scheduled post (never posted = waited forever); ties go to plan order. One reel per day on every platform. */
+/** Fill the next N posting days, strictly (owner, Nov 27 2026: "good and rigid"). Rules, in order:
+ *  1. ONE reel per day, and the SAME reel on every main platform (YouTube + Instagram): never two reels a day, never split.
+ *  2. A/B test reels first, in the exact order of series.json → experiments.<name>.post_queue (unposted ones only).
+ *  3. A reel with "follows": X goes ONLY on the day right after X's day; the day after X is kept for it.
+ *  4. A reel with "post_on": "YYYY-MM-DD" (festival) goes ONLY on that date, and that date is kept for it.
+ *  5. Otherwise the calendar (calendar.json, same as the Timeline): theme days (+3), festivals (+weight), ★ pull, with a pull towards plan order;
+ *     a reel matching a big festival (weight >= 4) within 21 days waits for it. Only CHECKED reels (citations ticked); never longform.
+ *  6. Facebook: the day's reel the same evening, plus the backlog (reels already live elsewhere, oldest first) 1 a day at 11:00 IST until caught up.
+ *  7. Long-form: an approved full-length video on YouTube, Sunday 11:00 IST, at most one a week (doesn't take the reel's slot).
+ *  8. Never moves, replaces or doubles anything already scheduled, posting or posted. */
+const MAIN: P[] = ["youtube", "instagram"];
+const istKey = (iso: string) => new Date(new Date(iso).getTime() + IST * 3600e3).toISOString().slice(0, 10);
 export async function runAutopilot() {
   const { data: ap } = await admin.from("autopilot").select("*").eq("id", 1).single();
   if (!ap?.enabled) return { skipped: "autopilot is off" };
-  const postDays: number[] = ap.post_days ?? [1, 2, 4, 5];
-  const { data: reels } = await admin.from("reels").select("id,code,plan_no,reviewed,stage,source_ref").eq("reviewed", true).neq("stage", "dropped").order("plan_no");
+  const postDays: number[] = ap.post_days ?? [0, 1, 2, 3, 4, 5, 6];
+  const platforms = ((ap.platforms ?? MAIN) as P[]);
+  const mains = MAIN.filter((p) => platforms.includes(p));
+  const { data: reels } = await admin.from("reels").select("id,code,title,plan_note,hashtags,plan_no,reviewed,stage,kind,source_ref,follows:script->>follows,post_on:script->>post_on").neq("stage", "dropped").order("plan_no");
   const { data: pubs } = await admin.from("publications").select("reel_id,platform,state,scheduled_for,posted_at");
-  const used = (p: string, dayKey: string) => (pubs ?? []).some((x) => x.platform === p && (x.state === "scheduled" || x.state === "posted" || x.state === "posting") && ((x.scheduled_for ?? x.posted_at) ?? "").length && new Date(new Date((x.scheduled_for ?? x.posted_at) as string).getTime() + IST * 3600e3).toISOString().slice(0, 10) === dayKey);
-  const free = (r: { id: string }, p: string) => !(pubs ?? []).some((x) => x.reel_id === r.id && x.platform === p && ["scheduled", "posted", "posting"].includes(x.state));
-  const { data: allReels } = await admin.from("reels").select("id,source_ref");
-  const catOf: Record<string, string> = Object.fromEntries((allReels ?? []).map((r) => [r.id, r.source_ref ?? "Other"]));
-  // when each category last had a slot on or before a given day (ms; 0 = never)
-  const lastSlot = (cat: string, before: number) => Math.max(0, ...(pubs ?? []).filter((x) => catOf[x.reel_id] === cat && ["scheduled", "posted", "posting"].includes(x.state))
-    .map((x) => new Date((x.scheduled_for ?? x.posted_at ?? 0) as string).getTime()).filter((t) => t < before));
-  const fairPick = (cands: { id: string; plan_no: number | null; source_ref: string | null }[], before: number) =>
-    [...cands].sort((a, b) => lastSlot(a.source_ref ?? "Other", before) - lastSlot(b.source_ref ?? "Other", before) || (a.plan_no ?? 1e9) - (b.plan_no ?? 1e9))[0];
-  const made: string[] = [];
+  const { data: ser } = await admin.from("series").select("config").limit(1).maybeSingle();
+  const all = (reels ?? []).filter((r) => r.kind !== "longform");
+  const byCode = Object.fromEntries(all.map((r) => [r.code, r]));
+  const live = (x: { state: string }) => ["scheduled", "posting", "posted"].includes(x.state);
+  const P_ = pubs ?? [];
+  const when = (r: { id: string }, p: string) => { const x = P_.find((y) => y.reel_id === r.id && y.platform === p && live(y)); return x ? istKey((x.scheduled_for ?? x.posted_at) as string) : null; };
+  const isLf = (id: string) => (reels ?? []).some((r) => r.id === id && r.kind === "longform");
+  const busy = (p: string, key: string) => P_.some((x) => x.platform === p && live(x) && !isLf(x.reel_id) && (x.scheduled_for ?? x.posted_at) && istKey((x.scheduled_for ?? x.posted_at) as string) === key);
+  const untouched = (r: { id: string }) => mains.every((p) => !when(r, p));            // not on any main platform yet
+  // rule 2: the test queue, in order
+  const exps = ((ser?.config ?? {}) as { experiments?: Record<string, { post_queue?: string[] }> }).experiments ?? {};
+  const testCodes = Object.values(exps).flatMap((e) => e.post_queue ?? []);
+  const order = [...testCodes.map((c) => byCode[c]).filter(Boolean), ...all.filter((r) => !testCodes.includes(r.code))];
+  // the same calendar as the Timeline page (calendar.json, synced into series.config.calendar): theme days and festivals
+  const cal = ((ser?.config ?? {}) as { calendar?: { themes?: [string, string][]; weekly?: { theme: string; days: number[]; label: string }[]; occasions?: { date: string; name: string; themes: string[]; weight: number }[] } }).calendar ?? {};
+  const RX = (cal.themes ?? []).map(([k, rx]) => [k, new RegExp(rx, "i")] as const);
+  const themesOf = (r: { title?: string | null; plan_note?: string | null; hashtags?: string[] | null }) => { const t = `${r.title ?? ""} ${r.plan_note ?? ""} ${(r.hashtags ?? []).join(" ")}`; return new Set(RX.filter(([, rx]) => rx.test(t)).map(([k]) => k)); };
+  const pullOf = (r: { plan_note?: string | null }) => ((r.plan_note ?? "").match(/★+/)?.[0].length ?? 1);
+  const fitOn = (r: typeof all[number], key: string, dow: number) => { const th = themesOf(r); let f = 0;
+    for (const w of cal.weekly ?? []) if (w.days.includes(dow) && th.has(w.theme)) f += 3;
+    for (const o of cal.occasions ?? []) if (o.date === key && o.themes.some((t) => th.has(t))) f += o.weight;
+    return f; };
+  // a reel that matches a big festival (weight >= 4) in the next 21 days waits for that day
+  const heldFor = (r: typeof all[number], key: string) => { const th = themesOf(r), d0 = Date.parse(key);
+    return (cal.occasions ?? []).find((o) => o.weight >= 4 && o.themes.some((t) => th.has(t)) && Date.parse(o.date) > d0 && Date.parse(o.date) - d0 <= 21 * 864e5); };
+  // opt-in fair rotation (calendar.json → "rotation": "fair"): the category (plan column → reels.source_ref) that has waited longest since its
+  // last post or scheduled post gets a boost, so every category gets a fair chance; never posted = waited the longest
+  const fair = (cal as { rotation?: string }).rotation === "fair";
+  const catOf = (id: string) => (reels ?? []).find((r) => r.id === id)?.source_ref ?? "Other";
+  const waited = (cat: string, key: string) => { const ts = P_.filter((x) => live(x) && catOf(x.reel_id) === cat && (x.scheduled_for ?? x.posted_at)).map((x) => istKey((x.scheduled_for ?? x.posted_at) as string)).filter((k) => k < key).sort();
+    return ts.length ? (Date.parse(key) - Date.parse(ts[ts.length - 1])) / 864e5 : 365; };
+  const made: string[] = [], notes: string[] = [];
   const todayIst = new Date(Date.now() + IST * 3600e3);
+  const fixedDates = new Set(all.filter((r) => r.post_on && untouched(r)).map((r) => r.post_on as string));
+  const keptFor = (key: string) => all.find((r) => r.post_on === key && untouched(r));
   for (let i = 0; i < (ap.days_ahead ?? 7); i++) {
     const day = new Date(Date.UTC(todayIst.getUTCFullYear(), todayIst.getUTCMonth(), todayIst.getUTCDate() + i));
     if (!postDays.includes(day.getUTCDay())) continue;
-    const key = day.toISOString().slice(0, 10), before = day.getTime() - IST * 3600e3 + 86400e3;
-    const need = (ap.platforms as P[]).filter((p) => !used(p, key)); if (!need.length) continue;
-    const dayReel = fairPick((reels ?? []).filter((r) => need.some((p) => free(r, p))), before);
-    for (const p of need) {
-      const reel = dayReel && free(dayReel, p) ? dayReel : fairPick((reels ?? []).filter((r) => free(r, p)), before); if (!reel) continue;
-      const at = await bestHourOn(p, day); if (!at) continue;
-      const { error } = await admin.from("publications").upsert({ reel_id: reel.id, platform: p, state: "scheduled", scheduled_for: at.toISOString(), schedule_options: { privacy: "public" }, scheduled_by: "autopilot", last_error: null }, { onConflict: "reel_id,platform" });
-      if (!error) { made.push(`${reel.code} ${p} ${key} ${at.toISOString().slice(11, 16)}Z`); (pubs ?? []).push({ reel_id: reel.id, platform: p, state: "scheduled", scheduled_for: at.toISOString(), posted_at: null }); }
+    const key = day.toISOString().slice(0, 10), prev = new Date(day.getTime() - 864e5).toISOString().slice(0, 10);
+    // ---- main platforms: one reel, all of them ----
+    if (mains.length && !mains.some((p) => busy(p, key))) {
+      let pick: typeof all[number] | undefined;
+      const fixed = keptFor(key);
+      // rule 3: the follower of yesterday's reel, if it is checked
+      const follower = all.find((r) => r.follows && untouched(r) && byCode[r.follows] && mains.some((p) => when(byCode[r.follows!], p) === prev));
+      if (fixed) pick = fixed.reviewed ? fixed : undefined;
+      else if (follower) { pick = follower.reviewed ? follower : undefined; if (!pick) notes.push(`${key}: kept for ${follower.code} (follows ${follower.follows}) but it isn't checked yet`); }
+      else if (!fixedDates.has(key)) {
+        // theme days + festivals + strong reels, with a pull towards plan/test order (same idea as the Timeline page)
+        const cands = order.filter((r) => r.reviewed && untouched(r) && !r.post_on && !r.follows && r.stage !== "published");
+        const testFirst = cands.find((r) => testCodes.includes(r.code));
+        const scored = cands.filter((r) => !heldFor(r, key) || fitOn(r, key, day.getUTCDay()) > 0)
+          .map((r, k) => ({ r, s: fitOn(r, key, day.getUTCDay()) + 0.25 * pullOf(r) - (fair ? 0.05 : 0.6) * k + (fair ? 0.5 * Math.min(waited(r.source_ref ?? "Other", key), 30) : 0) }));
+        scored.sort((a, b) => b.s - a.s);
+        pick = testFirst ?? scored[0]?.r;
+        for (const r of cands) { const h = heldFor(r, key); if (h && r !== pick && !notes.some((n) => n.includes(r.code))) notes.push(`${r.code} held for ${h.name} (${h.date})`); }
+        // a parent whose follower is checked but whose next day is taken would break the pair: skip it today
+        const nextKey = new Date(day.getTime() + 864e5).toISOString().slice(0, 10);
+        while (pick && all.some((f) => f.follows === pick!.code && untouched(f)) && (mains.some((p) => busy(p, nextKey)) || fixedDates.has(nextKey))) {
+          const cur: typeof all[number] = pick; pick = order.find((r) => r.reviewed && untouched(r) && !r.post_on && !r.follows && r.stage !== "published" && order.indexOf(r) > order.indexOf(cur));
+        }
+      }
+      if (pick) {
+        const times = await Promise.all(mains.map((p) => bestHourOn(p, day)));
+        if (times.every(Boolean)) {
+          for (let k = 0; k < mains.length; k++) {
+            const p = mains[k], at = times[k]!;
+            const { error } = await admin.from("publications").upsert({ reel_id: pick.id, platform: p, state: "scheduled", scheduled_for: at.toISOString(), schedule_options: { privacy: "public" }, scheduled_by: "autopilot", last_error: null }, { onConflict: "reel_id,platform" });
+            if (!error) { made.push(`${pick.code} ${p} ${key} ${at.toISOString().slice(11, 16)}Z`); P_.push({ reel_id: pick.id, platform: p, state: "scheduled", scheduled_for: at.toISOString(), posted_at: null }); }
+          }
+        }
+      }
+    }
+    // ---- long-form (owner, Nov 27 2026): an approved full-length video goes to YouTube on Sunday at 11:00 IST (the channel's best
+    //      YouTube slot in the model), at most one a week, never on top of another long-form video; it doesn't take the reel's evening slot ----
+    if (platforms.includes("youtube") && day.getUTCDay() === 0) {
+      const lf = (reels ?? []).filter((r) => r.kind === "longform" && r.reviewed && r.stage !== "published" && !when(r, "youtube"));
+      const weekHasLf = P_.some((x) => x.platform === "youtube" && live(x) && (reels ?? []).some((r) => r.kind === "longform" && r.id === x.reel_id) &&
+        Math.abs(Date.parse(istKey((x.scheduled_for ?? x.posted_at) as string)) - Date.parse(key)) < 7 * 864e5);
+      const at = new Date(Date.UTC(day.getUTCFullYear(), day.getUTCMonth(), day.getUTCDate(), 11) - IST * 3600e3);
+      if (lf[0] && !weekHasLf && at.getTime() > Date.now() + 30 * 60e3) {
+        const { error } = await admin.from("publications").upsert({ reel_id: lf[0].id, platform: "youtube", state: "scheduled", scheduled_for: at.toISOString(), schedule_options: { privacy: "public" }, scheduled_by: "autopilot", last_error: null }, { onConflict: "reel_id,platform" });
+        if (!error) { made.push(`${lf[0].code} youtube (long-form) ${key} 05:30Z`); P_.push({ reel_id: lf[0].id, platform: "youtube", state: "scheduled", scheduled_for: at.toISOString(), posted_at: null }); }
+      }
+    }
+    // ---- Facebook: (a) the day's reel, same evening as YouTube/Instagram; (b) the backlog of reels already live elsewhere,
+    //      1 a day at 11:00 IST until Facebook has caught up (owner, Nov 27 2026: "Facebook must catch up") ----
+    if (platforms.includes("facebook")) {
+      const fbOn = (k: string) => P_.filter((x) => x.platform === "facebook" && live(x) && (x.scheduled_for ?? x.posted_at) && istKey((x.scheduled_for ?? x.posted_at) as string) === k);
+      const schedFb = async (r: { id: string; code: string }, at: Date) => {
+        const { error } = await admin.from("publications").upsert({ reel_id: r.id, platform: "facebook", state: "scheduled", scheduled_for: at.toISOString(), schedule_options: { privacy: "public" }, scheduled_by: "autopilot", last_error: null }, { onConflict: "reel_id,platform" });
+        if (!error) { made.push(`${r.code} facebook ${key} ${at.toISOString().slice(11, 16)}Z`); P_.push({ reel_id: r.id, platform: "facebook", state: "scheduled", scheduled_for: at.toISOString(), posted_at: null }); }
+      };
+      // (a) the reel YouTube/Instagram get that day
+      const todays = P_.find((x) => MAIN.includes(x.platform as P) && live(x) && !isLf(x.reel_id) && (x.scheduled_for ?? x.posted_at) && istKey((x.scheduled_for ?? x.posted_at) as string) === key);
+      const tr = todays && all.find((r) => r.id === todays.reel_id);
+      if (tr && tr.reviewed && !when(tr, "facebook")) { const at = await bestHourOn("facebook", day); if (at) await schedFb(tr, at); }
+      // (b) backlog: oldest first, reels already POSTED on YouTube or Instagram, at most 1 extra a day (owner: one is enough)
+      for (const hh of [11]) {
+        if (fbOn(key).length >= 2) break;
+        const at = new Date(Date.UTC(day.getUTCFullYear(), day.getUTCMonth(), day.getUTCDate(), hh) - IST * 3600e3);
+        if (at.getTime() < Date.now() + 30 * 60e3) continue;
+        if (fbOn(key).some((x) => Math.abs(new Date(x.scheduled_for as string).getTime() - at.getTime()) < 60 * 60e3)) continue;
+        const back = all.find((r) => r.reviewed && !when(r, "facebook") && mains.some((p) => P_.some((x) => x.reel_id === r.id && x.platform === p && x.state === "posted")));
+        if (back) await schedFb(back, at);
+      }
     }
   }
-  await admin.from("autopilot").update({ last_run: { at: new Date().toISOString(), scheduled: made } }).eq("id", 1);
-  if (made.length) await admin.from("activity").insert({ actor: "autopilot", action: `autopilot scheduled ${made.length} post${made.length > 1 ? "s" : ""}`, detail: { made } });
-  return { scheduled: made };
+  await admin.from("autopilot").update({ last_run: { at: new Date().toISOString(), scheduled: made, notes } }).eq("id", 1);
+  if (made.length) await admin.from("activity").insert({ actor: "autopilot", action: `autopilot scheduled ${made.length} post${made.length > 1 ? "s" : ""}`, detail: { made, notes } });
+  return { scheduled: made, notes };
 }
 
 /** The daily job: discover peers once, scan, read audience, rebuild the model, run autopilot. */

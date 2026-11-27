@@ -85,11 +85,15 @@ Each rule has a mechanism in the engine; keep both.
     no scraping; Instagram hashtag data needs Meta's Public Content Access review), our Instagram audience's online hours (100+ followers) and our
     own results, and builds a weekday × hour score per platform (Best time page). Autopilot, off until the owner turns it on, schedules only
     CHECKED reels into the best slot of each posting day. Similar channels: found once from `autopilot.peer_search`, editable on the page.
+    Autopilot is strict (owner, Nov 27 2026): one reel a day and the SAME reel on YouTube + Instagram; A/B `post_queue` reels first in order;
+    a `"follows"` reel only on the day right after its pair (that day is kept for it); a `"post_on": "YYYY-MM-DD"` reel (festival) only on that date
+    (the date is kept for it); otherwise plan order; Facebook catches up one reel a day with reels already live elsewhere; it never moves or doubles
+    anything already scheduled or posted. Give every festival reel a `post_on` and every part 2 a `follows`.
 34. **Every link is in git.** `studio/series/<id>/MEDIA.md` (+ `media.json`) lists each reel's Hugging Face masters, audio pack, Storage paths
     (preview, cover, citations, caption) and live post links. `upload_reel.sh` rewrites it; after posts, `bootstrap.sh` runs `python3 scripts/media_index.py --commit`
     at the start of a session so the live links are committed too. Never hand-edit it.
-35. **Categories take turns fairly.** Autopilot gives each posting day to the CHECKED reel whose category (the plan's Category column,
-    `reels.source_ref`) has waited longest since its last post or scheduled post, one reel per day on every platform; ties follow plan order.
+35. **Categories take turns fairly (opt-in: `calendar.json → "rotation": "fair"`).** Autopilot then boosts the CHECKED reel whose category
+    (the plan's Category column, `reels.source_ref`) has waited longest since its last post or scheduled post; theme days, festivals and the other rules still apply.
     Write the plan the same way: each "turn" gives every category one reel before any repeats, and refill a category that runs out.
 36. **More real photos.** 2-4 openly licensed real photos per reel when good ones exist, each ~4 s with marks (rule 30's proof-shot style).
     When Wikimedia rate-limits (HTTP 429), search Openverse (api.openverse.org) and check each licence on the source page.
