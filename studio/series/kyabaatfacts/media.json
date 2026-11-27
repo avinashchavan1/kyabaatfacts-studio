@@ -127,15 +127,15 @@
     "caption": "kyabaatfacts/R003/R003_caption.txt"
    },
    "posts": {
-    "youtube": {
-     "state": "posted",
-     "post_url": "https://youtube.com/shorts/dm36wYkNgiY",
-     "posted_at": "2026-11-26T14:32:29.549+00:00"
-    },
     "instagram": {
      "state": "posted",
      "post_url": "https://www.instagram.com/reel/DgNYfxaybSs/",
      "posted_at": "2026-11-26T15:05:42.709+00:00"
+    },
+    "youtube": {
+     "state": "posted",
+     "post_url": "https://youtube.com/shorts/dm36wYkNgiY",
+     "posted_at": "2026-11-26T14:32:29.549+00:00"
     },
     "facebook": {
      "state": "posted",
@@ -147,7 +147,7 @@
   {
    "code": "R004",
    "title": "Kailasa Mandir: ek hi pathar, upar se neeche kaata gaya",
-   "stage": "approved",
+   "stage": "published",
    "app": "https://kyabaatfacts-studio.netlify.app/reels/R004",
    "masters": {
     "instagram_facebook": {
@@ -174,16 +174,22 @@
     "caption": "kyabaatfacts/R004/R004_caption.txt"
    },
    "posts": {
-    "instagram": {
-     "state": "scheduled",
+    "facebook": {
+     "state": "posted",
+     "post_url": "https://www.facebook.com/reel/1131066789900072",
+     "posted_at": "2026-11-27T14:34:07.693+00:00",
      "scheduled_for": "2026-11-27T14:30:00+00:00"
     },
     "youtube": {
-     "state": "scheduled",
+     "state": "posted",
+     "post_url": "https://youtube.com/shorts/neBbYyxo41g",
+     "posted_at": "2026-11-27T13:31:01.298+00:00",
      "scheduled_for": "2026-11-27T13:30:00+00:00"
     },
-    "facebook": {
-     "state": "scheduled",
+    "instagram": {
+     "state": "posted",
+     "post_url": "https://www.instagram.com/reel/DgP50iGxrpo/",
+     "posted_at": "2026-11-27T14:35:25.445+00:00",
      "scheduled_for": "2026-11-27T14:30:00+00:00"
     }
    }
@@ -523,13 +529,13 @@
     "instagram_facebook": {
      "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R013/R013_INSTAGRAM_MASTER.mp4?download=true",
      "path": "kyabaatfacts/R013/R013_INSTAGRAM_MASTER.mp4",
-     "mb": 142,
+     "mb": 125,
      "spec": "1080×1920 · H.264 High CRF 12 · AAC 320k · Instagram & Facebook"
     },
     "youtube": {
      "url": "https://huggingface.co/datasets/Avinash1443/kyabaatfacts-masters/resolve/main/kyabaatfacts/R013/R013_YOUTUBE_MASTER.mp4?download=true",
      "path": "kyabaatfacts/R013/R013_YOUTUBE_MASTER.mp4",
-     "mb": 287,
+     "mb": 260,
      "spec": "2160×3840 (4K) · H.264 High CRF 14 · AAC 384k · YouTube"
     }
    },
@@ -548,7 +554,7 @@
   {
    "code": "R014",
    "title": "Akbar padh-likh nahi sakte the, phir bhi empire kaise chalaya?",
-   "stage": "review",
+   "stage": "approved",
    "app": "https://kyabaatfacts-studio.netlify.app/reels/R014",
    "masters": {
     "instagram_facebook": {

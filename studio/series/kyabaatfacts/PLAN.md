@@ -43,7 +43,7 @@ Category totals: Itihaas Ke Raaz 17, Myth or Fact? 16, Desh Ke Ajoobe 14, Jaanwa
 | R014 | Akbar padh-likh nahi sakte the, phir bhi itna bada empire kaise chalaya? | R | Itihaas Ke Raaz |  | Week 3 · Tue |
 | R015 | Agar dharti ghoomna band kar de toh? | R | Agar Aisa Ho Toh? |  | Turn 1 · what if - answer only from published science (NASA, physicists) |
 | R016 | Kauwe tumhara chehra yaad rakhte hain | R | Jaanwaron Ki Duniya |  | Turn 1 |
-| R017 | Chand Baori: 13 manzil neeche, 3,500 seedhiyan | R | Desh Ke Ajoobe |  | Turn 1 |
+| R017 | Chand Baori: 13 manzil neeche, 3,500 seedhiyan | R | Desh Ke Ajoobe |  | Turn 1 · derived from L01 (cut from the long video, not made separately) |
 | R018 | Bijli ek jagah do baar nahi girti? | M | Myth or Fact? |  | Turn 1 · Myth |
 | R019 | UPI payment 2 second mein kaise pahunch jaata hai? | R | Tech Ka Jaadu |  | Turn 1 |
 | R020 | Hichki kyun aati hai? | R | Sharir Ka Sach |  | Turn 1 |
@@ -82,7 +82,7 @@ Category totals: Itihaas Ke Raaz 17, Myth or Fact? 16, Desh Ke Ajoobe 14, Jaanwa
 | R053 | Bharat ki pehli film: Raja Harishchandra (1913) | R | Bharat Ka Pehla |  | Turn 2 |
 | R054 | Agar duniya ke saare log ek saath jump karein toh? | R | Agar Aisa Ho Toh? |  | Turn 3 · what if |
 | R055 | Flamingo gulabi kyun hote hain? Khaane ki wajah se! | R | Jaanwaron Ki Duniya |  | Turn 3 |
-| R056 | Meghalaya ke zinda pul - roots se bane bridge | R | Desh Ke Ajoobe |  | Turn 3 |
+| R056 | Meghalaya ke zinda pul - roots se bane bridge | R | Desh Ke Ajoobe |  | Turn 3 · derived from L01 (cut from the long video, not made separately) |
 | R057 | Goldfish ki memory 3 second? | M | Myth or Fact? |  | Turn 3 · Myth |
 | R058 | GPS ko sahi chalne ke liye Einstein ki theory chahiye! | R | Tech Ka Jaadu |  | Turn 3 · relativity correction - cite a physics source |
 | R059 | Rongte kyun khade hote hain? | R | Sharir Ka Sach |  | Turn 3 |
@@ -117,7 +117,7 @@ Category totals: Itihaas Ke Raaz 17, Myth or Fact? 16, Desh Ke Ajoobe 14, Jaanwa
 | R088 | PIN code 1972 mein kyun aaya? | R | Bharat Ka Pehla |  | Turn 4 |
 | R089 | Agar tum bina spacesuit ke space mein chale jao toh? | R | Agar Aisa Ho Toh? |  | Turn 5 · what if - NASA/medical sources only |
 | R090 | King Cobra: the only snake that builds a nest | R | Jaanwaron Ki Duniya |  | Turn 5 |
-| R091 | Lonar Jheel: meteor ne banayi jheel | R | Desh Ke Ajoobe |  | Turn 5 |
+| R091 | Lonar Jheel: meteor ne banayi jheel | R | Desh Ke Ajoobe |  | Turn 5 · derived from L01 (cut from the long video, not made separately) |
 | R092 | Oont kubad mein paani bharta hai? | M | Myth or Fact? |  | Turn 5 · Myth - it's fat |
 | R093 | Touchscreen dastaane pehen ke kyun nahi chalti? | R | Tech Ka Jaadu |  | Turn 5 |
 | R094 | Ubaasi kyun aati hai? Science ko bhi poora pata nahi! | R | Sharir Ka Sach |  | Turn 5 |
@@ -141,7 +141,7 @@ Category totals: Itihaas Ke Raaz 17, Myth or Fact? 16, Desh Ke Ajoobe 14, Jaanwa
 | R112 | USB banane wali team mein ek Indian - Ajay Bhatt | R | Kisne Banaya? |  | Turn 6 |
 | R113 | Ek chammach neutron star = arabon ton! | R | Antriksh |  | Turn 6 |
 | R114 | Sher ki dhaariyan skin pe bhi hoti hain | R | Jaanwaron Ki Duniya |  | Turn 7 |
-| R115 | Loktak: tairte huye islands aur floating national park | R | Desh Ke Ajoobe |  | Turn 7 |
+| R115 | Loktak: tairte huye islands aur floating national park | R | Desh Ke Ajoobe |  | Turn 7 · derived from L01 (cut from the long video, not made separately) |
 | R116 | Shave karne se baal ghane aate hain? | M | Myth or Fact? |  | Turn 7 · Myth |
 | R117 | Pet ka acid pet ko hi kyun nahi gala deta? | R | Sharir Ka Sach |  | Turn 7 |
 | R118 | Hampi: kabhi duniya ke sabse bade shehron mein se ek | R | Itihaas Ke Raaz |  | Turn 7 |
@@ -156,7 +156,7 @@ Category totals: Itihaas Ke Raaz 17, Myth or Fact? 16, Desh Ke Ajoobe 14, Jaanwa
 | R127 | Shivaji Maharaj ne samundar ke beech kila kaise banaya? (Sindhudurg) | R | Itihaas Ke Raaz |  | Turn 8 |
 | R128 | Railway patri ke beech pathar kyun bichhe hote hain? | R | Aisa Kyun? |  | Turn 8 |
 | R129 | Button 5,000 saal pehle Sindhu ghaati mein! | R | Kisne Banaya? |  | Turn 8 · ornamental, not for fastening - say so |
-| R130 | Mattur: the village where people still speak Sanskrit | R | Desh Ke Ajoobe |  | Turn 9 |
+| R130 | Mattur: the village where people still speak Sanskrit | R | Desh Ke Ajoobe |  | Turn 9 · derived from L01 (cut from the long video, not made separately) |
 | R131 | Chewing gum 7 saal pet mein rehti hai? | M | Myth or Fact? |  | Turn 9 · Myth |
 | R132 | Tumhara dil roz lagbhag 1 lakh baar dhadakta hai | R | Sharir Ka Sach |  | Turn 9 |
 | R133 | Rajendra Chola: the Indian king whose navy crossed the sea | R | Itihaas Ke Raaz |  | Turn 9 |
@@ -174,21 +174,21 @@ Category totals: Itihaas Ke Raaz 17, Myth or Fact? 16, Desh Ke Ajoobe 14, Jaanwa
 | R145 | Konark mein chumbak tha? | M | Myth or Fact? |  | Turn 14 · Legend - say what is known |
 | R146 | Bajirao: the general who, it's said, never lost a battle | R | Itihaas Ke Raaz |  | Turn 14 · claim - say so |
 
-## Long videos L01-L10 (one a month)
+## Long videos L01-L10 (one a month; full plan and the L01 pilot in LONGFORM.md)
 Each video goes deeper than the matching reels. Its 4-6 derived reels are counted in R101-R500.
 
 | # | Month | Title | Category | Inside (beats) | Derived reels |
 |---|---|---|---|---|---|
 | **L01** | 1 | 10 Wonders of India Nobody Told You About | Desh Ke Ajoobe | Kailasa, Chand Baori, iron pillar, root bridges, Lonar, Loktak, Jantar Mantar, Rani ki Vav, Barren Island, Mattur | 5 |
 | **L02** | 2 | 10 Science Myths You Still Believe | Myth or Fact? | 10% brain, Great Wall from space, lightning twice, goldfish memory, bulls & red, and more | 5 |
-| **L03** | 3 | Mohenjo-daro: 4,500 Saal Pehle Ka Smart City | Itihaas Ke Raaz | Planned streets, drains, Great Bath, Lothal dockyard, trade, the script nobody can read yet, why it ended (theories) | 5 |
+| **L09** | 3 | Agar Aisa Ho Toh? 7 "What Ifs" Science Can Answer | Agar Aisa Ho Toh? | Earth stops spinning, the Sun switches off, everyone jumps at once, the Moon disappears, space without a suit, a tunnel through the Earth, no sleep | 5 |
 | **L04** | 4 | Aryabhata Se Chandrayaan Tak: India's Space Story | Antriksh | Aryabhata, first rocket carried on a bicycle (1963), Aryabhata satellite, Mangalyaan, Chandrayaan-3, Aditya-L1 | 5 |
-| **L05** | 5 | Aloo, Chai, Samosa: How "Indian" Food Came From Abroad | Khaane Ka Itihaas | Portuguese and the Americas, Persian sweets, the chai campaign, biryani theories | 5 |
-| **L06** | 6 | The Kohinoor's Journey | Itihaas Ke Raaz | Golconda mines, the dynasties that owned it, Nadir Shah, Ranjit Singh, London | 4 |
-| **L07** | 7 | Animals With Real Superpowers | Jaanwaron Ki Duniya | Octopus, crows, owls, tardigrades, mantis shrimp, elephants, cockroaches | 5 |
-| **L08** | 8 | Kaudi Se UPI Tak: The Story of Indian Money | Paise Ki Kahani | Cowrie shells, punch-marked coins, Sher Shah's rupiya, first paper notes, the ₹ symbol, UPI | 5 |
-| **L09** | 9 | Hampi: The Rise and Fall of a Great City | Itihaas Ke Raaz | Vijayanagara empire, foreign travellers' accounts, markets, 1565 battle of Talikota, ruins today | 4 |
-| **L10** | 10 | Tumhara Sharir: 10 Crazy Body Facts | Science Wala Sach | Bones, heartbeats, DNA, stomach, brain energy, reflexes | 5 |
+| **L10** | 5 | Tumhara Sharir: 10 Crazy Body Facts | Sharir Ka Sach | Bones, heartbeats, DNA, stomach, brain energy, reflexes | 5 |
+| **L07** | 6 | Animals With Real Superpowers | Jaanwaron Ki Duniya | Octopus, crows, owls, tardigrades, mantis shrimp, elephants, cockroaches | 5 |
+| **L08** | 7 | Kaudi Se UPI Tak: The Story of Indian Money | Paise Ki Kahani | Cowrie shells, punch-marked coins, Sher Shah's rupiya, first paper notes, the ₹ symbol, UPI | 5 |
+| **L03** | 8 | Mohenjo-daro: 4,500 Saal Pehle Ka Smart City | Itihaas Ke Raaz | Planned streets, drains, Great Bath, Lothal dockyard, trade, the script nobody can read yet, why it ended (theories) | 5 |
+| **L05** | 9 | Aloo, Chai, Samosa: How "Indian" Food Came From Abroad | Khaane Ka Itihaas | Portuguese and the Americas, Persian sweets, the chai campaign, biryani theories | 5 |
+| **L06** | 10 | The Kohinoor's Journey | Itihaas Ke Raaz | Golconda mines, the dynasties that owned it, Nadir Shah, Ranjit Singh, London | 4 |
 
 Total derived reels: about 48.
 

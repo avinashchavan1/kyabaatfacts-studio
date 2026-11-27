@@ -8,16 +8,16 @@
  "frame": "16:9",
  "target_min": "10-12",
  "beats_plan": [
-  "Kailasa",
-  "Chand Baori",
-  "iron pillar",
-  "root bridges",
-  "Lonar",
-  "Loktak",
-  "Jantar Mantar",
-  "Rani ki Vav",
-  "Barren Island",
-  "Mattur"
+  "10 Mattur",
+  "9 Barren Island",
+  "8 Loktak",
+  "7 Rani ki Vav",
+  "6 Jantar Mantar",
+  "5 Lonar",
+  "4 Living root bridges",
+  "3 Chand Baori",
+  "2 Iron pillar",
+  "1 Kailasa"
  ],
  "derived_target": 5,
  "related_reels": [
@@ -54,5 +54,13 @@
    "done": false
   }
  ],
- "derived_reels": []
+ "derived_reels": [],
+ "target_post": "2026-12-20 11:00 IST",
+ "derived_plan": {
+  "R130": "Mattur",
+  "R115": "Loktak",
+  "R091": "Lonar",
+  "R056": "Living root bridges",
+  "R017": "Chand Baori"
+ }
 }

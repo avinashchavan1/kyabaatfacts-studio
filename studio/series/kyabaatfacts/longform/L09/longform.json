@@ -1,20 +1,22 @@
 {
  "code": "L09",
- "title": "Hampi: The Rise and Fall of a Great City",
- "subtitle": "Itihaas Ke Raaz · month 9 · 10-12 min, 16:9",
+ "title": "Agar Aisa Ho Toh? 7 \"What Ifs\" Science Can Answer",
+ "subtitle": "Agar Aisa Ho Toh? · month 3 · 10-12 min, 16:9",
  "stage": "idea",
- "category": "Itihaas Ke Raaz",
- "month": 9,
+ "category": "Agar Aisa Ho Toh?",
+ "month": 3,
  "frame": "16:9",
  "target_min": "10-12",
  "beats_plan": [
-  "Vijayanagara empire",
-  "foreign travellers' accounts",
-  "markets",
-  "1565 battle of Talikota",
-  "ruins today"
+  "Earth stops spinning",
+  "The Sun switches off (8 minutes)",
+  "Everyone jumps at once",
+  "The Moon disappears",
+  "Space without a suit",
+  "A tunnel through the Earth",
+  "No sleep at all"
  ],
- "derived_target": 4,
+ "derived_target": 5,
  "related_reels": [],
  "progress": [
   {
