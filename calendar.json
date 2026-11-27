@@ -96,5 +96,6 @@
   4,
   5
  ],
- "_post_days_doc": "Posting weekdays (0=Sun … 6=Sat). Launch phase (weeks 1-4): Mon, Tue, Thu, Fri = 4 a week. Growth phase (buffer of 7-10 ready reels + credits): [1,2,3,4,5,6] = Mon-Sat."
+ "_post_days_doc": "Posting weekdays (0=Sun … 6=Sat). Launch phase (weeks 1-4): Mon, Tue, Thu, Fri = 4 a week. Growth phase (buffer of 7-10 ready reels + credits): [1,2,3,4,5,6] = Mon-Sat.",
+ "rotation": "fair"
 }
