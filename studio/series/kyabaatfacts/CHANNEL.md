@@ -5,7 +5,7 @@ Language: Hindi/Hinglish narration, English on screen (titles, cards, subtitles)
 Studio: built on storyreel-studio (painted animated reels 60-120 s + 10-12 min long videos).
 
 ## Decisions so far
-- Mixed facts channel with 9 categories (all approved by owner).
+- Mixed facts channel with 9 categories (all approved by owner); 11 more added 27 Nov 2026 (owner: "each category should get a fair chance"): Agar Aisa Ho Toh?, Aisa Kyun?, Sharir Ka Sach, Tech Ka Jaadu, Duniya Ke Record, Kisne Banaya?, Ajeeb Duniya, Dimaag Ka Khel, Samundar Ke Raaz, Numbers Ka Jaadu, Bharat Ka Pehla. Order: fair rotation (PLAN.md).
 - Catchy Hinglish hooks: question on screen in the first second, answer revealed in steps.
 - Every fact verified against a real source before it becomes a reel (disputed claims framed as "kya sach mein?").
 - One weekly signature show: Sach Ya Myth? (Friday).

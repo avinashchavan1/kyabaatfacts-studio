@@ -1,5 +1,5 @@
 {
- "_doc": "Kya Baat Facts posting calendar (IST). No festival planning (owner's choice): occasions is empty; copy dates from presets/calendar-hindu.json to bring festival specials back. Weekly days follow the category rhythm; post_days sets which weekdays get a post.",
+ "_doc": "Kya Baat Facts posting calendar (IST). No festival planning (owner's choice): occasions is empty; copy dates from presets/calendar-hindu.json to bring festival specials back. No fixed category weekdays: categories take turns fairly (PLAN.md → Fair rotation), so weekly is empty; post_days sets which weekdays get a post.",
  "timezone_offset_min": 330,
  "occasions": [],
  "themes": [
@@ -40,75 +40,55 @@
    "shabdon ki kahani|#shabdonkikahani"
   ],
   [
+   "whatif",
+   "agar aisa ho|what if|#agaraisahotoh"
+  ],
+  [
+   "why",
+   "aisa kyun|#aisakyun"
+  ],
+  [
+   "body",
+   "sharir|#sharirkasach"
+  ],
+  [
+   "tech",
+   "tech ka jaadu|#techkajaadu"
+  ],
+  [
+   "records",
+   "record|#duniyakerecord"
+  ],
+  [
+   "inventions",
+   "kisne banaya|#kisnebanaya"
+  ],
+  [
+   "odd",
+   "ajeeb duniya|#ajeebduniya"
+  ],
+  [
+   "mind",
+   "dimaag ka khel|#dimaagkakhel"
+  ],
+  [
+   "sea",
+   "samundar|#samundarkeraaz"
+  ],
+  [
+   "numbers",
+   "numbers ka jaadu|#numberskajaadu"
+  ],
+  [
+   "firsts",
+   "bharat ka pehla|#bharatkapehla"
+  ],
+  [
    "festival",
    "festival|diwali|holi|sankranti|republic day|independence day"
   ]
  ],
- "weekly": [
-  {
-   "theme": "science",
-   "days": [
-    1
-   ],
-   "label": "Science Monday"
-  },
-  {
-   "theme": "history",
-   "days": [
-    2
-   ],
-   "label": "History Tuesday"
-  },
-  {
-   "theme": "animals",
-   "days": [
-    3
-   ],
-   "label": "Animals/Space Wednesday"
-  },
-  {
-   "theme": "space",
-   "days": [
-    3
-   ],
-   "label": "Animals/Space Wednesday"
-  },
-  {
-   "theme": "wonders",
-   "days": [
-    4
-   ],
-   "label": "Desh Ke Ajoobe Thursday"
-  },
-  {
-   "theme": "myth",
-   "days": [
-    5
-   ],
-   "label": "Myth or Fact? Friday"
-  },
-  {
-   "theme": "food",
-   "days": [
-    6
-   ],
-   "label": "Saturday rotation"
-  },
-  {
-   "theme": "money",
-   "days": [
-    6
-   ],
-   "label": "Saturday rotation"
-  },
-  {
-   "theme": "words",
-   "days": [
-    6
-   ],
-   "label": "Saturday rotation"
-  }
- ],
+ "weekly": [],
  "festival_plan": false,
  "post_days": [
   1,

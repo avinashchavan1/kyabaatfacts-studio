@@ -46,10 +46,13 @@ Trust is the brand. One wrong fact costs more than ten good ones earn.
 - Category badge on every shot, with its colour (Science teal, History copper, Animals green, Space purple, Wonders orange, Myth red, Food pink, Money green, Words blue).
 - Covers: hook on top, red stamp with the answer, the strongest frame, category badge.
 
-## 6. Weekly rhythm
-Mon Science · Tue History · Wed Animals/Space · Thu Desh Ke Ajoobe · Fri Myth or Fact? · Sat Food/Money/Words · long video monthly.
+## 6. Category rotation (owner, 27 Nov 2026)
+20 categories take turns fairly (no fixed weekdays): see PLAN.md → Fair rotation. Badge colours and highlight names: `channel.json → categories`.
+"Agar Aisa Ho Toh?" (what if) reels answer only from published science and name the source on screen. Long video monthly.
 
-## Proof photos (owner, 25 Nov 2026)
+## Proof photos (owner, 25 Nov 2026; more of them from 27 Nov 2026)
+- Use **2-4 real photos** per reel whenever good openly licensed ones exist (R013 is the model: a real X-ray, a real skeleton zoomed to the
+  detail, skeletons of every age). Search Openverse (api.openverse.org) when Wikimedia rate-limits; check each licence on its source page.
 - On screen for about **4 seconds** (never a quick 2-second flash); the backdrop is solid while it shows.
 - Make it interesting: slow zoom toward the detail (`focus: [x, y]`, `zoomTo` ~1.4-1.7) and **draw on it**: a hand-drawn circle or box around the
   detail, an arrow and a short label (`notes: [{ x, y, r, text: 'YE HAI DEEWAR!', tx, ty, at }]`, photo units 0..1). One or two marks per photo.

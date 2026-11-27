@@ -179,24 +179,34 @@ async function bestHourOn(p: P, dateIst: Date, minLeadH = 2) {
 }
 
 // ---------- Autopilot ----------
-/** Fill the next N days: on each posting day without a post, schedule the next CHECKED reel at that day's best time per platform. */
+/** Fill the next N days: on each posting day without a post, schedule a CHECKED reel at that day's best time per platform.
+ *  Fair rotation (owner's rule: every category gets a fair chance): the day goes to the category that has waited longest
+ *  since its last post or scheduled post (never posted = waited forever); ties go to plan order. One reel per day on every platform. */
 export async function runAutopilot() {
   const { data: ap } = await admin.from("autopilot").select("*").eq("id", 1).single();
   if (!ap?.enabled) return { skipped: "autopilot is off" };
   const postDays: number[] = ap.post_days ?? [1, 2, 4, 5];
-  const { data: reels } = await admin.from("reels").select("id,code,plan_no,reviewed,stage").eq("reviewed", true).neq("stage", "dropped").order("plan_no");
+  const { data: reels } = await admin.from("reels").select("id,code,plan_no,reviewed,stage,source_ref").eq("reviewed", true).neq("stage", "dropped").order("plan_no");
   const { data: pubs } = await admin.from("publications").select("reel_id,platform,state,scheduled_for,posted_at");
   const used = (p: string, dayKey: string) => (pubs ?? []).some((x) => x.platform === p && (x.state === "scheduled" || x.state === "posted" || x.state === "posting") && ((x.scheduled_for ?? x.posted_at) ?? "").length && new Date(new Date((x.scheduled_for ?? x.posted_at) as string).getTime() + IST * 3600e3).toISOString().slice(0, 10) === dayKey);
   const free = (r: { id: string }, p: string) => !(pubs ?? []).some((x) => x.reel_id === r.id && x.platform === p && ["scheduled", "posted", "posting"].includes(x.state));
+  const { data: allReels } = await admin.from("reels").select("id,source_ref");
+  const catOf: Record<string, string> = Object.fromEntries((allReels ?? []).map((r) => [r.id, r.source_ref ?? "Other"]));
+  // when each category last had a slot on or before a given day (ms; 0 = never)
+  const lastSlot = (cat: string, before: number) => Math.max(0, ...(pubs ?? []).filter((x) => catOf[x.reel_id] === cat && ["scheduled", "posted", "posting"].includes(x.state))
+    .map((x) => new Date((x.scheduled_for ?? x.posted_at ?? 0) as string).getTime()).filter((t) => t < before));
+  const fairPick = (cands: { id: string; plan_no: number | null; source_ref: string | null }[], before: number) =>
+    [...cands].sort((a, b) => lastSlot(a.source_ref ?? "Other", before) - lastSlot(b.source_ref ?? "Other", before) || (a.plan_no ?? 1e9) - (b.plan_no ?? 1e9))[0];
   const made: string[] = [];
   const todayIst = new Date(Date.now() + IST * 3600e3);
   for (let i = 0; i < (ap.days_ahead ?? 7); i++) {
     const day = new Date(Date.UTC(todayIst.getUTCFullYear(), todayIst.getUTCMonth(), todayIst.getUTCDate() + i));
     if (!postDays.includes(day.getUTCDay())) continue;
-    const key = day.toISOString().slice(0, 10);
-    for (const p of ap.platforms as P[]) {
-      if (used(p, key)) continue;
-      const reel = (reels ?? []).find((r) => free(r, p)); if (!reel) continue;
+    const key = day.toISOString().slice(0, 10), before = day.getTime() - IST * 3600e3 + 86400e3;
+    const need = (ap.platforms as P[]).filter((p) => !used(p, key)); if (!need.length) continue;
+    const dayReel = fairPick((reels ?? []).filter((r) => need.some((p) => free(r, p))), before);
+    for (const p of need) {
+      const reel = dayReel && free(dayReel, p) ? dayReel : fairPick((reels ?? []).filter((r) => free(r, p)), before); if (!reel) continue;
       const at = await bestHourOn(p, day); if (!at) continue;
       const { error } = await admin.from("publications").upsert({ reel_id: reel.id, platform: p, state: "scheduled", scheduled_for: at.toISOString(), schedule_options: { privacy: "public" }, scheduled_by: "autopilot", last_error: null }, { onConflict: "reel_id,platform" });
       if (!error) { made.push(`${reel.code} ${p} ${key} ${at.toISOString().slice(11, 16)}Z`); (pubs ?? []).push({ reel_id: reel.id, platform: p, state: "scheduled", scheduled_for: at.toISOString(), posted_at: null }); }

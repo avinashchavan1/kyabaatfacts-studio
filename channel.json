@@ -187,7 +187,7 @@
   {
    "id": "SCI",
    "name": "Science Wala Sach",
-   "day": "Mon",
+   "day": "rotation",
    "color": "#20B2A6",
    "hashtag": "#ScienceWalaSach",
    "highlight": "SCIENCE"
@@ -195,7 +195,7 @@
   {
    "id": "HIS",
    "name": "Itihaas Ke Raaz",
-   "day": "Tue",
+   "day": "rotation",
    "color": "#C47832",
    "hashtag": "#ItihaasKeRaaz",
    "highlight": "ITIHAAS"
@@ -203,7 +203,7 @@
   {
    "id": "ANI",
    "name": "Jaanwaron Ki Duniya",
-   "day": "Wed (alternate)",
+   "day": "rotation",
    "color": "#58AA32",
    "hashtag": "#JaanwaronKiDuniya",
    "highlight": "JAANWAR"
@@ -211,7 +211,7 @@
   {
    "id": "SPC",
    "name": "Antriksh",
-   "day": "Wed (alternate)",
+   "day": "rotation",
    "color": "#6E50F0",
    "hashtag": "#Antriksh",
    "highlight": "ANTRIKSH"
@@ -219,7 +219,7 @@
   {
    "id": "WON",
    "name": "Desh Ke Ajoobe",
-   "day": "Thu",
+   "day": "rotation",
    "color": "#F06E28",
    "hashtag": "#DeshKeAjoobe",
    "highlight": "AJOOBE"
@@ -227,7 +227,7 @@
   {
    "id": "MYT",
    "name": "Myth or Fact?",
-   "day": "Fri",
+   "day": "rotation",
    "color": "#FF4B3E",
    "hashtag": "#MythOrFact",
    "highlight": "MYTH?"
@@ -235,7 +235,7 @@
   {
    "id": "FOOD",
    "name": "Khaane Ka Itihaas",
-   "day": "Sat (rotate)",
+   "day": "rotation",
    "color": "#E24682",
    "hashtag": "#KhaaneKaItihaas",
    "highlight": "KHAANA"
@@ -243,7 +243,7 @@
   {
    "id": "MON",
    "name": "Paise Ki Kahani",
-   "day": "Sat (rotate)",
+   "day": "rotation",
    "color": "#289650",
    "hashtag": "#PaiseKiKahani",
    "highlight": "PAISA"
@@ -251,10 +251,99 @@
   {
    "id": "WRD",
    "name": "Shabdon Ki Kahani",
-   "day": "Sat (rotate)",
+   "day": "rotation",
    "color": "#3282DC",
    "hashtag": "#ShabdonKiKahani",
    "highlight": "SHABD"
+  },
+  {
+   "id": "WHATIF",
+   "name": "Agar Aisa Ho Toh?",
+   "day": "rotation",
+   "color": "#E65100",
+   "hashtag": "#AgarAisaHoToh",
+   "highlight": "WHAT IF"
+  },
+  {
+   "id": "WHY",
+   "name": "Aisa Kyun?",
+   "day": "rotation",
+   "color": "#00897B",
+   "hashtag": "#AisaKyun",
+   "highlight": "KYUN?"
+  },
+  {
+   "id": "BODY",
+   "name": "Sharir Ka Sach",
+   "day": "rotation",
+   "color": "#D6336C",
+   "hashtag": "#SharirKaSach",
+   "highlight": "SHARIR"
+  },
+  {
+   "id": "TECH",
+   "name": "Tech Ka Jaadu",
+   "day": "rotation",
+   "color": "#00838F",
+   "hashtag": "#TechKaJaadu",
+   "highlight": "TECH"
+  },
+  {
+   "id": "REC",
+   "name": "Duniya Ke Record",
+   "day": "rotation",
+   "color": "#B8860B",
+   "hashtag": "#DuniyaKeRecord",
+   "highlight": "RECORD"
+  },
+  {
+   "id": "INV",
+   "name": "Kisne Banaya?",
+   "day": "rotation",
+   "color": "#7B5E3B",
+   "hashtag": "#KisneBanaya",
+   "highlight": "KISNE?"
+  },
+  {
+   "id": "ODD",
+   "name": "Ajeeb Duniya",
+   "day": "rotation",
+   "color": "#5C6BC0",
+   "hashtag": "#AjeebDuniya",
+   "highlight": "AJEEB"
+  },
+  {
+   "id": "MIND",
+   "name": "Dimaag Ka Khel",
+   "day": "rotation",
+   "color": "#6A1B9A",
+   "hashtag": "#DimaagKaKhel",
+   "highlight": "DIMAAG"
+  },
+  {
+   "id": "SEA",
+   "name": "Samundar Ke Raaz",
+   "day": "rotation",
+   "color": "#0277BD",
+   "hashtag": "#SamundarKeRaaz",
+   "highlight": "SAMUNDAR"
+  },
+  {
+   "id": "NUM",
+   "name": "Numbers Ka Jaadu",
+   "day": "rotation",
+   "color": "#37474F",
+   "hashtag": "#NumbersKaJaadu",
+   "highlight": "NUMBERS"
+  },
+  {
+   "id": "FIRST",
+   "name": "Bharat Ka Pehla",
+   "day": "rotation",
+   "color": "#C2185B",
+   "hashtag": "#BharatKaPehla",
+   "highlight": "PEHLA"
   }
- ]
+ ],
+ "category_rotation": "fair: every category gets one reel per turn before any repeats; Autopilot gives each posting day to the checked reel whose category has waited longest (PLAN.md → Fair rotation)"
 }

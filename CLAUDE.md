@@ -1,12 +1,12 @@
 # This channel: Kya Baat Facts (mixed facts, Hindi/Hinglish narration, English on screen)
 - Instagram @kyabaatfacts · YouTube @kyabaatfacts (both registered). Series folder: `studio/series/kyabaatfacts/`
   (CHANNEL.md = decisions, PLAN.md = 100 reels + 10 long videos + 400-reel roadmap, LONGFORM.md).
-- 9 categories with a weekly rhythm (`channel.json → categories`, `calendar.json → weekly`).
+- 20 categories in a **fair rotation** (owner, 27 Nov 2026): no fixed weekdays; each category gets one reel per turn before any repeats, and Autopilot gives each posting day to the category that has waited longest (`channel.json → categories`, PLAN.md → Fair rotation). When a category runs out of ideas, add 3-5 more in the next batch.
 - **Sources instead of verses:** this is a mixed facts channel with no single base text. Wherever the rules below say
   "verse", "base text" or `source_verse.py`, read: every claim lists its own source (publisher, title, URL) and is verified by
   reading that source, never from memory. Disputed or legendary claims are framed honestly or dropped. The opening-verse and
   quote-card rules become: show the source on screen when a claim is surprising (per-reel source links are enforced by `make_reel.py check`).
-- **Proof shots:** 1-2 real photos per reel (2-3 s, `kbProof` in `series/art/brand.js`), openly licensed (Wikimedia Commons / public domain preferred), no logos, text or identifiable people; record each in `script.json → media` + research notes and credit it on screen and in the caption. Let each photo breathe (~4 s, never a quick flash) and point at what matters: `kbProof(..., { focus, zoomTo, notes: [{x, y, r, text, tx, ty, at}] })` zooms toward the detail and draws a circle/box + arrow + label on it.
+- **Proof shots:** 2-4 real photos per reel when good ones exist (owner, 27 Nov 2026: "more real pictures make it look good"; R013 is the example), `kbProof` in `series/art/brand.js`), openly licensed (Wikimedia Commons / public domain preferred), no logos, text or identifiable people; record each in `script.json → media` + research notes and credit it on screen and in the caption. Let each photo breathe (~4 s, never a quick flash) and point at what matters: `kbProof(..., { focus, zoomTo, notes: [{x, y, r, text, tx, ty, at}] })` zooms toward the detail and draws a circle/box + arrow + label on it.
 - **Narrator (overrides the calm-narrator rule below):** Bunty (ElevenLabs, eleven_v4, stability 0.5), excited, chatty Hinglish like
   telling a friend; every reveal ends on the fixed clip `cast/signature/kya_baat_hai.mp3` ("क्या बात है!"). See `cast/cast.json`.
 - **v2 reel rules (owner-approved):** claim-first hook (no "अरे, एक बात बताऊँ?"), easy everyday Hinglish words, loop ending that echoes the hook,
