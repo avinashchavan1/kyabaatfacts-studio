@@ -67,3 +67,11 @@ Trust is the brand. One wrong fact costs more than ten good ones earn.
 - In a Hindi line, prefer the name people actually say in Hindi ("चीन की दीवार", "चाँद"); otherwise write the English name in Devanagari ("ग्रेट वॉल").
 - Latin-script names mid-sentence ("Great Wall") can come out with an odd pause or accent: after recording, check the word timings of names
   (a gap over ~0.2 s inside a name = re-record or rephrase).
+
+## Motion graphics (owner, 27 Nov 2026)
+- Every new reel: `const KB_MOTION = true;` at the top of shots.js. It adds, with no other work: a living camera (slow push-in + drift,
+  a zoom punch on every new sentence, a whip-in on each cut), a branded diagonal whip wipe (ink / yellow / red) at every cut, a progress bar
+  on the top edge, small sparkle bursts on each sentence, and a rotating sunburst + star burst behind "Kya baat hai!".
+- In the shots, add movement of your own: `kbBurst(c, x, y, u, at)` when a number lands, a stamp hits or two things join; `kbPop(u, at)` for pop-ins;
+  `kbWiggle(t)` / a sine bob for idle characters and objects; scale-bounce a counter when it lands. Rule of thumb: something moves or changes every 2-3 s.
+- Keep it readable: bursts stay small and away from the subtitles; never move the subtitles, badge or proof-photo labels.
