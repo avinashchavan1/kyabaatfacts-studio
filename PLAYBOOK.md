@@ -86,5 +86,5 @@ Each rule has a mechanism in the engine; keep both.
     own results, and builds a weekday × hour score per platform (Best time page). Autopilot, off until the owner turns it on, schedules only
     CHECKED reels into the best slot of each posting day. Similar channels: found once from `autopilot.peer_search`, editable on the page.
 34. **Every link is in git.** `studio/series/<id>/MEDIA.md` (+ `media.json`) lists each reel's Hugging Face masters, audio pack, Storage paths
-    (preview, cover, citations, caption) and live post links. `upload_reel.sh` rewrites it; after posts, run `python3 scripts/media_index.py --commit`
+    (preview, cover, citations, caption) and live post links. `upload_reel.sh` rewrites it; after posts, `bootstrap.sh` runs `python3 scripts/media_index.py --commit`
     at the start of a session so the live links are committed too. Never hand-edit it.
