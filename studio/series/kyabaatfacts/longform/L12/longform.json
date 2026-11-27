@@ -1,0 +1,53 @@
+{
+ "code": "L12",
+ "title": "Phone Ke Andar Ka Jaadu: UPI, GPS, Wi-Fi Kaise Kaam Karte Hain",
+ "subtitle": "Tech Ka Jaadu · Feb 2027 · 10-12 min, 16:9",
+ "stage": "idea",
+ "category": "Tech Ka Jaadu",
+ "month": 3,
+ "frame": "16:9",
+ "target_min": "10-12",
+ "beats_plan": [
+  "UPI in 2 seconds",
+  "GPS and Einstein",
+  "Wi-Fi",
+  "QR codes that survive damage",
+  "Touchscreens",
+  "Microwaves",
+  "Batteries"
+ ],
+ "derived_target": 5,
+ "related_reels": [],
+ "progress": [
+  {
+   "step": "Research + sources",
+   "done": false
+  },
+  {
+   "step": "Script (acts and beats)",
+   "done": false
+  },
+  {
+   "step": "Narration",
+   "done": false
+  },
+  {
+   "step": "Art and sets",
+   "done": false
+  },
+  {
+   "step": "Render 16:9 master",
+   "done": false
+  },
+  {
+   "step": "Cut the derived reels",
+   "done": false
+  },
+  {
+   "step": "Cover + upload",
+   "done": false
+  }
+ ],
+ "derived_reels": [],
+ "target_post": "2027-02-07 11:00 IST"
+}

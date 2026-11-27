@@ -1,0 +1,52 @@
+{
+ "code": "L18",
+ "title": "Numbers Ka Jaadu: 7 Baatein Jo Dimaag Hila Dein",
+ "subtitle": "Numbers Ka Jaadu · Sep 2027 · 10-12 min, 16:9",
+ "stage": "idea",
+ "category": "Numbers Ka Jaadu",
+ "month": 10,
+ "frame": "16:9",
+ "target_min": "10-12",
+ "beats_plan": [
+  "Birthday paradox",
+  "Fold paper 42 times",
+  "Chessboard and rice",
+  "Divide by zero",
+  "Infinity",
+  "Zero's journey"
+ ],
+ "derived_target": 5,
+ "related_reels": [],
+ "progress": [
+  {
+   "step": "Research + sources",
+   "done": false
+  },
+  {
+   "step": "Script (acts and beats)",
+   "done": false
+  },
+  {
+   "step": "Narration",
+   "done": false
+  },
+  {
+   "step": "Art and sets",
+   "done": false
+  },
+  {
+   "step": "Render 16:9 master",
+   "done": false
+  },
+  {
+   "step": "Cut the derived reels",
+   "done": false
+  },
+  {
+   "step": "Cover + upload",
+   "done": false
+  }
+ ],
+ "derived_reels": [],
+ "target_post": "2027-09-05 11:00 IST"
+}

@@ -1,10 +1,10 @@
 {
  "code": "L10",
  "title": "Tumhara Sharir: 10 Crazy Body Facts",
- "subtitle": "Sharir Ka Sach · month 5 · 10-12 min, 16:9",
+ "subtitle": "Sharir Ka Sach · Mar 2027 · 10-12 min, 16:9",
  "stage": "idea",
  "category": "Sharir Ka Sach",
- "month": 5,
+ "month": 4,
  "frame": "16:9",
  "target_min": "10-12",
  "beats_plan": [
@@ -47,5 +47,6 @@
    "done": false
   }
  ],
- "derived_reels": []
+ "derived_reels": [],
+ "target_post": "2027-03-07 11:00 IST"
 }

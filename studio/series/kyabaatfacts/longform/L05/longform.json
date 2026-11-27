@@ -1,10 +1,10 @@
 {
  "code": "L05",
  "title": "Aloo, Chai, Samosa: How \"Indian\" Food Came From Abroad",
- "subtitle": "Khaane Ka Itihaas · month 9 · 10-12 min, 16:9",
+ "subtitle": "Khaane Ka Itihaas · Jul 2027 · 10-12 min, 16:9",
  "stage": "idea",
  "category": "Khaane Ka Itihaas",
- "month": 9,
+ "month": 8,
  "frame": "16:9",
  "target_min": "10-12",
  "beats_plan": [
@@ -47,5 +47,6 @@
    "done": false
   }
  ],
- "derived_reels": []
+ "derived_reels": [],
+ "target_post": "2027-07-04 11:00 IST"
 }

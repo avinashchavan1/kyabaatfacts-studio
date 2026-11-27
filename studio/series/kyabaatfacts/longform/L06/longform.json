@@ -1,10 +1,10 @@
 {
  "code": "L06",
  "title": "The Kohinoor's Journey",
- "subtitle": "Itihaas Ke Raaz · month 10 · 10-12 min, 16:9",
+ "subtitle": "Itihaas Ke Raaz · Aug 2027 · 10-12 min, 16:9",
  "stage": "idea",
  "category": "Itihaas Ke Raaz",
- "month": 10,
+ "month": 9,
  "frame": "16:9",
  "target_min": "10-12",
  "beats_plan": [
@@ -46,5 +46,6 @@
    "done": false
   }
  ],
- "derived_reels": []
+ "derived_reels": [],
+ "target_post": "2027-08-01 11:00 IST"
 }

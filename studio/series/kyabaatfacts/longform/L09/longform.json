@@ -1,10 +1,10 @@
 {
  "code": "L09",
  "title": "Agar Aisa Ho Toh? 7 \"What Ifs\" Science Can Answer",
- "subtitle": "Agar Aisa Ho Toh? · month 3 · 10-12 min, 16:9",
+ "subtitle": "Agar Aisa Ho Toh? · Jan 2027 · 10-12 min, 16:9",
  "stage": "idea",
  "category": "Agar Aisa Ho Toh?",
- "month": 3,
+ "month": 2,
  "frame": "16:9",
  "target_min": "10-12",
  "beats_plan": [
@@ -48,5 +48,6 @@
    "done": false
   }
  ],
- "derived_reels": []
+ "derived_reels": [],
+ "target_post": "2027-01-17 11:00 IST"
 }

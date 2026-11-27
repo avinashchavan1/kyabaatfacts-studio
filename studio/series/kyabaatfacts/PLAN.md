@@ -174,23 +174,33 @@ Category totals: Itihaas Ke Raaz 17, Myth or Fact? 16, Desh Ke Ajoobe 14, Jaanwa
 | R145 | Konark mein chumbak tha? | M | Myth or Fact? |  | Turn 14 · Legend - say what is known |
 | R146 | Bajirao: the general who, it's said, never lost a battle | R | Itihaas Ke Raaz |  | Turn 14 · claim - say so |
 
-## Long videos L01-L10 (one a month; full plan and the L01 pilot in LONGFORM.md)
-Each video goes deeper than the matching reels. Its 4-6 derived reels are counted in R101-R500.
+## Long videos (two a month; full plan, budget and the L01 pilot in LONGFORM.md)
+Each video goes deeper than the matching reels and gives 4-6 derived reels.
 
-| # | Month | Title | Category | Inside (beats) | Derived reels |
-|---|---|---|---|---|---|
-| **L01** | 1 | 10 Wonders of India Nobody Told You About | Desh Ke Ajoobe | Kailasa, Chand Baori, iron pillar, root bridges, Lonar, Loktak, Jantar Mantar, Rani ki Vav, Barren Island, Mattur | 5 |
-| **L02** | 2 | 10 Science Myths You Still Believe | Myth or Fact? | 10% brain, Great Wall from space, lightning twice, goldfish memory, bulls & red, and more | 5 |
-| **L09** | 3 | Agar Aisa Ho Toh? 7 "What Ifs" Science Can Answer | Agar Aisa Ho Toh? | Earth stops spinning, the Sun switches off, everyone jumps at once, the Moon disappears, space without a suit, a tunnel through the Earth, no sleep | 5 |
-| **L04** | 4 | Aryabhata Se Chandrayaan Tak: India's Space Story | Antriksh | Aryabhata, first rocket carried on a bicycle (1963), Aryabhata satellite, Mangalyaan, Chandrayaan-3, Aditya-L1 | 5 |
-| **L10** | 5 | Tumhara Sharir: 10 Crazy Body Facts | Sharir Ka Sach | Bones, heartbeats, DNA, stomach, brain energy, reflexes | 5 |
-| **L07** | 6 | Animals With Real Superpowers | Jaanwaron Ki Duniya | Octopus, crows, owls, tardigrades, mantis shrimp, elephants, cockroaches | 5 |
-| **L08** | 7 | Kaudi Se UPI Tak: The Story of Indian Money | Paise Ki Kahani | Cowrie shells, punch-marked coins, Sher Shah's rupiya, first paper notes, the ₹ symbol, UPI | 5 |
-| **L03** | 8 | Mohenjo-daro: 4,500 Saal Pehle Ka Smart City | Itihaas Ke Raaz | Planned streets, drains, Great Bath, Lothal dockyard, trade, the script nobody can read yet, why it ended (theories) | 5 |
-| **L05** | 9 | Aloo, Chai, Samosa: How "Indian" Food Came From Abroad | Khaane Ka Itihaas | Portuguese and the Americas, Persian sweets, the chai campaign, biryani theories | 5 |
-| **L06** | 10 | The Kohinoor's Journey | Itihaas Ke Raaz | Golconda mines, the dynasties that owned it, Nadir Shah, Ranjit Singh, London | 4 |
+| Post (11:00 IST) | Code | Title | Category | Derived reels |
+|---|---|---|---|---|
+| Sun 20 Dec 2026 | **L01** | 10 Wonders of India Nobody Told You About | Desh Ke Ajoobe | 5 |
+| Sun 03 Jan 2027 | L02 | 10 Science Myths You Still Believe | Myth or Fact? | 5 |
+| Sun 17 Jan 2027 | L09 | Agar Aisa Ho Toh? 7 "What Ifs" Science Can Answer | Agar Aisa Ho Toh? | 5 |
+| Sun 07 Feb 2027 | L12 | Phone Ke Andar Ka Jaadu: UPI, GPS, Wi-Fi Kaise Kaam Karte Hain | Tech Ka Jaadu | 5 |
+| Sun 21 Feb 2027 | L04 | Aryabhata Se Chandrayaan Tak: India's Space Story | Antriksh | 5 |
+| Sun 07 Mar 2027 | L10 | Tumhara Sharir: 10 Crazy Body Facts | Sharir Ka Sach | 5 |
+| Sun 21 Mar 2027 | L11 | Samundar Ki Gehraai: Jahan Suraj Kabhi Nahi Pahuncha | Samundar Ke Raaz | 5 |
+| Sun 04 Apr 2027 | L07 | Animals With Real Superpowers | Jaanwaron Ki Duniya | 5 |
+| Sun 18 Apr 2027 | L14 | Duniya Ki 10 Sabse Extreme Jagah | Duniya Ke Record | 5 |
+| Sun 02 May 2027 | L08 | Kaudi Se UPI Tak: The Story of Indian Money | Paise Ki Kahani | 5 |
+| Sun 16 May 2027 | L13 | Tumhara Dimaag Tumhe Dhokha Deta Hai: 10 Illusions | Dimaag Ka Khel | 5 |
+| Sun 06 Jun 2027 | L03 | Mohenjo-daro: 4,500 Saal Pehle Ka Smart City | Itihaas Ke Raaz | 5 |
+| Sun 20 Jun 2027 | L15 | India Ne Duniya Ko Kya Diya: Zero Se Shampoo Tak | Kisne Banaya? | 5 |
+| Sun 04 Jul 2027 | L05 | Aloo, Chai, Samosa: How "Indian" Food Came From Abroad | Khaane Ka Itihaas | 5 |
+| Sun 18 Jul 2027 | L16 | 10 Desh, 10 Ajeeb Baatein | Ajeeb Duniya | 5 |
+| Sun 01 Aug 2027 | L06 | The Kohinoor's Journey | Itihaas Ke Raaz | 4 |
+| Sun 15 Aug 2027 | L17 | Bharat Ke 10 Pehle | Bharat Ka Pehla | 5 |
+| Sun 05 Sep 2027 | L18 | Numbers Ka Jaadu: 7 Baatein Jo Dimaag Hila Dein | Numbers Ka Jaadu | 5 |
+| Sun 19 Sep 2027 | L20 | Roz Ke 10 Kyun Jo Kabhi Socha Nahi | Aisa Kyun? | 5 |
+| Sun 03 Oct 2027 | L19 | Hampi: The Rise and Fall of a Great City | Itihaas Ke Raaz | 5 |
 
-Total derived reels: about 48.
+Total derived reels: about 100 (20 videos × ~5).
 
 ## Reels R101-R500: roadmap (400 reels)
 About 67 more weeks at 6 a week. Counts are targets; shift them toward whatever the analytics show works.

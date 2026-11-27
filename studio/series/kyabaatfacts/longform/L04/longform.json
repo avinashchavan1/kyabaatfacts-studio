@@ -1,10 +1,10 @@
 {
  "code": "L04",
  "title": "Aryabhata Se Chandrayaan Tak: India's Space Story",
- "subtitle": "Antriksh · month 4 · 10-12 min, 16:9",
+ "subtitle": "Antriksh · Feb 2027 · 10-12 min, 16:9",
  "stage": "idea",
  "category": "Antriksh",
- "month": 4,
+ "month": 3,
  "frame": "16:9",
  "target_min": "10-12",
  "beats_plan": [
@@ -47,5 +47,6 @@
    "done": false
   }
  ],
- "derived_reels": []
+ "derived_reels": [],
+ "target_post": "2027-02-21 11:00 IST"
 }

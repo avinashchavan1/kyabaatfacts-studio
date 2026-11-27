@@ -1,0 +1,52 @@
+{
+ "code": "L16",
+ "title": "10 Desh, 10 Ajeeb Baatein",
+ "subtitle": "Ajeeb Duniya · Jul 2027 · 10-12 min, 16:9",
+ "stage": "idea",
+ "category": "Ajeeb Duniya",
+ "month": 8,
+ "frame": "16:9",
+ "target_min": "10-12",
+ "beats_plan": [
+  "Ethiopia's 13 months",
+  "Nepal's flag",
+  "Bhutan's happiness",
+  "Vatican City",
+  "Japan's punctual trains",
+  "More"
+ ],
+ "derived_target": 5,
+ "related_reels": [],
+ "progress": [
+  {
+   "step": "Research + sources",
+   "done": false
+  },
+  {
+   "step": "Script (acts and beats)",
+   "done": false
+  },
+  {
+   "step": "Narration",
+   "done": false
+  },
+  {
+   "step": "Art and sets",
+   "done": false
+  },
+  {
+   "step": "Render 16:9 master",
+   "done": false
+  },
+  {
+   "step": "Cut the derived reels",
+   "done": false
+  },
+  {
+   "step": "Cover + upload",
+   "done": false
+  }
+ ],
+ "derived_reels": [],
+ "target_post": "2027-07-18 11:00 IST"
+}

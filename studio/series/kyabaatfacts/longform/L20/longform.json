@@ -1,0 +1,53 @@
+{
+ "code": "L20",
+ "title": "Roz Ke 10 Kyun Jo Kabhi Socha Nahi",
+ "subtitle": "Aisa Kyun? · Sep 2027 · 10-12 min, 16:9",
+ "stage": "idea",
+ "category": "Aisa Kyun?",
+ "month": 10,
+ "frame": "16:9",
+ "target_min": "10-12",
+ "beats_plan": [
+  "Sky blue, sunset orange",
+  "Onions and tears",
+  "Ice floats",
+  "Salty sea",
+  "White planes",
+  "Stones on rail tracks",
+  "Lightning before thunder"
+ ],
+ "derived_target": 5,
+ "related_reels": [],
+ "progress": [
+  {
+   "step": "Research + sources",
+   "done": false
+  },
+  {
+   "step": "Script (acts and beats)",
+   "done": false
+  },
+  {
+   "step": "Narration",
+   "done": false
+  },
+  {
+   "step": "Art and sets",
+   "done": false
+  },
+  {
+   "step": "Render 16:9 master",
+   "done": false
+  },
+  {
+   "step": "Cut the derived reels",
+   "done": false
+  },
+  {
+   "step": "Cover + upload",
+   "done": false
+  }
+ ],
+ "derived_reels": [],
+ "target_post": "2027-09-19 11:00 IST"
+}

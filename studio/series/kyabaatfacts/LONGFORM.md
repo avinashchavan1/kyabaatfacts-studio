@@ -1,6 +1,6 @@
 # Kya Baat Facts: long-form plan
 
-Owner, 27 Nov 2026: "I need long form type videos." One full-length video a month (10-12 min, 16:9, YouTube), each a NEW production
+Owner, 27 Nov 2026: "I need long form type videos" and "every month 2 long videos". **Two full-length videos a month** (10-12 min, 16:9, YouTube), each a NEW production
 whose beats are drawn so 4-6 reels can be cut from them (PLAYBOOK 22-28). This file is the plan; each video's working file is
 `longform/<code>/longform.json` (synced to the app's Long videos page).
 
@@ -27,29 +27,46 @@ whose beats are drawn so 4-6 reels can be cut from them (PLAYBOOK 22-28). This f
 - Budget: ~15-20k ElevenLabs characters per video (two takes). Plan the month's reels around it.
 
 ## Posting
-- Autopilot posts an APPROVED long video to YouTube on **Sunday at 11:00 IST** (the channel's best YouTube slot), at most one a week,
+- Two a month, on the **1st and 3rd Sunday at 11:00 IST** (the channel's best YouTube slot). Give each long video's script.json `"post_on": "YYYY-MM-DD"` (its Sunday from the table); Autopilot posts it, once APPROVED, on exactly that date, at most one a week,
   without taking that day's reel slot. Review it in the app like a reel (tick the citation check), and Autopilot does the rest.
 - Derived reels go into the plan's fair rotation like any reel, each ending with "poori video channel pe" (YouTube) in the caption.
 
-## Line-up (one a month, across the categories)
-| Month | Code | Title | Category | Derived reels |
+## Line-up (two a month, every category gets a turn)
+| Post (11:00 IST) | Code | Title | Category | Derived reels |
 |---|---|---|---|---|
-| 1 (Dec 2026) | **L01** | 10 Wonders of India Nobody Told You About | Desh Ke Ajoobe | 5 (pilot, below) |
-| 2 | L02 | 10 Science Myths You Still Believe | Myth or Fact? | 5 |
-| 3 | L09 | Agar Aisa Ho Toh? 7 "What Ifs" Science Can Answer | Agar Aisa Ho Toh? | 5 |
-| 4 | L04 | Aryabhata Se Chandrayaan Tak: India's Space Story | Antriksh | 5 |
-| 5 | L10 | Tumhara Sharir: 10 Crazy Body Facts | Sharir Ka Sach | 5 |
-| 6 | L07 | Animals With Real Superpowers | Jaanwaron Ki Duniya | 5 |
-| 7 | L08 | Kaudi Se UPI Tak: The Story of Indian Money | Paise Ki Kahani | 5 |
-| 8 | L03 | Mohenjo-daro: 4,500 Saal Pehle Ka Smart City | Itihaas Ke Raaz | 5 |
-| 9 | L05 | Aloo, Chai, Samosa: How "Indian" Food Came From Abroad | Khaane Ka Itihaas | 5 |
-| 10 | L06 | The Kohinoor's Journey | Itihaas Ke Raaz | 4 |
+| Sun 20 Dec 2026 | **L01** | 10 Wonders of India Nobody Told You About | Desh Ke Ajoobe | 5 |
+| Sun 03 Jan 2027 | L02 | 10 Science Myths You Still Believe | Myth or Fact? | 5 |
+| Sun 17 Jan 2027 | L09 | Agar Aisa Ho Toh? 7 "What Ifs" Science Can Answer | Agar Aisa Ho Toh? | 5 |
+| Sun 07 Feb 2027 | L12 | Phone Ke Andar Ka Jaadu: UPI, GPS, Wi-Fi Kaise Kaam Karte Hain | Tech Ka Jaadu | 5 |
+| Sun 21 Feb 2027 | L04 | Aryabhata Se Chandrayaan Tak: India's Space Story | Antriksh | 5 |
+| Sun 07 Mar 2027 | L10 | Tumhara Sharir: 10 Crazy Body Facts | Sharir Ka Sach | 5 |
+| Sun 21 Mar 2027 | L11 | Samundar Ki Gehraai: Jahan Suraj Kabhi Nahi Pahuncha | Samundar Ke Raaz | 5 |
+| Sun 04 Apr 2027 | L07 | Animals With Real Superpowers | Jaanwaron Ki Duniya | 5 |
+| Sun 18 Apr 2027 | L14 | Duniya Ki 10 Sabse Extreme Jagah | Duniya Ke Record | 5 |
+| Sun 02 May 2027 | L08 | Kaudi Se UPI Tak: The Story of Indian Money | Paise Ki Kahani | 5 |
+| Sun 16 May 2027 | L13 | Tumhara Dimaag Tumhe Dhokha Deta Hai: 10 Illusions | Dimaag Ka Khel | 5 |
+| Sun 06 Jun 2027 | L03 | Mohenjo-daro: 4,500 Saal Pehle Ka Smart City | Itihaas Ke Raaz | 5 |
+| Sun 20 Jun 2027 | L15 | India Ne Duniya Ko Kya Diya: Zero Se Shampoo Tak | Kisne Banaya? | 5 |
+| Sun 04 Jul 2027 | L05 | Aloo, Chai, Samosa: How "Indian" Food Came From Abroad | Khaane Ka Itihaas | 5 |
+| Sun 18 Jul 2027 | L16 | 10 Desh, 10 Ajeeb Baatein | Ajeeb Duniya | 5 |
+| Sun 01 Aug 2027 | L06 | The Kohinoor's Journey | Itihaas Ke Raaz | 4 |
+| Sun 15 Aug 2027 | L17 | Bharat Ke 10 Pehle | Bharat Ka Pehla | 5 |
+| Sun 05 Sep 2027 | L18 | Numbers Ka Jaadu: 7 Baatein Jo Dimaag Hila Dein | Numbers Ka Jaadu | 5 |
+| Sun 19 Sep 2027 | L20 | Roz Ke 10 Kyun Jo Kabhi Socha Nahi | Aisa Kyun? | 5 |
+| Sun 03 Oct 2027 | L19 | Hampi: The Rise and Fall of a Great City | Itihaas Ke Raaz | 5 |
 
-Changed 27 Nov 2026: "Hampi" (old L09) made way for **What If**, the strongest long-form genre for a facts channel; Body moved up.
-After the first two videos, reorder by what the analytics show (average view duration and the retention graph).
+December has only the pilot (6 Dec is too soon to make it well); from January it's two a month. "Bharat Ke 10 Pehle" lands on 15 August
+(Independence Day). After the first two videos, reorder by what the analytics show (average view duration and the retention graph).
+
+## Production and budget at two a month
+- Each video takes about 3 sessions, so about 6 sessions a month for long videos, alongside the reels.
+- They give **about 10 reels a month** (5 each), about a third of the daily reels, so fewer reels need to be made from scratch.
+- ElevenLabs: ~15-20k characters per video (two takes), so ~30-40k a month for long videos plus ~1-1.5k per standalone reel (× 2 takes).
+  Check the credits each month; if they run short, a long video waits, never its sources or quality.
+- Start the next video's research while the current one renders, so one is always ready two weeks ahead.
 
 ## Pilot: L01 "10 Wonders of India Nobody Told You About"
-Target: post **Sunday 20 Dec 2026, 11:00 IST**. Countdown order (10 → 1). Every claim gets verified from its source before recording;
+Target: post **Sunday 20 Dec 2026, 11:00 IST**; the next one (L02) is due Sunday 3 Jan 2027. Countdown order (10 → 1). Every claim gets verified from its source before recording;
 the notes say what to check. R004 (Kailasa) and R010 (iron pillar) already exist as reels, so the video re-tells them briefly with new
 proof, and the **five derived reels replace five standalone reels already in the plan** (same topics, made once, from the long video).
 

@@ -1,10 +1,10 @@
 {
  "code": "L03",
  "title": "Mohenjo-daro: 4,500 Saal Pehle Ka Smart City",
- "subtitle": "Itihaas Ke Raaz · month 8 · 10-12 min, 16:9",
+ "subtitle": "Itihaas Ke Raaz · Jun 2027 · 10-12 min, 16:9",
  "stage": "idea",
  "category": "Itihaas Ke Raaz",
- "month": 8,
+ "month": 7,
  "frame": "16:9",
  "target_min": "10-12",
  "beats_plan": [
@@ -50,5 +50,6 @@
    "done": false
   }
  ],
- "derived_reels": []
+ "derived_reels": [],
+ "target_post": "2027-06-06 11:00 IST"
 }

@@ -1,10 +1,10 @@
 {
  "code": "L08",
  "title": "Kaudi Se UPI Tak: The Story of Indian Money",
- "subtitle": "Paise Ki Kahani · month 7 · 10-12 min, 16:9",
+ "subtitle": "Paise Ki Kahani · May 2027 · 10-12 min, 16:9",
  "stage": "idea",
  "category": "Paise Ki Kahani",
- "month": 7,
+ "month": 6,
  "frame": "16:9",
  "target_min": "10-12",
  "beats_plan": [
@@ -47,5 +47,6 @@
    "done": false
   }
  ],
- "derived_reels": []
+ "derived_reels": [],
+ "target_post": "2027-05-02 11:00 IST"
 }
