@@ -286,3 +286,71 @@ endCard = function (ctx, u, p, sh, t, post) {
 // safe zone: map pins keep their label clear of the action rail
 const _kbPin0 = kbPin;
 kbPin = function (c, x, y, label, u, at = 0.3, col = KB.RED) { return _kbPin0(c, KB_S() ? Math.min(Math.max(x, 220), 760) : x, KB_S() ? Math.min(y, 1140) : y, label, u, at, col); };
+
+// ---- Motion kit (owner, 27 Nov 2026: "more and more motion graphics, to hold retention"). Opt-in per reel: `const KB_MOTION = true;` ----
+// Everything here runs on top of the shots, so old reels are untouched and new reels get it for free:
+//   FX_CAM  living camera on the art: slow push-in + drift every shot, a zoom PUNCH on every new sentence, a whip-in on each cut
+//   FX_CUT  replaces the dark soft cut (the whip wipe is drawn on top in FX_UI)
+//   FX_UI   a progress bar at the very top, the branded diagonal whip wipe at every cut, sparkle bursts on every new sentence
+//   kbBurst / kbRays / kbPop / kbWiggle: helpers for shots (burst of stars, rotating sunburst, pop-in scale, idle wiggle)
+const KB_M = () => typeof KB_MOTION !== 'undefined' && KB_MOTION;
+const KB_WIPE = 0.14;                                      // seconds either side of a cut
+function kbBeats(sh) { const n = (sh.sent || []).length; return n > 1 ? sentenceStarts(sh, n).slice(1) : []; }
+function kbPop(u, at, len = 0.35) { return backOut(map(u, at, at + len)); }
+function kbWiggle(t, amt = 0.04, sp = 3) { return Math.sin(t * sp) * amt; }
+// a burst of 4-point stars flying out from (x, y), starting at `at`
+function kbBurst(c, x, y, u, at, n = 10, R = 260, cols = [KB.Y, KB.W, KB.RED], seed = 1) {
+  const d = u - at; if (d < 0 || d > 0.6) return; const k = easeOut(d / 0.6), a = 1 - d / 0.6;
+  c.save(); c.globalAlpha = a;
+  for (let j = 0; j < n; j++) {
+    const ang = (j / n) * Math.PI * 2 + seed * 0.7, rr = R * (0.35 + 0.65 * k) * (0.8 + 0.4 * ((j * 37 + seed * 11) % 7) / 7), s = (16 + (j % 3) * 8) * (1 - 0.5 * k);
+    const px = x + Math.cos(ang) * rr, py = y + Math.sin(ang) * rr;
+    c.fillStyle = cols[j % cols.length]; c.strokeStyle = KB.INK; c.lineWidth = 4;
+    c.beginPath(); for (let q = 0; q < 8; q++) { const r2 = q % 2 ? s * 0.38 : s, a2 = q * Math.PI / 4 + d * 6; c.lineTo(px + Math.cos(a2) * r2, py + Math.sin(a2) * r2); } c.closePath(); c.fill(); c.stroke();
+  }
+  c.restore();
+}
+// rotating sunburst rays behind a reveal (alpha 0..1)
+function kbRays(c, x, y, t, a = 1, col = KB.W, n = 16, R = 1400) {
+  if (a <= 0) return; c.save(); c.translate(x, y); c.rotate(t * 0.35); c.globalAlpha = 0.28 * a; c.fillStyle = col;
+  for (let j = 0; j < n; j++) { c.rotate(Math.PI * 2 / n); c.beginPath(); c.moveTo(0, 0); c.lineTo(R, -R * 0.09); c.lineTo(R, R * 0.09); c.closePath(); c.fill(); }
+  c.restore();
+}
+function FX_CAM(sh, u, i, t) {
+  if (!KB_M() || sh.cta) return null;
+  let z = 1.025 + 0.045 * clamp(u / sh.dur), dx = Math.sin(t * 0.6) * 7, dy = Math.cos(t * 0.45) * 6, rot = Math.sin(t * 0.33) * 0.004;
+  for (const b of kbBeats(sh)) { const d = u - b; if (d >= 0 && d < 0.32) z += 0.05 * Math.pow(1 - d / 0.32, 2); }     // punch on each sentence
+  if (i > 0 && u < 0.3) { const k = 1 - easeOut(u / 0.3); z += 0.08 * k; dx += 140 * k * (i % 2 ? 1 : -1); rot += 0.02 * k * (i % 2 ? 1 : -1); }   // whip-in
+  return { z, dx, dy, rot };
+}
+function FX_CUT(ctx, TL, i, u, t) { if (!KB_M()) { const cut = 1 - map(u, 0, 3 / FPS); if (cut > 0 && i > 0) { ctx.fillStyle = `rgba(4,4,14,${cut * 0.5})`; ctx.fillRect(0, 0, FW, FH); } } }
+function FX_UI(c, sh, u, t, i, TL) {
+  if (!KB_M()) return;
+  // 1. progress bar (top edge; YouTube shows it, Instagram's header gradient softens it)
+  const tot = TL.total || TL.shots.reduce((s, x) => s + x.dur, 0), pr = clamp(t / tot);
+  c.save(); c.fillStyle = rgba(KB.INK, 0.45); c.fillRect(0, 0, FW, 12); c.fillStyle = KB.Y; c.fillRect(0, 0, FW * pr, 12);
+  c.fillStyle = KB.RED; c.beginPath(); c.arc(FW * pr, 6, 9, 0, Math.PI * 2); c.fill(); c.restore();
+  // 2. sparkle burst on each new sentence (small, around the art's centre, alternating sides)
+  if (!sh.cta) kbBeats(sh).forEach((b, j) => kbBurst(c, j % 2 ? 300 : 780, 1180, u, b, 8, 170, [KB.Y, KB.W, KB.RED], j + sh.id));
+  // 3. branded whip wipe at each cut: an ink band then a yellow band sweep diagonally across
+  for (let j = 1; j < TL.shots.length; j++) {
+    const d = t - TL.shots[j].start; if (Math.abs(d) > KB_WIPE) continue;
+    const k = (d + KB_WIPE) / (2 * KB_WIPE), dir = j % 2 ? 1 : -1, X = dir > 0 ? -700 + k * (FW + 1400) : FW + 700 - k * (FW + 1400);
+    c.save(); c.translate(X, FH / 2); c.rotate(-0.32 * dir);
+    c.fillStyle = KB.INK; c.fillRect(-330, -FH, 260, FH * 2); c.fillStyle = KB.Y; c.fillRect(-70, -FH, 300, FH * 2); c.fillStyle = KB.RED; c.fillRect(230, -FH, 40, FH * 2);
+    c.restore();
+  }
+}
+// the catchphrase gets a rotating sunburst + a star burst when motion is on (same layout as the safe-zone version, rays between wash and eyes)
+{ const _kbKB1 = kbKyaBaat;
+  kbKyaBaat = function (c, u, t, at) {
+    if (!KB_M() || !KB_S()) return _kbKB1(c, u, t, at);
+    if (u < at - 0.1) return; const q = backOut(map(u, at - 0.1, at + 0.3)), q1 = Math.min(1, q);
+    c.save(); c.fillStyle = rgba(KB.Y, 0.93 * q1); c.fillRect(0, 0, W, H); c.restore();
+    kbRays(c, 540, 820, t, q1);
+    const wob = 1 + 0.03 * Math.sin((u - at) * 9) * Math.max(0, 1 - (u - at) / 1.5);
+    c.save(); c.translate(540, 820); c.scale(q * 0.8 * wob, q * 0.8 * wob); kbEyes(c, 0, 0, 170, t, 'wow', 1); c.restore();
+    textFit(c, 'KYA BAAT HAI!', 540, 1180, { size: 104 * q1, weight: 900, color: KB.INK, shadow: 0 });
+    kbBurst(c, 540, 820, u, at + 0.05, 14, 420, [KB.RED, KB.W, KB.INK], 3);
+  };
+}

@@ -1,5 +1,6 @@
 // ===== R013 · Bachche 300 haddiyon ke saath, bade hokar 206 kyun? (Science Wala Sach) — Kya Baat look =====
 const KB_SAFE = true;                                   // safe-zone layout (v2)
+const KB_MOTION = true;                                 // motion kit: living camera, whip cuts, progress bar, beat sparkles
 const SUB_STYLE = { maxW: 640, bottom: 1400 };
 const R13_CAT = { label: 'SCIENCE WALA SACH', col: '#20B2A6' };
 function buildScenes() { return Promise.all([kbLoadImg('xray', 'proof_xray.jpg'), kbLoadImg('baby', 'proof_baby_xray.jpg'), kbLoadImg('skel', 'proof_skeleton.jpg'), kbLoadImg('ages', 'proof_ages.jpg')]); }
@@ -56,10 +57,12 @@ const SHOTS = {
   1(ctx, u, p, sh, t, post) {
     const st = sentenceStarts(sh, 2);
     kbYellow(ctx, t);
-    r13Bone(ctx, 540, 1060, 420, 1.05 * backOut(map(u, 0.05, 0.45)), -0.15, t, u > st[1] ? 'wow' : 'kya');
+    r13Bone(ctx, 540, 1060 + Math.sin(t * 2.2) * 10, 420, 1.05 * backOut(map(u, 0.05, 0.45)), -0.15 + kbWiggle(t, 0.05, 2.6), t, u > st[1] ? 'wow' : 'kya');
     post.ui = c => { kbBadge(c, R13_CAT.label, R13_CAT.col, ease(u, 0, 0.3)); (sh.card || []).forEach(([s, col], i) => { const q = i ? ease(u, st[1] - 0.05, st[1] + 0.3) : 1; if (q > 0) textFit(c, s, 540, 430 + i * 130 + (1 - q) * 22, { size: 92, weight: 900, color: col || KB.W, alpha: q, stroke: 14, shadow: 0 }, 980); });
       const n = u < st[1] ? r13Count(u, 0, 300, 0.4, 1.6) : r13Count(u, 300, 206, st[1] + 0.1, st[1] + 1.3);
-      text(c, String(n), 540, 800, { size: 150, weight: 900, color: u > st[1] ? KB.RED : KB.INK, stroke: 14, shadow: 0 }); };
+      const land = u > st[1] + 1.3 ? 1 + 0.12 * Math.max(0, 1 - (u - st[1] - 1.3) / 0.3) : 1;
+      c.save(); c.translate(540, 800); c.scale(land, land); text(c, String(n), 0, 0, { size: 150, weight: 900, color: u > st[1] ? KB.RED : KB.INK, stroke: 14, shadow: 0 }); c.restore();
+      kbBurst(c, 540, 760, u, 1.6, 10, 240, [KB.Y, KB.W, KB.INK], 2); kbBurst(c, 540, 760, u, st[1] + 1.3, 12, 280, [KB.RED, KB.W, KB.Y], 5); };
   },
   // 2 — where did they go? a real X-ray of a 3-month-old (small separate bones), then two bones slide together and become one
   2(ctx, u, p, sh, t, post) {
@@ -68,8 +71,7 @@ const SHOTS = {
     const j = easeOut(map(u, after + 0.1, after + 0.9));
     if (j < 1) { r13Bone(ctx, 540 - 260 * (1 - j), 1050, 260, 0.9, 0, t, 'kya'); r13Bone(ctx, 540 + 260 * (1 - j), 1050, 260, 0.9, 0, t, 'kya'); }
     else r13Bone(ctx, 540, 1050, 560, 0.9, 0, t, 'wow');
-    if (j > 0.9 && j < 1.2) { ctx.fillStyle = KB.Y; for (let k = 0; k < 10; k++) { const a = k * 0.63 + t; ctx.beginPath(); ctx.arc(540 + Math.cos(a) * 160, 1050 + Math.sin(a) * 110, 10, 0, Math.PI * 2); ctx.fill(); } }
-    post.ui = c => { kbBadge(c, R13_CAT.label, R13_CAT.col);
+    post.ui = c => { kbBadge(c, R13_CAT.label, R13_CAT.col); kbBurst(c, 540, 1050, u, after + 0.85, 14, 330, [KB.RED, KB.W, KB.INK], 4);
       if (!kbProof(c, 'baby', u, P0, PL, 'ASLI X-RAY · 3 MAHINE KA BACHCHA', 'S. Rowland 1896 · Wellcome · CC0', 0.025, {
         focus: [0.2, 0.75], zoomTo: 1.3, notes: [
           { x: 0.12, y: 0.86, r: 0.12, shape: 'box', at: 0.9, text: 'ALAG-ALAG HADDIYAN', tx: 0.55, ty: 0.62 },
@@ -80,7 +82,7 @@ const SHOTS = {
   3(ctx, u, p, sh, t, post) {
     const st = sentenceStarts(sh, 2);
     kbYellow(ctx, t);
-    r13Skull(ctx, 540, 1000, 1.05 * backOut(map(u, 0.05, 0.45)), easeOut(map(u, st[1] + 0.6, sh.dur - 0.6)), t);
+    r13Skull(ctx, 540, 1000 + Math.sin(t * 1.8) * 12, 1.05 * backOut(map(u, 0.05, 0.45)), easeOut(map(u, st[1] + 0.6, sh.dur - 0.6)), t);
     post.ui = c => { kbBadge(c, R13_CAT.label, R13_CAT.col);
       kbLabel(c, u < st[1] ? 'NARAM JAGAH (SOFT SPOT)' : '1-2 SAAL MEIN BAND!', 430, u, u < st[1] ? 0.4 : st[1], { size: 54, fill: u < st[1] ? KB.W : KB.Y });
       if (u < st[1] + 0.5) kbArrow(c, 790, 560, 600, 830, KB.INK, 12); };
@@ -107,7 +109,7 @@ const SHOTS = {
           { x: 0.42, y: 0.71, r: 0.09, at: 1.3, text: 'REEDH KI AAKHRI HADDI', tx: 0.5, ty: 0.28 },
           { x: 0.42, y: 0.705, r: 0.07, shape: 'box', at: Math.max(2.4, st[1] - P0 - 1.4), text: 'PEHLE 5 THI!', tx: 0.5, ty: 0.94 }] })) return;
       if (u < st[1]) kbLabel(c, 'PEHLE: 5 ALAG HADDIYAN', 430, u, 0.2, { size: 56 });
-      else { kbStamp(c, '5 → 1', 540, 430, u, st[1] + 0.5, KB.RED, 120); kbLabel(c, '20-25 SAAL TAK', 640, u, st[1] + 1.2, { fill: KB.Y, size: 54 }); } };
+      else { kbStamp(c, '5 → 1', 540, 430, u, st[1] + 0.5, KB.RED, 120); kbBurst(c, 540, 430, u, st[1] + 0.6, 12, 300, [KB.Y, KB.W, KB.INK], 7); kbLabel(c, '20-25 SAAL TAK', 640, u, st[1] + 1.2, { fill: KB.Y, size: 54 }); } };
   },
   // 6 — loop: you grew up and your bones got fewer; "that was when I was a baby!"
   6(ctx, u, p, sh, t, post) {
@@ -121,7 +123,7 @@ const SHOTS = {
           { x: 0.52, y: 0.72, r: 0.1, at: 0.9, text: 'BACHPAN: ~300', tx: 0.3, ty: 0.93 },
           { x: 0.64, y: 0.33, r: 0.1, at: 2.0, text: 'BADE: 206', tx: 0.3, ty: 0.1 }] })) return;
       if (u < st[1]) { const n = r13Count(u, 300, 206, 0.2, Math.max(1.4, st[1] - 0.2)); text(c, `HADDIYAN: ${n}`, 540, 460, { size: 80, weight: 900, color: KB.INK, stroke: 0, shadow: 0 }); }
-      else kbStamp(c, '"WO TO BACHPAN MEIN THI!"', 540, 430, u, st[1] + 0.2, KB.RED, 68); };
+      else { kbStamp(c, '"WO TO BACHPAN MEIN THI!"', 540, 430, u, st[1] + 0.2, KB.RED, 68); kbBurst(c, 540, 430, u, st[1] + 0.3, 12, 330, [KB.Y, KB.W, KB.RED], 6); } };
   },
   7(ctx, u, p, sh, t, post) { endCard(ctx, u, p, sh, t, post); },
 };
